@@ -1,0 +1,45 @@
+{%- from "/macros/translation.html" import transbag -%}
+{%- set t_sponsors = transbag('translate', this.alt, 'sponsors') -%}
+{%- set t_sponsor_text = transbag('translate', this.alt, 'sponsor_text') -%}
+{%- set t_apply_sponsor = transbag('translate', this.alt, 'apply_sponsor') -%}
+{%- set t_apply_sponsor = transbag('translate', this.alt, 'apply_sponsor') -%}
+{%- set t_invitation_sponsor_text = transbag('translate', this.alt, 'invitation_sponsor_text') -%}
+
+<a name="{{ t_sponsors|lower }}"><h1 class="text-center section-title-light"><b>{{ t_sponsors }}</b></h1></a>
+    <br>
+    <p class="sponsors-text" >{{ t_sponsor_text }}</p>
+    <br>
+<div class="container sponsors"/>
+    {% for category in ["diamond", "gold", "silver", "bronze", "startup", "partner"] %}
+      {%- set t_category = transbag('translate', this.alt, category) -%}
+      {% set sponsors = site.query('/sponsors', alt=this.alt).filter(F.category==category).filter(F.confirmed) %}
+        <div class="sponsors-category">
+          <h3 class= "sponsors-title sponsors-title-{{ category }}" >{{ t_category }}</h3>
+          {% if sponsors %}
+          {% for sponsor in sponsors %}
+            <div class="sponsor sponsor-{{ category }}">
+              <a href="{{ sponsor.web }}" target="blank">
+                <div>
+                  <img src="/sponsors/{{ sponsor._id }}/{{ sponsor.image }}" class="img-fluid">
+                </div>
+              </a>
+            </div>
+          {% endfor %}
+          {% else %}
+            <a class="sponsor-invitation-text" href="{{ '/sponsors' | url(alt=this.alt) }}#{{ t_category |lower}}"> {{ t_invitation_sponsor_text }}</a>
+          {% endif %}
+        </div>
+    {% endfor %}
+</div>
+<br />
+<div class="row">
+  <div class="col-md-6 col-sm-6 col-xs-10 mx-auto">
+    <div class="row">
+      <div class="col-md-8 col-sm-10 col-xs-12 mx-auto">
+        <a href="{{ '/sponsors'|url(alt=this.alt) }}" class="btn btn-success btn-lg btn-block     center-block">
+          {{ t_apply_sponsor }}!
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

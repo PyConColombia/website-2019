@@ -1,0 +1,87 @@
+{%- from "/macros/translation.html" import transbag -%}
+{%- set t_agenda_text = transbag('translate', this.alt, 'agenda_text') -%}
+
+{% set dates = [] %}
+{% for i in range((this.date_end - this.date_start).days + 1) %}
+  {% set a = this.date_start.fromordinal(this.date_start.toordinal() + i) %}
+  {% if dates.insert(i,a) %}{% endif %}
+{% endfor %}
+
+
+<h2 class="text-center">{{ t_agenda_text }}</h2>
+<h3 class="text-center">
+{{- this.date_start.day }}th - {{ this.date_end.day }}th {{ this.date_start.strftime('%B') -}} {#- 9th - 11th February -#}
+</h3>
+
+<ul class="nav center-nav nav-schedule" role="tablist" id="schedule-tabs">
+{% for date in dates %}
+  <li class="nav-item{% if loop.index == 1 %} active{% endif %}">
+    <a class="nav-link" data-toggle="pill" href="#{{ date.strftime('%Y-%m-%d') }}" aria-controls="{{ date.strftime('%Y-%m-%d') }}" role="tab">
+    {{- date.strftime('%A %d') }}th</a> {#- Friday 9th #}
+  </li>
+{%- endfor %}
+</ul>
+<div class="tab-content text-center">
+{% for date in dates %}
+  <div class="tab-pane tab-schedule{% if loop.index == 1 %} active{% endif %}" id="{{ date.strftime('%Y-%m-%d') }}" role="tabpanel">
+  {# Complex expressions doent work in filter() so date should be converted to datetime #}
+  {% set start = this.datetime.combine(date, this.datetime.min.time().replace(tzinfo=this.datetime.tzinfo)) %}
+  {% set end = this.datetime.combine(date, this.datetime.max.time().replace(tzinfo=this.datetime.tzinfo)) %}
+
+  {% set talks = site.query('/talks', alt=this.alt).filter(F.datetime >= start).filter(F.datetime <= end) %}
+  {% for talk in talks.order_by('datetime') %}
+    {% if talk._model == 'schedule' %}
+    <div class="event-item-schedule row">
+      <div class="time-schedule col-sm-3">
+        {{- talk.datetime.strftime('%H:%M') -}}
+      </div>
+      <div class="event-details col-sm-9">
+        <i class="fa fa-{{talk.icon}} fa-lg"></i>
+        <div class="event-name">
+          {{ talk.name }}
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <div class="item-schedule row">
+      <div class="time-schedule col-sm-3">
+        <span class="hour">
+          {{- talk.datetime.strftime('%H') -}}
+        </span>
+        <span class="minutes">:
+          {{- talk.datetime.strftime('%M') -}}
+        </span>
+      </div>
+      <div class="talk-details row col-sm-9">
+        <div class="room-schedule">
+        {% set room = site.query('/rooms', alt=this.alt).get(talk.room) %}
+        {{ room.name }}
+        </div>
+        <div class="speaker-schedule">
+          {% for speaker in talk.authors %}
+            {% set speaker = site.query('/speakers', alt=this.alt).get(speaker) %}
+            <span class="speaker-name">
+            {{- speaker.name }} {{ speaker.last_name -}}
+            </span>
+            <span class="speaker-country">
+            ({{ speaker.country }})
+            </span>
+          {% endfor %}
+        </div>
+        <div class="talk-name">
+        {{ talk.name }}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+{% endfor %}
+</div>
+
+<script>
+$('#schedule-tabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>

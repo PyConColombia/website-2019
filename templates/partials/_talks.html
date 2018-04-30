@@ -1,0 +1,67 @@
+{%- from "/macros/translation.html" import transbag -%}
+
+{%- macro render_talks(types) -%}
+
+  <!-- Nav tabs -->
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+
+  <ul class="nav nav-tabs nav-justified" role="tablist">
+  {%- for type in types -%}
+    {%- set talks = site.query('/talks', alt=this.alt).filter(F.type == type).order_by('name') -%}
+    {%- set t_type = transbag('translate', this.alt, type) -%}
+    <li class="nav-item">
+      <a class="nav-link {% if loop.index == 1 %}active{% endif %}" data-toggle="tab" href="#tab-{{ type }}" role="tab">{{ t_type }} ({{ talks.count() }})</a>
+    </li>
+  {%- endfor -%}
+  </ul>
+  </div>
+  </div>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+  {%- for type in types -%}
+    <div class="tab-pane {% if loop.index == 1 %}active{% endif %}" id="tab-{{ type }}" role="tabpanel">
+      {%- set talks = site.query('/talks', alt=this.alt).filter(F.type == type).order_by('_id') -%}
+      <br>
+      <div class="row">
+      {%- for talk in talks -%}
+        {%- set current_index = loop.index -%}
+        {%- set t_lang = transbag('translate', this.alt, talk.language) -%}
+        <div class="col-lg-6">
+          {%- if loop.index == 1 -%} 
+          {%- elif loop.index == 2 -%} 
+          <hr class="d-md-block d-lg-none d-xl-none" style="background-color:#aaa;">
+          {%- else -%} 
+          <hr style="background-color:#aaa;">
+          {%- endif -%}
+          <div style="padding:6px;">
+            <div class="row">
+              <div class="col-1">
+                {{ current_index }}.&nbsp;
+              </div>
+              <div class="col-11">
+                <a class="link" style="color:white;" href="{{talk|url(alt=this.alt)}}"><b>{{ talk.name }}</b> <small><i>({{ t_lang }})</i></small></a>
+              </div>
+              <div class="col-1">
+              </div>
+              <div class="col-11">
+                {%- set author_count = 0 -%}
+                {%- for author in talk.authors -%}
+                {%- set current_author = site.get('/speakers/'+author, alt=this.alt) -%}
+                {%- set t_country = transbag('translate', this.alt, current_author.country) -%}
+                <a class="link" href="{{current_author|url(alt=this.alt)}}">{{ current_author.name }} {{ current_author.last_name }}{%- if current_author.country -%}&nbsp;<small>({{ t_country }})</small>{% endif %}</a>{% if not loop.last %},&nbsp{% endif %}
+                <br>
+                {%- endfor -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+      </div>
+    </div>
+  {%- endfor -%}
+  </div><!-- End Tab panes -->
+{%- endmacro -%}
+
+{{ render_talks(['talk', 'workshop']) }}

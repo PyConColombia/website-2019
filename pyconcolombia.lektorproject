@@ -1,0 +1,29 @@
+[project]
+name = pyconcolombia
+url = http://pycon.co
+url_style = absolute
+
+[packages]
+lektor-webpack-support = 0.3
+lektor-markdown-header-anchors = 0.1
+
+[alternatives.en]
+name = English
+primary = yes
+locale = en
+
+[alternatives.es]
+name = Español
+url_prefix = /es/
+locale = es
+
+[servers.develop]
+name = Develop
+target = ghpages+https://pyconcolombia/website-develop?cname=develop.pycon.co
+
+[servers.production]
+name = Production
+target = ghpages+https://pyconcolombia/website-production?cname=www.pycon.co
+
+[themes]
+theme = unix
