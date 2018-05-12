@@ -1,0 +1,93 @@
+@import "variable-color";
+@import "variable-font";
+@import "transitions";
+@import "header";
+
+*
+	font-family font-principal
+
+
+body
+	background url(images/space-background.jpg) top center no-repeat
+	background-size cover
+	font-family font-principal
+
+
+a
+	color color-white
+	text-decoration none
+
+	&:hover 
+		colorcolor-white
+	
+
+/*Bootstrap classes*/
+
+.container-box 
+	margin-left auto
+	margin-right auto
+	max-width 950px
+	/*padding 0 15px*/
+
+
+.row-no-padding
+	[class*="col-"] 
+		padding-left 0 !important
+		padding-right 0 !important
+	
+
+
+.container-no-padding 
+	padding-left 0 !important
+	padding-right 0 !important
+
+
+.row-centered 
+	text-align center
+
+
+.col-centered
+	display inline-block
+	float none
+	/* inline-block space fix */
+	margin-right -4px
+	/* reset the text-align */
+	text-align center
+	vertical-align top
+
+
+/*Design classes*/
+
+.background-content
+	overflow hidden
+	position relative
+
+	&:after,&:before
+		background-position center
+		background-repeat no-repeat
+		background-size cover
+		bottom 0
+		content ''
+		left 0
+		position absolute
+		right 0
+		top 0
+		z-index 0
+
+input
+	outline none !important
+	
+
+
+@media screen and (max-width: 1300px)
+	body 
+		zoom 67%
+
+
+@media screen and (max-width: 991px)
+	body
+		zoom 100%
+
+
+
+// @media screen and (max-width: 767px)
