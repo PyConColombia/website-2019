@@ -1,9 +1,9 @@
 <div align="center">
 
-# Sitio Web de la Comunidad de Python Colombia
+# Sitio Web - PyCon Colombia 2019
 
 <a href="https://github.com/PyConColombia">
-  <img width="300" src="assets/static/images/logo-pythonco.jpg">
+  <img width="150" src="assets/static/images/pycon.png">
 </a>
 
 [![Build Status][build-badge]][build]
