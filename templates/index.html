@@ -62,7 +62,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/libs/animate.css">
     <link rel="stylesheet" href="/static/css/styles.css">
@@ -74,78 +75,61 @@
 
       <main><!-- class="mdl-layout__content" -->
         <div><!-- class="page-content" -->
-
           <div class="container-fluid container-no-padding header-content">
-
-            <div class="logo"></div>
-            <div class="planet-left"></div>
-            <div class="planet-right"></div>
-            <div class="commet"></div>
-            <div class="date">February<br>2019</div>
-            <div class="apply-content">
-              <div class="planet-earth-content">
-                <div class="planet-earth-glow"></div>
-                <div class="planet-earth-glow"></div>
-                <div class="planet-earth-top-glow"></div>
-                <div class="planet-earth-top-glow"></div>
-                <div class="planet-earth"></div>
-              </div>
-              <p class="cfp-message">
-                Call for speakers
-              </p>
-              <!-- <div class="cfp-message" id="alejo">
-                <div id="clockdiv">
-                  <div>
-                    <span class="days"></span>
-                    <div class="smalltext">Days</div>
-                  </div>
-                  <div>
-                    <span class="hours"></span>
-                    <div class="smalltext">Hours</div>
-                  </div>
-                  <div>
-                    <span class="minutes"></span>
-                    <div class="smalltext">Minutes</div>
-                  </div>
-                  <div>
-                    <span class="seconds"></span>
-                    <div class="smalltext">Seconds</div>
-                  </div>
+            <div class="section">
+              <div class="logo"></div>
+              <div class="planet-left"></div>
+              <div class="planet-right"></div>
+              <div class="commet"></div>
+              <div class="date">February<br>2019</div>
+              <div class="apply-content">
                 </div>
-              </div> -->
-              <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
-                <span>Talks</span>
-              </a>
-              <a href="https://www.papercall.io/pycon-colombia-2019-workshops" target="_blank" class="apply-btn">
-                <span>Workshops</span>
-              </a>
-              <div class="social-icons-container">
-                <a href="https://www.twitter.com/pyconcolombia/" target="_blank"><div class="social-icon social-twitter"></div></a>
-                <a href="https://www.facebook.com/pyconcolombia/" target="_blank"><div class="social-icon social-facebook"></div></a>
-                <a href="https://www.instagram.com/pyconcolombia/" target="_blank"><div class="social-icon social-instagram"></div></a>
-                <a href="https://medium.com/@pyconcolombia" target="_blank"><div class="social-icon social-medium"></div></a>
+                <p class="cfp-message">
+                  Call for speakers
+                </p>
+                <!-- <div class="cfp-message" id="alejo">
+                  <div id="clockdiv">
+                    <div>
+                      <span class="days"></span>
+                      <div class="smalltext">Days</div>
+                    </div>
+                    <div>
+                      <span class="hours"></span>
+                      <div class="smalltext">Hours</div>
+                    </div>
+                    <div>
+                      <span class="minutes"></span>
+                      <div class="smalltext">Minutes</div>
+                    </div>
+                    <div>
+                      <span class="seconds"></span>
+                      <div class="smalltext">Seconds</div>
+                    </div>
+                  </div>
+                </div> -->
+                <div class="row justify-content-md-center">
+                  <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
+                    <span>Talks</span>
+                  </a>
+                  <a href="https://www.papercall.io/pycon-colombia-2019-workshops" target="_blank" class="apply-btn">
+                    <span>Workshops</span>
+                  </a>
+                </div>
+                
               </div>
             </div>
-
           </div><!-- header ends -->
 
 
 
           <div class="container-fluid container-no-padding header-content">
-            <div class="date">SUBSCRIBE TO OUR NEWSLETTER</div>
-            <div class="apply-content">
-              {% include 'partials/_mailchimp.html' %}
-              <p class="cfp-message">
-                Call for speakers
-              </p>
-              <div class="social-icons-container">
-                <a href="https://www.twitter.com/pyconcolombia/" target="_blank"><div class="social-icon social-twitter"></div></a>
-                <a href="https://www.facebook.com/pyconcolombia/" target="_blank"><div class="social-icon social-facebook"></div></a>
-                <a href="https://www.instagram.com/pyconcolombia/" target="_blank"><div class="social-icon social-instagram"></div></a>
-                <a href="https://medium.com/@pyconcolombia" target="_blank"><div class="social-icon social-medium"></div></a>
+            <div class="section">
+              <div class="apply-content">
+                <div>
+                  {% include 'partials/_mailchimp.html' %}
+                </div>
               </div>
             </div>
-
           </div><!-- header ends -->
 
 
@@ -181,7 +165,7 @@
     <!-- Javascript -->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="js/libs/wow.js"></script>
     <script src="js/libs/dialog-polyfill.js"></script>
     <script src="/static/js/clock.js"></script>

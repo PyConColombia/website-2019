@@ -11,30 +11,23 @@
 {%- set t_subscribe_description = transbag('translate', this.alt, 'subscribe_description') -%}
 <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
-  <h1 class="section-title">{{ t_subscribe_text }}</h1>
-  <p class="text-center">{{ t_subscribe_description }}</p>
+  <h1 class="title-subscribe">SUBSCRIBE TO OUR NEWSLETTER</h1>
+  <div class="commet"></div>
   <div class="form-container">
     <form action="https://PyPereira.us17.list-manage.com/subscribe/post?u=1f8bcbb60bfefcd35da2108ec&amp;id=d27a1d0f15" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
-        <div class="row">
-          <div class="mc-field-group col-md-4 col-sm-6 col-xs-12">
-            <br>
-            <input type="text" value="" name="NAME" class="required form-input" id="mce-NAME" placeholder="{{ t_name }}">
-          </div>
-          <div class="mc-field-group col-md-4 col-sm-6 col-xs-12">
-            <br>
-            <input type="email" value="" name="EMAIL" class="required email form-input" id="mce-EMAIL" placeholder="{{ t_email }}">
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-            <input type="text" name="b_948458ca54a966497e7ca6602_7bd820999b" tabindex="-1" value="">
-          </div>
-          <br />
-          <div class="col-md-4 col-sm-4 mx-auto">
-            <input type="submit" value="{{t_subscribe}}" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success btn-lg btn-block center-block">
+        <div class="col-md-8 col-sm-8 col-xs-10 mx-auto">
+          <div class="row form-subscribe">
+            <div class="mc-field-group col-md-4 col-sm-6 col-xs-12">
+              <input type="text" value="" name="NAME" class="required form-input subscribe-input" id="mce-NAME" placeholder="Name" autocomplete="off">
+            </div>
+            <div class="mc-field-group col-md-4 col-sm-6 col-xs-12">
+              <input type="email" value="" name="EMAIL" class="required email form-input subscribe-input" id="mce-EMAIL" placeholder="Email" autocomplete="off">
+              
+            </div>
+            <div class="mc-field-group col-md-3 col-sm-6 col-xs-12">
+              <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="subscribe-btn">
+            </div>
           </div>
         </div>
       </div>
