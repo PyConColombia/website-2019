@@ -70,6 +70,8 @@
     <link rel="stylesheet" href="/static/css/clock.css">
   </head>
 
+  {%- from "macros/speakers.html" import render_speaker -%}
+
   <body>
     <div class="mdl-layout mdl-js-layout layout-home">
 
@@ -120,6 +122,25 @@
             </div>
           </div><!-- header ends -->
 
+
+          <!-- Keynote Speakers Section -->
+          <div class="container-fluid container-no-padding header-content">
+            <div class="section">
+              <div class="apply-content">
+                <div class="container-fluid light-section">
+                  <div class="section-container">
+                    <div class="col-md-8 col-sm-8 col-xs-10 mx-auto">
+                      {% set speakers = site.query('/speakers', alt=this.alt).filter(F.keynote).filter(F.publish) %}
+                      <a name="keynotes"><h1 class="section-title-light"><b>Keynotes</b></h1></a>
+                        {% for speaker in speakers %}
+                          {{ render_speaker(speaker, index=loop.index, details=True, css='light-color') }}
+                        {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
           <div class="container-fluid container-no-padding header-content">

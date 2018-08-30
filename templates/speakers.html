@@ -1,0 +1,64 @@
+{#- https://docs.google.com/spreadsheets/d/1Df2WU5gAR6fogjeDhc3MhyzfcgekY96VVufZPS-x5h4/edit#gid=1754881339 -#}
+{% extends "page.html" %}
+{%- from "macros/speakers.html" import render_speaker -%}
+{%- from "macros/translation.html" import transbag -%}
+
+{%- set t_keynote_speakers = transbag('translate', this.alt, 'keynote_speakers') -%}
+{%- set t_speakers = transbag('translate', this.alt, 'speakers') -%}
+{%- set t_accepted_speakers_button = transbag('translate', this.alt, 'accepted_speakers_button') -%}
+
+{% block title %}{{ this.title }}{% endblock %}
+
+      {% block vectors %}
+      <img src="/static/images/graph-big-left.png" class="vector-img big-left">
+      <img src="/static/images/graph-big-right.png" class="vector-img big-right">
+      <img src="/static/images/graph-small-left.png" class="vector-img small-left">
+      <img src="/static/images/graph-small-right.png" class="vector-img small-right">
+      {% endblock %}
+
+
+{% block content %}
+<div class="container-fluid light-section">
+  <div class="section-container">
+    <div class="container">
+
+    {% set speakers = site.query('/speakers', alt=this.alt).filter(F.keynote).filter(F.publish).order_by('_id') %}
+    <h1 class="section-title-light"><b>{{ t_keynote_speakers }} ({{ speakers.count()}})</b></h1>
+      <div class="row justify-content-center">
+        {% for speaker in speakers %}
+        <div class="col-sm-6 col-lg-4">
+          {{ render_speaker(speaker, index=loop.index, details=True, css='light-color') }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid dark-section">
+  <div class="section-container">
+    <div class="container">
+
+      {% set speakers = site.query('/speakers', alt=this.alt).filter(F.keynote != True).filter(F.publish) %}
+      <br>
+      <h1 class="section-title-dark text-center">{{ t_speakers }} ({{ speakers.count() }})</h1>
+      <br>
+      <div class="row justify-content-center">
+        {% if speakers %}
+        {% for speaker in speakers %}
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          {{ render_speaker(speaker, index=loop.index, details=True, css='light-color') }}
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="col mx-auto text-center">
+          <a href="{{ site.get('/', alt=this.alt).accepted_speakers_link }}" target="blank" class="btn btn-success btn-lg centerer-block text">
+            {{ t_accepted_speakers_button }}
+          </a>
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

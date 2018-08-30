@@ -1,0 +1,63 @@
+{%- from "macros/speakers.html" import render_speaker -%}
+{%- from "macros/speakers.html" import render_speaker_info -%}
+{%- from "macros/speakers.html" import render_speaker_social -%}
+{%- from "macros/translation.html" import transbag -%}
+
+{%- set t_speaker_at = transbag('translate', this.alt, 'speaker_at') -%}
+{%- set t_keynote_speaker = transbag('translate', this.alt, 'keynote_speaker') -%}
+{%- set t_currently_living = transbag('translate', this.alt, 'currently_living') -%}
+{%- set t_country = transbag('translate', this.alt, this.country) -%}
+{%- set t_country_residence = transbag('translate', this.alt, this.country_residence) -%}
+
+
+{%- macro render_talks(author, type) -%}
+  {%- set t_title = transbag('translate', this.alt, type) -%}
+  {%- set talks = site.query('/talks', alt=this.alt).filter(F.type==type) -%}
+  {%- set talk_count = 0 -%}
+  {%- for talk in talks -%}
+    {%- if author._id in talk.authors -%}
+      {%- if talk_count == 0 -%}<h3>{{ t_title }}</h3><ul>{%- endif -%}
+      {%- set t_lang = transbag('translate', this.alt, talk.language) -%}
+      <li><a href="{{talk|url(alt=this.alt)}}">{{ talk.name }} <small><i>({{ t_lang }})</i></small></a></li>
+      {%- set talk_count = talk_count + 1 -%}
+    {%- endif -%}
+    </ul>
+  {%- endfor -%}
+{%- endmacro-%}
+
+{% extends "page.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block banner_text %}
+{% endblock %}
+{% block body %}
+<div class="row">
+    <div class="speaker-details">
+      <h1>{{ this.name }} {{ this.last_name }}</h1>
+      <div class="speaker-job">
+        {% if this.display_summary %}
+        <h2>{{ this.summary }}</h2>
+        {% else%}
+        <h2>{{ this.position }} {%- if this.employer -%}&nbsp;{{ t_speaker_at }}&nbsp;{{ this.employer }}{%- endif -%}</h2>
+        {% endif %}
+      </div>
+      <h3 class="speaker-country">
+        {%- if this.country-%}{{ t_country }}{%- endif -%}
+      </h3>
+      {% if this.keynote %}
+        <h3 class="text-keynote-speaker">{{ t_keynote_speaker }}</h3>
+      {% endif %}
+      <br>
+    </div>
+  <div class="col-sm-12 col-md-5 align-self-center">
+    {{ render_speaker(this, details=False) }}
+    {{ render_speaker_social(this, floating=False) }}
+  </div>
+  <div class="col-sm-12 col-md-7 align-self-center">
+    <div class="speaker-info">
+      {{ this.information }}
+      {{ render_talks(this, 'talk') }}
+      {{ render_talks(this, 'workshop') }}
+    </div>
+  </div>
+</div>
+{% endblock %}

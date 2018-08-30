@@ -37,8 +37,7 @@
 
 {% macro render_speaker(speaker, index=1, details=True, css='light-color') %}
 {%- set complete_name = speaker.name + " " + speaker.last_name -%}
-
-  <div class="speaker">
+  <div class="row">
     <a href="{{ speaker | url }}" title="{{ complete_name }}"">
     <img class="speaker-image" id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src=
     {%- if speaker.image -%}
@@ -47,8 +46,8 @@
     {%- else -%}
       "/static/images/empty-photo.svg"
     {%- endif -%}
-     />
-     </a>
+    />
+    </a>
     {% if details -%}
     <div class="speaker-details-wrapper">
       {{ render_speaker_social(speaker, index) }}
