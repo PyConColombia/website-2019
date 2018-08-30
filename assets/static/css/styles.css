@@ -70,3 +70,20 @@
   width: 100%;
   z-index:10
 }
+
+.speaker-image {
+  border: 4px solid #2bb6da;
+  position: relative;
+  display: block;
+  max-width: 80%;
+  margin: 1em;
+  height: auto;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+}
+
+.rounded-circle, .speaker-image {
+  border-radius: 50% !important;
+}
