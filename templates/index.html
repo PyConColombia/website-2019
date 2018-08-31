@@ -70,7 +70,7 @@
     <link rel="stylesheet" href="/static/css/clock.css">
   </head>
 
-  {%- from "macros/speakers.html" import render_speaker -%}
+  {%- from "macros/speakers.html" import render_keynote_speaker -%}
 
   <body>
     <div class="mdl-layout mdl-js-layout layout-home">
@@ -135,7 +135,7 @@
                     <div class="form-container">
 
                     {% for speaker in speakers %}
-                      {{ render_speaker(speaker, index=loop.index, details=True, css='light-color') }}
+                      {{ render_keynote_speaker(speaker, index=loop.index, details=True, css='light-color') }}
                     {% endfor %}
                 </div>
               </div>

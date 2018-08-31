@@ -1,6 +1,6 @@
 {#- https://docs.google.com/spreadsheets/d/1Df2WU5gAR6fogjeDhc3MhyzfcgekY96VVufZPS-x5h4/edit#gid=1754881339 -#}
 {% extends "page.html" %}
-{%- from "macros/speakers.html" import render_speaker -%}
+{%- from "macros/speakers.html" import render_keynote_speaker -%}
 {%- from "macros/translation.html" import transbag -%}
 
 {%- set t_keynote_speakers = transbag('translate', this.alt, 'keynote_speakers') -%}
@@ -27,7 +27,7 @@
       <div class="row justify-content-center">
         {% for speaker in speakers %}
         <div class="col-sm-6 col-lg-4">
-          {{ render_speaker(speaker, index=loop.index, details=True, css='light-color') }}
+          {{ render_keynote_speaker(speaker, index=loop.index, details=True, css='light-color') }}
         </div>
         {% endfor %}
       </div>
@@ -46,7 +46,7 @@
         {% if speakers %}
         {% for speaker in speakers %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          {{ render_speaker(speaker, index=loop.index, details=True, css='light-color') }}
+          {{ render_keynote_speaker(speaker, index=loop.index, details=True, css='light-color') }}
         </div>
         {% endfor %}
         {% else %}

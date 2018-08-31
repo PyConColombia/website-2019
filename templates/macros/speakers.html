@@ -1,6 +1,6 @@
 {%- from "macros/translation.html" import transbag -%}
 
-{% macro render_speaker_social(speaker, index=1, floating=True) %}
+{% macro render_keynote_speaker_social(speaker, index=1, floating=True) %}
   <div id="link-{{ index }}" class="speaker-social{% if floating %} floating{% endif %}">
     {%- set counter = 0 -%}
     {% if speaker.twitter_handle %}
@@ -21,7 +21,7 @@
   </div>
 {% endmacro %}
 
-{% macro render_speaker_info(speaker, css) %}
+{% macro render_keynote_speaker_info(speaker, css) %}
  {%- set t_speaker_at = transbag('translate', speaker.alt, 'speaker_at') -%}
   <div class="speaker-details {{ css }}">
     <div class="speaker-name">{{ speaker.name }} {{speaker.last_name }}</div>
@@ -35,7 +35,7 @@
   </div>
 {% endmacro %}
 
-{% macro render_speaker(speaker, index=1, details=True, css='light-color') %}
+{% macro render_keynote_speaker(speaker, index=1, details=True, css='light-color') %}
 {%- set complete_name = speaker.name + " " + speaker.last_name -%}
   <div class="row justify-content-center align-self-center">
     <div class="col-md-4 col-sm-6 col-xs-12">
@@ -52,8 +52,8 @@
     <div class="col-md-8 col-sm-6 col-xs-12">
       {% if details -%}
       <div class="speaker-details-wrapper">
-        {{ render_speaker_social(speaker, index) }}
-        {{ render_speaker_info(speaker, css) }}
+        {{ render_keynote_speaker_social(speaker, index) }}
+        {{ render_keynote_speaker_info(speaker, css) }}
       </div>
       {%- endif %}
     </div>

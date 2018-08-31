@@ -78,10 +78,12 @@
   max-width: 80%;
   margin: 1em;
   height: auto;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
+  border:1px solid #94b8df;
+  border-radius:100px;
+  -webkit-box-shadow:0 0 50px rgba(255,255,255,0.9), 0 0 100px #0079ac;
+  box-shadow:0 0 50px rgba(255,255,255,0.9), 0 0 100px #0079ac;
+  color:#fff;
+  z-index:10
 }
 
 .rounded-circle, .speaker-image {
