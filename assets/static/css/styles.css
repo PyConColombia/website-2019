@@ -75,8 +75,6 @@
   border: 4px solid #2bb6da;
   position: relative;
   display: block;
-  max-width: 80%;
-  margin: 1em;
   height: auto;
   border:1px solid #94b8df;
   border-radius:100px;
@@ -86,6 +84,30 @@
   z-index:10
 }
 
+.speaker-image-container {
+  padding: 1.5em;
+}
+
 .rounded-circle, .speaker-image {
   border-radius: 50% !important;
 }
+
+.speaker-container {
+  margin: 0;
+}
+
+.speaker-details {
+  padding: 5em 0;
+}
+
+.speaker-name, .speaker-info {
+  font-weight: 300;
+  letter-spacing: 5px;
+}
+
+.speaker-info {
+  color: #a8a8a8
+}
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }

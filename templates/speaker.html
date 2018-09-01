@@ -31,23 +31,23 @@
 {% endblock %}
 {% block body %}
 <div class="row">
-    <div class="speaker-details">
-      <h1>{{ this.name }} {{ this.last_name }}</h1>
-      <div class="speaker-job">
-        {% if this.display_summary %}
-        <h2>{{ this.summary }}</h2>
-        {% else%}
-        <h2>{{ this.position }} {%- if this.employer -%}&nbsp;{{ t_speaker_at }}&nbsp;{{ this.employer }}{%- endif -%}</h2>
-        {% endif %}
-      </div>
-      <h3 class="speaker-country">
-        {%- if this.country-%}{{ t_country }}{%- endif -%}
-      </h3>
-      {% if this.keynote %}
-        <h3 class="text-keynote-speaker">{{ t_keynote_speaker }}</h3>
+  <div class="speaker-details">
+    <h1>{{ this.name }} {{ this.last_name }}</h1>
+    <div class="speaker-job">
+      {% if this.display_summary %}
+      <h2>{{ this.summary }}</h2>
+      {% else%}
+      <h2>{{ this.position }} {%- if this.employer -%}&nbsp;{{ t_speaker_at }}&nbsp;{{ this.employer }}{%- endif -%}</h2>
       {% endif %}
-      <br>
     </div>
+    <h3 class="speaker-country">
+      {%- if this.country-%}{{ t_country }}{%- endif -%}
+    </h3>
+    {% if this.keynote %}
+      <h3 class="text-keynote-speaker">{{ t_keynote_speaker }}</h3>
+    {% endif %}
+    <br>
+  </div>
   <div class="col-sm-12 col-md-5 align-self-center">
     {{ render_keynote_speaker(this, details=False) }}
     {{ render_keynote_speaker_social(this, floating=False) }}
