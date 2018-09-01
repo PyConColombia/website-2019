@@ -1,4 +1,4 @@
-{%- from "macros/speakers.html" import render_speaker_social -%}
+<!-- {%- from "macros/speakers.html" import render_speaker_social -%} -->
 {%- from "macros/translation.html" import transbag -%}
 
 {% macro render_team_member(member, index=1, details=True, alt="en") %}
@@ -17,7 +17,7 @@
      </a>
     {%- if details -%}
     <div class="speaker-details-wrapper">
-      {{ render_speaker_social(member, index) }}
+      <!-- {{ render_speaker_social(member, index) }} -->
     <div class="speaker-details light-color">
       <div class="speaker-name">{{ complete_name }}</div>
       <div class="speaker-job">

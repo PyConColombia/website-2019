@@ -1,6 +1,6 @@
 {%- from "macros/speakers.html" import render_keynote_speaker -%}
-{%- from "macros/speakers.html" import render_keynote_speaker_info -%}
-{%- from "macros/speakers.html" import render_keynote_speaker_social -%}
+<!-- {%- from "macros/speakers.html" import render_keynote_speaker_info -%} -->
+<!-- {%- from "macros/speakers.html" import render_keynote_speaker_social -%} -->
 {%- from "macros/translation.html" import transbag -%}
 
 {%- set t_speaker_at = transbag('translate', this.alt, 'speaker_at') -%}
@@ -49,8 +49,8 @@
     <br>
   </div>
   <div class="col-sm-12 col-md-5 align-self-center">
-    {{ render_keynote_speaker(this, details=False) }}
-    {{ render_keynote_speaker_social(this, floating=False) }}
+    <!-- {{ render_keynote_speaker(this, details=False) }} -->
+    <!-- {{ render_keynote_speaker_social(this, floating=False) }} -->
   </div>
   <div class="col-sm-12 col-md-7 align-self-center">
     <div class="speaker-info">
