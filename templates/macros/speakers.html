@@ -7,7 +7,7 @@
       <a href="{{ speaker | url }}">
         <img class="speaker-image img-fluid" id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image
           -%}
-          "/speakers/{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} />
+          "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} />
       </a>
     </div>
   </div>
@@ -33,7 +33,8 @@
   <div class="speaker-image-container">
     <a href="{{ speaker | url }}">
       <img class="speaker-image img-fluid" id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image
-        -%} "/speakers/{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} />
+          -%}
+          "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} />
     </a>
   </div>
 </div>
@@ -42,7 +43,7 @@
 {% macro render_keynote_speaker(speaker, index=1, details=True) %}
   <div class="speaker-container">
     <div class="row justify-content-center align-self-center">
-      {%- if index % 2 == 0 -%}
+      {%- if index % 2 == 1 -%}
         {{ speaker_left(speaker, index) }}
       {%- else -%}
         {{ speaker_right(speaker, index) }}

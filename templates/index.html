@@ -1,200 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105321720-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+{% extends "layout.html" %}
+{%- from "macros/speakers.html" import render_keynote_speaker -%}
 
-      gtag('config', 'UA-105321720-2');
-    </script>
-
-    <!-- Meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description"
-    content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February.">
-
-    <meta property="og:site_name" content="PyCon Colombia"/>
-    <meta property="og:title" content="PyCon Colombia | February 2019 | Colombia"/>
-    <meta property="og:description"
-    content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February"/>
-    <meta property="og:image" content="/static/images/opimage.jpg">
-    <meta property="og:url" content="https://www.pycon.co/">
-    <meta property="og:type" content="website"/>
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@pyconcolombia">
-    <meta name="twitter:creator" content="@soyelhijo">
-    <meta name="twitter:title" content="PyCon Colombia | February 2019 | Colombia">
-    <meta name="twitter:description"
-    content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February">
-    <meta name="twitter:image" content="/static/images/opimage.jpg">
-
-    <title>PyCon Colombia | February 2019 | Colombia</title>
-
-    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-icon-192x192.png">
-    <link rel="manifest" href="/static/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/css/libs/animate.css">
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="stylesheet" href="/static/css/custom.css">
-    <link rel="stylesheet" href="/static/css/clock.css">
-  </head>
-
-  {%- from "macros/speakers.html" import render_keynote_speaker -%}
-
-  <body>
-    <div class="mdl-layout mdl-js-layout layout-home">
-
-      <main><!-- class="mdl-layout__content" -->
-        <div><!-- class="page-content" -->
-          <div class="container-fluid container-no-padding header-content">
-            <div class="section">
-              <div class="logo"></div>
-              <div class="planet-left"></div>
-              <div class="planet-right"></div>
-              <div class="commet"></div>
-              <div class="date">February<br>2019</div>
-              <div class="apply-content">
-                </div>
-                <p class="cfp-message">
-                  Call for speakers
-                </p>
-                <!-- <div class="cfp-message" id="alejo">
-                  <div id="clockdiv">
-                    <div>
-                      <span class="days"></span>
-                      <div class="smalltext">Days</div>
-                    </div>
-                    <div>
-                      <span class="hours"></span>
-                      <div class="smalltext">Hours</div>
-                    </div>
-                    <div>
-                      <span class="minutes"></span>
-                      <div class="smalltext">Minutes</div>
-                    </div>
-                    <div>
-                      <span class="seconds"></span>
-                      <div class="smalltext">Seconds</div>
-                    </div>
-                  </div>
-                </div> -->
-                <div class="row justify-content-md-center">
-                  <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
-                    <span>Talks</span>
-                  </a>
-                  <a href="https://www.papercall.io/pycon-colombia-2019-workshops" target="_blank" class="apply-btn">
-                    <span>Workshops</span>
-                  </a>
-                </div>
-                
-              </div>
-            </div>
-          </div><!-- header ends -->
-
-
-          <!-- Keynote Speakers Section -->
-          <div class="container-fluid container-no-padding header-content">
-            <div class="section">
-              <div class="apply-content">
-                <div class="col-md-8 col-sm-8 col-xs-10 mx-auto">
-                  {% set speakers = site.query('/speakers', alt=this.alt).filter(F.keynote).filter(F.publish) %}
-
-                    <h1 class="title-subscribe">KEY NOTES</h1>
-                    <div class="commet"></div>
-                    <div class="form-container">
-
-                    {% for speaker in speakers %}
-                      {{ render_keynote_speaker(speaker, index=loop.index, details=True) }}
-                    {% endfor %}
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="container-fluid container-no-padding header-content">
-            <div class="section">
-              <div class="apply-content">
-                <div>
-                  {% include 'partials/_mailchimp.html' %}
-                </div>
-              </div>
-            </div>
-          </div><!-- header ends -->
-
-
-
-          <div class="container-fluid container-no-padding header-content">
-            <div class="date"></div>
-            <div class="apply-content">
-              <div class="planet-earth-content">
-                <div class="planet-earth-glow"></div>
-                <div class="planet-earth-glow"></div>
-                <div class="planet-earth-top-glow"></div>
-                <div class="planet-earth-top-glow"></div>
-                <div class="planet-earth"></div>
-              </div>
+{%- block body -%}
+<body>
+  <div class="mdl-layout mdl-js-layout layout-home">
+    <main>
+      <!-- class="mdl-layout__content" -->
+      <div>
+        <!-- class="page-content" -->
+        <div class="container-fluid container-no-padding header-content">
+          <div class="section">
+            <div class="logo"></div>
+            <div class="planet-left"></div>
+            <div class="planet-right"></div>
+            <div class="commet"></div>
+            <div class="date">February<br>2019</div>
+            {%- if 'speakers-call' in this.sections -%}
+            <div>
               <p class="cfp-message">
                 Call for speakers
               </p>
-              <div class="social-icons-container">
-                <a href="https://www.twitter.com/pyconcolombia/" target="_blank"><div class="social-icon social-twitter"></div></a>
-                <a href="https://www.facebook.com/pyconcolombia/" target="_blank"><div class="social-icon social-facebook"></div></a>
-                <a href="https://www.instagram.com/pyconcolombia/" target="_blank"><div class="social-icon social-instagram"></div></a>
-                <a href="https://medium.com/@pyconcolombia" target="_blank"><div class="social-icon social-medium"></div></a>
+              <div class="cfp-message" id="alejo">
+                <div id="clockdiv">
+                  <div>
+                    <span class="days"></span>
+                    <div class="smalltext">Days</div>
+                  </div>
+                  <div>
+                    <span class="hours"></span>
+                    <div class="smalltext">Hours</div>
+                  </div>
+                  <div>
+                    <span class="minutes"></span>
+                    <div class="smalltext">Minutes</div>
+                  </div>
+                  <div>
+                    <span class="seconds"></span>
+                    <div class="smalltext">Seconds</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-md-center">
+                <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
+                  <span>Talks</span>
+                </a>
+                <a href="https://www.papercall.io/pycon-colombia-2019-workshops" target="_blank" class="apply-btn">
+                  <span>Workshops</span>
+                </a>
               </div>
             </div>
-          
-          </div><!-- header ends -->
-
+            {%- endif -%}
+          </div>
         </div>
-      </main>
-    </div>
+      </div><!-- header ends -->
 
-    <img class="hidden" src="/static/images/opimage.jpg" />
-    <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="js/libs/wow.js"></script>
-    <script src="js/libs/dialog-polyfill.js"></script>
-    <script src="/static/js/clock.js"></script>
-    <script>
-      $(document).ready(function() {
-      });
-    </script>
-  </body>
 
-</html>
+      <!-- Keynote Speakers Section -->
+      <div class="container-fluid container-no-padding header-content">
+        <div class="section">
+          <div class="apply-content">
+            <div class="col-md-8 col-sm-8 col-xs-10 mx-auto">
+              {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish) %}
+
+              <h1 class="title-subscribe">KEY NOTES</h1>
+              <div class="commet"></div>
+              <div class="form-container">
+
+                {% for speaker in speakers %} {{ render_keynote_speaker(speaker, index=loop.index, details=True) }} {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid container-no-padding header-content">
+          <div class="section">
+            <div class="apply-content">
+              <div>
+                {% include 'partials/_mailchimp.html' %}
+              </div>
+            </div>
+          </div>
+        </div><!-- header ends -->
+
+        <div class="container-fluid container-no-padding header-content">
+          <div class="date"></div>
+          <div class="apply-content">
+            <div class="planet-earth-content">
+              <div class="planet-earth-glow"></div>
+              <div class="planet-earth-glow"></div>
+              <div class="planet-earth-top-glow"></div>
+              <div class="planet-earth-top-glow"></div>
+              <div class="planet-earth"></div>
+            </div>
+            <!-- <p class="cfp-message">
+              Call for speakers
+            </p> -->
+            <div class="social-icons-container">
+              <a href="https://www.twitter.com/pyconcolombia/" target="_blank"><div class="social-icon social-twitter"></div></a>
+              <a href="https://www.facebook.com/pyconcolombia/" target="_blank"><div class="social-icon social-facebook"></div></a>
+              <a href="https://www.instagram.com/pyconcolombia/" target="_blank"><div class="social-icon social-instagram"></div></a>
+              <a href="https://medium.com/@pyconcolombia" target="_blank"><div class="social-icon social-medium"></div></a>
+            </div>
+          </div>
+
+        </div><!-- header ends -->
+
+      </div>
+    </main>
+  </div>
+
+  <img class="hidden" src="/static/images/opimage.jpg" />
+
+
+{%- endblock -%}

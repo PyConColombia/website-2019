@@ -38,5 +38,5 @@ function initializeClock(id, endtime) {
 
 }
 
-const deadline = new Date('2018-09-01 00:00:00');
+const deadline = new Date('2018-09-30 00:00:00');
 initializeClock('clockdiv', deadline);
