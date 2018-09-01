@@ -27,7 +27,7 @@
       <div class="row justify-content-center">
         {% for speaker in speakers %}
         <div class="col-sm-6 col-lg-4">
-          {{ render_keynote_speaker(speaker, index=loop.index, details=True, css='light-color') }}
+          {{ render_keynote_speaker(speaker, index=loop.index, details=True) }}
         </div>
         {% endfor %}
       </div>
@@ -46,7 +46,7 @@
         {% if speakers %}
         {% for speaker in speakers %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          {{ render_keynote_speaker(speaker, index=loop.index, details=True, css='light-color') }}
+          {{ render_keynote_speaker(speaker, index=loop.index, details=True) }}
         </div>
         {% endfor %}
         {% else %}
