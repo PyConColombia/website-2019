@@ -99,6 +99,7 @@
 }
 
 .speaker-name, .speaker-info {
+  color: #fff;
   font-weight: 300;
   letter-spacing: 5px;
 }
@@ -107,11 +108,33 @@
   color: #a8a8a8
 }
 
+.speaker-summary {
+  color: #fff;
+  font-size: .6em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .text-left { text-align: left; }
 .text-right { text-align: right; }
+.text-center { text-align: center; }
 
 .background-speakers {
   background:url("images/space-background.jpg") top center no-repeat;
-  background-size: cover;
   height: auto;
+}
+
+.social-container-speaker {
+  padding: 1em 0;
+}
+
+.social-icon {
+  font-size: 1.6em;
+  width: 1.6em;
+  text-align: center;
+  line-height: 1.6em;
+  background: #a8a8a8;
+  color: #1c2f61;
+  border-radius: 0.8em;
+  margin: 0 .5em;
 }

@@ -1,6 +1,3 @@
-{%- from "macros/speakers.html" import render_keynote_speaker -%}
-<!-- {%- from "macros/speakers.html" import render_keynote_speaker_info -%} -->
-<!-- {%- from "macros/speakers.html" import render_keynote_speaker_social -%} -->
 {%- from "macros/translation.html" import transbag -%}
 
 {%- set t_speaker_at = transbag('translate', this.alt, 'speaker_at') -%}
@@ -25,38 +22,63 @@
   {%- endfor -%}
 {%- endmacro-%}
 
-{% extends "page.html" %}
-{% block title %}{{ this.title }}{% endblock %}
-{% block banner_text %}
-{% endblock %}
+{% extends "layout.html" %}
+
 {% block body %}
-<div class="row">
-  <div class="speaker-details">
-    <h1>{{ this.name }} {{ this.last_name }}</h1>
-    <div class="speaker-job">
-      {% if this.display_summary %}
-      <h2>{{ this.summary }}</h2>
-      {% else%}
-      <h2>{{ this.position }} {%- if this.employer -%}&nbsp;{{ t_speaker_at }}&nbsp;{{ this.employer }}{%- endif -%}</h2>
-      {% endif %}
+{%- set complete_name = this.name + " " + this.last_name -%}
+<body class="background-speakers">
+  <div class="container-fluid">
+    <div class="section-container">
+      <div class="container">
+        <div class="section">
+          <div class="row justify-content-center align-self-center">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+              <div class="speaker-image-container">
+                <a href="{{ this | url }}">
+                  <img class="speaker-image img-fluid" id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if this.image
+                    -%} "{%- if this.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ this._id }}/{{ this.image }}" {%-
+                    else -%} "/static/images/empty-photo.svg" {%- endif -%} />
+                </a>
+              </div>  
+            </div>
+          </div>
+          <div class="row justify-content-center align-self-center">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <div class="speaker-details text-center">
+                <h1 class="speaker-name">{{ complete_name }}</h1>
+                <h2 class="speaker-info">{{ this.position }}</h2>
+                {% if this.twitter_handle %}
+                <a href="http://twitter.com/{{ this.twitter_handle }}" target="blank_"><h3 class="speaker-info">@{{ this.twitter_handle }}</h3></a>
+                {% endif %}
+                <div class="social-container-speaker">
+                  {% if this.github_handle %}
+                  <a href="https://github.com/{{ this.github_handle }}" target="_blank"><div class="social-icon fab fa-github-alt"></div></a>
+                  {% endif %}
+                  {% if this.facebook_handle %}
+                  <a href="https://facebook.com/{{ this.facebook_handle }}" target="_blank"><div class="social-icon fab fa-facebook-f"></div></a>
+                  {% endif %}
+                  {% if this.linkedin_handle %}
+                  <a href="http://linkedin.com/in/{{ this.linkedin_handle }}" target="_blank"><div class="social-icon fab fa-linkedin-in"></div></a>
+                  {% endif %}
+                  {% if this.web %}
+                  <a href="{{ this.web }}" target="_blank"><div class="social-icon fas fa-globe"></div></a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center align-self-center">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="speaker-summary">
+                {% if this.information %}
+                <h2>{{ this.information }}</h2>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <h3 class="speaker-country">
-      {%- if this.country-%}{{ t_country }}{%- endif -%}
-    </h3>
-    {% if this.keynote %}
-      <h3 class="text-keynote-speaker">{{ t_keynote_speaker }}</h3>
-    {% endif %}
-    <br>
   </div>
-  <div class="col-sm-12 col-md-5 align-self-center">
-    
-  </div>
-  <div class="col-sm-12 col-md-7 align-self-center">
-    <div class="speaker-info">
-      {{ this.information }}
-      {{ render_talks(this, 'talk') }}
-      {{ render_talks(this, 'workshop') }}
-    </div>
-  </div>
-</div>
+
 {% endblock %}

@@ -15,7 +15,9 @@
     <div class="speaker-details text-left">
       <h1 class="speaker-name">{{ complete_name }}</h1>
       <h2 class="speaker-info">{{ speaker.position }}</h2>
-      <h3 class="speaker-info">{{ speaker.email }}</h3>
+      {% if speaker.twitter_handle %}
+      <h3 class="speaker-info">@{{ speaker.twitter_handle }}</h3>
+      {% endif %}
     </div>
   </div>
 {% endmacro %}
@@ -26,7 +28,9 @@
   <div class="speaker-details text-right">
     <h1 class="speaker-name">{{ complete_name }}</h1>
     <h2 class="speaker-info">{{ speaker.position }}</h2>
-    <h3 class="speaker-info">{{ speaker.email }}</h3>
+    {% if speaker.twitter_handle %}
+    <h3 class="speaker-info">@{{ speaker.twitter_handle }}</h3>
+    {% endif %}
   </div>
 </div>
 <div class="col-md-4 col-sm-6 col-xs-12">
