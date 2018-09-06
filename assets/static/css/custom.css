@@ -2,6 +2,10 @@
   margin: 150px 0;
 }
 
+/* .container-no-padding {
+  margin-bottom: -20px;
+} */
+
 .title-subscribe {
   color:#fff;
   font-size:33px;
@@ -120,8 +124,38 @@
 .text-center { text-align: center; }
 
 .background-speakers {
-  background:url("images/space-background.jpg") top center no-repeat;
-  height: auto;
+  background:url("images/space-background.jpg"); 
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.intro-background {
+  background:url("../images/intro-pycon19.png"); 
+  background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.keynotes-background {
+  background:url("../images/keynotes-pycon19.png"); 
+  background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.subscribe-background {
+  background:url("../images/subscribe-pycon19.png"); 
+  background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.footer-background {
+  background:url("../images/footer-pycon19.png"); 
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .social-container-speaker {
