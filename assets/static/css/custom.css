@@ -149,7 +149,14 @@
 .text-center { text-align: center; }
 
 .background-speakers {
-  background:url("images/space-background.jpg"); 
+  background:url("../images/speaker-background.png"); 
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.background-keynotes {
+  background:url("../images/keynotes-background.png"); 
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center top;
