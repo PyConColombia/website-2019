@@ -14,9 +14,10 @@
   <div class="col-md-8 col-sm-8 col-xs-12">
     <div class="speaker-details text-left">
       <h1 class="speaker-name">{{ complete_name }}</h1>
-      <h2 class="speaker-info">{{ speaker.position }}</h2>
+      <h2 class="speaker-info-2">{{ speaker.position_2 }}</h2>
+      <h2 class="speaker-info-1">{{ speaker.position_1 }}</h2>
       {% if speaker.twitter_handle %}
-      <h3 class="speaker-info">@{{ speaker.twitter_handle }}</h3>
+      <h3 class="speaker-info-1">@{{ speaker.twitter_handle }}</h3>
       {% endif %}
     </div>
   </div>
@@ -27,9 +28,10 @@
 <div class="col-md-8 col-sm-8 col-xs-12">
   <div class="speaker-details text-right">
     <h1 class="speaker-name">{{ complete_name }}</h1>
-    <h2 class="speaker-info">{{ speaker.position }}</h2>
+    <h2 class="speaker-info-2">{{ speaker.position_2 }}</h2>
+    <h2 class="speaker-info-1">{{ speaker.position_1 }}</h2>
     {% if speaker.twitter_handle %}
-    <h3 class="speaker-info">@{{ speaker.twitter_handle }}</h3>
+    <h3 class="speaker-info-1">@{{ speaker.twitter_handle }}</h3>
     {% endif %}
   </div>
 </div>
