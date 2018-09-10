@@ -41,7 +41,7 @@
   letter-spacing:0px;
   line-height:1.2;
   height:43px;
-  margin: 5px 20px;
+  margin: 5px 0px;
   position:relative;
   text-align:center;
   width: 100%;
@@ -66,11 +66,20 @@
   letter-spacing:0px;
   line-height:1.2;
   height:43px;
-  margin: 5px 20px;
+  margin: 5px 0;
   padding: 0 20px;
   position:relative;
   width: 100%;
   z-index:10
+}
+
+#mc_embed_signup div.mce_inline_error {
+  margin: 0 0 1em 0;
+  padding: 5px 10px;
+  background-color: #6B0505;
+  /* font-weight: bold; */
+  z-index: 1;
+  color: #fff;
 }
 
 .footer {
@@ -190,3 +199,66 @@
   margin: 0 .5em;
 }
 
+
+@media (max-width: 576px) {
+  .background-speakers, .intro-background, .keynotes-background, .subscribe-background, .footer-background {
+    background-size: auto 100%;
+  }
+
+  .speaker-image-container {
+    padding: 1.5em;
+  }
+
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .background-speakers, .intro-background, .keynotes-background, .subscribe-background, .footer-background {
+    background-size: auto 100%;
+  }
+
+  .speaker-image-container {
+    padding: 0.5em;
+  }
+
+  .speaker-details {
+    padding: 2em 0;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) { 
+  .speaker-image-container {
+    padding: 0em;
+  }
+
+  .speaker-details {
+    padding: 1em 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) { 
+
+}

@@ -2,7 +2,7 @@
 
 {% macro speaker_left(speaker, index) %}
 {%- set complete_name = speaker.name + " " + speaker.last_name -%}
-  <div class="col-md-4 col-sm-6 col-xs-12">
+  <div class="col-md-4 col-sm-4 col-xs-12">
     <div class="speaker-image-container">
       <a href="{{ speaker | url }}">
         <img class="speaker-image img-fluid" id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image
@@ -11,7 +11,7 @@
       </a>
     </div>
   </div>
-  <div class="col-md-8 col-sm-6 col-xs-12">
+  <div class="col-md-8 col-sm-8 col-xs-12">
     <div class="speaker-details text-left">
       <h1 class="speaker-name">{{ complete_name }}</h1>
       <h2 class="speaker-info">{{ speaker.position }}</h2>
@@ -24,7 +24,7 @@
 
 {% macro speaker_right(speaker, index) %}
 {%- set complete_name = speaker.name + " " + speaker.last_name -%}
-<div class="col-md-8 col-sm-6 col-xs-12">
+<div class="col-md-8 col-sm-8 col-xs-12">
   <div class="speaker-details text-right">
     <h1 class="speaker-name">{{ complete_name }}</h1>
     <h2 class="speaker-info">{{ speaker.position }}</h2>
@@ -33,7 +33,7 @@
     {% endif %}
   </div>
 </div>
-<div class="col-md-4 col-sm-6 col-xs-12">
+<div class="col-md-4 col-sm-4 col-xs-12">
   <div class="speaker-image-container">
     <a href="{{ speaker | url }}">
       <img class="speaker-image img-fluid" id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image
