@@ -159,6 +159,16 @@
   background-position: center top;
 }
 
+.background-code{
+  background:url("../images/code-background.png"); 
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: #fff;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .background-keynotes {
   background:url("../images/keynotes-background.png"); 
   background-size: 100% 100%;
@@ -208,6 +218,17 @@
   color: #1c2f61;
   border-radius: 0.8em;
   margin: 0 .5em;
+}
+
+.background-code .code-title, .background-code h2 {
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 5px;
+  margin-bottom: 80px;
+}
+
+.background-code h2 {
+  margin: 40px 0;
 }
 
 
