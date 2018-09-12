@@ -1,4 +1,16 @@
-{% extends "layout.html" %} {%- from "macros/speakers.html" import render_keynote_speaker -%} {%- block body -%}
+{%- from "macros/translation.html" import transbag -%}
+
+{% extends "layout.html" %} 
+{%- from "macros/speakers.html" import render_keynote_speaker -%}
+
+{%- set t_intro_date = transbag('translate', this.alt, 'intro_date') -%}
+{%- set t_intro_message = transbag('translate', this.alt, 'intro_message') -%}
+{%- set t_button_talks = transbag('translate', this.alt, 'button_talks') -%}
+{%- set t_button_workshops = transbag('translate', this.alt, 'button_workshops') -%}
+{%- set t_footer_message = transbag('translate', this.alt, 'footer_message') -%}
+
+
+{%- block body -%}
 
 <body>
     <main>
@@ -8,11 +20,11 @@
           <div class="planet-left"></div>
           <div class="planet-right"></div>
           <div class="commet"></div>
-          <div class="date">February<br>2019</div>
+          <div class="date">{{ t_intro_date }}<br />2019</div>
           {%- if 'speakers-call' in this.sections -%}
           <div>
             <p class="cfp-message">
-              Call for speakers
+              {{ t_intro_message }}
             </p>
             <div class="cfp-message" id="alejo">
               <div id="clockdiv">
@@ -36,10 +48,10 @@
             </div>
             <div class="row justify-content-center">
               <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
-                <span>Talks</span>
+                <span>{{ t_button_talks }}</span>
               </a>
               <a href="https://www.papercall.io/pycon-colombia-2019-workshops" target="_blank" class="apply-btn">
-                <span>Workshops</span>
+                <span>{{ t_button_workshops }}</span>
               </a>
             </div>
           </div>
@@ -73,7 +85,7 @@
         <section class="footer">
           <div class="apply-content">
             <p class="footer-text">
-              Made with love in Planet Earth
+              {{ t_footer_message }}
             </p>
             <div class="planet-earth-content">
               <div class="planet-earth-glow"></div>

@@ -7,15 +7,15 @@ url_style = absolute
 lektor-webpack-support = 0.3
 lektor-markdown-header-anchors = 0.1
 
-[alternatives.en]
-name = English
-primary = yes
-locale = en
-
 [alternatives.es]
 name = Español
-url_prefix = /es/
+primary = yes
 locale = es
+
+[alternatives.en]
+name = English
+url_prefix = /en/
+locale = en
 
 [servers.develop]
 name = Develop
