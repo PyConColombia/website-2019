@@ -4,6 +4,10 @@
 {%- from "macros/speakers.html" import render_keynote_speaker -%}
 
 {%- set t_intro_date = transbag('translate', this.alt, 'intro_date') -%}
+{%- set t_intro_clock_days = transbag('translate', this.alt, 'intro_clock_days') -%}
+{%- set t_intro_clock_hours = transbag('translate', this.alt, 'intro_clock_hours') -%}
+{%- set t_intro_clock_minutes = transbag('translate', this.alt, 'intro_clock_minutes') -%}
+{%- set t_intro_clock_seconds = transbag('translate', this.alt, 'intro_clock_seconds') -%}
 {%- set t_intro_message = transbag('translate', this.alt, 'intro_message') -%}
 {%- set t_button_talks = transbag('translate', this.alt, 'button_talks') -%}
 {%- set t_button_workshops = transbag('translate', this.alt, 'button_workshops') -%}
@@ -22,27 +26,27 @@
           <div class="commet"></div>
           <div class="date">{{ t_intro_date }}<br />2019</div>
           {%- if 'speakers-call' in this.sections -%}
-          <div>
+          <div id="cfp">
             <p class="cfp-message">
               {{ t_intro_message }}
             </p>
-            <div class="cfp-message" id="alejo">
+            <div class="cfp-message">
               <div id="clockdiv">
                 <div>
                   <span class="days"></span>
-                  <div class="smalltext">Days</div>
+                  <div class="smalltext">{{ t_intro_clock_days }}</div>
                 </div>
                 <div>
                   <span class="hours"></span>
-                  <div class="smalltext">Hours</div>
+                  <div class="smalltext">{{ t_intro_clock_hours }}</div>
                 </div>
                 <div>
                   <span class="minutes"></span>
-                  <div class="smalltext">Minutes</div>
+                  <div class="smalltext">{{ t_intro_clock_minutes }}</div>
                 </div>
                 <div>
                   <span class="seconds"></span>
-                  <div class="smalltext">Seconds</div>
+                  <div class="smalltext">{{ t_intro_clock_seconds }}</div>
                 </div>
               </div>
             </div>
