@@ -1,9 +1,25 @@
 {%- set base_url = '/'|url(alt='es') -%}
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+  <!-- Language -->
+  <script>
+    let userLang = navigator.language || navigator.userLanguage;
+    userLang = userLang.split('-')[0];
+    let url = window.location.pathname;
+    const realUrl = url.replace('/en/', '');
+
+    const isEn = (userLang === 'en' || userLang === 'fr' || userLang === 'pt' || userLang === 'ru');
+
+    if (isEn && !url.includes('/en/')) {
+      window.location.href = '/en' + realUrl;
+    } else if (!isEn && url.includes('/en/')) {
+      window.location.href = '/' + realUrl;
+    }
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105321720-2"></script>
   <script>
@@ -81,12 +97,6 @@
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- <script src="js/libs/wow.js"></script> -->
-<!-- <script src="js/libs/dialog-polyfill.js"></script> -->
-<script>
-  $(document).ready(function () {
-  });
-</script>
 </body>
 
 </html>
