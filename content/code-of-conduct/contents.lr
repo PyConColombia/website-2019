@@ -1,34 +1,37 @@
 _model: page
 ---
-title: Code of Conduct
+title: Código de Conducta
 ---
 body:
 
-**PyCon Colombia** is a conference organized by the Python Colombia community created for the dissemination of the Python programming language in our country and Latin America, with the objective of sharing knowledge and expanding the spaces for interaction and collaboration of its members. We value the participation of each member of the community and we want each participant in the conference to enjoy and gain valuable experience full of knowledge and innovation. According to this code, all participants including organizers, speakers, volunteers and attendees are expected to show respect and courtesy among themselves in all aspects of the conference, its organization and the events taking place in the context of the conference. To be more explicit than is expected of any person participating in the event and the global and local community of Python and Pycon Colombia are required to comply with the following Code of Conduct. The organizers of this event and any event in the future are subject to enforce following and complying with international and Colombian laws and the spirit of the International Python Society (Python Software Foundation
+**PyCon Colombia** es una conferencia organizada por la comunidad Python Colombia creada para la difusión del lenguaje de programación Python en nuestro país y Latinoamérica, con el objetivo de compartir conocimiento y ampliar los espacios de interacción y colaboración de sus miembros. Valoramos la participación de cada miembro de la comunidad y deseamos que cada participante de la conferencia disfrute y obtenga una experiencia valiosa llena de conocimiento e innovación. De acuerdo con este código, se espera que todos los participantes incluidos los organizadores, ponentes, voluntarios y asistentes muestren respeto y cortesía entre ellos en todos los aspectos de la conferencia, su organización y los eventos que se lleven en el contexto de la conferencia. Para ser más explícitos de lo que se espera de cualquier persona participante del evento y la comunidad a nivel Global y local de Python y Pycon Colombia están requeridos a cumplir siguiendo el siguiente Código de Conducta. Los organizadores de este evento y cualquier evento en el futuro están sujetos a hacer cumplir siguiendo y acatando las leyes internacionales y colombianas y el espíritu de la Sociedad International de Python (Python Software Foundation)
 
 
-## Code of Conduct Content
+## Contenido del Código de Conducta
 
-PyCon Colombia is dedicated to providing a conference free of harassment for all members, regardless of gender, sexual orientation, physical abilities, physical appearance, race or religion. No abuse will be tolerated by any conference participant. All communications should be focused on a professional audience including people with different backgrounds and experiences. Sexual language is not appropriate for any event organized under our rules, including talks.
-Our goal as a community recommends:
+PyCon Colombia está dedicado a proveer una conferencia libre de acoso para todos sus miembros, independiente de su género, orientación sexual, habilidades físicas, apariencia física, raza o religión. No se tolerará ningún abuso por parte de cualquier participante de la conferencia. Todas las comunicaciones deben estar enfocadas a una audiencia profesional incluyendo personas con diferentes currículos y experiencias. El lenguaje sexual no es apropiado para ningún evento organizado bajo nuestras normas, incluyendo las charlas.
 
-Be kind to other members.
-Do not insult or demean the other participants.
-Behave professionally.
-Remember that any conduct of harassment, sexism, racism or political division or of any instance, is not appropriate for participation within the conference or community
-Not attending the conference under the influence of alcoholic beverages.
-Participants of our community of any type (Organizers, Speakers, Volunteers and Assistants) who do not comply with any of these rules will be expelled from the conference without any reimbursement at the discretion of the organizing committee of the conference.
+Nuestro objetivo como comunidad recomienda:
 
-Thank you for being subject to these terms and welcome to PyCon Colombia. This is a friendly event for our entire community. 
+* Ser bondadoso con otros miembros.
+* No insultar o demeritar a los otros participantes.
+* Comportarse profesionalmente.
+* Recordar que cualquier conducta de acoso, sexismo, racismo o división política o de cualquier instancia, no es apropiada para la participación dentro de la conferencia o comunidad
+* No asistir a la conferencia bajo influencia de bebidas alcohólicas.
+* Participantes de nuestra comunidad de cualquier tipo (Organizadores, Ponentes, Voluntarios y Asistentes) que no cumplan con cualquiera de estas normas, serán expulsados de la conferencia sin ningún reembolso bajo la discreción del comité organizador de la conferencia.
 
-## Contact Information
+Gracias por hacerse sujeto a estos términos y bienvenido a PyCon Colombia. Este es un evento amistoso para toda nuestra comunidad.
 
-If you have been harassed, or realize that someone else is being harassed or is violating the International Terms of the PyCon Colombia or have any problems, please contact our organizers:
+## Información de Contacto
+
+Si usted ha sido acosado, o se da cuenta de que alguien más está siendo acosado o está violando los términos Internacionales de la PyCon Colombia o tiene algún problema, por favor contacte nuestros organizadores:
 
 * John Jairo Roa: +57 320-252-4157
 * Johanna Sanchez: +593 96-733-4048​⁠​
 * Gonzalo Peña-Castellanos: +57 312-381-5489
 
-Our team at the conference will also be available to collaborate and contact local security or assist you to ensure your safety. We value your presence in our events.
+Nuestro equipo en la conferencia también estará disponible para colaborar y contactar la seguridad local ó asistirlo, para garantizar su seguridad. Nosotros valoramos su presencia en nuestros eventos.
 
-In case of any violation of the terms of this code of conduct by the organizers please contact the main organizer of the conference, John Roa or as a last resort to the PSF.
+En caso de alguna violación a los términos de este código de conducta por parte de los organizadores por favor contactar el organizador principal de la conferencia, John Roa o como última instancia a la PSF.
+---
+_slug: codigo-de-conducta
