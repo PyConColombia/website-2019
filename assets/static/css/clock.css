@@ -1,4 +1,4 @@
-#clockdiv {
+#clockdiv, #clockEventdiv {
   font-family: sans-serif;
   color: #fff;
   display: inline-block;
@@ -7,14 +7,14 @@
   font-size: 30px;
 }
 
-#clockdiv > div {
+#clockdiv > div, #clockEventdiv > div {
   padding: 10px;
   margin: 5px 0;
   height: auto;
   display: inline-block;
 }
 
-#clockdiv div > span {
+#clockdiv div > span, #clockEventdiv div > span {
   font-size: 1.5em;
   padding: 20px 10px;
   background: #1a237e;

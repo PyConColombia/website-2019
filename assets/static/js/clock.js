@@ -40,3 +40,6 @@ function initializeClock(id, endtime) {
 
 const deadline = new Date('2018-10-01 00:00:00');
 initializeClock('clockdiv', deadline);
+
+const deadlineEvent = new Date('2019-02-08 08:00:00');
+initializeClock('clockEventdiv', deadlineEvent);
