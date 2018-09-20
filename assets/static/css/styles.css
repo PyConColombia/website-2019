@@ -55,3 +55,7 @@
   background-color: rgba(0, 0, 0, 0.4);
   height: 70px;
 }
+
+.navbar-toggler-icon {
+  color: #fff;
+}
