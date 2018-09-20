@@ -1,11 +1,22 @@
 {%- set base_url = '/'|url(alt='es') -%}
 
+{%- from "macros/translation.html" import transbag -%}
+
+{%- macro menu_item(identifier) -%}
+{% set identifier_url = '/' + identifier %}
+{% set trans_url = identifier_url|url(alt=this.alt) %}
+{% set this_is_child = this.is_child_of(identifier_url) %}
+<li class="nav-item{% if this_is_child %} active{% endif %}">
+  <a class="nav-link" href="{{ trans_url }}">{{ transbag('menu', this.alt, identifier) }}</a>
+</li>
+{%- endmacro -%}
+
 <!DOCTYPE html>
 <html>
 
 <head>
   <!-- Language -->
-  <script>
+  <!-- <script>
     let userLang = navigator.language || navigator.userLanguage;
     userLang = userLang.split('-')[0];
     let url = window.location.pathname;
@@ -18,7 +29,7 @@
     } else if (!isEn && url.includes('/en/')) {
       window.location.href = '/' + realUrl;
     }
-  </script>
+  </script> -->
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105321720-2"></script>
@@ -90,6 +101,35 @@
   <link rel="stylesheet" href="{{ base_url }}static/css/custom.css">
   <link rel="stylesheet" href="{{ base_url }}static/css/clock.css">
 </head>
+
+<nav class="navbar fixed-top navbar-expand-lg">
+  <a class="navbar-brand" href="{{ '/'|url(alt=this.alt) }}">
+    <img src="{{ base_url }}static/css/images/logo.svg" alt="" width="auto" height="50">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- {{ menu_item('venue') }} -->
+      {{ menu_item('keynotes') }}
+      <!-- {{ menu_item('speakers') }}
+      {{ menu_item('talks') }}
+      {{ menu_item('sponsors') }}
+      {{ menu_item('volunteers') }}
+      {{ menu_item('team') }} -->
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      {% if this.alt == 'en' %}
+      <a href="{{ '.'|url(alt='es') }}">Español</a>
+      {% else %}
+      <a href="{{ '.'|url(alt='en') }}">English</a>
+      {% endif %}
+    </form>
+  </div>
+</nav>
 
 {%- block body -%}{%- endblock -%}
 
