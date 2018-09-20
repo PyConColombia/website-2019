@@ -37,6 +37,7 @@
   height: 1px;
   background: #fff;
   max-width: 500px;
+  width: 95%;
 }
 
 .header-content .ticket {

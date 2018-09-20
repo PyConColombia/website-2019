@@ -3,5 +3,7 @@ $(document).ready(function () {
 
   if (new Date > cfp) {
     $('#cfp').remove();
-  } 
+  } else {
+    $('#clockEvent').remove();
+  }
 });
