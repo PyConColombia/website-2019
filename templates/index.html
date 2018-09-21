@@ -18,130 +18,110 @@
 
 {%- block body -%}
 
-<body>
-    <main>
-      <div class="container-fluid container-no-padding header-content intro-background">
-        <div class="section">
-          <div class="logo"></div>
-          <div class="planet-left"></div>
-          <div class="planet-right"></div>
-          <div class="commet"></div>
-          <div class="location">{{ t_intro_location }}</div>
-          <hr />
-          <div class="date">{{ t_intro_date }} 2019</div>
-          <div class="place">{{ t_intro_place }}</div>
-          <div class="text-center ticket">
-            <a href="{{ this.tickets_link }}" target="blank_">
-              <img src="{{ base_url }}static/images/boleta.svg" style="max-width: 350px; width: 95%;" class="centered" alt="">
-            </a>
-          </div>
-          {%- if 'speakers-call' in this.sections -%}
-          <div id="cfp">
-            <p class="cfp-message">
-              {{ t_intro_message }}
-            </p>
-            <div class="cfp-message">
-              <div id="clockdiv">
-                <div>
-                  <span class="days"></span>
-                  <div class="smalltext">{{ t_intro_clock_days }}</div>
-                </div>
-                <div>
-                  <span class="hours"></span>
-                  <div class="smalltext">{{ t_intro_clock_hours }}</div>
-                </div>
-                <div>
-                  <span class="minutes"></span>
-                  <div class="smalltext">{{ t_intro_clock_minutes }}</div>
-                </div>
-                <div>
-                  <span class="seconds"></span>
-                  <div class="smalltext">{{ t_intro_clock_seconds }}</div>
-                </div>
-              </div>
-              <div class="row justify-content-center">
-                <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
-                  <span>{{ t_button_talks }}</span>
-                </a>
-                <a href="https://www.papercall.io/pycon-colombia-2019-workshops" target="_blank" class="apply-btn">
-                  <span>{{ t_button_workshops }}</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div id="clockEvent">
-            <p class="cfp-message">
-              {{ t_intro_message }}
-            </p>
-            <div class="cfp-message">
-              <div id="clockEventdiv">
-                <div>
-                  <span class="days"></span>
-                  <div class="smalltext">{{ t_intro_clock_days }}</div>
-                </div>
-                <div>
-                  <span class="hours"></span>
-                  <div class="smalltext">{{ t_intro_clock_hours }}</div>
-                </div>
-                <div>
-                  <span class="minutes"></span>
-                  <div class="smalltext">{{ t_intro_clock_minutes }}</div>
-                </div>
-                <div>
-                  <span class="seconds"></span>
-                  <div class="smalltext">{{ t_intro_clock_seconds }}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {%- endif -%}
+  <main>
+    <div class="container-fluid container-no-padding header-content intro-background">
+      <div class="section">
+        <div class="logo"></div>
+        <div class="planet-left"></div>
+        <div class="planet-right"></div>
+        <div class="commet"></div>
+        <div class="location">{{ t_intro_location }}</div>
+        <hr />
+        <div class="date">{{ t_intro_date }} 2019</div>
+        <div class="place">{{ t_intro_place }}</div>
+        <div class="text-center ticket">
+          <a href="{{ this.tickets_link }}" target="blank_">
+            <img src="{{ base_url }}static/images/boleta.svg" style="max-width: 350px; width: 95%;" class="centered" alt="">
+          </a>
         </div>
+        {%- if 'speakers-call' in this.sections -%}
+        <div id="cfp">
+          <p class="cfp-message">
+            {{ t_intro_message }}
+          </p>
+          <div class="cfp-message">
+            <div id="clockdiv">
+              <div>
+                <span class="days"></span>
+                <div class="smalltext">{{ t_intro_clock_days }}</div>
+              </div>
+              <div>
+                <span class="hours"></span>
+                <div class="smalltext">{{ t_intro_clock_hours }}</div>
+              </div>
+              <div>
+                <span class="minutes"></span>
+                <div class="smalltext">{{ t_intro_clock_minutes }}</div>
+              </div>
+              <div>
+                <span class="seconds"></span>
+                <div class="smalltext">{{ t_intro_clock_seconds }}</div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
+                <span>{{ t_button_talks }}</span>
+              </a>
+              <a href="https://www.papercall.io/pycon-colombia-2019-workshops" target="_blank" class="apply-btn">
+                <span>{{ t_button_workshops }}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="clockEvent">
+          <p class="cfp-message">
+            {{ t_intro_message }}
+          </p>
+          <div class="cfp-message">
+            <div id="clockEventdiv">
+              <div>
+                <span class="days"></span>
+                <div class="smalltext">{{ t_intro_clock_days }}</div>
+              </div>
+              <div>
+                <span class="hours"></span>
+                <div class="smalltext">{{ t_intro_clock_hours }}</div>
+              </div>
+              <div>
+                <span class="minutes"></span>
+                <div class="smalltext">{{ t_intro_clock_minutes }}</div>
+              </div>
+              <div>
+                <span class="seconds"></span>
+                <div class="smalltext">{{ t_intro_clock_seconds }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {%- endif -%}
       </div>
-      <div class="container-fluid container-no-padding header-content keynotes-background">
-        <div class="section">
-          <div class="apply-content">
-            <div class="col-md-8 col-sm-10 col-xs-10 mx-auto">
-              {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish) %}
+    </div>
+    <div class="container-fluid container-no-padding header-content keynotes-background">
+      <div class="section">
+        <div class="apply-content">
+          <div class="col-md-8 col-sm-10 col-xs-10 mx-auto">
+            {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish) %}
 
-              <h1 class="title-subscribe">KEY NOTES</h1>
-              <div class="commet"></div>
-              <div class="form-container">
+            <h1 class="title-subscribe">KEY NOTES</h1>
+            <div class="commet"></div>
+            <div class="form-container">
 
-                {% for speaker in speakers %} {{ render_keynote_speaker(speaker, index=loop.index, details=True) }} {% endfor %}
-              </div>
+              {% for speaker in speakers %} {{ render_keynote_speaker(speaker, index=loop.index, details=True) }} {% endfor %}
             </div>
           </div>
         </div>
       </div>
-      <div class="container-fluid container-no-padding header-content subscribe-background">
-        <div class="section">
-          <div class="apply-content">
-            <div class="col-md-8 col-sm-12 col-xs-12 mx-auto">
-              {% include 'partials/_mailchimp.html' %}
-            </div>
+    </div>
+    <div class="container-fluid container-no-padding header-content subscribe-background">
+      <div class="section">
+        <div class="apply-content">
+          <div class="col-md-8 col-sm-12 col-xs-12 mx-auto">
+            {% include 'partials/_mailchimp.html' %}
           </div>
         </div>
-        <section class="footer">
-          <div class="apply-content">
-            <p class="footer-text">
-              {{ t_footer_message }}
-            </p>
-            <div class="planet-earth-content">
-              <div class="planet-earth-glow"></div>
-              <div class="planet-earth-glow"></div>
-              <div class="planet-earth-top-glow"></div>
-              <div class="planet-earth-top-glow"></div>
-              <div class="planet-earth"></div>
-            </div>
-            <div class="social-icons-container">
-              <a href="https://www.twitter.com/pyconcolombia/" target="_blank"><div class="social-icon social-twitter"></div></a>
-              <a href="https://www.facebook.com/pyconcolombia/" target="_blank"><div class="social-icon social-facebook"></div></a>
-              <a href="https://www.instagram.com/pyconcolombia/" target="_blank"><div class="social-icon social-instagram"></div></a>
-              <a href="https://medium.com/@pyconcolombia" target="_blank"><div class="social-icon social-medium"></div></a>
-            </div>
-          </div>
-        </section>
       </div>
-    </main>
-  <script src="{{ base_url }}static/js/clock.js"></script>
+      {% include 'partials/_footer.html' %}
+    </div>
+  </main>
+<script src="{{ base_url }}static/js/clock.js"></script>
 {%- endblock -%}
