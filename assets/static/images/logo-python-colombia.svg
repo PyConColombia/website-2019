@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="500.00003"
+   height="299.55402"
+   viewBox="0 0 500.00002 299.55403"
+   id="svg5069"
+   version="1.1"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   sodipodi:docname="logo-python-colombia.svg"
+   inkscape:export-filename="/Users/gpena-castellanos/Desktop/pythoncolombia.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs5071">
+    <marker
+       orient="auto"
+       overflow="visible"
+       markerHeight="1"
+       markerWidth="1"
+       viewBox="0 0 1 1"
+       markerUnits="strokeWidth"
+       id="DefaultArrow2"
+       style="overflow:visible">
+      <!-- REF_ARROW_STRAIGHT (-2) -->
+      <g
+         id="g5467"
+         transform="scale(0.00925926)">
+        <!-- 1/108 -->
+        <path
+           id="path5469"
+           d="M -9,54 V -54 L 117,0 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </marker>
+    <marker
+       orient="auto"
+       overflow="visible"
+       markerHeight="1"
+       markerWidth="1"
+       viewBox="0 0 1 1"
+       markerUnits="strokeWidth"
+       id="DefaultArrow3"
+       style="overflow:visible">
+      <!-- REF_ARROW_ANGLED -->
+      <g
+         id="g5472"
+         transform="scale(0.00925926)">
+        <path
+           id="path5474"
+           d="M -27,54 -9,0 -27,-54 135,0 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </marker>
+    <marker
+       orient="auto"
+       overflow="visible"
+       markerHeight="1"
+       markerWidth="1"
+       viewBox="0 0 1 1"
+       markerUnits="strokeWidth"
+       id="DefaultArrow4"
+       style="overflow:visible">
+      <!-- REF_ARROW_ROUNDED -->
+      <g
+         id="g5477"
+         transform="scale(0.00925926)">
+        <path
+           id="path5479"
+           d="m -9,0 v -45 c 0,-6.708 11.808,-11.58 18,-9 l 108,45 c 3.916,1.631 9,4.758 9,9 0,4.242 -5.084,7.369 -9,9 L 9,54 C 2.808,56.58 -9,51.708 -9,45 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </marker>
+    <marker
+       orient="auto"
+       overflow="visible"
+       markerHeight="1"
+       markerWidth="1"
+       viewBox="0 0 1 1"
+       markerUnits="strokeWidth"
+       id="DefaultArrow5"
+       style="overflow:visible">
+      <!-- REF_ARROW_SPOT -->
+      <g
+         id="g5482"
+         transform="scale(0.00925926)">
+        <path
+           id="path5484"
+           d="M -54,0 C -54,29.807 -29.807,54 0,54 29.807,54 54,29.807 54,0 54,-29.807 29.807,-54 0,-54 -29.807,-54 -54,-29.807 -54,0 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </marker>
+    <marker
+       orient="auto"
+       overflow="visible"
+       markerHeight="1"
+       markerWidth="1"
+       viewBox="0 0 1 1"
+       markerUnits="strokeWidth"
+       id="DefaultArrow6"
+       style="overflow:visible">
+      <!-- REF_ARROW_DIAMOND -->
+      <g
+         id="g5487"
+         transform="scale(0.00925926)">
+        <path
+           id="path5489"
+           d="M -63,0 0,63 63,0 0,-63 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </marker>
+    <marker
+       orient="auto"
+       overflow="visible"
+       markerHeight="1"
+       markerWidth="1"
+       viewBox="0 0 1 1"
+       markerUnits="strokeWidth"
+       id="DefaultArrow7"
+       style="overflow:visible">
+      <!-- REF_ARROW_FEATHER -->
+      <g
+         id="g5492"
+         transform="scale(0.00925926)">
+        <path
+           id="path5494"
+           d="m 18,-54 h 90 L 63,0 108,54 H 18 L -36,0 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </marker>
+    <marker
+       orient="auto"
+       overflow="visible"
+       markerHeight="1"
+       markerWidth="1"
+       viewBox="0 0 1 1"
+       markerUnits="strokeWidth"
+       id="DefaultArrow8"
+       style="overflow:visible">
+      <!-- REF_ARROW_FEATHER2 -->
+      <g
+         id="g5497"
+         transform="scale(0.00925926)">
+        <path
+           id="path5499"
+           d="m -36,0 54,-54 h 36 l -36,36 h 9 l 36,-36 h 36 l -36,36 h 9 l 36,-36 h 36 L 90,0 144,54 H 108 L 72,18 H 63 L 99,54 H 63 L 27,18 H 18 L 54,54 H 18 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </marker>
+    <marker
+       orient="auto"
+       overflow="visible"
+       markerHeight="1"
+       markerWidth="1"
+       viewBox="0 0 1 1"
+       markerUnits="strokeWidth"
+       id="DefaultArrow9"
+       style="overflow:visible">
+      <!-- REF_ARROW_HOLLOWDIAMOND -->
+      <g
+         id="g5502"
+         transform="scale(0.00925926)">
+        <path
+           id="path5504"
+           d="M 0,45 -45,0 0,-45 45,0 Z M 0,63 -63,0 0,-63 63,0 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </marker>
+    <filter
+       id="StainedFilter">
+      <feBlend
+         id="feBlend5507"
+         result="blend"
+         in="SourceGraphic"
+         in2="BackgroundImage"
+         mode="multiply" />
+      <feComposite
+         id="feComposite5509"
+         result="comp"
+         operator="in"
+         in2="SourceAlpha"
+         in="blend" />
+    </filter>
+    <filter
+       id="BleachFilter">
+      <feBlend
+         id="feBlend5512"
+         result="blend"
+         in="SourceGraphic"
+         in2="BackgroundImage"
+         mode="screen" />
+      <feComposite
+         id="feComposite5514"
+         result="comp"
+         operator="in"
+         in2="SourceAlpha"
+         in="blend" />
+    </filter>
+    <filter
+       id="InvertTransparencyBitmapFilter">
+      <feComponentTransfer
+         id="feComponentTransfer5517">
+        <feFuncR
+           id="feFuncR5519"
+           offset="-0.055"
+           exponent=".416666666"
+           amplitude="1.055"
+           type="gamma" />
+        <feFuncG
+           id="feFuncG5521"
+           offset="-0.055"
+           exponent=".416666666"
+           amplitude="1.055"
+           type="gamma" />
+        <feFuncB
+           id="feFuncB5523"
+           offset="-0.055"
+           exponent=".416666666"
+           amplitude="1.055"
+           type="gamma" />
+      </feComponentTransfer>
+      <feComponentTransfer
+         id="feComponentTransfer5525">
+        <feFuncR
+           id="feFuncR5527"
+           intercept="1"
+           slope="-1"
+           type="linear" />
+        <feFuncG
+           id="feFuncG5529"
+           intercept="1"
+           slope="-1"
+           type="linear" />
+        <feFuncB
+           id="feFuncB5531"
+           intercept="1"
+           slope="-1"
+           type="linear" />
+        <feFuncA
+           id="feFuncA5533"
+           intercept="0"
+           slope="1"
+           type="linear" />
+      </feComponentTransfer>
+      <feComponentTransfer
+         id="feComponentTransfer5535">
+        <feFuncR
+           id="feFuncR5537"
+           offset="0"
+           exponent="2.4"
+           amplitude="1"
+           type="gamma" />
+        <feFuncG
+           id="feFuncG5539"
+           offset="0"
+           exponent="2.4"
+           amplitude="1"
+           type="gamma" />
+        <feFuncB
+           id="feFuncB5541"
+           offset="0"
+           exponent="2.4"
+           amplitude="1"
+           type="gamma" />
+      </feComponentTransfer>
+    </filter>
+    <radialGradient
+       gradientTransform="matrix(1,0,0,0.266735,719.664,671.249)"
+       r="297.93201"
+       cy="0"
+       cx="0"
+       gradientUnits="userSpaceOnUse"
+       id="RadialGradient">
+      <stop
+         id="stop5544"
+         stop-color="#727272"
+         offset="0" />
+      <stop
+         id="stop5546"
+         stop-color="#000000"
+         offset="1" />
+    </radialGradient>
+    <linearGradient
+       gradientTransform="matrix(15.153043,-13.161757,13.161757,15.153043,-45343.597,3861.6744)"
+       y2="0"
+       x2="673.55499"
+       y1="0"
+       x1="0"
+       gradientUnits="userSpaceOnUse"
+       id="LinearGradient">
+      <stop
+         id="stop5549"
+         stop-color="#5a9fd4"
+         offset="0" />
+      <stop
+         id="stop5551"
+         stop-color="#306998"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(-11.511126,16.442035,-16.442035,-11.511126,-33705.246,-12371.66)"
+       y2="0"
+       x2="316.62"
+       y1="0"
+       x1="0"
+       gradientUnits="userSpaceOnUse"
+       id="LinearGradient_1">
+      <stop
+         id="stop5554"
+         stop-color="#ffd43b"
+         offset="0" />
+      <stop
+         id="stop5556"
+         stop-color="#ffe873"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(20.071038,0,0,20.071038,26805.34,-12438.376)"
+       y2="0"
+       x2="1545.6071"
+       y1="0"
+       x1="0"
+       gradientUnits="userSpaceOnUse"
+       id="LinearGradient_2">
+      <stop
+         id="stop5559"
+         stop-color="#4c8cbf"
+         offset="0" />
+      <stop
+         id="stop5561"
+         stop-color="#306898"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(2.882614,2.503805,2.503805,-2.882614,-9030.7155,209.72562)"
+       y2="0"
+       x2="673.55499"
+       y1="0"
+       x1="0"
+       gradientUnits="userSpaceOnUse"
+       id="LinearGradient-5">
+      <stop
+         id="stop5549-6"
+         stop-color="#5a9fd4"
+         offset="0" />
+      <stop
+         id="stop5551-2"
+         stop-color="#306998"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(-2.1897999,-3.1278231,-3.1278231,2.1897999,-6816.7134,3297.847)"
+       y2="0"
+       x2="316.62"
+       y1="0"
+       x1="0"
+       gradientUnits="userSpaceOnUse"
+       id="LinearGradient_1-9">
+      <stop
+         id="stop5554-1"
+         stop-color="#ffd43b"
+         offset="0" />
+      <stop
+         id="stop5556-2"
+         stop-color="#ffe873"
+         offset="1" />
+    </linearGradient>
+    <clipPath
+       id="clipPath6261"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         inkscape:connector-curvature="0"
+         id="path6263"
+         d="m 3773.33,3626.66 -1868,1983.14 c 243.93,158.73 492.7,224.21 754.36,224.21 742.84,0 1589.86,-527.58 2726.9,-946.92 l -18.24,-114.67 c -144.03,-2.73 -282.9,-21.47 -414.62,-53.89 l -64.88,46.05 58.72,-47.58 c -290.67,-72.62 -546.39,-212.15 -746.92,-394.35 -336.01,-54.34 -560.75,-151.81 -560.75,-262.78 0,-67.43 83.48,-129.91 224.81,-180.72 -39.44,-81.34 -70.2,-165.87 -91.38,-252.49 m 2214.99,1060.31 c -199.98,58.8 -395.78,85.8 -582.99,85.8 -7.87,0 -15.63,-0.05 -23.47,-0.14 l 10.56,112.31 c 190.19,-70.02 388.63,-137.03 595.9,-197.97" />
+    </clipPath>
+    <clipPath
+       id="clipPath6277"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         inkscape:connector-curvature="0"
+         id="path6279"
+         d="M 1905.39,5609.8 C 3425.41,6514.61 5253.38,6037.13 5988.3,4687 4977.95,5082.16 3976.29,4604.67 3751.02,3764.2 3135.8,4379.4 2520.59,4994.61 1905.39,5609.8" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.52112794"
+     inkscape:cx="411.02019"
+     inkscape:cy="85.401252"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3513"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     showguides="false"
+     units="px" />
+  <metadata
+     id="metadata5074">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(2486.0668,-1726.6179)">
+    <g
+       id="g3471"
+       transform="matrix(4.0304234,0,0,4.0304234,-4015.201,-2036.768)"
+       inkscape:export-filename="/srv/argenomada/argentinaenpython-work/Dropbox/Gráfica proyectos/Logos externos/python-colombia/logo-python-colombia.png"
+       inkscape:export-xdpi="46"
+       inkscape:export-ydpi="46">
+      <g
+         id="g3513"
+         inkscape:export-filename="/srv/argenomada/argentinaenpython-work/Dropbox/Gráfica proyectos/Logos externos/python-colombia/logo-python-colombia.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90">
+        <g
+           id="g3422"
+           transform="matrix(0.97656255,0,0,0.97656255,8.8921193,-0.60324438)">
+          <path
+             inkscape:export-filename="/srv/argenomada/github-para-argentinaenpython-actualizacion/argentinaenpython.com/web/images/django-girls/2017/04/bucaramanga/colaboradores.png"
+             inkscape:export-ydpi="200"
+             inkscape:export-xdpi="200"
+             d="m 469.89802,1028.9799 c 20.11802,0 36.5337,-4.3019 36.5337,-9.5743 0,-5.2898 -16.41568,-9.5923 -36.5337,-9.5923 -20.13636,0 -36.55236,4.3025 -36.55236,9.5924 0,5.2723 16.416,9.5743 36.55236,9.5743"
+             style="fill:#97ddf7;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             id="path6225"
+             inkscape:connector-curvature="0" />
+          <path
+             inkscape:export-filename="/srv/argenomada/github-para-argentinaenpython-actualizacion/argentinaenpython.com/web/images/django-girls/2017/04/bucaramanga/colaboradores.png"
+             inkscape:export-ydpi="200"
+             inkscape:export-xdpi="200"
+             d="m 466.44139,1027.5159 c 16.85702,0 30.62784,-3.6142 30.62784,-8.04 0,-4.4083 -13.77082,-8.0226 -30.62784,-8.0226 -16.85608,0 -30.6269,3.6143 -30.6269,8.0226 0,4.4258 13.77082,8.04 30.6269,8.04"
+             style="fill:#89d4f4;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             id="path6227"
+             inkscape:connector-curvature="0" />
+          <path
+             inkscape:export-filename="/srv/argenomada/github-para-argentinaenpython-actualizacion/argentinaenpython.com/web/images/django-girls/2017/04/bucaramanga/colaboradores.png"
+             inkscape:export-ydpi="200"
+             inkscape:export-xdpi="200"
+             d="m 488.13004,990.7879 -1.53456,16.3099 15.28702,-5.8539 -14.88114,6.8237 12.71274,10.3151 -13.34753,-9.4859 -2.57427,16.1858 1.53362,-16.3099 -15.30474,5.8539 14.89948,-6.8234 -12.73077,-10.31513 13.36556,9.48653 2.57458,-16.1867"
+             style="fill:#fcf99a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path6249"
+             inkscape:connector-curvature="0" />
+          <g
+             inkscape:export-filename="/srv/argenomada/github-para-argentinaenpython-actualizacion/argentinaenpython.com/web/images/django-girls/2017/04/bucaramanga/colaboradores.png"
+             inkscape:export-ydpi="200"
+             inkscape:export-xdpi="200"
+             transform="matrix(0.03110152,0,0,-0.03110152,320.13926,1145.6737)"
+             id="g6257">
+            <g
+               id="g6259"
+               clip-path="url(#clipPath6261)">
+              <path
+                 d="M 1905.33,3626.66 H 5988.32 V 5834.01 H 1905.33 Z"
+                 style="fill:#d5d5d3;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path6265"
+                 inkscape:connector-curvature="0" />
+            </g>
+          </g>
+          <path
+             inkscape:export-filename="/srv/argenomada/github-para-argentinaenpython-actualizacion/argentinaenpython.com/web/images/django-girls/2017/04/bucaramanga/colaboradores.png"
+             inkscape:export-ydpi="200"
+             inkscape:export-xdpi="200"
+             d="m 440.33758,1025.0263 c -4.39557,-1.5803 -6.99192,-3.5235 -6.99192,-5.6206 0,-3.4514 6.98974,-6.4829 17.44018,-8.173 -0.59156,0.5375 -1.16787,1.0874 -1.7277,1.6482 -7.98967,1.4521 -13.24365,3.8721 -13.24365,6.595 0,1.6331 1.87543,3.1559 5.08883,4.4273 -0.19469,0.3727 -0.38285,0.7461 -0.56574,1.1231"
+             style="fill:#7ab5d0;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path6267"
+             inkscape:connector-curvature="0" />
+          <path
+             inkscape:export-filename="/srv/argenomada/github-para-argentinaenpython-actualizacion/argentinaenpython.com/web/images/django-girls/2017/04/bucaramanga/colaboradores.png"
+             inkscape:export-ydpi="200"
+             inkscape:export-xdpi="200"
+             d="m 440.90332,1023.9032 c -3.2134,-1.2714 -5.08883,-2.7942 -5.08883,-4.4273 0,-2.7229 5.25398,-5.1429 13.24365,-6.595 -3.31853,3.3222 -6.07287,7.0404 -8.15482,11.0223"
+             style="fill:#6caccc;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path6269"
+             inkscape:connector-curvature="0" />
+          <path
+             inkscape:export-filename="/srv/argenomada/github-para-argentinaenpython-actualizacion/argentinaenpython.com/web/images/django-girls/2017/04/bucaramanga/colaboradores.png"
+             inkscape:export-ydpi="200"
+             inkscape:export-xdpi="200"
+             d="m 474.01616,998.96789 -1.82627,-1.47982 2.01786,1.43227 c -0.0643,0.0156 -0.12751,0.0315 -0.19159,0.0478 m 13.08691,-1.72363 0.56728,-3.56642 c 0.0622,0.0232 0.11882,0.044 0.18133,0.0669 l -0.32843,3.49299 c -0.13903,0 -0.28148,0.006 -0.42018,0.006"
+             style="fill:#d0cf7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path6271"
+             inkscape:connector-curvature="0" />
+          <g
+             inkscape:export-filename="/srv/argenomada/github-para-argentinaenpython-actualizacion/argentinaenpython.com/web/images/django-girls/2017/04/bucaramanga/colaboradores.png"
+             inkscape:export-ydpi="200"
+             inkscape:export-xdpi="200"
+             transform="matrix(0.03110152,0,0,-0.03110152,320.13926,1145.6737)"
+             id="g6273">
+            <g
+               id="g6275"
+               clip-path="url(#clipPath6277)">
+              <path
+                 d="m 2828.2,4687 c 872.64,872.64 2287.46,872.64 3160.1,0 -734.9,1350.13 -2562.89,1827.61 -4082.91,922.8 307.6,-307.59 615.2,-615.19 922.81,-922.8"
+                 style="fill:#efd01c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path6281"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 3289.65,4225.57 c 548.92,856.54 1757.15,1095.31 2698.65,461.43 -872.64,872.64 -2287.46,872.64 -3160.1,0 153.81,-153.82 307.62,-307.63 461.45,-461.43"
+                 style="fill:#2b398f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path6283"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 3751.02,3764.2 c 225.27,840.47 1226.93,1317.96 2237.28,922.8 -941.5,633.88 -2149.73,395.11 -2698.65,-461.43 153.77,-153.79 307.56,-307.58 461.37,-461.37"
+                 style="fill:#bd1b32;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path6285"
+                 inkscape:connector-curvature="0" />
+            </g>
+          </g>
+          <path
+             inkscape:export-filename="/srv/argenomada/github-para-argentinaenpython-actualizacion/argentinaenpython.com/web/images/django-girls/2017/04/bucaramanga/colaboradores.png"
+             inkscape:export-ydpi="200"
+             inkscape:export-xdpi="200"
+             d="m 443.7496,985.56624 c -17.31978,13.80277 -6.14047,41.56496 15.69232,39.72836 21.83276,-1.783 28.33983,-30.96434 8.97324,-41.77518 -7.81978,-4.35565 -17.68637,-3.5687 -24.66556,2.04682"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path6235"
+             inkscape:connector-curvature="0" />
+          <g
+             inkscape:export-filename="/srv/argenomada/github-para-argentinaenpython-actualizacion/argentinaenpython.com/web/images/django-girls/2017/04/bucaramanga/colaboradores.png"
+             inkscape:export-ydpi="200"
+             inkscape:export-xdpi="200"
+             transform="matrix(0.55744664,0,0,0.55744664,350.67921,447.3977)"
+             id="g6121">
+            <path
+               id="path5574-7"
+               d="m 192.16257,968.45261 c -2.36709,0.0112 -4.62769,0.21237 -6.61675,0.56487 -5.85937,1.03445 -6.92284,3.20175 -6.92284,7.19694 v 5.27563 h 13.84613 v 1.75938 h -13.84613 -5.19642 c -4.02371,0 -7.548,2.41829 -8.64984,7.01944 -1.27148,5.27377 -1.32741,8.56462 0,14.07123 0.98369,4.0986 3.33428,7.0189 7.35843,7.0189 h 4.76084 v -6.3244 c 0,-4.5707 3.95389,-8.60137 8.64983,-8.60137 h 13.82951 c 3.85082,0 6.92341,-3.16999 6.92341,-7.03626 v -13.18255 c 0,-3.7523 -3.16576,-6.57104 -6.92341,-7.19694 -2.37874,-0.39672 -4.84554,-0.57608 -7.21276,-0.56487 z m -7.48859,4.24368 c 1.43042,0 2.59827,1.18703 2.59827,2.64685 0,1.45358 -1.16785,2.63003 -2.59827,2.63003 -1.43546,0 -2.59765,-1.17645 -2.59765,-2.63003 0,-1.45982 1.16219,-2.64685 2.59765,-2.64685 z"
+               inkscape:connector-curvature="0"
+               style="font-size:medium;font-family:'Times New Roman';fill:url(#LinearGradient-5);fill-rule:nonzero;stroke:none;stroke-width:10.05558968;stroke-linejoin:bevel;marker-start:none;marker-end:none" />
+            <path
+               id="path5576-0"
+               d="m 208.02579,983.24943 v 6.14754 c 0,4.76682 -4.04202,8.77882 -8.65046,8.77882 h -13.82951 c -3.78879,0 -6.92284,3.24221 -6.92284,7.03561 v 13.1829 c 0,3.7532 3.2621,5.9596 6.92284,7.037 4.38269,1.2875 8.58601,1.5208 13.82951,0 3.48618,-1.0097 6.92341,-3.0405 6.92341,-7.037 v -5.276 h -13.82963 v -1.7593 h 13.82963 6.92365 c 4.02321,0 5.52289,-2.8063 6.92291,-7.0189 1.44487,-4.3364 1.38384,-8.50786 0,-14.07123 -0.99459,-4.00639 -2.89347,-7.01944 -6.92291,-7.01944 z m -7.77868,33.38677 c 1.43552,0 2.59827,1.1762 2.59827,2.6305 0,1.4593 -1.16275,2.6465 -2.59827,2.6465 -1.43036,0 -2.59759,-1.1872 -2.59759,-2.6465 0,-1.4543 1.16723,-2.6305 2.59759,-2.6305 z"
+               inkscape:connector-curvature="0"
+               style="font-size:medium;font-family:'Times New Roman';fill:url(#LinearGradient_1-9);fill-rule:nonzero;stroke:none;stroke-width:10.05558968;stroke-linejoin:bevel;marker-start:none;marker-end:none" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
