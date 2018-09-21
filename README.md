@@ -8,14 +8,15 @@
 
 [![Build Status][build-badge]][build]
 [![MIT License][license-badge]][LICENSE]
-[![Python Status](https://img.shields.io/badge/Python-%3E%3D3.5-blue.svg?longCache=true&style=flat-square)](https://www.python.org/)
+[![Python Status](https://img.shields.io/badge/Python-%33.5-blue.svg?longCache=true&style=flat-square)](https://www.python.org/)
 [![PRs Welcome][prs-badge]][prs] 
 [![GitHub issues](https://img.shields.io/github/issues/PyConColombia/website-2019.svg?style=flat-square)](https://github.com/PyConColombia/website-2019/issues)
 [![Twitter Jopmi](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/pyconcolombia)
 
 Este es el repositorio del sitio web de la PyCon Colombia 2019 servido por
 [Github](https://pyconcolombia.github.io/website-develop/), y
-construido utilizando [lektor](https://www.getlektor.com).
+construido utilizando [lektor](https://www.getlektor.com). Diseño original por [Edwin Jerez (El Hijo)
+](https://github.com/soyelhijo).
 </div>
 
 # 🔀 Flujo de trabajo
@@ -148,48 +149,3 @@ ___
 [license]: https://github.com/PyConColombia/website-2019/blob/master/LICENSE
 [prs-badge]: https://img.shields.io/badge/Issues-welcome-brightgreen.svg?style=flat-square
 [prs]: https://github.com/PyConColombia/website-2019/issues/new
-
-<!-- # PyCon Colombia 2019 website
-
-This is the repository for the pycon 2019 website at [pycon.co](https://www.pycon.co/), built using [lektor](https://www.getlektor.com)
-
-# Workflow
-
-There are 2 branches, `develop` and `production`.
-
-## Develop
-Default branch is develop and is deployed with gh-pages via Lektor to https://develop.pycon.co
-
-## Production
-After test have been carried out by the QA Team, the changes from `develop`
-will be merged in `production` and deployed gh-pages via Lektor to https://www.pycon.co
-and https://develop.pycon.co
-
-# Run locally
-
-## Install Lektor
-
-Running installation script:
-```
-$ curl -sf https://www.getlektor.com/install.sh | sh
-```
-
-Using pip:
-```
-$ pip install -U Lektor
-```
-
-### Run server and make changes
-
-To run local server:
-
-```
-$ lektor server
-```
-
-If you also want to update the webpack files, you need `npm` installed
-and then run it like this:
-
-```
-$ lektor server -f webpack
-``` -->
