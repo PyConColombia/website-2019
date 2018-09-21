@@ -1,11 +1,13 @@
 {%- set base_url = '/'|url(alt='es') -%}
 
 {%- from "macros/translation.html" import transbag -%}
+{%- set t_open_chat = transbag('translate', this.alt, 'open_chat') -%}
 
 {%- macro menu_item(identifier) -%}
 {% set identifier_url = '/' + identifier %}
 {% set trans_url = identifier_url|url(alt=this.alt) %}
 {% set this_is_child = this.is_child_of(identifier_url) %}
+
 <li class="nav-item{% if this_is_child %} active{% endif %}">
   <a class="nav-link" href="{{ trans_url }}">{{ transbag('menu', this.alt, identifier) }}</a>
 </li>
@@ -132,6 +134,7 @@
 </nav>
 
 <body>
+  <button class="js-gitter-toggle-chat-button gitter-custom-button">{{ t_open_chat }}</button>
 {%- block body -%}{%- endblock -%}
 
 <!-- Javascript -->
@@ -139,7 +142,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="{{ base_url }}static/js/cfp.js"></script>
-
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'PyConColombia/Lobby',
+    activationElement: '.gitter-button',
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 </body>
 
 </html>
