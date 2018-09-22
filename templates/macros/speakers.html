@@ -4,11 +4,11 @@
 {%- set complete_name = speaker.name + " " + speaker.last_name -%}
   <div class="col-md-4 col-sm-4 col-xs-12">
     <div class="speaker-image-container">
-      <a href="{{ speaker | url }}">
+      <!-- <a href="{{ speaker | url }}"> -->
         <img class="speaker-image img-fluid" id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image
           -%}
-          "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} />
-      </a>
+          "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ speaker._id }}')" />
+      <!-- </a> -->
     </div>
   </div>
   <div class="col-md-8 col-sm-8 col-xs-12">
@@ -37,11 +37,11 @@
 </div>
 <div class="col-md-4 col-sm-4 col-xs-12">
   <div class="speaker-image-container">
-    <a href="{{ speaker | url }}">
+    <!-- <a href="{{ speaker | url }}"> -->
       <img class="speaker-image img-fluid" id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image
           -%}
-          "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} />
-    </a>
+          "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ speaker._id }}')" />
+    <!-- </a> -->
   </div>
 </div>
 {% endmacro %}

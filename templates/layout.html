@@ -102,6 +102,7 @@
   <link rel="stylesheet" href="{{ base_url }}static/css/styles.css">
   <link rel="stylesheet" href="{{ base_url }}static/css/custom.css">
   <link rel="stylesheet" href="{{ base_url }}static/css/clock.css">
+  <link rel="stylesheet" href="{{ base_url }}static/css/sidenav.css">
 </head>
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
@@ -150,6 +151,16 @@
   };
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+<script>
+  function openNav(id) {
+    document.getElementById(id).style.width = "100%";
+  }
+
+  function closeNav(id) {
+    document.getElementById(id).style.width = "0";
+    console.log('close', id);
+  }
+</script>
 </body>
 
 </html>

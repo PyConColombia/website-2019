@@ -1,5 +1,9 @@
- {% extends "layout.html" %} {%- from "macros/speakers.html" import render_keynote_speaker -%} {%- block body -%}
+{% extends "layout.html" %} {%- from "macros/speakers.html" import render_keynote_speaker -%} {%- block body -%}
+
+{% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish).order_by('_id') %}
+
 <div class="mdl-layout mdl-js-layout layout-home">
+  {% include "./partials/_resume_speakers.html" %}
   <main>
     <!-- class="mdl-layout__content" -->
     <div>
@@ -7,15 +11,13 @@
       <div class="container-fluid container-no-padding header-content background-keynotes">
         <div class="section">
           <div class="apply-content">
-
-            {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish).order_by('_id') %}
             <div class="row justify-content-center">
               <div class="col-md-8 col-sm-8 col-xs-10 mx-auto">
               <h1 class="title-subscribe">{{ this.title }} {{ t_keynote_speakers }} ({{ speakers.count()}})</h1>
               <div class="commet"></div>
               {% for speaker in speakers %}
                 {{ render_keynote_speaker(speaker, index=loop.index, details=True) }}
-                {% endfor %}
+              {% endfor %}
               </div>
           </div>
           {% include 'partials/_footer.html' %}
