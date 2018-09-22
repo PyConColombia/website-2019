@@ -45,8 +45,8 @@
 }
 
 .header-content .ticket:hover {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
   -webkit-animation-name: shake;
   animation-name: shake;
 }

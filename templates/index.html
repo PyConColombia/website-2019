@@ -14,6 +14,7 @@
 {%- set t_button_talks = transbag('translate', this.alt, 'button_talks') -%}
 {%- set t_button_workshops = transbag('translate', this.alt, 'button_workshops') -%}
 {%- set t_footer_message = transbag('translate', this.alt, 'footer_message') -%}
+{%- set t_intro_keynotes = transbag('translate', this.alt, 'intro_keynotes') -%}
 
 
 {%- block body -%}
@@ -31,7 +32,7 @@
         <div class="place">{{ t_intro_place }}</div>
         <div class="text-center ticket">
           <a href="{{ this.tickets_link }}" target="blank_">
-            <img src="{{ base_url }}static/images/boleta.svg" style="max-width: 350px; width: 95%;" class="centered" alt="">
+            <img src="{% if this.alt == 'en' %} {{ base_url }}static/images/boleta.svg {% else %} {{ base_url }}static/images/boleta_es.svg {% endif %}" style="max-width: 350px; width: 95%;" class="centered" alt="">
           </a>
         </div>
         {%- if 'speakers-call' in this.sections -%}
@@ -102,7 +103,7 @@
           <div class="col-md-8 col-sm-10 col-xs-10 mx-auto">
             {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish) %}
 
-            <h1 class="title-subscribe">KEY NOTES</h1>
+            <h1 class="title-subscribe">{{ t_intro_keynotes }}</h1>
             <div class="commet"></div>
             <div class="form-container">
 

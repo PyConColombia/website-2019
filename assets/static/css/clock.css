@@ -5,6 +5,7 @@
   font-weight: 100;
   text-align: center;
   font-size: 30px;
+  margin-bottom: 50px;
 }
 
 #clockdiv > div, #clockEventdiv > div {

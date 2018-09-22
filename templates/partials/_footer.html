@@ -15,10 +15,7 @@
       {{ t_footer_message }}
     </p>
     <p class="footer-text">
-      <img src="{{ base_url }}static/images/logo-python-colombia.svg" alt="Logo PythonCo" style="max-width: 150px; width: 95%;">
-      <br />{{ t_footer_rights }}
-    </p>
-    <p class="footer-text">
+      {{ t_footer_rights }}<br />
       {% if this.alt == 'en' %}
       <a href="/en/code-of-conduct">Code of Conduct</a>
       {% else %}
