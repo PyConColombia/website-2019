@@ -25,12 +25,13 @@
 
 {% for speaker in speakers %}
 {%- set complete_name = speaker.name + " " + speaker.last_name -%}
+<div id="back-resume-speaker"></div>
 <div id="{{ speaker._id }}" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav('{{ speaker._id }}')">&times;</a>
   <div class="container-fluid container-no-padding header-content">
     <div class="section" style="margin-bottom: 100px;">
       <div class="row justify-content-center align-self-center">
-        <div class="col-md-3 col-sm-4 col-xs-12">
+        <div class="col-md-6 col-sm-8 col-xs-12">
           <div class="speaker-image-container">
             <a href="{{ speaker | url }}">
               <img class="speaker-image img-fluid" id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%-
@@ -76,7 +77,7 @@
             </div>
           </div>
           <div class="row justify-content-center align-self-center">
-            <div class="col-md-8 col-sm-6 col-xs-12">
+            <div class="col-md-8 col-sm-10 col-xs-12">
               <div class="speaker-summary">
                 {% if speaker.information %}
                 <p>{{ speaker.information }}</p>

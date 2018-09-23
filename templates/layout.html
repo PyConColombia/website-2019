@@ -153,12 +153,17 @@
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 <script>
   function openNav(id) {
-    document.getElementById(id).style.width = "100%";
+    if (window.innerWidth < 780) {
+      document.getElementById(id).style.width = "100%";
+    } else {
+      document.getElementById(id).style.width = "50%";
+    }
+    document.getElementById('back-resume-speaker').style.display = "block";
   }
 
   function closeNav(id) {
     document.getElementById(id).style.width = "0";
-    console.log('close', id);
+    document.getElementById('back-resume-speaker').style.display = "none";
   }
 </script>
 </body>
