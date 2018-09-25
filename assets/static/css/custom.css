@@ -344,14 +344,21 @@
   background-color: #03e3ff; }
 @media (min-width: 768px) {
   .center-nav {
-  text-align: center; }
+    text-align: center; 
+  }
   .center-nav .nav-item {
     display: inline-block;
     float: none;
-    vertical-align: top; }
+    vertical-align: top; 
   }
-
+}
 
 .gitter-chat-embed {
   top: 70px;
+}
+
+@media (max-width: 768px) {
+    .gitter-custom-button {
+    width: calc(100% - 65px);
+  }
 }

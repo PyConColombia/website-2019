@@ -52,7 +52,7 @@
 
 @media screen and (max-height: 450px) {
   .section {
-    margin: 50px 30px;
+    margin: 100px 30px;
   }
 
   .sidenav .closebtn {

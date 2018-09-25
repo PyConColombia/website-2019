@@ -1,21 +1,20 @@
 {% extends "layout.html" %}
 
 {% block body %}
-
-<div class="mdl-layout mdl-js-layout layout-home">
+<div class="mdl-layout mdl-js-layout layout-home"></div>
   <main>
     <!-- class="mdl-layout__content" -->
     <div>
       <!-- class="page-content" -->
-      <div class="container-fluid container-no-padding header-content background-code">
+      <div class="container-fluid header-content background-code">
         <div class="section">
-          <div class="row justify-content-center align-self-center"">
+          <div class="row justify-content-center align-self-center">
             <div class="col-md-6 col-sm-8 col-xs-12">
-              <div class="row justify-content-center" style="margin-bottom: 100px;">
+              <div style="margin-bottom: 100px;">
                 <div class="row justify-content-center align-self-center">
                   <h1 class="title-subscribe">{{ this.title }} </h1>
                 </div>
-                <div class="row justify-content-center align-self-center">
+                <div >
                   {{ this.body }}
                 </div>
               </div>
@@ -26,5 +25,4 @@
       </div>
   </main>
 </div>
-
-  {% endblock %}
+{% endblock %}
