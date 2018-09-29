@@ -38,8 +38,10 @@ function initializeClock(id, endtime) {
 
 }
 
-const deadline = new Date('2018-10-01 00:00:00');
+let deadline = '2018-10-01 00:00:00';
+deadline = new Date(deadline.replace(/-/g, '/'));
 initializeClock('clockdiv', deadline);
 
-const deadlineEvent = new Date('2019-02-08 08:00:00');
+let deadlineEvent = '2019-02-08 08:00:00';
+deadlineEvent = new Date(deadlineEvent.replace(/-/g, '/'));
 initializeClock('clockEventdiv', deadlineEvent);
