@@ -36,13 +36,12 @@
           <div class="section" style="margin-bottom: 100px;">
             <div class="row justify-content-center align-self-center">
               <div class="col-md-3 col-sm-4 col-xs-12">
-                <div class="speaker-image-container">
-                  <a href="{{ this | url }}">
-                    <img class="speaker-image img-fluid" id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if
-                      this.image -%}
-                      "{%- if this.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ this._id }}/{{ this.image }}" {%- else
-                      -%} "/static/images/empty-photo.svg" {%- endif -%} />
-                  </a>
+                <div class="speaker-image-container row justify-content-center align-self-center">
+                  <div class="shadow overlay square">
+                    <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if this.image -%}
+                      "{%- if this.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ this._id }}/{{ this.image }}"
+                      {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ this._id }}')" class="img-fluid blend" />
+                  </div>
                 </div>
               </div>
             </div>

@@ -116,13 +116,6 @@
   border-radius: 50%;
   height: auto;
   overflow: hidden;
-  /* position: relative; */
+  margin: 0 auto;
   width: 100%;
 }
-
-/* .square2 {
-  border-radius: 50%;
-  height: 100%;
-  overflow: hidden;
-  width: 95%;
-} */
