@@ -81,3 +81,48 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
+
+.overlay {
+  background: rgb(57,203,243);
+  margin: 40px;
+}
+
+.overlay:hover {
+  background: none;
+}
+
+.blend {
+  mix-blend-mode: multiply;
+}
+
+.blend:hover {
+  mix-blend-mode: initial;
+}
+
+.shadow {
+  webkit-box-shadow: 0 0 50px rgba(0, 152, 184,0.9), 0 0 100px #0079ac;
+  box-shadow: 0 0 50px rgba(0, 152, 184,0.9), 0 0 100px #0079ac;
+}
+
+.round {
+  border-radius: 100%;
+  height: 400px;
+  overflow: hidden;
+  /* position: relative; */
+  width: 400px;
+}
+
+.square {
+  border-radius: 50%;
+  height: auto;
+  overflow: hidden;
+  /* position: relative; */
+  width: 100%;
+}
+
+/* .square2 {
+  border-radius: 50%;
+  height: 100%;
+  overflow: hidden;
+  width: 95%;
+} */
