@@ -3,7 +3,7 @@
 {% macro speaker_left(speaker, index) %}
 {%- set complete_name = speaker.name + " " + speaker.last_name -%}
   <div class="col-md-4 col-sm-4 col-xs-12">
-    <div class="speaker-image-container row justify-content-center align-self-center">
+    <div class="speaker-image-container">
       <div class="shadow overlay square">
         <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image
         -%}
