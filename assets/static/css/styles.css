@@ -91,9 +91,9 @@
   background: none;
 }
 
-.blend {
+/* .blend {
   mix-blend-mode: multiply;
-}
+} */
 
 .blend:hover {
   mix-blend-mode: initial;

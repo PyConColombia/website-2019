@@ -4,7 +4,7 @@
 {%- set complete_name = speaker.name + " " + speaker.last_name -%}
   <div class="col-md-4 col-sm-4 col-xs-12">
     <div class="speaker-image-container">
-      <div class="shadow overlay square">
+      <div class="shadow square">
         <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image
         -%}
         "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else
@@ -38,7 +38,7 @@
 </div>
 <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
   <div class="speaker-image-container">
-    <div class="shadow overlay square">
+    <div class="shadow square">
       <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image -%}
         "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}"
         {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ speaker._id }}')" class="img-fluid blend" />
