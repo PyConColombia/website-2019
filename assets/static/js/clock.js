@@ -21,9 +21,9 @@ function initializeClock(id, endtime) {
   const secondsSpan = clock.querySelector('.seconds');
 
   function updateClock() {
-    const t = getTimeRemaining(endtime);
+    let t = getTimeRemaining(endtime);
 
-    daysSpan.innerHTML = ('0' + t.days).slice(-2);
+    daysSpan.innerHTML = t.days;
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
@@ -33,8 +33,8 @@ function initializeClock(id, endtime) {
     }
   }
 
+  let timeinterval = setInterval(updateClock, 1000);
   updateClock();
-  const timeinterval = setInterval(updateClock, 1000);
 
 }
 
