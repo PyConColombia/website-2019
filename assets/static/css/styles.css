@@ -149,3 +149,7 @@ a {
     background-color: #231f2a;
   }
 }
+
+/* Map */
+
+#mapid { height: 50vh; }

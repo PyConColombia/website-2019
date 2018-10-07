@@ -98,6 +98,8 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
   <link rel="stylesheet" href="{{ base_url }}static/css/libs/animate.css">
   <link rel="stylesheet" href="{{ base_url }}static/css/styles.css">
   <link rel="stylesheet" href="{{ base_url }}static/css/custom.css">
@@ -116,7 +118,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <!-- {{ menu_item('venue') }} -->
+      {{ menu_item('venue') }}
       {{ menu_item('keynotes') }}
       {{ menu_item('code-of-conduct') }}
       <!-- {{ menu_item('speakers') }}
@@ -149,6 +151,22 @@
     room: 'PyConColombia/Lobby',
     activationElement: '.gitter-button',
   };
+</script>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+  crossorigin=""></script>
+<script>
+
+  var mymap = L.map('mapid').setView([4.6283241,-74.0646417], 17);
+  var marker = L.marker([4.6283241,-74.0646417]).addTo(mymap);
+
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox.streets'
+  }).addTo(mymap);
+
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 <script>
