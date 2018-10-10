@@ -159,14 +159,26 @@
   background-position: center top;
 }
 
-.background-code{
-  background:url("../images/code-background.png"); 
-  background-size: 100% 100%;
+.background-code {
+  background:url("../images/BG-Code.svg"); 
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
   color: #fff;
   text-align: justify;
   text-justify: inter-word;
+}
+
+.background-stars {
+  background:url("../images/code-stars.svg"); 
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.background-meteor {
+  background:url("../images/code-meteor.svg"); 
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .background-keynotes {
