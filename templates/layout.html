@@ -65,7 +65,8 @@
   <meta name="twitter:description" content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February">
   <meta name="twitter:image" content="{{ base_url }}static/images/opimage.jpg">
 
-  <title>PyCon Colombia | February 2019 | Colombia</title>
+  <title>{% block title %}{% if this._path == '/' %} Inicio {% else %} {{ this.title }} {% endif %}{% endblock %} |
+    PyCon Colombia</title>
 
   <link rel="apple-touch-icon" sizes="57x57" href="{{ base_url }}static/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="{{ base_url }}static/favicon/apple-icon-60x60.png">
