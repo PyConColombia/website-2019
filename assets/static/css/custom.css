@@ -160,7 +160,7 @@
 }
 
 .background-code {
-  background:url("../images/BG-Code.svg"); 
+  background:url("../images/back.svg"); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -169,17 +169,17 @@
   text-justify: inter-word;
 }
 
-.background-stars {
-  background:url("../images/code-stars.svg"); 
+/* .background-stars {
+  background:url("../images/stars.svg"); 
   background-repeat: no-repeat;
   background-position: center top;
 }
 
 .background-meteor {
-  background:url("../images/code-meteor.svg"); 
+  background:url("../images/meteor.svg"); 
   background-repeat: no-repeat;
   background-position: center top;
-}
+} */
 
 .background-keynotes {
   background:url("../images/keynotes-background.png"); 
