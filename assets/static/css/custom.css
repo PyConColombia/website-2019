@@ -129,7 +129,7 @@
 }
 
 .speaker .speaker-details {
-  padding: .5em 0;
+  padding: 1em 0;
 }
 
 .speaker .speaker-name, .speaker .speaker-info-1, .speaker .speaker-info-2 {
@@ -144,6 +144,10 @@
 
 .speaker .speaker-info-1 {
   font-size: 1.5rem;
+}
+
+.speaker .speaker-info-2 {
+  font-size: 1rem;
 }
 
 .speaker .speaker-summary {
