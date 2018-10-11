@@ -17,10 +17,12 @@
             <div class="row justify-content-center">
               <div class="col-md-8 col-sm-8 col-xs-10 mx-auto">
               <h1 class="title-subscribe">{{ this.title }} {{ t_keynote_speakers }} ({{ speakers.count()}})</h1>
-              <div class="commet"></div>
-              {% for speaker in speakers %}
-                {{ render_keynote_speaker(speaker, index=loop.index, details=True) }}
-              {% endfor %}
+                <div class="commet"></div>
+                <div class="keynotes">
+                {% for speaker in speakers %}
+                  {{ render_keynote_speaker(speaker, index=loop.index, details=True) }}
+                {% endfor %}
+                </div>
               </div>
           </div>
           {% include 'partials/_footer.html' %}
