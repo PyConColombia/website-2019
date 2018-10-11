@@ -1,34 +1,32 @@
-
 {% extends "layout.html" %}
 {%- from "macros/speakers.html" import render_keynote_speaker -%}
 
 {%- block body -%}
-<body class="background-speakers">
-  <div class="container-fluid dark-section">
-    <div class="section-container">
-      <div class="container">
 
-        {% set speakers = site.query('/speakers', alt=this.alt).filter(F.keynote != True).filter(F.publish) %}
-        <br>
-        <h1 class="section-title-dark text-center">{{ t_speakers }} ({{ speakers.count() }})</h1>
-        <br>
-        <div class="row justify-content-center">
-          {% if speakers %}
-          {% for speaker in speakers %}
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            {{ render_keynote_speaker(speaker, index=loop.index, details=True) }}
+{% set speakers = site.query('/speakers', alt=this.alt).filter(F.publish).order_by('_id') %}
+
+<div class="mdl-layout mdl-js-layout layout-home">
+  {% include "./partials/_resume_speakers.html" %}
+  <main>
+    <!-- class="mdl-layout__content" -->
+    <div>
+      <!-- class="page-content" -->
+      <div class="container-fluid container-no-padding header-content background-keynotes">
+        <div class="section">
+          <div class="apply-content">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-sm-8 col-xs-10 mx-auto">
+                <h1 class="title-subscribe">{{ this.title }} {{ t_keynote_speakers }} ({{ speakers.count()}})</h1>
+                <div class="commet"></div>
+                {% for speaker in speakers %}
+                {{ render_keynote_speaker(speaker, index=loop.index, details=True) }}
+                {% endfor %}
+              </div>
+            </div>
+            {% include 'partials/_footer.html' %}
           </div>
-          {% endfor %}
-          {% else %}
-          <div class="col mx-auto text-center">
-            <a href="{{ site.get('/', alt=this.alt).accepted_speakers_link }}" target="blank" class="btn btn-success btn-lg centerer-block text">
-              {{ t_accepted_speakers_button }}
-            </a>
-          </div>
-          {% endif %}
         </div>
       </div>
-    </div>
-  </div>
+  </main>
 </div>
 {%- endblock -%}
