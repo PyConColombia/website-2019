@@ -1,0 +1,35 @@
+name:
+
+John 
+---
+last_name: Roa
+---
+prefix: Mr.
+---
+publish: yes
+---
+country: Colombia
+---
+country_residence: Colombia
+---
+dob: 1995-01-15
+---
+email: john@pycon.co
+---
+facebook_handle: john
+---
+github_handle: john
+---
+information: John Information
+---
+linkedin_handle: john
+---
+position_1: PyCon Organizer
+---
+position_2: lendingfront developer
+---
+summary: John summary
+---
+twitter_handle: john
+---
+web: http://john.co

@@ -98,7 +98,7 @@
   z-index: 10;
 }
 
-.speaker-image {
+.speaker .speaker-image {
   border: 4px solid #0098b8;
   position: relative;
   display: block;
@@ -111,37 +111,92 @@
   z-index:10
 }
 
-.speaker-image-container {
-  padding: 1.5em;
+.speaker .speaker-image-container {
+  padding: .5em;
 }
 
-.rounded-circle, .speaker-image {
+.speaker .speaker-name {
+  font-size: 1.5em;
+}
+
+.rounded-circle, .speaker .speaker-image {
   border-radius: 50% !important;
 }
 
-.speaker-container {
+.speaker .speaker-container {
   margin: 0;
+  padding: 2em 0;
 }
 
-.speaker-details {
-  padding: 4em 0;
+.speaker .speaker-details {
+  padding: .5em 0;
 }
 
-.speaker-name, .speaker-info-1, .speaker-info-2 {
+.speaker .speaker-name, .speaker .speaker-info-1, .speaker .speaker-info-2 {
   color: #fff;
   font-weight: 300;
   letter-spacing: 5px;
 }
 
-.speaker-info-1, .speaker-info-2 {
+.speaker .speaker-info-1, .speaker .speaker-info-2 {
   color: #a8a8a8
 }
 
-.speaker-info-1 {
+.speaker .speaker-info-1 {
   font-size: 1.5rem;
 }
 
-.speaker-summary {
+.speaker .speaker-summary {
+  color: #fff;
+  font-size: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.keynotes .speaker-image {
+  border: 4px solid #0098b8;
+  position: relative;
+  display: block;
+  height: auto;
+  border:1px solid #0098b8;
+  border-radius:100px;
+  -webkit-box-shadow:0 0 50px rgba(0, 152, 184,0.9), 0 0 100px #0079ac;
+  box-shadow:0 0 50px rgba(0, 152, 184,0.9), 0 0 100px #0079ac;
+  color:#fff;
+  z-index:10
+}
+
+.keynotes .speaker-image-container {
+  padding: 1.5em;
+}
+
+.rounded-circle, .keynotes .speaker-image {
+  border-radius: 50% !important;
+}
+
+.keynotes .speaker-container {
+  margin: 0;
+}
+
+.keynotes .speaker-details {
+  padding: 4em 0;
+}
+
+.keynotes .speaker-name, .keynotes .speaker-info-1, .keynotes .speaker-info-2 {
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 5px;
+}
+
+.keynotes .speaker-info-1, .keynotes .speaker-info-2 {
+  color: #a8a8a8
+}
+
+.keynotes .speaker-info-1 {
+  font-size: 1.5rem;
+}
+
+.keynotes .speaker-summary {
   color: #fff;
   font-size: 1rem;
   text-align: justify;

@@ -2,6 +2,7 @@
 
 {% macro speaker_left(speaker, index) %}
 {%- set complete_name = speaker.name + " " + speaker.last_name -%}
+<div class="row">
   <div class="col-md-4 col-sm-4 col-xs-12">
     <div class="speaker-image-container">
       <div class="shadow square">
@@ -22,26 +23,29 @@
       {% endif %}
     </div>
   </div>
+</div>
 {% endmacro %}
 
 {% macro speaker_right(speaker, index) %}
 {%- set complete_name = speaker.name + " " + speaker.last_name -%}
-<div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
-  <div class="speaker-details text-right">
-    <h1 class="speaker-name">{{ complete_name }}</h1>
-    <h2 class="speaker-info-1">{{ speaker.position_1 }}</h2>
-    <h2 class="speaker-info-2">{{ speaker.position_2 }}</h2>
-    {% if speaker.twitter_handle %}
-    <h3 class="speaker-info-1">@{{ speaker.twitter_handle }}</h3>
-    {% endif %}
+<div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name">{{ complete_name }}</h1>
+      <h2 class="speaker-info-1">{{ speaker.position_1 }}</h2>
+      <h2 class="speaker-info-2">{{ speaker.position_2 }}</h2>
+      {% if speaker.twitter_handle %}
+      <h3 class="speaker-info-1">@{{ speaker.twitter_handle }}</h3>
+      {% endif %}
+    </div>
   </div>
-</div>
-<div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
-  <div class="speaker-image-container">
-    <div class="shadow square">
-      <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image -%}
-        "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}"
-        {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ speaker._id }}')" class="img-fluid blend" />
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image -%}
+          "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}"
+          {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ speaker._id }}')" class="img-fluid blend" />
+      </div>
     </div>
   </div>
 </div>
@@ -56,5 +60,21 @@
         {{ speaker_right(speaker, index) }}
       {%- endif -%}
     </div>
+  </div>
+{% endmacro %}
+
+{% macro render_speaker(speaker, index=1, details=True) %}
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> -->
+      {%- if index % 4 == 1 -%}
+        {{ speaker_left(speaker, index) }}
+      {%- elif index % 4 == 2 -%}
+        {{ speaker_left(speaker, index) }}
+      {%- elif index % 4 == 3 -%}
+        {{ speaker_right(speaker, index) }}
+      {%- elif index % 4 == 0 -%}
+        {{ speaker_right(speaker, index) }}
+      {%- endif -%}
+    <!-- </div> -->
   </div>
 {% endmacro %}
