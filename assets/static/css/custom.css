@@ -6,6 +6,19 @@
   margin-bottom: -20px;
 } */
 
+.title {
+  color:#fff;
+  font-size:33px;
+  font-weight:300;
+  letter-spacing:5px;
+  line-height:1.2;
+  margin-bottom:32px;
+  opacity:0.8;
+  position:relative;
+  text-align:center;
+  z-index:10;
+}
+
 .title-subscribe {
   color:#fff;
   font-size:33px;
