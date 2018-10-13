@@ -107,8 +107,9 @@
             <h1 class="title-subscribe">{{ t_intro_keynotes }}</h1>
             <div class="commet"></div>
             <div class="form-container">
-
-              {% for speaker in speakers %} {{ render_keynote_speaker(speaker, index=loop.index, details=True) }} {% endfor %}
+              <div class="keynotes">
+                {% for speaker in speakers %} {{ render_keynote_speaker(speaker, index=loop.index, details=True) }} {% endfor %}
+              </div>
             </div>
           </div>
         </div>
