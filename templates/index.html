@@ -104,7 +104,7 @@
       <div class="container">
         <div class="section">
           <div class="apply-content">
-            <div class="col-12 mx-auto">
+            <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
               {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish) %}
   
               <h1 class="title-subscribe">{{ t_intro_keynotes }}</h1>
