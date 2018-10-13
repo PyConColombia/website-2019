@@ -34,63 +34,65 @@
         <!-- class="page-content" -->
         <div class="container-fluid container-no-padding header-content background-speakers">
           <div class="container">
-            <div class="keynotes">
-              <div class="section" style="margin-bottom: 100px;">
-                <div class="row justify-content-center align-self-center">
-                  <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="speaker-image-container row justify-content-center align-self-center">
-                      <div class="shadow overlay square">
-                        <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if this.image -%}
-                          "{%- if this.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ this._id }}/{{ this.image }}"
-                          {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ this._id }}')" class="img-fluid blend" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center align-self-center">
-                  <div class="col-md-8 col-sm-8 col-xs-12">
-                    <div class="speaker-details text-center">
-                      <h1 class="speaker-name">{{ complete_name }}</h1>
-                      <h2 class="speaker-info-2">{{ this.position_2 }}</h2>
-                      <h2 class="speaker-info-1">{{ this.position_1 }}</h2>
-                      <div class="social-container-speaker">
-                        {% if this.github_handle %}
-                        <a href="https://github.com/{{ this.github_handle }}" target="_blank">
-                          <div class="social-icon fab fa-github-alt"></div>
-                        </a>
-                        {% endif %}
-                        {% if this.facebook_handle %}
-                        <a href="https://facebook.com/{{ this.facebook_handle }}" target="_blank">
-                          <div class="social-icon fab fa-facebook-f"></div>
-                        </a>
-                        {% endif %}
-                        {% if this.twitter_handle %}
-                        <a href="https://twitter.com/{{ this.twitter_handle }}" target="_blank">
-                          <div class="social-icon fab fa-twitter"></div>
-                        </a>
-                        {% endif %}
-                        {% if this.linkedin_handle %}
-                        <a href="http://linkedin.com/in/{{ this.linkedin_handle }}" target="_blank">
-                          <div class="social-icon fab fa-linkedin-in"></div>
-                        </a>
-                        {% endif %}
-                        {% if this.web %}
-                        <a href="{{ this.web }}" target="_blank">
-                          <div class="social-icon fas fa-globe"></div>
-                        </a>
-                        {% endif %}
-                      </div>
-                    </div>
-                    <div class="row justify-content-center align-self-center">
-                      <div class="col-md-8 col-sm-6 col-xs-12">
-                        <div class="speaker-summary">
-                          {% if this.information %}
-                          <p>{{ this.information }}</p>
-                          {% endif %}
+            <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+              <div class="keynotes">
+                <div class="section" style="margin-bottom: 100px;">
+                  <div class="row justify-content-center align-self-center">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                      <div class="speaker-image-container row justify-content-center align-self-center">
+                        <div class="shadow overlay square">
+                          <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if this.image -%}
+                            "{%- if this.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ this._id }}/{{ this.image }}"
+                            {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ this._id }}')" class="img-fluid blend" />
                         </div>
                       </div>
                     </div>
-                    {% include 'partials/_footer.html' %}
+                  </div>
+                  <div class="row justify-content-center align-self-center">
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                      <div class="speaker-details text-center">
+                        <h1 class="speaker-name">{{ complete_name }}</h1>
+                        <h2 class="speaker-info-2">{{ this.position_2 }}</h2>
+                        <h2 class="speaker-info-1">{{ this.position_1 }}</h2>
+                        <div class="social-container-speaker">
+                          {% if this.github_handle %}
+                          <a href="https://github.com/{{ this.github_handle }}" target="_blank">
+                            <div class="social-icon fab fa-github-alt"></div>
+                          </a>
+                          {% endif %}
+                          {% if this.facebook_handle %}
+                          <a href="https://facebook.com/{{ this.facebook_handle }}" target="_blank">
+                            <div class="social-icon fab fa-facebook-f"></div>
+                          </a>
+                          {% endif %}
+                          {% if this.twitter_handle %}
+                          <a href="https://twitter.com/{{ this.twitter_handle }}" target="_blank">
+                            <div class="social-icon fab fa-twitter"></div>
+                          </a>
+                          {% endif %}
+                          {% if this.linkedin_handle %}
+                          <a href="http://linkedin.com/in/{{ this.linkedin_handle }}" target="_blank">
+                            <div class="social-icon fab fa-linkedin-in"></div>
+                          </a>
+                          {% endif %}
+                          {% if this.web %}
+                          <a href="{{ this.web }}" target="_blank">
+                            <div class="social-icon fas fa-globe"></div>
+                          </a>
+                          {% endif %}
+                        </div>
+                      </div>
+                      <div class="row justify-content-center align-self-center">
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <div class="speaker-summary">
+                            {% if this.information %}
+                            <p>{{ this.information }}</p>
+                            {% endif %}
+                          </div>
+                        </div>
+                      </div>
+                      {% include 'partials/_footer.html' %}
+                    </div>
                   </div>
                 </div>
               </div>
