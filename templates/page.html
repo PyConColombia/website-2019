@@ -9,18 +9,20 @@
       <div class="background-code">
         <div class="background-stars">
           <div class="container-fluid header-content background-meteor">
-            <div class="section">
-              <div class="row justify-content-center align-self-center">
-                <div class="col-md-6 col-sm-8 col-xs-12">
-                  <div style="margin-bottom: 100px;">
-                    <div class="row justify-content-center align-self-center">
-                      <h1 class="title-subscribe">{{ this.title }} </h1>
+            <div class="container">
+              <div class="section">
+                <div class="row justify-content-center align-self-center">
+                  <div class="col-12">
+                    <div style="margin-bottom: 100px;">
+                      <div class="row justify-content-center align-self-center">
+                        <h1 class="title-subscribe">{{ this.title }} </h1>
+                      </div>
+                      <div >
+                        {{ this.body }}
+                      </div>
                     </div>
-                    <div >
-                      {{ this.body }}
-                    </div>
+                    {% include 'partials/_footer.html' %}
                   </div>
-                  {% include 'partials/_footer.html' %}
                 </div>
               </div>
             </div>
