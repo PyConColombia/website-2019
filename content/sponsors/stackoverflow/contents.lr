@@ -3,3 +3,11 @@ name: stackoverflow
 confirmed: yes
 ---
 image: stack.svg
+---
+facebook_handle: officialstackoverflow
+---
+github_handle: StackExchange
+---
+twitter_handle: stackoverflow
+---
+web: https://es.stackoverflow.com/
