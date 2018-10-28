@@ -1,35 +1,62 @@
 {% extends "layout.html" %}
 
-{% block body %}
-<div class="mdl-layout mdl-js-layout layout-home"></div>
+{%- block body -%}
+
+{% set diamond = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category == 'diamond').order_by('_id') %}
+{% set platinum = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'platinum').order_by('_id') %}
+{% set gold = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'gold').order_by('_id') %}
+{% set silver = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'silver').order_by('_id') %}
+{% set bronze = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'bronze').order_by('_id') %}
+{% set startup = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'startup').order_by('_id') %}
+{% set partner = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'partner').order_by('_id') %}
+
+<div class="mdl-layout mdl-js-layout layout-home">
   <main>
     <!-- class="mdl-layout__content" -->
     <div>
       <!-- class="page-content" -->
-      <div class="background-code">
-        <div class="background-stars">
-          <div class="container-fluid header-content background-meteor">
-            <div class="container">
-              <div class="section">
-                <div class="row justify-content-center align-self-center">
-                  <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
-                    <div style="margin-bottom: 100px;">
-                      <div class="row justify-content-center align-self-center">
-                        <h1 class="title-subscribe">{{ this.title }} </h1>
+      <div class="container-fluid container-no-padding header-content background-keynotes">
+        <div class="container">
+          <div class="section">
+            <div class="apply-content">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+                  <h1 class="title-subscribe">SPONSORS</h1>
+                  <div class="commet"></div>
+                  <div>
+                    {% if diamond %}
+                      <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                          <h2>Diamond</h2>
+                        </div>
                       </div>
-                      <div class="commet"></div>
-                      <div >
-                        {{ this.body }}
+                      {% for item in diamond %}
+                      <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                        </div>
+                        <div class="col-md-8 col-xs-12">
+                          <img src={%- if item.image -%}
+                                "{{ item._id }}/{{ item.image }}"
+                                {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} />
+                          {{ item.summary }}
+                        </div>
                       </div>
-                    </div>
-                    {% include 'partials/_footer.html' %}
+                      {% endfor %}
+                    {% endif %}
                   </div>
                 </div>
               </div>
+              {% include 'partials/_footer.html' %}
             </div>
           </div>
         </div>
       </div>
   </main>
 </div>
-{% endblock %}
+{%- endblock -%}
