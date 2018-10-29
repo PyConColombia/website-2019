@@ -1,7 +1,8 @@
 {%- from "macros/translation.html" import transbag -%}
 
-{% extends "layout.html" %} 
+{% extends "layout.html" %}
 {%- from "macros/speakers.html" import render_keynote_speaker -%}
+{%- from "macros/sponsors.html" import render_sponsors -%}
 
 {%- set t_intro_location = transbag('translate', this.alt, 'intro_location') -%}
 {%- set t_intro_date = transbag('translate', this.alt, 'intro_date') -%}
@@ -15,113 +16,163 @@
 {%- set t_button_workshops = transbag('translate', this.alt, 'button_workshops') -%}
 {%- set t_footer_message = transbag('translate', this.alt, 'footer_message') -%}
 {%- set t_intro_keynotes = transbag('translate', this.alt, 'intro_keynotes') -%}
+{%- set t_intro_sponsors = transbag('translate', this.alt, 'intro_sponsors') -%}
+{%- set t_message_sponsors = transbag('translate', this.alt, 'message_sponsors') -%}
 
+{% set diamond = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'diamond').order_by('_id') %}
+{% set platinum = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'platinum').order_by('_id') %}
+{% set gold = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'gold').order_by('_id') %}
+{% set silver = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'silver').order_by('_id') %}
+{% set bronze = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'bronze').order_by('_id') %}
+{% set startup = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'startup').order_by('_id') %}
+{% set partner = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'partner').order_by('_id') %}
 
 {%- block body -%}
 
-  <main>
-    {% include './partials/_resume_speakers.html' %}
-    <div class="container-fluid container-no-padding header-content intro-background">
-      <div class="container">
-        <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
-          <div class="section">
-            <div class="logo"></div>
-            <div class="planet-left"></div>
-            <div class="planet-right"></div>
-            <div class="commet"></div>
-            <div class="location">{{ t_intro_location }}</div>
-            <hr />
-            <div class="date">{{ t_intro_date }}, 2019</div>
-            <div class="place">{{ t_intro_place }}</div>
-            <div class="text-center ticket">
-              <a href="{{ this.tickets_link }}" target="blank_">
-                <img src="{% if this.alt == 'en' %} {{ base_url }}static/images/boleta.svg {% else %} {{ base_url }}static/images/boleta_es.svg {% endif %}" style="max-width: 350px; width: 95%;" class="centered" alt="">
-              </a>
-            </div>
-            {%- if 'speakers-call' in this.sections -%}
-            <div id="cfp">
-              <p class="cfp-message">
-                {{ t_intro_message }}
-              </p>
-              <div class="cfp-message">
-                <div id="clockdiv">
-                  <div>
-                    <span class="days"></span>
-                    <div class="smalltext">{{ t_intro_clock_days }}</div>
-                  </div>
-                  <div>
-                    <span class="hours"></span>
-                    <div class="smalltext">{{ t_intro_clock_hours }}</div>
-                  </div>
-                  <div>
-                    <span class="minutes"></span>
-                    <div class="smalltext">{{ t_intro_clock_minutes }}</div>
-                  </div>
-                  <div>
-                    <span class="seconds"></span>
-                    <div class="smalltext">{{ t_intro_clock_seconds }}</div>
-                  </div>
+<main>
+  {% include './partials/_resume_speakers.html' %}
+  <div class="container-fluid container-no-padding header-content intro-background">
+    <div class="container">
+      <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+        <div class="section">
+          <div class="logo"></div>
+          <div class="planet-left"></div>
+          <div class="planet-right"></div>
+          <div class="commet"></div>
+          <div class="location">{{ t_intro_location }}</div>
+          <hr />
+          <div class="date">{{ t_intro_date }}, 2019</div>
+          <div class="place">{{ t_intro_place }}</div>
+          <div class="text-center ticket">
+            <a href="{{ this.tickets_link }}" target="blank_">
+              <img src="{% if this.alt == 'en' %} {{ base_url }}static/images/boleta.svg {% else %} {{ base_url }}static/images/boleta_es.svg {% endif %}"
+                style="max-width: 350px; width: 95%;" class="centered" alt="">
+            </a>
+          </div>
+          {%- if 'speakers-call' in this.sections -%}
+          <div id="cfp">
+            <p class="cfp-message">
+              {{ t_intro_message }}
+            </p>
+            <div class="cfp-message">
+              <div id="clockdiv">
+                <div>
+                  <span class="days"></span>
+                  <div class="smalltext">{{ t_intro_clock_days }}</div>
                 </div>
-                <div class="row justify-content-center">
-                  <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
-                    <span>{{ t_button_talks }}</span>
-                  </a>
-                  <a href="https://www.papercall.io/pycon-colombia-2019-workshops" target="_blank" class="apply-btn">
-                    <span>{{ t_button_workshops }}</span>
-                  </a>
+                <div>
+                  <span class="hours"></span>
+                  <div class="smalltext">{{ t_intro_clock_hours }}</div>
+                </div>
+                <div>
+                  <span class="minutes"></span>
+                  <div class="smalltext">{{ t_intro_clock_minutes }}</div>
+                </div>
+                <div>
+                  <span class="seconds"></span>
+                  <div class="smalltext">{{ t_intro_clock_seconds }}</div>
                 </div>
               </div>
+              <div class="row justify-content-center">
+                <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
+                  <span>{{ t_button_talks }}</span>
+                </a>
+                <a href="https://www.papercall.io/pycon-colombia-2019-workshops" target="_blank" class="apply-btn">
+                  <span>{{ t_button_workshops }}</span>
+                </a>
+              </div>
             </div>
-            <div id="clockEvent">
-              <!-- <p class="cfp-message">
+          </div>
+          <div id="clockEvent">
+            <!-- <p class="cfp-message">
                 {{ t_intro_message }}
               </p> -->
-              <div class="cfp-message">
-                <div id="clockEventdiv">
-                  <div>
-                    <span class="days"></span>
-                    <div class="smalltext">{{ t_intro_clock_days }}</div>
-                  </div>
-                  <div>
-                    <span class="hours"></span>
-                    <div class="smalltext">{{ t_intro_clock_hours }}</div>
-                  </div>
-                  <div>
-                    <span class="minutes"></span>
-                    <div class="smalltext">{{ t_intro_clock_minutes }}</div>
-                  </div>
-                  <div>
-                    <span class="seconds"></span>
-                    <div class="smalltext">{{ t_intro_clock_seconds }}</div>
-                  </div>
+            <div class="cfp-message">
+              <div id="clockEventdiv">
+                <div>
+                  <span class="days"></span>
+                  <div class="smalltext">{{ t_intro_clock_days }}</div>
                 </div>
-              </div>
-            </div>
-            {%- endif -%}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid container-no-padding header-content keynotes-background">
-      <div class="container">
-        <div class="section">
-          <div class="apply-content">
-            <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
-              {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish) %}
-  
-              <h1 class="title-subscribe">{{ t_intro_keynotes }}</h1>
-              <div class="commet"></div>
-              <div class="form-container">
-                <div class="keynotes">
-                  {% for speaker in speakers %} {{ render_keynote_speaker(speaker, index=loop.index, details=True) }} {% endfor %}
+                <div>
+                  <span class="hours"></span>
+                  <div class="smalltext">{{ t_intro_clock_hours }}</div>
+                </div>
+                <div>
+                  <span class="minutes"></span>
+                  <div class="smalltext">{{ t_intro_clock_minutes }}</div>
+                </div>
+                <div>
+                  <span class="seconds"></span>
+                  <div class="smalltext">{{ t_intro_clock_seconds }}</div>
                 </div>
               </div>
             </div>
           </div>
+          {%- endif -%}
         </div>
       </div>
     </div>
-    <div class="container-fluid container-no-padding header-content subscribe-background">
+  </div>
+  <div class="container-fluid container-no-padding header-content keynotes-background">
+    <div class="container">
+      <div class="section">
+        <div class="apply-content">
+          <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+            {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish) %}
+
+            <h1 class="title-subscribe">{{ t_intro_keynotes }}</h1>
+            <div class="commet"></div>
+            <div class="form-container">
+              <div class="keynotes">
+                {% for speaker in speakers %} {{ render_keynote_speaker(speaker, index=loop.index, details=True) }} {%
+                endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid container-no-padding header-content subscribe-background">
+    <div class="container">
+      <div class="section">
+        <div class="apply-content">
+          <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+            <h1 class="title-subscribe">{{ t_intro_sponsors }}</h1>
+            <p class="message-intro">
+              {{ t_message_sponsors }}
+            </p>
+            <div class="commet"></div>
+            <div>
+              {% if diamond %}
+                {{ render_sponsors(diamond) }}
+              {% endif %}
+              {% if platinum %}
+                {{ render_sponsors(platinum) }}
+              {% endif %}
+              {% if gold %}
+                {{ render_sponsors(gold) }}
+              {% endif %}
+              {% if silver %}
+                {{ render_sponsors(silver) }}
+              {% endif %}
+              {% if startup %}
+                {{ render_sponsors(startup) }}
+              {% endif %}
+              {% if partner %}
+                {{ render_sponsors(partner) }}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="section">
           <div class="apply-content">
@@ -135,6 +186,6 @@
         </div>
       </div>
     </div>
-  </main>
+</main>
 <script src="{{ base_url }}static/js/clock.js"></script>
 {%- endblock -%}

@@ -7,3 +7,5 @@ image: psf.svg
 web: https://www.python.org/psf/
 ---
 twitter_handle: ThePSF
+---
+category: gold

@@ -149,3 +149,20 @@ a {
     background-color: #231f2a;
   }
 }
+
+.row_sponsor {
+  padding: 30px 0;
+}
+
+.message-intro {
+  color:#fff;
+  font-size:25px;
+  font-weight:300;
+  letter-spacing:4px;
+  line-height:1.2;
+  margin-bottom:32px;
+  opacity:0.8;
+  position:relative;
+  text-align:center;
+  z-index:10
+}
