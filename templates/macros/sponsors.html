@@ -1,0 +1,12 @@
+{% macro render_sponsors(sponsor_list) %}
+<div class="row_sponsor">
+  <div class="row">
+    {% for item in sponsor_list %}
+    <div class="col-md-4 col-sm-12 col-xs-12 mx-auto">
+      <img src={%- if item.image -%} "/sponsors/{{ item._id }}/{{ item.image }}" {%- else -%}
+        "/static/images/empty-photo.svg" {%- endif -%} />
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endmacro %}
