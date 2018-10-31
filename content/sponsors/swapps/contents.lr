@@ -1,9 +1,7 @@
-name: Swapps
----
-category: startup
+name: swapps
 ---
 confirmed: yes
 ---
-web: https://swapps.com/es/
----
 image: swapps.svg
+---
+category: startup

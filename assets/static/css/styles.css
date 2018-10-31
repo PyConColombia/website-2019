@@ -166,3 +166,8 @@ a {
   text-align:center;
   z-index:10
 }
+
+.sponsor-ini img {
+  width: 95%;
+  max-width: 300px;
+}

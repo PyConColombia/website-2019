@@ -3,9 +3,11 @@
   <div class="row">
     {% for item in sponsor_list %}
     <div class="col-md-4 col-sm-12 col-xs-12 mx-auto">
-      <img src={%- if item.image -%} "/sponsors/{{ item._id }}/{{ item.image }}" {%- else -%}
-        "/static/images/empty-photo.svg" {%- endif -%} />
+      <div class="sponsor-ini">
+        <img src={%- if item.image -%} "/patrocinadores/{{ item._id }}/{{ item.image }}" {%- else -%}
+          "/static/images/empty-photo.svg" {%- endif -%} />
       </div>
+    </div>
     {% endfor %}
   </div>
 </div>
