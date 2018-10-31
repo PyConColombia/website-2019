@@ -1,11 +1,11 @@
 name: Python Software Foundation
 ---
+category: gold
+---
 confirmed: yes
----
-image: psf.svg
----
-web: https://www.python.org/psf/
 ---
 twitter_handle: ThePSF
 ---
-category: gold
+web: https://www.python.org/psf/
+---
+image: psf.svg
