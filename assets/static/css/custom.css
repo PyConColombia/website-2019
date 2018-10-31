@@ -218,6 +218,10 @@
   background-position: center top;
 }
 
+.background-sponsor{
+  background-color: #000;
+}
+
 .background-code {
   background:url("../images/back.svg"); 
   background-size: cover;

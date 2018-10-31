@@ -140,7 +140,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid container-no-padding header-content subscribe-background">
+  <div class="container-fluid container-no-padding header-content background-sponsor">
     <div class="container">
       <div class="section">
         <div class="apply-content">
@@ -152,40 +152,43 @@
             <div class="commet"></div>
             <div>
               {% if diamond %}
-                {{ render_sponsors(diamond) }}
+              {{ render_sponsors(diamond) }}
               {% endif %}
               {% if platinum %}
-                {{ render_sponsors(platinum) }}
+              {{ render_sponsors(platinum) }}
               {% endif %}
               {% if gold %}
-                {{ render_sponsors(gold) }}
+              {{ render_sponsors(gold) }}
               {% endif %}
               {% if silver %}
-                {{ render_sponsors(silver) }}
+              {{ render_sponsors(silver) }}
               {% endif %}
               {% if startup %}
-                {{ render_sponsors(startup) }}
+              {{ render_sponsors(startup) }}
               {% endif %}
               {% if partner %}
-                {{ render_sponsors(partner) }}
+              {{ render_sponsors(partner) }}
               {% endif %}
             </div>
           </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="section">
-          <div class="apply-content">
-            <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
-              {% include 'partials/_mailchimp.html' %}
-            </div>
-          </div>
-        </div>
-        <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
-          {% include 'partials/_footer.html' %}
         </div>
       </div>
     </div>
+  </div>
+  <div class="container-fluid container-no-padding header-content subscribe-background">
+    <div class="container">
+      <div class="section">
+        <div class="apply-content">
+          <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+            {% include 'partials/_mailchimp.html' %}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+        {% include 'partials/_footer.html' %}
+      </div>
+    </div>
+  </div>
 </main>
 <script src="{{ base_url }}static/js/clock.js"></script>
 {%- endblock -%}
