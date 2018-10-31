@@ -19,6 +19,8 @@
 {%- set t_intro_sponsors = transbag('translate', this.alt, 'intro_sponsors') -%}
 {%- set t_message_sponsors = transbag('translate', this.alt, 'message_sponsors') -%}
 
+{% set venue = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'venue').order_by('_id') %}
 {% set diamond = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
 'diamond').order_by('_id') %}
 {% set platinum = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
@@ -151,6 +153,9 @@
             </p>
             <div class="commet"></div>
             <div>
+              {% if venue %}
+              {{ render_sponsors(venue) }}
+              {% endif %}
               {% if diamond %}
               {{ render_sponsors(diamond) }}
               {% endif %}
