@@ -54,8 +54,7 @@
           <div class="place">{{ t_intro_place }}</div>
           <div class="text-center ticket">
             <a href="{{ this.tickets_link }}" target="blank_">
-              <img src="{% if this.alt == 'en' %} {{ base_url }}static/images/boleta.svg {% else %} {{ base_url }}static/images/boleta_es.svg {% endif %}"
-                style="max-width: 350px; width: 95%;" class="centered" alt="">
+              <img src="{% if this.alt == 'en' %} {{ base_url }}static/images/boleta.svg {% else %} {{ base_url }}static/images/boleta_es.svg {% endif %}" class="centered" alt="">
             </a>
           </div>
           {%- if 'speakers-call' in this.sections -%}

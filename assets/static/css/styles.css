@@ -55,6 +55,13 @@ a {
   animation-name: shake;
 }
 
+.ticket img {
+  position: relative;
+  display: inline-block;
+  max-width: 350px;
+  width: 95%;
+}
+
 .navbar {
   background-color: rgba(0, 0, 0, 0.4);
   height: 70px;
