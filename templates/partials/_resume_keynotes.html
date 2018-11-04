@@ -21,7 +21,7 @@
   {%- endfor -%}
 {%- endmacro-%}
 
-{% set speakers = site.query('/speakers', alt=this.alt).filter(F.publish).order_by('_id') %}
+{% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish).order_by('_id') %}
 
 {% for speaker in speakers %}
 {%- set complete_name = speaker.name + " " + speaker.last_name -%}
