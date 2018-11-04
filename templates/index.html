@@ -3,6 +3,7 @@
 {% extends "layout.html" %}
 {%- from "macros/speakers.html" import render_keynote_speaker -%}
 {%- from "macros/sponsors.html" import render_sponsors -%}
+{%- from "macros/sponsors.html" import render_sponsors_venue -%}
 
 {%- set t_intro_location = transbag('translate', this.alt, 'intro_location') -%}
 {%- set t_intro_date = transbag('translate', this.alt, 'intro_date') -%}
@@ -153,7 +154,7 @@
             <div class="commet"></div>
             <div>
               {% if venue %}
-              {{ render_sponsors(venue) }}
+              {{ render_sponsors_venue(venue) }}
               {% endif %}
               {% if diamond %}
               {{ render_sponsors(diamond) }}

@@ -1,3 +1,18 @@
+{% macro render_sponsors_venue(sponsor_list) %}
+<div class="row_sponsor">
+  <div class="row">
+    {% for item in sponsor_list %}
+    <div class="col-md-6 col-sm-12 col-xs-12 mx-auto">
+      <div class="sponsor-ini_venue">
+        <img src={%- if item.image -%} "/patrocinadores/{{ item._id }}/{{ item.image }}" {%- else -%}
+          "/static/images/empty-photo.svg" {%- endif -%} />
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endmacro %}
+
 {% macro render_sponsors(sponsor_list) %}
 <div class="row_sponsor">
   <div class="row">
