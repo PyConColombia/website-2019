@@ -55,6 +55,13 @@ a {
   animation-name: shake;
 }
 
+.ticket img {
+  position: relative;
+  display: inline-block;
+  max-width: 350px;
+  width: 95%;
+}
+
 .navbar {
   background-color: rgba(0, 0, 0, 0.4);
   height: 70px;
@@ -153,3 +160,31 @@ a {
 /* Map */
 
 #mapid { height: 50vh; }
+
+@media (max-width: 767px) {
+  .sponsor-ini img {
+    padding: 10px 0;
+  }
+}
+
+.row_sponsor {
+  padding: 30px 0;
+}
+
+.message-intro {
+  color:#fff;
+  font-size:25px;
+  font-weight:300;
+  letter-spacing:4px;
+  line-height:1.2;
+  margin-bottom:32px;
+  opacity:0.8;
+  position:relative;
+  text-align:center;
+  z-index:10
+}
+
+.sponsor-ini img {
+  width: 95%;
+  /* max-width: 300px; */
+}
