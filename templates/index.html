@@ -155,25 +155,25 @@
             <div class="commet"></div>
             <div>
               {% if venue %}
-              {{ render_sponsors_venue(venue) }}
+              {{ render_sponsors(venue, 8) }}
               {% endif %}
               {% if diamond %}
-              {{ render_sponsors(diamond) }}
+              {{ render_sponsors(diamond, 6) }}
               {% endif %}
               {% if platinum %}
-              {{ render_sponsors(platinum) }}
+              {{ render_sponsors(platinum, 5) }}
               {% endif %}
               {% if gold %}
-              {{ render_sponsors(gold) }}
+              {{ render_sponsors(gold, 4) }}
               {% endif %}
               {% if silver %}
-              {{ render_sponsors(silver) }}
+              {{ render_sponsors(silver, 3) }}
               {% endif %}
               {% if startup %}
-              {{ render_sponsors(startup) }}
+              {{ render_sponsors(startup, 2) }}
               {% endif %}
               {% if partner %}
-              {{ render_sponsors(partner) }}
+              {{ render_sponsors(partner, 1) }}
               {% endif %}
             </div>
           </div>
