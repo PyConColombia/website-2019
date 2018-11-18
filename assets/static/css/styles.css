@@ -184,3 +184,33 @@ a {
   width: 95%;
   /* max-width: 300px; */
 }
+
+.sponsors-view {
+  text-align: left;
+}
+
+.sponsor-web img {
+  height: 100px;
+  margin: 0 0 15px 0;
+}
+
+.row_sponsor {
+  margin: 5px 0;
+}
+
+.sponsor-name {
+  color: #fff;
+  font-size: 33px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  line-height: 1.2;
+  position: relative;
+  z-index: 10;
+}
+
+.sponsor-summary {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  justify-content: center;
+}
