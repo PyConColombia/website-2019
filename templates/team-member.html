@@ -1,0 +1,30 @@
+{%- from "macros/translation.html" import transbag -%}
+{%- from "macros/team_members.html" import render_team_member -%}
+{%- from "macros/speakers.html" import render_speaker_social -%}
+
+{% extends "page.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block banner_text %}
+{% endblock %}
+{% block body %}
+<div class="row">
+    <div class="speaker-details">
+      <h1>{{ this.name }} {{ this.last_name }}</h1>
+      <div class="speaker-job">
+        <h2>{{ transbag('translate', this.alt, this.category) }}</h2>
+      </div>
+      <h3 class="speaker-country">
+        {{ this.country }}
+      </h3>
+    </div>
+  <div class="col-sm-12 col-md-5 align-self-center">
+    {{ render_team_member(this, details=False) }}
+    {{ render_speaker_social(this, floating=False) }}
+  </div>
+  <div class="col-sm-12 col-md-7 align-self-center">
+    <div claass="speaker-info">
+      {{ this.information }}
+    </div>
+  </div>
+</div>
+{% endblock %}

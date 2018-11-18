@@ -1,0 +1,22 @@
+{%- from "macros/team_members.html" import render_team_member -%}
+{%- from "macros/translation.html" import transbag -%}
+{% extends "page.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  {% for name, categories in [['Organizers', ['Organizer', 'Co-Organizer']],
+                              ['Collaborators', ['Collaborator']],
+                              ['Volunteers', ['Volunteer']]] %}
+                              {# ['Ambassors', ['Ambassor']]] %} #}
+    <h2 class="team-title">{{ transbag('translate', this.alt, name) }}</h2>
+    <div class="row justify-content-center">
+    {% for category in categories %}
+      {% set members = site.query('/team', alt=this.alt).filter(F.category==category).filter(F.publish) %}
+      {% for member in members %}
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          {{ render_team_member(member, loop.index, alt=this.alt) }}
+        </div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+  {% endfor %}
+{% endblock %}
