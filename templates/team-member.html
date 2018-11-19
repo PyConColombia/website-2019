@@ -1,30 +1,35 @@
-{%- from "macros/translation.html" import transbag -%}
-{%- from "macros/team_members.html" import render_team_member -%}
-{%- from "macros/speakers.html" import render_speaker_social -%}
+{% extends "layout.html" %}
 
-{% extends "page.html" %}
-{% block title %}{{ this.title }}{% endblock %}
-{% block banner_text %}
-{% endblock %}
 {% block body %}
-<div class="row">
-    <div class="speaker-details">
-      <h1>{{ this.name }} {{ this.last_name }}</h1>
-      <div class="speaker-job">
-        <h2>{{ transbag('translate', this.alt, this.category) }}</h2>
+<div class="mdl-layout mdl-js-layout layout-home"></div>
+<main>
+  <!-- class="mdl-layout__content" -->
+  <div>
+    <!-- class="page-content" -->
+    <div class="background-code">
+      <div class="background-stars">
+        <div class="container-fluid header-content background-meteor">
+          <div class="container">
+            <div class="section">
+              <div class="row justify-content-center align-self-center">
+                <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+                  <div style="margin-bottom: 100px;">
+                    <div class="row justify-content-center align-self-center">
+                      <h1 class="title-subscribe">{{ this.title }} </h1>
+                    </div>
+                    <div class="commet"></div>
+                    <div>
+                      
+                    </div>
+                  </div>
+                  {% include 'partials/_footer.html' %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h3 class="speaker-country">
-        {{ this.country }}
-      </h3>
     </div>
-  <div class="col-sm-12 col-md-5 align-self-center">
-    {{ render_team_member(this, details=False) }}
-    {{ render_speaker_social(this, floating=False) }}
-  </div>
-  <div class="col-sm-12 col-md-7 align-self-center">
-    <div claass="speaker-info">
-      {{ this.information }}
-    </div>
-  </div>
+</main>
 </div>
 {% endblock %}
