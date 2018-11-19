@@ -1,34 +1,32 @@
-<!-- {%- from "macros/speakers.html" import render_speaker_social -%} -->
 {%- from "macros/translation.html" import transbag -%}
 
-{% macro render_team_member(member, index=1, details=True, alt="en") %}
+{% macro render_team_member(member, index=1, details=True, alt="es") %}
 {%- set complete_name = member.name + " " + member.last_name -%}
 
-  <div class="speaker">
-    <a href="{{ member | url }}" title="{{ complete_name }}">
+  <div class="team">
+    <a {# href="{{ member | url }}" #} title="{{ complete_name }}">
     <img class="speaker-image" id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src=
     {%- if member.image -%}
       {# No cambiar esto es necesario para que lektor funcione bien con las alternativas #}
-      "/team/{{ member._id }}/{{ member.image }}"
+      "/equipo/{{ member._id }}/{{ member.image }}"
     {%- else -%}
       "/static/images/empty-photo.svg"
     {%- endif -%}
      />
      </a>
     {%- if details -%}
-    <div class="speaker-details-wrapper">
-      <!-- {{ render_speaker_social(member, index) }} -->
-    <div class="speaker-details light-color">
-      <div class="speaker-name">{{ complete_name }}</div>
-      <div class="speaker-job">
-      {%- if member.category in ['Organizer', 'Co-Organizer'] -%}
-        {{ transbag('translate', alt, member.category) }}
-      {%- endif -%}
-      {% if member.responsibility %}
-        ({{ member.responsibility }})
-      {% endif %}
+    <div class="col-sm-12">
+      <div class="speaker-details light-color">
+        <div class="speaker-name">{{ complete_name }}</div>
+        <div class="speaker-job">
+        {%- if member.category in ['Organizer', 'Co-Organizer'] -%}
+          {{ transbag('translate', alt, member.category) }}
+        {%- endif -%}
+        {% if member.responsibility %}
+          ({{ member.responsibility }})
+        {% endif %}
+        </div>
       </div>
-    </div>
     </div>
     {%- endif -%}
   </div>

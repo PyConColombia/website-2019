@@ -1,8 +1,13 @@
 {% extends "layout.html" %}
 
+{%- from "macros/sponsors.html" import render_sponsors_web -%}
+
 {%- block body -%}
 
-{% set diamond = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category == 'diamond').order_by('_id') %}
+{% set venue = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'venue').order_by('_id') %}
+{% set diamond = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'diamond').order_by('_id') %}
 {% set platinum = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
 'platinum').order_by('_id') %}
 {% set gold = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
@@ -29,25 +34,70 @@
                 <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
                   <h1 class="title-subscribe">SPONSORS</h1>
                   <div class="commet"></div>
-                  <div>
+                  <div class="sponsors-view">
+                    {% if venue %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Venue</h2>
+                        </div>
+                        {{ render_sponsors_web(venue) }}
+                      </div>
+                    {% endif %}
                     {% if diamond %}
-                      <div class="row">
+                      <div class="row row_sponsor">
                         <div class="col-md-4 col-xs-12">
-                          <h2>Diamond</h2>
+                          <h2 class="sponsor-name">Diamond</h2>
                         </div>
+                        {{ render_sponsors_web(diamond) }}
                       </div>
-                      {% for item in diamond %}
-                      <div class="row">
+                    {% endif %}
+                    {% if platinum %}
+                      <div class="row row_sponsor">
                         <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Platinum</h2>
                         </div>
-                        <div class="col-md-8 col-xs-12">
-                          <img src={%- if item.image -%}
-                                "{{ item._id }}/{{ item.image }}"
-                                {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} />
-                          {{ item.summary }}
-                        </div>
+                        {{ render_sponsors_web(platinum) }}
                       </div>
-                      {% endfor %}
+                    {% endif %}
+                    {% if gold %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Gold</h2>
+                        </div>
+                        {{ render_sponsors_web(gold) }}
+                      </div>
+                    {% endif %}
+                    {% if silver %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Silver</h2>
+                        </div>
+                        {{ render_sponsors_web(silver) }}
+                      </div>
+                    {% endif %}
+                    {% if bronze %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Bronce</h2>
+                        </div>
+                        {{ render_sponsors_web(bronze) }}
+                      </div>
+                    {% endif %}
+                    {% if startup %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Startup</h2>
+                        </div>
+                        {{ render_sponsors_web(startup) }}
+                      </div>
+                    {% endif %}
+                    {% if partner %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Partner</h2>
+                        </div>
+                        {{ render_sponsors_web(partner) }}
+                      </div>
                     {% endif %}
                   </div>
                 </div>

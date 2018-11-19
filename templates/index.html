@@ -1,4 +1,12 @@
+{%- set base_url = '/'|url(alt='es') -%}
 {%- from "macros/translation.html" import transbag -%}
+
+{%- macro item_url(identifier) -%}
+  {% set identifier_url = '/' + identifier %}
+  {% set trans_url = identifier_url|url(alt=this.alt) %}
+
+  {{ trans_url }}
+{%- endmacro -%}
 
 {% extends "layout.html" %}
 {%- from "macros/speakers.html" import render_keynote_speaker -%}
@@ -40,7 +48,7 @@
 {%- block body -%}
 
 <main>
-  {% include './partials/_resume_speakers.html' %}
+  {% include './partials/_resume_keynotes.html' %}
   <div class="container-fluid container-no-padding header-content intro-background">
     <div class="container">
       <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
@@ -55,7 +63,8 @@
           <div class="place">{{ t_intro_place }}</div>
           <div class="text-center ticket">
             <a href="{{ this.tickets_link }}" target="blank_">
-              <img src="{% if this.alt == 'en' %} {{ base_url }}static/images/boleta.svg {% else %} {{ base_url }}static/images/boleta_es.svg {% endif %}" class="centered" alt="">
+              <img src="{% if this.alt == 'en' %} {{ base_url }}static/images/boleta.svg {% else %} {{ base_url }}static/images/boleta_es.svg {% endif %}"
+                class="centered" alt="">
             </a>
           </div>
           {%- if 'speakers-call' in this.sections -%}
@@ -147,32 +156,32 @@
       <div class="section">
         <div class="apply-content">
           <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
-            <h1 class="title-subscribe">{{ t_intro_sponsors }}</h1>
+            <h1 class="title-subscribe"><a href="{{item_url('sponsors')}}">{{ t_intro_sponsors }}</a></h1>
             <p class="message-intro">
               {{ t_message_sponsors }}
             </p>
             <div class="commet"></div>
             <div>
               {% if venue %}
-              {{ render_sponsors_venue(venue) }}
+              {{ render_sponsors(venue, 8) }}
               {% endif %}
               {% if diamond %}
-              {{ render_sponsors(diamond) }}
+              {{ render_sponsors(diamond, 6) }}
               {% endif %}
               {% if platinum %}
-              {{ render_sponsors(platinum) }}
+              {{ render_sponsors(platinum, 5) }}
               {% endif %}
               {% if gold %}
-              {{ render_sponsors(gold) }}
+              {{ render_sponsors(gold, 4) }}
               {% endif %}
               {% if silver %}
-              {{ render_sponsors(silver) }}
+              {{ render_sponsors(silver, 3) }}
               {% endif %}
               {% if startup %}
-              {{ render_sponsors(startup) }}
+              {{ render_sponsors(startup, 2) }}
               {% endif %}
               {% if partner %}
-              {{ render_sponsors(partner) }}
+              {{ render_sponsors(partner, 1) }}
               {% endif %}
             </div>
           </div>

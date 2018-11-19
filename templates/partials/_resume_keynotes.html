@@ -21,7 +21,7 @@
   {%- endfor -%}
 {%- endmacro-%}
 
-{% set speakers = site.query('/speakers', alt=this.alt).filter(F.publish).order_by('_id') %}
+{% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish).order_by('_id') %}
 
 {% for speaker in speakers %}
 {%- set complete_name = speaker.name + " " + speaker.last_name -%}
@@ -52,43 +52,31 @@
                   <h2 class="speaker-info-1">{{ speaker.position_1 }}</h2>
                   <h2 class="speaker-info-2">{{ speaker.position_2 }}</h2>
                   <div class="social-container-speaker">
-                    <div class="row justify-content-center align-self-center">
-                      <div class="col-sm-1">
-                        {% if speaker.github_handle %}
-                        <a href="https://github.com/{{ speaker.github_handle }}" target="_blank">
-                          <div class="social-icon fab fa-github-alt"></div>
-                        </a>
-                        {% endif %}
-                      </div>
-                      <div class="col-sm-1">
-                        {% if speaker.facebook_handle %}
-                        <a href="https://facebook.com/{{ speaker.facebook_handle }}" target="_blank">
-                          <div class="social-icon fab fa-facebook-f"></div>
-                        </a>
-                        {% endif %}
-                      </div>
-                      <div class="col-sm-1">
-                        {% if speaker.twitter_handle %}
-                        <a href="https://twitter.com/{{ speaker.twitter_handle }}" target="_blank">
-                          <div class="social-icon fab fa-twitter"></div>
-                        </a>
-                        {% endif %}
-                      </div>
-                      <div class="col-sm-1">
-                        {% if speaker.linkedin_handle %}
-                        <a href="http://linkedin.com/in/{{ speaker.linkedin_handle }}" target="_blank">
-                          <div class="social-icon fab fa-linkedin-in"></div>
-                        </a>
-                        {% endif %}
-                      </div>
-                      <div class="col-sm-1">
-                        {% if speaker.web %}
-                        <a href="{{ speaker.web }}" target="_blank">
-                          <div class="social-icon fas fa-globe"></div>
-                        </a>
-                        {% endif %}
-                      </div>
-                    </div>
+                    {% if speaker.github_handle %}
+                    <a href="https://github.com/{{ speaker.github_handle }}" target="_blank">
+                      <div class="social-icon fab fa-github-alt"></div>
+                    </a>
+                    {% endif %}
+                    {% if speaker.facebook_handle %}
+                    <a href="https://facebook.com/{{ speaker.facebook_handle }}" target="_blank">
+                      <div class="social-icon fab fa-facebook-f"></div>
+                    </a>
+                    {% endif %}
+                    {% if speaker.twitter_handle %}
+                    <a href="https://twitter.com/{{ speaker.twitter_handle }}" target="_blank">
+                      <div class="social-icon fab fa-twitter"></div>
+                    </a>
+                    {% endif %}
+                    {% if speaker.linkedin_handle %}
+                    <a href="http://linkedin.com/in/{{ speaker.linkedin_handle }}" target="_blank">
+                      <div class="social-icon fab fa-linkedin-in"></div>
+                    </a>
+                    {% endif %}
+                    {% if speaker.web %}
+                    <a href="{{ speaker.web }}" target="_blank">
+                      <div class="social-icon fas fa-globe"></div>
+                    </a>
+                    {% endif %}
                   </div>
                 </div>
                 <div class="row justify-content-center align-self-center">
