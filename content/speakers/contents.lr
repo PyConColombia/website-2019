@@ -1,0 +1,7 @@
+_model: speakers
+---
+title: Speakers
+---
+_template: speakers.html
+---
+_slug: ponentes

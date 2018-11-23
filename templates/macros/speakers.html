@@ -1,59 +1,80 @@
 {%- from "macros/translation.html" import transbag -%}
 
-{% macro render_speaker_social(speaker, index=1, floating=True) %}
-  <div id="link-{{ index }}" class="speaker-social{% if floating %} floating{% endif %}">
-    {%- set counter = 0 -%}
-    {% if speaker.twitter_handle %}
-      <a id="link-{{ index }}" class="social-hover" href="https://www.twitter.com/{{ speaker.twitter_handle }}" target="blank"><div class="social-icon icon-twitter"></div></a>
-      {% set counter =  counter +1 %}
-    {% endif %}
-    {% if speaker.web %}
-      <a id="link-{{ index }}" class="social-hover" href="{{ speaker.web }}" target="blank"><div class="social-icon icon-website"></div></a>
-      {% set counter =  counter + 1 %}
-    {% endif %}
-    {% if speaker.github_handle %}
-      <a id="link-{{ index }}" class="social-hover" href="https://www.github.com/{{ speaker.github_handle }}" target="blank"><div class="social-icon icon-github"></div></a>
-      {% set counter =  counter + 1 %}
-    {% endif %}
-    {% if speaker.facebook_handle and counter > 3 and not floating %}
-      <a id="link-{{ index }}" class="social-hover" href="https://www.facebook.com/{{ speaker.facebook_handle }}" target="blank"><div class="social-icon icon-facebook"></div></a>
-    {% endif %}
+{% macro speaker_left(speaker, index) %}
+{%- set complete_name = speaker.name + " " + speaker.last_name -%}
+<div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image
+        -%}
+        "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else
+        -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ speaker._id }}')" class="img-fluid blend" />
+      </div>
+    </div>
   </div>
-{% endmacro %}
-
-{% macro render_speaker_info(speaker, css) %}
- {%- set t_speaker_at = transbag('translate', speaker.alt, 'speaker_at') -%}
-  <div class="speaker-details {{ css }}">
-    <div class="speaker-name">{{ speaker.name }} {{speaker.last_name }}</div>
-    <div class="speaker-job">
-      {% if speaker.display_summary %}
-      {{ speaker.summary }}
-      {% else%}
-      {{ speaker.position }} {%- if speaker.employer -%}&nbsp;{{ t_speaker_at }}&nbsp;{{ speaker.employer }}{%- endif -%}</h2>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name">{{ complete_name }}</h1>
+      <h2 class="speaker-info-1">{{ speaker.position_1 }}</h2>
+      <h2 class="speaker-info-2">{{ speaker.position_2 }}</h2>
+      {% if speaker.twitter_handle %}
+      <h3 class="speaker-info-1">@{{ speaker.twitter_handle }}</h3>
       {% endif %}
     </div>
   </div>
+</div>
 {% endmacro %}
 
-{% macro render_speaker(speaker, index=1, details=True, css='light-color') %}
+{% macro speaker_right(speaker, index) %}
 {%- set complete_name = speaker.name + " " + speaker.last_name -%}
-
-  <div class="speaker">
-    <a href="{{ speaker | url }}" title="{{ complete_name }}"">
-    <img class="speaker-image" id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src=
-    {%- if speaker.image -%}
-      {# No cambiar esto es necesario para que lektor funcione bien con las alternativas #}
-      "/speakers/{{ speaker._id }}/{{ speaker.image }}"
-    {%- else -%}
-      "/static/images/empty-photo.svg"
-    {%- endif -%}
-     />
-     </a>
-    {% if details -%}
-    <div class="speaker-details-wrapper">
-      {{ render_speaker_social(speaker, index) }}
-      {{ render_speaker_info(speaker, css) }}
+<div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name">{{ complete_name }}</h1>
+      <h2 class="speaker-info-1">{{ speaker.position_1 }}</h2>
+      <h2 class="speaker-info-2">{{ speaker.position_2 }}</h2>
+      {% if speaker.twitter_handle %}
+      <h3 class="speaker-info-1">@{{ speaker.twitter_handle }}</h3>
+      {% endif %}
     </div>
-    {%- endif %}
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image -%}
+          "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}"
+          {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ speaker._id }}')" class="img-fluid blend" />
+      </div>
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro render_keynote_speaker(speaker, index=1, details=True) %}
+  <div class="speaker-container">
+    <div class="row justify-content-center align-self-center">
+      {%- if index % 2 == 1 -%}
+        {{ speaker_left(speaker, index) }}
+      {%- else -%}
+        {{ speaker_right(speaker, index) }}
+      {%- endif -%}
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro render_speaker(speaker, index=1, details=True) %}
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> -->
+      {%- if index % 4 == 1 -%}
+        {{ speaker_left(speaker, index) }}
+      {%- elif index % 4 == 2 -%}
+        {{ speaker_left(speaker, index) }}
+      {%- elif index % 4 == 3 -%}
+        {{ speaker_right(speaker, index) }}
+      {%- elif index % 4 == 0 -%}
+        {{ speaker_right(speaker, index) }}
+      {%- endif -%}
+    <!-- </div> -->
   </div>
 {% endmacro %}

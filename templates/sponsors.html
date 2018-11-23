@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{%- from "macros/sponsors.html" import render_sponsors_web -%}
+
+{%- block body -%}
+
+{% set venue = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'venue').order_by('_id') %}
+{% set diamond = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'diamond').order_by('_id') %}
+{% set platinum = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'platinum').order_by('_id') %}
+{% set gold = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'gold').order_by('_id') %}
+{% set silver = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'silver').order_by('_id') %}
+{% set bronze = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'bronze').order_by('_id') %}
+{% set startup = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'startup').order_by('_id') %}
+{% set partner = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'partner').order_by('_id') %}
+
+<div class="mdl-layout mdl-js-layout layout-home">
+  <main>
+    <!-- class="mdl-layout__content" -->
+    <div>
+      <!-- class="page-content" -->
+      <div class="container-fluid container-no-padding header-content background-keynotes">
+        <div class="container">
+          <div class="section">
+            <div class="apply-content">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+                  <h1 class="title-subscribe">SPONSORS</h1>
+                  <div class="commet"></div>
+                  <div class="sponsors-view">
+                    {% if venue %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Venue</h2>
+                        </div>
+                        {{ render_sponsors_web(venue) }}
+                      </div>
+                    {% endif %}
+                    {% if diamond %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Diamond</h2>
+                        </div>
+                        {{ render_sponsors_web(diamond) }}
+                      </div>
+                    {% endif %}
+                    {% if platinum %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Platinum</h2>
+                        </div>
+                        {{ render_sponsors_web(platinum) }}
+                      </div>
+                    {% endif %}
+                    {% if gold %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Gold</h2>
+                        </div>
+                        {{ render_sponsors_web(gold) }}
+                      </div>
+                    {% endif %}
+                    {% if silver %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Silver</h2>
+                        </div>
+                        {{ render_sponsors_web(silver) }}
+                      </div>
+                    {% endif %}
+                    {% if bronze %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Bronce</h2>
+                        </div>
+                        {{ render_sponsors_web(bronze) }}
+                      </div>
+                    {% endif %}
+                    {% if startup %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Startup</h2>
+                        </div>
+                        {{ render_sponsors_web(startup) }}
+                      </div>
+                    {% endif %}
+                    {% if partner %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Partner</h2>
+                        </div>
+                        {{ render_sponsors_web(partner) }}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+              {% include 'partials/_footer.html' %}
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+</div>
+{%- endblock -%}

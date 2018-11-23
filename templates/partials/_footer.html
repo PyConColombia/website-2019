@@ -1,0 +1,40 @@
+{%- from "macros/translation.html" import transbag -%}
+{%- set t_footer_message = transbag('translate', this.alt, 'footer_message') -%}
+{%- set t_footer_rights = transbag('translate', this.alt, 'footer_rights') -%}
+
+<section class="footer">
+  <div class="apply-content">
+    <div class="planet-earth-content">
+      <div class="planet-earth-glow"></div>
+      <div class="planet-earth-glow"></div>
+      <div class="planet-earth-top-glow"></div>
+      <div class="planet-earth-top-glow"></div>
+      <div class="planet-earth"></div>
+    </div>
+    <p class="footer-text">
+      {{ t_footer_message }}
+    </p>
+    <p class="footer-text">
+      {{ t_footer_rights }}<br />
+      {% if this.alt == 'en' %}
+      <a href="/en/code-of-conduct">Code of Conduct</a>
+      {% else %}
+      <a href="/codigo-de-conducta">Código de Conducta</a>
+      {% endif %} | <a href="mailto:hello@pycon.co">hello@pycon.co</a>
+    </p>
+    <div class="social-icons-container">
+      <a href="https://www.twitter.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-twitter"></div>
+      </a>
+      <a href="https://www.facebook.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-facebook"></div>
+      </a>
+      <a href="https://www.instagram.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-instagram"></div>
+      </a>
+      <a href="https://medium.com/@pyconcolombia" target="_blank">
+        <div class="social-icon social-medium"></div>
+      </a>
+    </div>
+  </div>
+</section>

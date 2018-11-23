@@ -1,50 +1,52 @@
 {% from "/macros/translation.html" import transbag %}
-{%- set t_subscribe = transbag('translate', this.alt, 'subscribe') -%}
-{%- set t_name = transbag('translate', this.alt, 'name') -%}
-{%- set t_email = transbag('translate', this.alt, 'email') -%}
-{%- set t_subscribe_text = transbag('translate', this.alt, 'subscribe_text') -%}
-{%- set t_topic = transbag('translate', this.alt, 'topic') -%}
-{%- set t_topic_web = transbag('translate', this.alt, 'topic_web') -%}
-{%- set t_topic_science = transbag('translate', this.alt, 'topic_science') -%}
-{%- set t_topic_arti = transbag('translate', this.alt, 'topic_arti') -%}
-{%- set t_topic_iot = transbag('translate', this.alt, 'topic_iot') -%}
-{%- set t_subscribe_description = transbag('translate', this.alt, 'subscribe_description') -%}
+{%- set t_newsletter_title = transbag('translate', this.alt, 'newsletter_title') -%}
+{%- set t_newsletter_name = transbag('translate', this.alt, 'newsletter_name') -%}
+{%- set t_newsletter_email = transbag('translate', this.alt, 'newsletter_email') -%}
+{%- set t_newsletter_topic = transbag('translate', this.alt, 'newsletter_topic') -%}
+{%- set t_newsletter_opc1 = transbag('translate', this.alt, 'newsletter_opc1') -%}
+{%- set t_newsletter_opc2 = transbag('translate', this.alt, 'newsletter_opc2') -%}
+{%- set t_newsletter_opc3 = transbag('translate', this.alt, 'newsletter_opc3') -%}
+{%- set t_newsletter_opc4 = transbag('translate', this.alt, 'newsletter_opc4') -%}
+{%- set t_newsletter_opc5 = transbag('translate', this.alt, 'newsletter_opc5') -%}
+{%- set t_newsletter_opc6 = transbag('translate', this.alt, 'newsletter_opc6') -%}
+{%- set t_newsletter_opc7 = transbag('translate', this.alt, 'newsletter_opc7') -%}
+{%- set t_newsletter_opc8 = transbag('translate', this.alt, 'newsletter_opc8') -%}
+{%- set t_newsletter_opc9 = transbag('translate', this.alt, 'newsletter_opc9') -%}
+{%- set t_newsletter_opc10 = transbag('translate', this.alt, 'newsletter_opc10') -%}
+{%- set t_newsletter_button = transbag('translate', this.alt, 'newsletter_button') -%}
+
 <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
-  <h1 class="section-title">{{ t_subscribe_text }}</h1>
-  <p class="text-center">{{ t_subscribe_description }}</p>
+  <h1 class="title-subscribe">{{ t_newsletter_title }}</h1>
+  <div class="commet"></div>
   <div class="form-container">
-    <form action="//pyconcolombia.us13.list-manage.com/subscribe/post?u=948458ca54a966497e7ca6602&amp;id=7bd820999b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <div id="mc_embed_signup_scroll">
-        <div class="row">
-          <div class="mc-field-group col-md-4 col-sm-6 col-xs-12">
-            <br>
-            <input type="text" value="" name="NAME" class="required form-input" id="mce-NAME" placeholder="{{ t_name }}">
+    <form action="//pyconcolombia.us13.list-manage.com/subscribe/post?u=948458ca54a966497e7ca6602&amp;id=7bd820999b" method="post"
+      id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll form-subscribe">
+        <div class="row justify-content-center form-subscribe">
+          <div class="mc-field-group col-md-4 col-sm-6 col-xs-11 mx-auto">
+            <input type="text" value="" name="NAME" class="required form-input subscribe-input" id="mce-NAME" placeholder="{{ t_newsletter_name }}" autocomplete="off">
           </div>
           <div class="mc-field-group col-md-4 col-sm-6 col-xs-12">
-            <br>
-            <input type="email" value="" name="EMAIL" class="required email form-input" id="mce-EMAIL" placeholder="{{ t_email }}">
+            <input type="email" value="" name="EMAIL" class="required form-input subscribe-input" id="mce-EMAIL" placeholder="{{ t_newsletter_email }}" autocomplete="off">
           </div>
           <div class="mc-field-group col-md-4 col-sm-12 col-xs-12">
-            <br>
-            <select name="group[10770]" class="REQ_CSS form-input" id="mce-group[10770]" required>
-              <option value="" disabled selected hidden>{{ t_topic }}</option>
-              <option value="1">{{ t_topic_web }}</option>
-              <option value="2">{{ t_topic_science }}</option>
-              <option value="4">{{ t_topic_arti }}</option>
-              <option value="8">{{ t_topic_iot }}</option>
+            <select name="group[10770]" class="REQ_CSS form-input subscribe-input" id="mce-group[10770]" required>
+              <option value="" disabled selected hidden>{{ t_newsletter_topic }}</option>
+              <option value="268435456">{{ t_newsletter_opc1 }}</option>
+              <option value="4">{{ t_newsletter_opc2 }}</option>
+              <option value="536870912">{{ t_newsletter_opc3 }}</option>
+              <option value="8">{{ t_newsletter_opc4 }}</option>
+              <option value="1">{{ t_newsletter_opc5 }}</option>
+              <option value="1073741824">{{ t_newsletter_opc6 }}</option>
+              <option value="2">{{ t_newsletter_opc7 }}</option>
+              <option value="2147483648">{{ t_newsletter_opc8 }}</option>
+              <option value="4294967296">{{ t_newsletter_opc9 }}</option>
+              <option value="8589934592">{{ t_newsletter_opc10 }}</option>
             </select>
           </div>
-        </div>
-        <br>
-        <div class="row">
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-            <input type="text" name="b_948458ca54a966497e7ca6602_7bd820999b" tabindex="-1" value="">
-          </div>
-          <br />
-          <div class="col-md-4 col-sm-4 mx-auto">
-            <input type="submit" value="{{t_subscribe}}" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success btn-lg btn-block center-block">
+          <div class="mc-field-group col-md-3 col-sm-6 col-xs-12">
+            <input type="submit" value="{{ t_newsletter_button }}" name="subscribe" id="mc-embedded-subscribe" class="subscribe-btn">
           </div>
         </div>
       </div>

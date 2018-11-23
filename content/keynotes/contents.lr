@@ -1,0 +1,7 @@
+_model: speakers
+---
+title: Keynotes
+---
+_template: keynotes.html
+---
+_slug: keynotes

@@ -1,132 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105321720-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+{%- set base_url = '/'|url(alt='es') -%}
+{%- from "macros/translation.html" import transbag -%}
 
-      gtag('config', 'UA-105321720-2');
-    </script>
+{%- macro item_url(identifier) -%}
+  {% set identifier_url = '/' + identifier %}
+  {% set trans_url = identifier_url|url(alt=this.alt) %}
 
-    <!-- Meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description"
-    content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February.">
+  {{ trans_url }}
+{%- endmacro -%}
 
-    <meta property="og:site_name" content="PyCon Colombia"/>
-    <meta property="og:title" content="PyCon Colombia | February 2019 | Colombia"/>
-    <meta property="og:description"
-    content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February"/>
-    <meta property="og:image" content="/static/images/opimage.jpg">
-    <meta property="og:url" content="https://www.pycon.co/">
-    <meta property="og:type" content="website"/>
+{% extends "layout.html" %}
+{%- from "macros/speakers.html" import render_keynote_speaker -%}
+{%- from "macros/sponsors.html" import render_sponsors -%}
+{%- from "macros/sponsors.html" import render_sponsors_venue -%}
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@pyconcolombia">
-    <meta name="twitter:creator" content="@soyelhijo">
-    <meta name="twitter:title" content="PyCon Colombia | February 2019 | Colombia">
-    <meta name="twitter:description"
-    content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February">
-    <meta name="twitter:image" content="/static/images/opimage.jpg">
+{%- set t_intro_location = transbag('translate', this.alt, 'intro_location') -%}
+{%- set t_intro_date = transbag('translate', this.alt, 'intro_date') -%}
+{%- set t_intro_place = transbag('translate', this.alt, 'intro_place') -%}
+{%- set t_intro_clock_days = transbag('translate', this.alt, 'intro_clock_days') -%}
+{%- set t_intro_clock_hours = transbag('translate', this.alt, 'intro_clock_hours') -%}
+{%- set t_intro_clock_minutes = transbag('translate', this.alt, 'intro_clock_minutes') -%}
+{%- set t_intro_clock_seconds = transbag('translate', this.alt, 'intro_clock_seconds') -%}
+{%- set t_intro_message = transbag('translate', this.alt, 'intro_message') -%}
+{%- set t_button_talks = transbag('translate', this.alt, 'button_talks') -%}
+{%- set t_button_workshops = transbag('translate', this.alt, 'button_workshops') -%}
+{%- set t_footer_message = transbag('translate', this.alt, 'footer_message') -%}
+{%- set t_intro_keynotes = transbag('translate', this.alt, 'intro_keynotes') -%}
+{%- set t_intro_sponsors = transbag('translate', this.alt, 'intro_sponsors') -%}
+{%- set t_message_sponsors = transbag('translate', this.alt, 'message_sponsors') -%}
 
-    <title>PyCon Colombia | February 2019 | Colombia</title>
+{% set venue = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'venue').order_by('_id') %}
+{% set diamond = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'diamond').order_by('_id') %}
+{% set platinum = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'platinum').order_by('_id') %}
+{% set gold = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'gold').order_by('_id') %}
+{% set silver = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'silver').order_by('_id') %}
+{% set bronze = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'bronze').order_by('_id') %}
+{% set startup = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'startup').order_by('_id') %}
+{% set partner = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'partner').order_by('_id') %}
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-icon-192x192.png">
-    <link rel="manifest" href="/static/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+{%- block body -%}
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/css/libs/animate.css">
-    <link rel="stylesheet" href="/static/css/styles.css">
-
-    <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="js/libs/wow.js"></script>
-    <script src="js/libs/dialog-polyfill.js"></script>
-
-    <script>
-      $(document).ready(function() {
-      });
-    </script>
-
-  </head>
-
-  <body>
-    <div class="mdl-layout mdl-js-layout layout-home">
-
-      <main><!-- class="mdl-layout__content" -->
-        <div><!-- class="page-content" -->
-
-          <div class="container-fluid container-no-padding header-content">
-
-            <div class="logo"></div>
-            <div class="planet-left"></div>
-            <div class="planet-right"></div>
-            <div class="commet"></div>
-            <div class="date">February<br>2019</div>
-            <div class="apply-content">
-              <div class="planet-earth-content">
-                <div class="planet-earth-glow"></div>
-                <div class="planet-earth-glow"></div>
-                <div class="planet-earth-top-glow"></div>
-                <div class="planet-earth-top-glow"></div>
-                <div class="planet-earth"></div>
+<main>
+  {% include './partials/_resume_keynotes.html' %}
+  <div class="container-fluid container-no-padding header-content intro-background">
+    <div class="container">
+      <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+        <div class="section">
+          <div class="logo"></div>
+          <div class="planet-left"></div>
+          <div class="planet-right"></div>
+          <div class="commet"></div>
+          <div class="location">{{ t_intro_location }}</div>
+          <hr />
+          <div class="date">{{ t_intro_date }}, 2019</div>
+          <div class="place">{{ t_intro_place }}</div>
+          <div class="text-center ticket">
+            <a href="{{ this.tickets_link }}" target="blank_">
+              <img src="{% if this.alt == 'en' %} {{ base_url }}static/images/boleta.svg {% else %} {{ base_url }}static/images/boleta_es.svg {% endif %}"
+                class="centered" alt="">
+            </a>
+          </div>
+          {%- if 'speakers-call' in this.sections -%}
+          <div id="cfp">
+            <p class="cfp-message">
+              {{ t_intro_message }}
+            </p>
+            <div class="cfp-message">
+              <div id="clockdiv">
+                <div>
+                  <span class="days"></span>
+                  <div class="smalltext">{{ t_intro_clock_days }}</div>
+                </div>
+                <div>
+                  <span class="hours"></span>
+                  <div class="smalltext">{{ t_intro_clock_hours }}</div>
+                </div>
+                <div>
+                  <span class="minutes"></span>
+                  <div class="smalltext">{{ t_intro_clock_minutes }}</div>
+                </div>
+                <div>
+                  <span class="seconds"></span>
+                  <div class="smalltext">{{ t_intro_clock_seconds }}</div>
+                </div>
               </div>
-              <p class="cfp-message">
-                Call for speakers
-              </p>
-                  <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
-                  <span>Talks</span>
+              <div class="row justify-content-center">
+                <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
+                  <span>{{ t_button_talks }}</span>
                 </a>
                 <a href="https://www.papercall.io/pycon-colombia-2019-workshops" target="_blank" class="apply-btn">
-                  <span>Workshops</span>
+                  <span>{{ t_button_workshops }}</span>
                 </a>
-              <div class="social-icons-container">
-                <a href="https://www.twitter.com/pyconcolombia/" target="_blank"><div class="social-icon social-twitter"></div></a>
-                <a href="https://www.facebook.com/pyconcolombia/" target="_blank"><div class="social-icon social-facebook"></div></a>
-                <a href="https://www.instagram.com/pyconcolombia/" target="_blank"><div class="social-icon social-instagram"></div></a>
-                <a href="https://medium.com/@pyconcolombia" target="_blank"><div class="social-icon social-medium"></div></a>
               </div>
             </div>
-
-          </div><!-- header ends -->
-
+          </div>
+          <div id="clockEvent">
+            <!-- <p class="cfp-message">
+                {{ t_intro_message }}
+              </p> -->
+            <div class="cfp-message">
+              <div id="clockEventdiv">
+                <div>
+                  <span class="days"></span>
+                  <div class="smalltext">{{ t_intro_clock_days }}</div>
+                </div>
+                <div>
+                  <span class="hours"></span>
+                  <div class="smalltext">{{ t_intro_clock_hours }}</div>
+                </div>
+                <div>
+                  <span class="minutes"></span>
+                  <div class="smalltext">{{ t_intro_clock_minutes }}</div>
+                </div>
+                <div>
+                  <span class="seconds"></span>
+                  <div class="smalltext">{{ t_intro_clock_seconds }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {%- endif -%}
         </div>
-      </main>
+      </div>
     </div>
+  </div>
+  <div class="container-fluid container-no-padding header-content keynotes-background">
+    <div class="container">
+      <div class="section">
+        <div class="apply-content">
+          <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+            {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish) %}
 
-    <img class="hidden" src="/static/images/opimage.jpg" />
-
-  </body>
-
-</html>
+            <h1 class="title-subscribe">{{ t_intro_keynotes }}</h1>
+            <div class="commet"></div>
+            <div class="form-container">
+              <div class="keynotes">
+                {% for speaker in speakers %} {{ render_keynote_speaker(speaker, index=loop.index, details=True) }} {%
+                endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid container-no-padding header-content background-sponsor">
+    <div class="container">
+      <div class="section">
+        <div class="apply-content">
+          <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+            <h1 class="title-subscribe"><a href="{{item_url('sponsors')}}">{{ t_intro_sponsors }}</a></h1>
+            <p class="message-intro">
+              {{ t_message_sponsors }}
+            </p>
+            <div class="commet"></div>
+            <div>
+              {% if venue %}
+              {{ render_sponsors(venue, 8) }}
+              {% endif %}
+              {% if diamond %}
+              {{ render_sponsors(diamond, 6) }}
+              {% endif %}
+              {% if platinum %}
+              {{ render_sponsors(platinum, 5) }}
+              {% endif %}
+              {% if gold %}
+              {{ render_sponsors(gold, 4) }}
+              {% endif %}
+              {% if silver %}
+              {{ render_sponsors(silver, 3) }}
+              {% endif %}
+              {% if startup %}
+              {{ render_sponsors(startup, 2) }}
+              {% endif %}
+              {% if partner %}
+              {{ render_sponsors(partner, 1) }}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid container-no-padding header-content subscribe-background">
+    <div class="container">
+      <div class="section">
+        <div class="apply-content">
+          <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+            {% include 'partials/_mailchimp.html' %}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+        {% include 'partials/_footer.html' %}
+      </div>
+    </div>
+  </div>
+</main>
+<script src="{{ base_url }}static/js/clock.js"></script>
+{%- endblock -%}

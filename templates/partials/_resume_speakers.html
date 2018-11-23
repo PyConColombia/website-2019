@@ -1,0 +1,111 @@
+{%- from "macros/translation.html" import transbag -%}
+
+{%- set t_speaker_at = transbag('translate', this.alt, 'speaker_at') -%}
+{%- set t_keynote_speaker = transbag('translate', this.alt, 'keynote_speaker') -%}
+{%- set t_currently_living = transbag('translate', this.alt, 'currently_living') -%}
+{%- set t_country = transbag('translate', this.alt, this.country) -%}
+{%- set t_country_residence = transbag('translate', this.alt, this.country_residence) -%}
+
+{%- macro render_talks(author, type) -%}
+  {%- set t_title = transbag('translate', this.alt, type) -%}
+  {%- set talks = site.query('/talks', alt=this.alt).filter(F.type==type) -%}
+  {%- set talk_count = 0 -%}
+  {%- for talk in talks -%}
+    {%- if author._id in talk.authors -%}
+      {%- if talk_count == 0 -%}<h3>{{ t_title }}</h3><ul>{%- endif -%}
+      {%- set t_lang = transbag('translate', this.alt, talk.language) -%}
+      <li><a href="{{talk|url(alt=this.alt)}}">{{ talk.name }} <small><i>({{ t_lang }})</i></small></a></li>
+      {%- set talk_count = talk_count + 1 -%}
+    {%- endif -%}
+    </ul>
+  {%- endfor -%}
+{%- endmacro-%}
+
+{% set speakers = site.query('/speakers', alt=this.alt).filter(F.publish).order_by('_id') %}
+
+{% for speaker in speakers %}
+{%- set complete_name = speaker.name + " " + speaker.last_name -%}
+<div id="back-resume-speaker"></div>
+<div id="{{ speaker._id }}" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav('{{ speaker._id }}')">&times;</a>
+  <div class="container-fluid container-no-padding header-content">
+    <div class="container">
+      <div class="section" style="margin-bottom: 100px;">
+        <div class="col-md-12 col-sm-12 col-xs-12 mx-auto">
+          <div class="speaker">
+            <div class="row justify-content-center align-self-center">
+              <div class="col-md-6 col-sm-8 col-xs-12">
+                <div class="speaker-image-container">
+                  <a href="{{ speaker | url }}">
+                    <img class="speaker-image img-fluid" id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if
+                      speaker.image -%}
+                      "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}"
+                      {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center align-self-center">
+              <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="speaker-details text-center">
+                  <h1 class="speaker-name">{{ complete_name }}</h1>
+                  <h2 class="speaker-info-1">{{ speaker.position_1 }}</h2>
+                  <h2 class="speaker-info-2">{{ speaker.position_2 }}</h2>
+                  <div class="social-container-speaker">
+                    <div class="row justify-content-center align-self-center">
+                      <div class="col-sm-1">
+                        {% if speaker.github_handle %}
+                        <a href="https://github.com/{{ speaker.github_handle }}" target="_blank">
+                          <div class="social-icon fab fa-github-alt"></div>
+                        </a>
+                        {% endif %}
+                      </div>
+                      <div class="col-sm-1">
+                        {% if speaker.facebook_handle %}
+                        <a href="https://facebook.com/{{ speaker.facebook_handle }}" target="_blank">
+                          <div class="social-icon fab fa-facebook-f"></div>
+                        </a>
+                        {% endif %}
+                      </div>
+                      <div class="col-sm-1">
+                        {% if speaker.twitter_handle %}
+                        <a href="https://twitter.com/{{ speaker.twitter_handle }}" target="_blank">
+                          <div class="social-icon fab fa-twitter"></div>
+                        </a>
+                        {% endif %}
+                      </div>
+                      <div class="col-sm-1">
+                        {% if speaker.linkedin_handle %}
+                        <a href="http://linkedin.com/in/{{ speaker.linkedin_handle }}" target="_blank">
+                          <div class="social-icon fab fa-linkedin-in"></div>
+                        </a>
+                        {% endif %}
+                      </div>
+                      <div class="col-sm-1">
+                        {% if speaker.web %}
+                        <a href="{{ speaker.web }}" target="_blank">
+                          <div class="social-icon fas fa-globe"></div>
+                        </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center align-self-center">
+                  <div class="col-md-8 col-sm-10 col-xs-12">
+                    <div class="speaker-summary">
+                      {% if speaker.information %}
+                      <p>{{ speaker.information }}</p>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
