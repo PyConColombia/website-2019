@@ -12,24 +12,26 @@
     <div>
       <!-- class="page-content" -->
       <div class="container-fluid container-no-padding header-content background-keynotes">
-        <div class="section">
-          <div class="apply-content">
-            <div class="row justify-content-center">
-              <div class="col-md-8 col-sm-8 col-xs-10 mx-auto">
-                <h1 class="title-subscribe">{{ this.title }} {{ t_keynote_speakers }} ({{ speakers.count()}})</h1>
-                <div class="commet"></div>
-                <div class="row">
-                  {% for speaker in speakers %}
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="speaker">
-                      {{ render_speaker(speaker, index=loop.index, details=True) }}
+        <div class="container">
+          <div class="section">
+            <div class="apply-content">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+                  <h1 class="title-subscribe">{{ this.title }} {{ t_keynote_speakers }} ({{ speakers.count()}})</h1>
+                  <div class="commet"></div>
+                  <div class="row">
+                    {% for speaker in speakers %}
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <div class="speaker">
+                        {{ render_speaker(speaker, index=loop.index, details=True) }}
+                      </div>
                     </div>
+                    {% endfor %}
                   </div>
-                  {% endfor %}
                 </div>
               </div>
+              {% include 'partials/_footer.html' %}
             </div>
-            {% include 'partials/_footer.html' %}
           </div>
         </div>
       </div>
