@@ -1,0 +1,31 @@
+_model: talk
+---
+name: Charla de prueba
+---
+authors: nick-sweeting
+---
+datetime: 2018-02-09 08:00:00 -0500
+---
+datetime_end: 2018-02-09 09:00:00 -0500
+---
+description:
+
+## Hola
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit interdum risus, nisl condimentum aptent venenatis hendrerit vulputate viverra luctus facilisis magna, erat diam purus ligula molestie sed commodo pellentesque. At pretium condimentum id sagittis mi himenaeos, molestie tempor vulputate sodales cum vestibulum, erat enim nostra volutpat phasellus. Nisi leo justo fames nullam tempor mus tellus lectus pulvinar nec odio, eget condimentum nostra morbi at ligula purus litora venenatis.
+
+Sed nunc eu tincidunt vel ut blandit fusce facilisi nostra odio rutrum, purus suscipit ante pulvinar volutpat placerat eleifend consequat luctus curae. Duis mollis montes nostra vivamus facilisis aptent, quisque dapibus volutpat pulvinar condimentum enim taciti, maecenas lobortis lacinia natoque tortor. Euismod himenaeos sodales hendrerit sociosqu suspendisse donec, tristique convallis pharetra habitasse integer, pulvinar et semper dis fringilla.
+---
+language: es
+---
+room: sala-1
+---
+summary: Resumen de la Charla
+---
+topic: IoT
+---
+type: talk
+---
+url: https://github.com
+---
+file: 2018-2019.pdf

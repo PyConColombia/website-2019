@@ -1,0 +1,104 @@
+{% extends "page.html" %}
+{%- from "macros/translation.html" import transbag -%}
+{%- set t_language = transbag('translate', this.alt, 'talk_language') -%}
+{%- set t_authors = transbag('translate', this.alt, 'talk_authors') -%}
+{%- set t_type  = transbag('translate', this.alt, 'talk_type') -%}
+{%- set t_talk_type  = transbag('translate', this.alt, 'type_'+this.type) -%}
+{%- set t_summary = transbag('translate', this.alt, 'talk_summary') -%}
+{%- set t_talk_description = transbag('translate', this.alt, 'talk_description') -%}
+{%- set t_resources = transbag('translate', this.alt, 'talk_resources') -%}
+{%- set t_slides = transbag('translate', this.alt, 'talk_slides') -%}
+{%- set t_location = transbag('translate', this.alt, 'location') -%}
+{%- set t_date_and_time = transbag('translate', this.alt, 'date_and_time') -%}
+{%- set t_day = transbag('translate', this.alt, this.datetime.strftime('%A')) -%}
+
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+<!-- {% block banner %}{% endblock %} -->
+
+<div class="mdl-layout mdl-js-layout layout-home"></div>
+  <main>
+    <!-- class="mdl-layout__content" -->
+    <div>
+      <!-- class="page-content" -->
+      <div class="background-code">
+        <div class="background-stars">
+          <div class="container-fluid header-content background-meteor">
+            <div class="section">
+              <div class="row justify-content-center align-self-center">
+                <div class="col-md-6 col-sm-8 col-xs-12">
+                  <div style="margin-bottom: 100px;">
+                    <div class="row justify-content-center align-self-center">
+                      <div class="title">{{ this.name }}
+                        {%- if this.language -%}
+                        &nbsp;{%- set t_lang = transbag('translate', this.alt, this.language) -%}
+                        <small>({{ t_lang }})</small>
+                        {%- endif -%}
+                      </div>
+                      <div class="label-talk">{{ t_talk_type }}</div>
+
+                      {%- if this.room -%}
+                      {%- set room = site.get('/rooms/' + this.room, alt=this.alt) -%}
+                      <div class="col-sm-12">
+                        <div class="subtitle">{{ room.name }}</div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="label-talk">{{ t_location }}</div>
+                      </div>
+                      {%- endif -%}
+                      <div class="col-sm-12">
+                        <div class="subtitle">{{ t_day }} {{ this.datetime.strftime("%d, %H:%M") }}</div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="label-talk">{{ t_date_and_time }}</div>
+                      </div>
+                      {# {{ t_authors }}:
+                      {%- for author in this.authors -%}
+                      {%- set current_author = site.get('/speakers/'+author, alt=this.alt) -%}
+                      {%- set t_country_res = transbag('translate', this.alt, current_author.country) -%}
+                      <a class="link" href="{{current_author|url(alt=this.alt)}}">{{ current_author.name }} {{ current_author.last_name
+                        }} {% if current_author.country %}<small>({{ t_country_res }})</small>{% endif %}</a>{% if not loop.last
+                      %},&nbsp{% endif %}
+                      {%- endfor -%} #}
+
+                      {%- if this.summary -%}
+                        <div class="col-sm-12">
+                          <div class="summary-talk">{{ this.summary }}</div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="label-talk">{{ t_summary }}</div>
+                        </div>
+                      {%- endif -%}
+                      {%- if this.description -%}
+                        <div class="col-sm-12">
+                          <p class="summary-talk">{{ this.description }}</p>
+                        </div>
+                      {%- endif -%}
+                      {%- if this.url or this.file -%}
+                        <div class="col-sm-12">
+                          <div class="title">{{ t_resources }}</div>
+                        </div>
+                          <div class="col-sm-12">
+                            {% if this.file %}
+                              <div class="subtitle"><a class="link" href="{{- this.file | url(alt='es') -}}">{{ t_slides }}</a></div>
+                            {% endif %}
+                          </div>
+                          <div class="col-sm-12">
+                            {%- if this.url -%}
+                              <div class="subtitle">{{ this.url }}</div>
+                            {%- endif -%}
+                          </div>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                  {% include 'partials/_footer.html' %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+</div>
+{% endblock %}
