@@ -10,7 +10,6 @@
 {%- set t_slides = transbag('translate', this.alt, 'talk_slides') -%}
 {%- set t_location = transbag('translate', this.alt, 'location') -%}
 {%- set t_date_and_time = transbag('translate', this.alt, 'date_and_time') -%}
-{%- set t_day = transbag('translate', this.alt, this.datetime.strftime('%A')) -%}
 
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
@@ -36,22 +35,24 @@
                         {%- endif -%}
                       </div>
                       <div class="label-talk">{{ t_talk_type }}</div>
-
                       {%- if this.room -%}
                       {%- set room = site.get('/rooms/' + this.room, alt=this.alt) -%}
-                      <div class="col-sm-12">
-                        <div class="subtitle">{{ room.name }}</div>
-                      </div>
-                      <div class="col-sm-12">
-                        <div class="label-talk">{{ t_location }}</div>
-                      </div>
+                        <div class="col-sm-12">
+                          <div class="subtitle">{{ room.name }}</div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="label-talk">{{ t_location }}</div>
+                        </div>
                       {%- endif -%}
-                      <div class="col-sm-12">
-                        <div class="subtitle">{{ t_day }} {{ this.datetime.strftime("%d, %H:%M") }}</div>
-                      </div>
-                      <div class="col-sm-12">
-                        <div class="label-talk">{{ t_date_and_time }}</div>
-                      </div>
+                      {%- if this.datetime -%}
+                        {%- set t_day = transbag('translate', this.alt, this.datetime.strftime('%A')) -%}
+                        <div class="col-sm-12">
+                          <div class="subtitle">{{ t_day }} {{ this.datetime.strftime("%d, %H:%M") }}</div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="label-talk">{{ t_date_and_time }}</div>
+                        </div>
+                      {%- endif -%}
                       {# {{ t_authors }}:
                       {%- for author in this.authors -%}
                       {%- set current_author = site.get('/speakers/'+author, alt=this.alt) -%}
