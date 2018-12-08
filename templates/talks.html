@@ -44,16 +44,18 @@
       <div class="background-code">
         <div class="background-stars">
           <div class="container-fluid header-content background-meteor">
-            <div class="section">
-              <div class="row justify-content-center align-self-center">
-                <div class="col-md-10 col-sm-12 col-xs-12">
-                  <div style="margin-bottom: 100px;">
-                    <div >
-                      {{ render_list('talk') }}
-                      {{ render_list('workshop') }}
+            <div class="container">
+              <div class="section">
+                <div class="row justify-content-center align-self-center">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="margin-bottom: 100px;">
+                      <div >
+                        {{ render_list('talk') }}
+                        {{ render_list('workshop') }}
+                      </div>
                     </div>
+                    {% include 'partials/_footer.html' %}
                   </div>
-                  {% include 'partials/_footer.html' %}
                 </div>
               </div>
             </div>
