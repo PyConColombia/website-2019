@@ -1,0 +1,11 @@
+_model: talk
+---
+name: Crea un sitio web de dibujo colaborativo en tiempo real con Django Channels
+---
+language: es
+---
+topic: Web
+---
+type: workshop
+---
+authors: dario-guzman
