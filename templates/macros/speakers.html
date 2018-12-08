@@ -8,7 +8,7 @@
       <div class="shadow square">
         <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image
         -%}
-        "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else
+        "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else
         -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ speaker._id }}')" class="img-fluid blend" />
       </div>
     </div>
@@ -43,7 +43,7 @@
     <div class="speaker-image-container">
       <div class="shadow square">
         <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image -%}
-          "{%- if speaker.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}"
+          "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}"
           {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ speaker._id }}')" class="img-fluid blend" />
       </div>
     </div>

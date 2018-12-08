@@ -42,7 +42,7 @@
                       <div class="speaker-image-container row justify-content-center align-self-center">
                         <div class="shadow overlay square">
                           <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if this.image -%}
-                            "{%- if this.keynote -%}/keynotes/{%- else -%}/speakers/{%- endif -%}{{ this._id }}/{{ this.image }}"
+                            "{%- if this.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ this._id }}/{{ this.image }}"
                             {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ this._id }}')" class="img-fluid blend" />
                         </div>
                       </div>
