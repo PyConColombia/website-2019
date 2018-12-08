@@ -1,0 +1,65 @@
+{% extends "page.html" %}
+{%- from "macros/translation.html" import transbag -%}
+{%- from "macros/speakers.html" import render_speaker -%}
+
+{% macro render_list(type) %}
+  {% set talks = site.query('/talks', alt=this.alt).filter(F.type == type).order_by('_id') %}
+  {%- set t_title = transbag('translate', this.alt, type) -%}
+  {%- set t_slides = transbag('translate', this.alt, 'talk_slides') -%}
+  {%- set t_resources = transbag('translate', this.alt, 'talk_resources') -%}
+
+  <div class="row justify-content-center align-self-center">
+    <h1 class="title-subscribe">{{ t_title }} ({{ talks.count() }})</h1>
+  </div>
+  <div class="commet"></div>  
+  <div class="row" style="margin-top: 40px">
+    {%- for talk in talks -%}
+    {%- set t_lang = transbag('translate', this.alt, talk.language) -%}
+      <div class="col-sm-6 container-resume">
+        <div class="subtitle left"><a class="link" href="{{talk|url(alt=this.alt)}}">{{ talk.name }}</a>
+        </div>
+        <div class="label-talk left">({{ t_lang }})</div>
+        <div class="row">
+          {%- for author in talk.authors -%}
+            {%- set current_author = site.get('/speakers/'+ author, alt=this.alt) -%}
+            <div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="{{current_author|url(alt=this.alt)}}"><img class="shadow overlay square" src={%- if current_author.image -%}"/ponentes/{{ current_author._id }}/{{ current_author.image }}"{%- else -%} "/static/images/empty-photo.svg" {%- endif -%} />
+                </a>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+{% endmacro %}
+
+{% block body %}
+<div class="mdl-layout mdl-js-layout layout-home"></div>
+  <main>
+    <!-- class="mdl-layout__content" -->
+    <div>
+      <!-- class="page-content" -->
+      <div class="background-code">
+        <div class="background-stars">
+          <div class="container-fluid header-content background-meteor">
+            <div class="section">
+              <div class="row justify-content-center align-self-center">
+                <div class="col-md-10 col-sm-12 col-xs-12">
+                  <div style="margin-bottom: 100px;">
+                    <div >
+                      {{ render_list('talk') }}
+                      {{ render_list('workshop') }}
+                    </div>
+                  </div>
+                  {% include 'partials/_footer.html' %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+</div>
+{% endblock %}  

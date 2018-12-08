@@ -6,6 +6,19 @@
   margin-bottom: -20px;
 } */
 
+.title {
+  color:#fff;
+  font-size:33px;
+  font-weight:300;
+  letter-spacing:5px;
+  line-height:1.2;
+  margin-bottom:32px;
+  opacity:0.8;
+  position:relative;
+  text-align:center;
+  z-index:10;
+}
+
 .title-subscribe {
   color:#fff;
   font-size:33px;
@@ -436,4 +449,36 @@
     .gitter-custom-button {
     width: calc(100% - 65px);
   }
+}
+
+/* Talks */
+
+.subtitle {
+  color:#fff;
+  font-size: 25px;
+  font-weight:300;
+  letter-spacing:5px;
+  line-height:1.2;
+  position:relative;
+  text-align:center;
+  z-index:10;
+}
+
+.label-talk {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1.2;
+  margin-bottom:32px;
+  opacity: 0.8;
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+
+.summary-talk {
+  text-align: justify;
+  text-justify: inter-word;
 }

@@ -12,3 +12,21 @@
   </div>
 </div>
 {% endmacro %}
+
+{% macro render_sponsors_web(sponsor_list) %}
+<div class="col-md-8 col-xs-12">
+  {% for item in sponsor_list %}
+  <div class="row">
+    <div class="col-sm-12 mx-auto">
+      <div class="sponsor-web">
+        <img src={%- if item.image -%} "/patrocinadores/{{ item._id }}/{{ item.image }}" {%- else -%}
+          "/static/images/empty-photo.svg" {%- endif -%} />
+      </div>
+    </div>
+    <div class="col-sm-12 mx-auto">
+      <div class="sponsor-summary">{{ item.summary }}</div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}

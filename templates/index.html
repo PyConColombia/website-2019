@@ -1,4 +1,12 @@
+{%- set base_url = '/'|url(alt='es') -%}
 {%- from "macros/translation.html" import transbag -%}
+
+{%- macro item_url(identifier) -%}
+  {% set identifier_url = '/' + identifier %}
+  {% set trans_url = identifier_url|url(alt=this.alt) %}
+
+  {{ trans_url }}
+{%- endmacro -%}
 
 {% extends "layout.html" %}
 {%- from "macros/speakers.html" import render_keynote_speaker -%}
@@ -148,7 +156,7 @@
       <div class="section">
         <div class="apply-content">
           <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
-            <h1 class="title-subscribe">{{ t_intro_sponsors }}</h1>
+            <h1 class="title-subscribe"><a href="{{item_url('sponsors')}}">{{ t_intro_sponsors }}</a></h1>
             <p class="message-intro">
               {{ t_message_sponsors }}
             </p>

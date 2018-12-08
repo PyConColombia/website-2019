@@ -1,0 +1,7 @@
+_model: page
+---
+title: Ponencias
+---
+_slug: ponencias
+---
+_template: talks.html
