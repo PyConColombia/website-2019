@@ -4,12 +4,27 @@
 {%- set t_open_chat = transbag('translate', this.alt, 'open_chat') -%}
 
 {%- macro menu_item(identifier) -%}
-{% set identifier_url = '/' + identifier %}
-{% set trans_url = identifier_url|url(alt=this.alt) %}
-{% set this_is_child = this.is_child_of(identifier_url) %}
+  {% set identifier_url = '/' + identifier %}
+  {% set trans_url = identifier_url|url(alt=this.alt) %}
+  {% set this_is_child = this.is_child_of(identifier_url) %}
 
-<li class="nav-item{% if this_is_child %} active{% endif %}">
-  <a class="nav-link" href="{{ trans_url }}">{{ transbag('menu', this.alt, identifier) }}</a>
+  <li class="nav-item{% if this_is_child %} active{% endif %}">
+    <a class="nav-link" href="{{ trans_url }}">{{ transbag('menu', this.alt, identifier) }}</a>
+  </li>
+{%- endmacro -%}
+
+{%- macro menu_item_list(identifier, items) -%}
+<li class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+    aria-expanded="false">{{ transbag('menu', this.alt, identifier) }}</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    {%- for item in items -%}
+      {% set item_url = '/' + item %}
+      {% set item_trans_url = item_url|url(alt=this.alt) %}
+      {% set item_this_is_child = this.is_child_of(item_url) %}
+      <a class="dropdown-item{% if item_this_is_child %} active{% endif %}" href="{{ item_trans_url }}">{{ transbag('menu', this.alt, item) }}</a>
+    {%- endfor -%}
+  </div>
 </li>
 {%- endmacro -%}
 
@@ -120,21 +135,23 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       {{ menu_item('venue') }}
-      {{ menu_item('keynotes') }}
-      {{ menu_item('code-of-conduct') }}
+      {{ menu_item_list('speakers', ['keynotes', 'speakers']) }}
+      <!-- {{ menu_item('code-of-conduct') }} -->
       {{ menu_item('talks') }}
       <!-- {{ menu_item('speakers') }}
         {{ menu_item('volunteers') }}-->
       {{ menu_item('sponsors') }}
       {{ menu_item('equipo') }}
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      {% if this.alt == 'en' %}
-      <a href="{{ '.'|url(alt='es') }}">Español</a>
-      {% else %}
-      <a href="{{ '.'|url(alt='en') }}">English</a>
-      {% endif %}
-    </form>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        {% if this.alt == 'en' %}
+        <a href="{{ '.'|url(alt='es') }}">Español</a>
+        {% else %}
+        <a href="{{ '.'|url(alt='en') }}">English</a>
+        {% endif %}
+      </li>
+    </ul>
   </div>
 </nav>
 

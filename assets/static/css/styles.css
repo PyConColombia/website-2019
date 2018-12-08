@@ -71,6 +71,19 @@ a {
   color: #fff;
 }
 
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-item {
+  color: rgba(255,255,255,.75);
+}
+
+.dropdown-item.active, .dropdown-item:hover {
+  background-color: initial;
+  color: #fff;
+}
+
 /* Scroll */
 
 /* width */
@@ -134,7 +147,7 @@ a {
 /* Menu */
 
 @media (max-width: 992px) {
-  nav .nav-item, nav .my-2 {
+  nav .nav-item, nav .my-2, nav .dropdown, nav .dropdown-menu {
     background-color: #231f2a;
     color: #fff;
     font-size: 33px;
