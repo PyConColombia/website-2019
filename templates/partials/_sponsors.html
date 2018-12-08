@@ -9,7 +9,7 @@
     <br>
     <p class="sponsors-text" >{{ t_sponsor_text }}</p>
     <br>
-<div class="container sponsors"/>
+    <div class="container sponsors">
     {% for category in ["diamond", "gold", "silver", "bronze", "startup", "partner"] %}
       {%- set t_category = transbag('translate', this.alt, category) -%}
       {% set sponsors = site.query('/sponsors', alt=this.alt).filter(F.category==category).filter(F.confirmed) %}
