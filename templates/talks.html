@@ -12,7 +12,7 @@
     <h1 class="title-subscribe">{{ t_title }} ({{ talks.count() }})</h1>
   </div>
   <div class="commet"></div>  
-  <div class="row">
+  <div class="row" style="margin-top: 40px">
     {%- for talk in talks -%}
     {%- set t_lang = transbag('translate', this.alt, talk.language) -%}
       <div class="col-sm-6 container-resume">
