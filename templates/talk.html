@@ -29,55 +29,67 @@
                 <div class="col-md-6 col-sm-8 col-xs-12">
                   <div style="margin-bottom: 100px;">
                     <div class="row justify-content-center align-self-center">
-                      <h1 class="title">{{ this.name }}
+                      <div class="title">{{ this.name }}
                         {%- if this.language -%}
                         &nbsp;{%- set t_lang = transbag('translate', this.alt, this.language) -%}
                         <small>({{ t_lang }})</small>
                         {%- endif -%}
-                      </h1>
-                    </div>
-                    <div class="row justify-content-center align-self-center">
-                      <h4 class="text-center">{{ t_talk_type }}</h4>
-                    </div>
-                    <div >
-                      <dl>
-                        <dd></dd>
-                        {%- if this.room -%}
-                        {%- set room = site.get('/rooms/' + this.room, alt=this.alt) -%}
-                        <dt>{{ t_location }}:</dt>
-                        <dd>{{ room.name }}</dd>
-                        {%- endif -%}
-                        <dt>{{ t_date_and_time }}:</dt>
-                        <dd>{{ t_day }} {{ this.datetime.strftime("%d, %H:%M") }}</dd>
-                        <dt>{{ t_authors }}:</dt>
-                        <dd>
-                          {%- for author in this.authors -%}
-                          {%- set current_author = site.get('/speakers/'+author, alt=this.alt) -%}
-                          {%- set t_country_res = transbag('translate', this.alt, current_author.country) -%}
-                          <a class="link" href="{{current_author|url(alt=this.alt)}}">{{ current_author.name }} {{ current_author.last_name
-                            }} {% if current_author.country %}<small>({{ t_country_res }})</small>{% endif %}</a>{% if not loop.last
-                          %},&nbsp{% endif %}
-                          {%- endfor -%}
-                        </dd>
-                        {% if this.file %}
-                        <dt>{{ t_slides }}:</dt>
-                        <dd>
-                          <a class="link" href="{{- this.file | url(alt='en') -}}"> {{ this.file }}</a>
-                        </dd>
-                        {% endif %}
-                        {%- if this.summary -%}
-                        <dt>{{ t_summary }}:</dt>
-                        <dd>{{ this.summary }}</dd>
-                        {%- endif -%}
-                        {%- if this.description-%}
-                        <dt>{{ t_talk_description }}:</dt>
-                        <dd>{{ this.description }}</dd>
-                        {%- endif -%}
-                        {%- if this.url -%}
-                        <dt>{{ t_resources }}:</dt>
-                        <dd>{{ this.url }}</dd>
-                        {%- endif -%}
-                      </dl>
+                      </div>
+                      <div class="label-talk">{{ t_talk_type }}</div>
+
+                      {%- if this.room -%}
+                      {%- set room = site.get('/rooms/' + this.room, alt=this.alt) -%}
+                      <div class="col-sm-12">
+                        <div class="subtitle">{{ room.name }}</div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="label-talk">{{ t_location }}</div>
+                      </div>
+                      {%- endif -%}
+                      <div class="col-sm-12">
+                        <div class="subtitle">{{ t_day }} {{ this.datetime.strftime("%d, %H:%M") }}</div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="label-talk">{{ t_date_and_time }}</div>
+                      </div>
+                      {# {{ t_authors }}:
+                      {%- for author in this.authors -%}
+                      {%- set current_author = site.get('/speakers/'+author, alt=this.alt) -%}
+                      {%- set t_country_res = transbag('translate', this.alt, current_author.country) -%}
+                      <a class="link" href="{{current_author|url(alt=this.alt)}}">{{ current_author.name }} {{ current_author.last_name
+                        }} {% if current_author.country %}<small>({{ t_country_res }})</small>{% endif %}</a>{% if not loop.last
+                      %},&nbsp{% endif %}
+                      {%- endfor -%} #}
+
+                      {%- if this.summary -%}
+                        <div class="col-sm-12">
+                          <div class="summary-talk">{{ this.summary }}</div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="label-talk">{{ t_summary }}</div>
+                        </div>
+                      {%- endif -%}
+                      {%- if this.description -%}
+                        <div class="col-sm-12">
+                          <p class="summary-talk">{{ this.description }}</p>
+                        </div>
+                      {%- endif -%}
+                      {%- if this.url or this.file -%}
+                        <div class="col-sm-12">
+                          <div class="title">{{ t_resources }}</div>
+                        </div>
+                          <div class="col-sm-12">
+                            {% if this.file %}
+                              <div class="subtitle"><a class="link" href="{{- this.file | url(alt='es') -}}">{{ t_slides }}</a></div>
+                            {% endif %}
+                          </div>
+                          <div class="col-sm-12">
+                            {%- if this.url -%}
+                              <div class="subtitle">{{ this.url }}</div>
+                            {%- endif -%}
+                          </div>
+                        </div>
+                      {%- endif -%}
                     </div>
                   </div>
                   {% include 'partials/_footer.html' %}
