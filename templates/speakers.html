@@ -6,7 +6,7 @@
 {% set speakers = site.query('/speakers', alt=this.alt).filter(F.publish).order_by('_id') %}
 
 <div class="mdl-layout mdl-js-layout layout-home">
-  {% include "./partials/_resume_speakers.html" %}
+  {#{% include "./partials/_resume_speakers.html" %}#}
   <main>
     <!-- class="mdl-layout__content" -->
     <div>

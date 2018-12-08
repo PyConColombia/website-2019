@@ -13,12 +13,15 @@
   {%- set talk_count = 0 -%}
   {%- for talk in talks -%}
     {%- if author._id in talk.authors -%}
-      {%- if talk_count == 0 -%}<h3>{{ t_title }}</h3><ul>{%- endif -%}
       {%- set t_lang = transbag('translate', this.alt, talk.language) -%}
-      <li><a href="{{talk|url(alt=this.alt)}}">{{ talk.name }} <small><i>({{ t_lang }})</i></small></a></li>
+      <div class="col-sm-12">
+        <div class="subtitle"><a href="{{talk|url(alt=this.alt)}}">{{ talk.name }} ({{ t_lang }})</a></div>
+      </div>
+      <div class="col-sm-12">
+        <div class="label-talk">{{ t_title }}</div>
+      </div>
       {%- set talk_count = talk_count + 1 -%}
     {%- endif -%}
-    </ul>
   {%- endfor -%}
 {%- endmacro-%}
 
@@ -54,6 +57,7 @@
                         <h1 class="speaker-name">{{ complete_name }}</h1>
                         <h2 class="speaker-info-2">{{ this.position_2 }}</h2>
                         <h2 class="speaker-info-1">{{ this.position_1 }}</h2>
+                        <h2 class="label-talk">{{ this.country_residence }}</h2>
                         <div class="social-container-speaker">
                           <div class="row justify-content-center align-self-center">
                             <div class="col-xs-1">
@@ -101,6 +105,13 @@
                             <p>{{ this.information }}</p>
                             {% endif %}
                           </div>
+                        </div>
+                      </div>
+                      <div class="commet"></div>
+                      <div class="row justify-content-center align-self-center">
+                        <div style="padding-top: 4em;">
+                          {{ render_talks(this, 'talk') }}
+                          {{ render_talks(this, 'workshop') }}
                         </div>
                       </div>
                     </div>
