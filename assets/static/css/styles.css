@@ -245,3 +245,16 @@ a {
 .team .speaker-job {
   text-align: center;
 }
+
+.left {
+  text-align: left !important;
+}
+
+.speaker-talk-container {
+  width: 100%;
+}
+
+.container-resume {
+  border-left: 2px solid white;
+  margin-bottom: 50px;
+}

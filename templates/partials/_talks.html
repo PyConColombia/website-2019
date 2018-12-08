@@ -5,17 +5,16 @@
   <!-- Nav tabs -->
   <div class="row justify-content-center">
     <div class="col-lg-8">
-
-  <ul class="nav nav-tabs nav-justified" role="tablist">
-  {%- for type in types -%}
-    {%- set talks = site.query('/talks', alt=this.alt).filter(F.type == type).order_by('name') -%}
-    {%- set t_type = transbag('translate', this.alt, type) -%}
-    <li class="nav-item">
-      <a class="nav-link {% if loop.index == 1 %}active{% endif %}" data-toggle="tab" href="#tab-{{ type }}" role="tab">{{ t_type }} ({{ talks.count() }})</a>
-    </li>
-  {%- endfor -%}
-  </ul>
-  </div>
+      <ul class="nav nav-tabs nav-justified" role="tablist">
+      {%- for type in types -%}
+        {%- set talks = site.query('/talks', alt=this.alt).filter(F.type == type).order_by('name') -%}
+        {%- set t_type = transbag('translate', this.alt, type) -%}
+        <li class="nav-item">
+          <a class="nav-link {% if loop.index == 1 %}active{% endif %}" data-toggle="tab" href="#tab-{{ type }}" role="tab">{{ t_type }} ({{ talks.count() }})</a>
+        </li>
+      {%- endfor -%}
+      </ul>
+    </div>
   </div>
 
   <!-- Tab panes -->

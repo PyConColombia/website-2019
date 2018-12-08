@@ -7,31 +7,31 @@
   {%- set t_title = transbag('translate', this.alt, type) -%}
   {%- set t_slides = transbag('translate', this.alt, 'talk_slides') -%}
   {%- set t_resources = transbag('translate', this.alt, 'talk_resources') -%}
-  <h1 class="text-center">{{ t_title }} ({{ talks.count() }})</h1>
-  <div>
-  {%- for talk in talks -%}
-  {%- set t_lang = transbag('translate', this.alt, talk.language) -%}
-    <h3>{{ loop.index }}.&nbsp;<a class="link" href="{{talk|url(alt=this.alt)}}">{{ talk.name }} <small><i>({{ t_lang }})</i></small></a></h3>
-    <p>
-    {%- for author in talk.authors -%}
-      {%- set current_author = site.get('/speakers/'+author, alt=this.alt) -%}
-      {%- set current_country = transbag('translate', this.alt, current_author.country) -%}
-      <a class="link" href="{{current_author|url(alt=this.alt)}}"><i>{{ current_author.name }} {{ current_author.last_name }} {% if current_author.country %}<small>({{ current_country }})</small>{% endif %}</i></a>{% if not loop.last %},&nbsp{% endif %}
-      {%- endfor -%}
-    </p>
-    {{ talk.summary }}
-    {% if talk.file %}
-    <p>
-      <a class="link" href="{{- talk | url(alt='en') -}}{{ talk.file }}"> {{ t_slides }}: {{ talk.file }}</a>
-    </p>
-    {% endif %}
-    {% if talk.url %}
-    <p>
-      <a class="link" href="{{ talk.url }}"> {{ t_resources }}: {{ talk.url }}</a>
-    </p>
-    {% endif %}
-    <br>
-  {%- endfor -%}
+
+  <div class="row justify-content-center align-self-center">
+    <h1 class="title-subscribe">{{ t_title }} ({{ talks.count() }})</h1>
+  </div>
+  <div class="commet"></div>  
+  <div class="row">
+    {%- for talk in talks -%}
+    {%- set t_lang = transbag('translate', this.alt, talk.language) -%}
+      <div class="col-sm-6 container-resume">
+        <div class="subtitle left"><a class="link" href="{{talk|url(alt=this.alt)}}">{{ talk.name }}</a>
+        </div>
+        <div class="label-talk left">({{ t_lang }})</div>
+        <div class="row">
+          {%- for author in talk.authors -%}
+            {%- set current_author = site.get('/speakers/'+ author, alt=this.alt) -%}
+            <div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="{{current_author|url(alt=this.alt)}}"><img class="shadow overlay square" src={%- if current_author.image -%}"/ponentes/{{ current_author._id }}/{{ current_author.image }}"{%- else -%} "/static/images/empty-photo.svg" {%- endif -%} />
+                </a>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endfor -%}
   </div>
 {% endmacro %}
 
@@ -46,11 +46,8 @@
           <div class="container-fluid header-content background-meteor">
             <div class="section">
               <div class="row justify-content-center align-self-center">
-                <div class="col-md-6 col-sm-8 col-xs-12">
+                <div class="col-md-10 col-sm-12 col-xs-12">
                   <div style="margin-bottom: 100px;">
-                    <div class="row justify-content-center align-self-center">
-                      <h1 class="title-subscribe">{% block title %}{{ this.title }}{% endblock %} </h1>
-                    </div>
                     <div >
                       {{ render_list('talk') }}
                       {{ render_list('workshop') }}
