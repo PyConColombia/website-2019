@@ -159,7 +159,10 @@ a {
 
 /* Map */
 
-#mapid { height: 50vh; }
+#mapid { 
+  height: 50vh;
+  z-index: 0;
+}
 
 @media (max-width: 767px) {
   .sponsor-ini img {
