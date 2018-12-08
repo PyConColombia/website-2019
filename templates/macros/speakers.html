@@ -6,20 +6,22 @@
   <div class="col-md-4 col-sm-4 col-xs-12">
     <div class="speaker-image-container">
       <div class="shadow square">
-        <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image
-        -%}
-        "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else
-        -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ speaker._id }}')" class="img-fluid blend" />
+        <a href="{{speaker|url(alt=('es'))}}">
+          <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image
+          -%}
+          "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else
+          -%} "/static/images/empty-photo.svg" {%- endif -%} " class="img-fluid blend" />
+        </a>
       </div>
     </div>
   </div>
   <div class="col-md-8 col-sm-8 col-xs-12">
     <div class="speaker-details text-left">
-      <h1 class="speaker-name">{{ complete_name }}</h1>
+      <h1 class="speaker-name"><a href="{{speaker|url(alt=('es'))}}">{{ complete_name }}</a></h1>
       <h2 class="speaker-info-1">{{ speaker.position_1 }}</h2>
       <h2 class="speaker-info-2">{{ speaker.position_2 }}</h2>
       {% if speaker.twitter_handle %}
-      <h3 class="speaker-info-1">@{{ speaker.twitter_handle }}</h3>
+      <h3 class="speaker-info-1"><a href="https://twitter.com/{{ speaker.twitter_handle }}" target="blank_">@{{ speaker.twitter_handle }}</a></h3>
       {% endif %}
     </div>
   </div>
@@ -31,20 +33,22 @@
 <div class="row">
   <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
     <div class="speaker-details text-right">
-      <h1 class="speaker-name">{{ complete_name }}</h1>
+      <h1 class="speaker-name"><a href="{{speaker|url(alt=('es'))}}">{{ complete_name }}</a></h1>
       <h2 class="speaker-info-1">{{ speaker.position_1 }}</h2>
       <h2 class="speaker-info-2">{{ speaker.position_2 }}</h2>
       {% if speaker.twitter_handle %}
-      <h3 class="speaker-info-1">@{{ speaker.twitter_handle }}</h3>
+      <h3 class="speaker-info-1"><a href="https://twitter.com/{{ speaker.twitter_handle }}" target="blank_">@{{ speaker.twitter_handle }}</a></h3>
       {% endif %}
     </div>
   </div>
   <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
     <div class="speaker-image-container">
       <div class="shadow square">
-        <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image -%}
-          "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}"
-          {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ speaker._id }}')" class="img-fluid blend" />
+        <a href="{{speaker|url(alt=('es'))}}">
+          <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if speaker.image -%}
+            "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}"
+            {%- else -%} "/static/images/empty-photo.svg" {%- endif -%}" class="img-fluid blend" />
+        </a>
       </div>
     </div>
   </div>
