@@ -138,17 +138,24 @@
       {{ menu_item_list('speakers', ['keynotes', 'speakers']) }}
       <!-- {{ menu_item('code-of-conduct') }} -->
       {{ menu_item('talks') }}
-      <!-- {{ menu_item('speakers') }}
-        {{ menu_item('volunteers') }}-->
+      <!-- {{ menu_item('volunteers') }}-->
       {{ menu_item('sponsors') }}
       {{ menu_item('equipo') }}
     </ul>
     <ul class="navbar-nav ml-auto">
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">v.2019</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://2018.pycon.co">v.2018</a>
+          <a class="dropdown-item" href="http://2017.pycon.co">v.2017</a>
+        </div>
+      </li>
       <li class="nav-item">
         {% if this.alt == 'en' %}
-        <a href="{{ '.'|url(alt='es') }}">Español</a>
+        <a class="nav-link" href="{{ '.'|url(alt='es') }}">Español</a>
         {% else %}
-        <a href="{{ '.'|url(alt='en') }}">English</a>
+        <a class="nav-link" href="{{ '.'|url(alt='en') }}">English</a>
         {% endif %}
       </li>
     </ul>
