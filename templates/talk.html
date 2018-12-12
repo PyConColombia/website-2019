@@ -35,7 +35,14 @@
                           <small>({{ t_lang }})</small>
                           {%- endif -%}
                         </div>
-                        <div class="label-talk">{{ t_talk_type }}</div>
+                      </div>
+                      <div class="row justify-content-center align-self-center">
+                        {%- for tag in this.topic -%}
+                          <div class="{{ tag }} tag">{{ tag }}</div>
+                        {%- endfor -%}
+                      </div>
+                      <div class="row justify-content-center align-self-center">
+                        <h4 class="label-talk">{{ t_talk_type }}</h4>
                         {%- if this.room -%}
                         {%- set room = site.get('/rooms/' + this.room, alt=this.alt) -%}
                           <div class="col-sm-12">
@@ -94,11 +101,11 @@
                         {%- endif -%}
                       </div>
                     </div>
-                    {% include 'partials/_footer.html' %}
                   </div>
                 </div>
               </div>
             </div>
+            {% include 'partials/_footer.html' %}
           </div>
         </div>
       </div>

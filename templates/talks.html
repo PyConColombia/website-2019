@@ -16,9 +16,13 @@
     {%- for talk in talks -%}
     {%- set t_lang = transbag('translate', this.alt, talk.language) -%}
       <div class="col-sm-6 container-resume">
-        <div class="subtitle left"><a class="link" href="{{talk|url(alt=this.alt)}}">{{ talk.name }}</a>
+        <div class="subtitle left"><a class="link" href="{{talk|url(alt=this.alt)}}">{{ talk.name }} ({{ t_lang }})</a>
         </div>
-        <div class="label-talk left">({{ t_lang }})</div>
+        <div class="row">
+          {%- for tag in talk.topic -%}
+          <div class="{{ tag }} tag">{{ tag }}</div>
+          {%- endfor -%}
+        </div>
         <div class="row">
           {%- for author in talk.authors -%}
             {%- set current_author = site.get('/speakers/'+ author, alt=this.alt) -%}
