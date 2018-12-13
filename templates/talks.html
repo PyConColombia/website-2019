@@ -15,7 +15,7 @@
   <div class="row" style="margin-top: 40px">
     {%- for talk in talks -%}
     {%- set t_lang = transbag('translate', this.alt, talk.language) -%}
-      <div class="col-sm-6 container-resume">
+      <div class="col-sm-12 col-md-6 container-resume">
         <div class="subtitle left"><a class="link" href="{{talk|url(alt=this.alt)}}">{{ talk.name }} ({{ t_lang }})</a>
         </div>
         <div class="row">

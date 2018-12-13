@@ -1,0 +1,11 @@
+_model: talk
+---
+name: Parameterizing On-demand Scrapy crawlers with Django and Kafka
+---
+authors: camilo-sepulveda
+---
+language: en
+---
+topic: Web
+---
+type: workshop
