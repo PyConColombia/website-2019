@@ -1,0 +1,11 @@
+_model: talk
+---
+name: Aprendizaje supervisado con scikit-learn, qué algoritmo usar y cómo exportarlo.
+---
+authors: jose-david-arevalo
+---
+language: es
+---
+topic: Machine Learning
+---
+type: workshop
