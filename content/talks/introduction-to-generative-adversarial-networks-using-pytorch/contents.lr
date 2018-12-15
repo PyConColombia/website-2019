@@ -9,3 +9,22 @@ language: en
 topic: Machine Learning
 ---
 type: talk
+---
+description:
+
+Neural networks, particularly deep neural networks, have been successful in tasks such as image classification and natural language processing. The success of this type of machine learning algorithms has led to multiple applications such as image recognition in photo apps and sentiment analysis in social networks. 
+
+The idea behind Generative Adversarial Networks (GANs) is to leverage the power of neural networks to train models that can generate new samples using existing data. Specifically, GANs are two neural networks competing with each other; this competition results in artificial samples that resemble the original data that was used to train one of the networks in the adversarial model. This idea of adversarial models has led to increasing interest in the area because it has the potential of generating a wide range of samples such as images of common objects or particle physics simulations.
+
+The objective of this talk is to give an introduction to the components of  GANs and how these models can achieve generating new samples from existing data. The talk will also cover applications of GANs in industry and academia and how this type of models can be implemented using the open source deep learning library PyTorch.
+
+## Contents:
+
+Speaker and talk introduction ~ 1 min 
+Background: Loss functions and the backpropagation algorithm  ~ 6 min
+The components of GANs: discriminator and generator ~ 13 min
+Applications ~ 4 min
+Implementation of GANs using PyTorch ~ 10 min
+Q&A ~ 6 min
+---
+summary: Generative Adversarial Networks (GANs) leverage the power of neural networks to train a model that can generate new samples using existing data. This talk is an introduction to GANs: how these models work, their applications, and an implementation using the open source library PyTorch.

@@ -9,3 +9,7 @@ language: es
 topic: Data Science
 ---
 type: talk
+---
+description: La visualización de datos es una parte esencial del proceso de ciencia de datos tanto en etapas iniciales de exploración como en etapas finales de presentación de resultados. Por mucho tiempo se han usado gráficas estáticas del tipo “mire pero no toque” sin embargo estas no permiten una activa participación del usuario como lo hacen las gráficas interactivas, en las cuales es posible elegir qué datos visualizar y contar una historia desde diferentes puntos de vista. En esta charla hablaré de cómo crear este tipo de gráficas interactivas de manera efectiva usando algunas de las librerías más famosas de Python para este propósito como Bokeh, Plotly, Folium.
+---
+summary: Por siglos las personas han usado gráficas estáticas que ofrecen un único punto de vista de la información, la visualización interactiva de datos por otro lado les permite explorar la información por si mismos. Esta charla mostrará cómo implementar efectivamente visualización interactiva en Python.

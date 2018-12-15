@@ -9,3 +9,15 @@ last_name: Ravi
 prefix: Mr.
 ---
 publish: yes
+---
+information:
+
+Bhavani Ravi - Software Engineer - Orangescape - 
+Tech Enthusiast - Django & Chatbot specialist 
+Mentor/Speaker Build2learn, Chennai Geeks.
+---
+position_1: Orangescape
+---
+twitter_handle: geeky_bhavani
+---
+web: http://bhavaniravi.com

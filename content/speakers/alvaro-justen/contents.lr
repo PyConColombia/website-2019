@@ -11,3 +11,14 @@ publish: yes
 web: http://turicas.info/
 ---
 image: perfil.jpg
+---
+country_residence: br
+---
+information:
+
+Álvaro Justen, también conocido como Turicas es desarrollador de software y profesor. Desde 2004 es activista de software libre, empezó con Python en 2005 y desde entonces contribuye con la comunidad brasileña (incluso organizó el evento nacional - la PythonBrasil - en 2012).
+Es químicamente dependiente de cafés especiales y actualmente trabaja cómo desarollador principal en ImpactoJOR (mediendo el impacto del periodismo en la sociedad), liberando datos públicos brasileños con el proyecto Brasil.IO y es profesor de la Escola de Dados (parte de OpenKnowledge Foundation Brasil).
+---
+position_1: Brasil.IO
+---
+twitter_handle: turicas

@@ -1,6 +1,6 @@
 name: Cesar Augusto
 ---
-country_residence: Herdenez Araque
+country_residence: co
 ---
 email: caherdenez@gmail.com
 ---
@@ -13,3 +13,14 @@ web: http://cesarh.co/
 image: perfil.jpg
 ---
 prefix: Mr.
+---
+information:
+
+- Técnico en Sistema del SENA
+- Ingeniero de Sistemas de la Fundación Universitaria San Martín 
+- Full Stack Developer en MeltStudio
+- Co-organizador Python Barranquilla
+---
+position_1: Python Barranquilla
+---
+twitter_handle: cesarau0619

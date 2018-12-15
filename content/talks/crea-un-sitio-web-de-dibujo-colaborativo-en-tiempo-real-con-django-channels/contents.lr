@@ -9,3 +9,21 @@ topic: Web
 type: workshop
 ---
 authors: dario-guzman
+---
+description:
+
+Las aplicaciones que hacen uso de websockets para comunicarse entre servidores y clientes suelen ser más complicadas de escalar en comparación a una aplicación construida para usar solo HTTP, esto es debido a que el segundo es por diseño sin estado, lo que significa que ninhinga de las partes tiene memoria de las interacciones previas que se realizaron debido a que su conexión se cierra una vez se termina la petición, mientras que en el primero la conexión permanece abierta.
+
+Es por esto que en el caso de las aplicaciones que usan el protocolo de websockets deben ser diseñadas cuidadosamente para que puedan ser escaladas en diferentes servidores. 
+
+*Contenido*
+
+- ¿Que es un sitio web colaborativo?
+- ¿Que tecnologías y herramientas tenemos disponibles para construir uno?
+- Introducción a Django Channels
+- ¿Como podemos escalar una aplicación que hago uso de websockets?
+- Errores comunes que no te permitiran escalar
+- Descripción del proyecto a desarrollar
+- Desarrollo del taller
+---
+summary: ¿Tienes algun interés en conocer cómo es posible crear herramientas de colaboración en línea como Google docs? Hoy podras Aprender cómo crear un sitio web de dibujo colaborativo con la capacidad de escalar según la demanda de tus usuarios.

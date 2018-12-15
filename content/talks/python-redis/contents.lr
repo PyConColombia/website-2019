@@ -11,3 +11,7 @@ language: es
 topic: Web
 ---
 type: workshop
+---
+description: El workshop teórico-práctico tiene como audiencia central  aquellas personas que están comenzando con python, en objectivo principal es que al finalizar el taller tenga conocimientos básicos de redis, python, flask y así poder realizar prototipos funcionales en un corto plazo. y ademas usar redis en microservicios
+---
+summary: Siempre que pensamos Redis pensamos en solo en cache, por redis nos ofrece otros usos y si sumamos el poder de python, se convierte en una formidable herramienta al momento de trabajar sobre todo en microservicios

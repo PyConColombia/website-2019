@@ -1,6 +1,6 @@
 name: Dario
 ---
-country_residence: Colombia
+country_residence: co
 ---
 email: guzman.d.dario@gmail.com
 ---
@@ -13,3 +13,13 @@ publish: yes
 web: http://www.guzmandario.com/
 ---
 image: profile.png
+---
+information:
+
+Soy estudiante de ingeniería de sistemas de la Universidad Nacional Abierta y a Distancia (UNAD), tengo 3 años de experiencia como programador, en la universidad inicie un club de programación para reforzar los temas dados en las clases con el grupo de primer semestre, el cual demoro alrededor de 3 meses debido a falta de tiempo por mi parte, actualmente trabajo en Ebenezer Technologies una empresa enfocada en crear servicios aplicando visión por computadora e inteligencia artificial donde desempeño el rol de desarrollador web.
+
+Mi pasión por enseñar lo que aprendo me ha llevo a hacer parte del equipo organizador de la comunidad Python Barranquilla y participar como guía en dos Django Girls uno en mi ciudad Barranquilla y el otro en Cartagena.
+---
+position_1: Ebenezer Technologies
+---
+twitter_handle: GudarJs

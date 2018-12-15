@@ -9,3 +9,51 @@ language: en
 topic: Machine Learning
 ---
 type: workshop
+---
+description:
+
+"In this workshop, we're going to learn how to create a virtual rapporteur. A digital assistant who can join any conference call; record it and provide participants with real-time insights into the overall tone of the call. Once the call is complete, we'll look at how we can use the call recording to provide participants with a text transcript as well as meta information about the call such as the most talked about concepts, keywords and entities.
+
+Workshop outline
+===============
+
+Creating our conference
+------------------------------
+- What is Hug
+- Creating a conference line with Hug & Nexmo
+- Running our Hug server
+
+Adding our bot and recording the call
+-----------------------------------------------
+- Creating our bot API endpoint
+
+Sending our audio to IBM Watson
+------------------------------------------
+- Introducing Tornado
+- Handling a WebSocket Connection
+- Using on_message to proxy data to IBM Watson
+
+Performing our sentiment analysis
+--------------------------------------------
+- Sending our transcription to the tone analyser service
+
+Displaying in the browser
+--------------------------------
+- Demo
+
+Fetching our recording 
+-----------------------------
+- Downloading the mp3 with requests
+- Sending the mp3 to be transcribed
+
+
+Using the Natural Language Understanding API
+-----------------------------------------------------------
+- Sending our transcription to the NLU API
+- Saving the response
+
+Pulling it all together
+---------------------------
+- Final Demo"
+---
+summary: Discover how you can use Artifical Intelligence to perform sentiment analysis of an audio stream, in real-time! In this workshop, we'll show you how to use AI and NLP to figure out what a person is calling about and how they are feeling, all from a telephone call audio feed via WebSockets.

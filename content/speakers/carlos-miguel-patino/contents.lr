@@ -9,3 +9,7 @@ prefix: Mr.
 publish: yes
 ---
 image: perfil.jpg
+---
+information: I am a physicist from Universidad de los Andes interested in scientific computing and data science using Python. I have worked with in projects related with [particle physics](https://www.sciencedirect.com/science/article/pii/S0370269318300169) and [molecular dynamics simulations] (https://nanohub.org/resources/struc2lammpsdf/). Recently I have been interested in the applications of machine learning algorithms in particle physics, particularly deep neural networks. Currently, I am working in data science at Digital57 developing data visualizations and analysis using Python.
+---
+position_1: Digital57

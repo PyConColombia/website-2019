@@ -9,3 +9,25 @@ language: en
 topic: IoT
 ---
 type: talk
+---
+description:
+
+The radiolocalization problem is a very old problem that we have solved in regular outdoor areas. However indoor radiolocalization is an open problem due to the fact that there are multiple obstacles and variations in indoor spaces representing a challenge to determine the position of a target.
+
+Compressed sensing is a paradigm that is revolutionizing the signal processing area, since it proposes an approach that intends to compress the signal in the precise moment of its acquisition reducing the amount of data that needs to be processed and collected.
+The application of compressed sensing to different areas has been a research topic during the last ten years. We focused our attention in the application of the compressed sensing paradigm, and even more, the sparse reconstruction task, in indoor radiolocalization tasks. 
+
+The proposed agenda is:
+
+* Introduction to the indoor radiolocalization problem: 5 minutes
+* Generalities of compressed sensing (CS): 5 minutes
+* How is compressed sensing related to machine learning and big data: 5 minutes
+* Application of CS to indoor radiolocalization: 5 minutes
+* General framework of solution that we have proposed in order to solve in a practical manner this problem: 5 minutes
+* Results and examples of the performance of the code in python: 5 minutes
+* Conclusions: 5 minutes
+* Q&A: 5 minutes
+
+Related contents to this talk were presented in ISSPIT2017 (“Sparse framework for hybrid TDoA/DoA multiple emitter localization”, DOI: 10.1109/ISSPIT.2017.8388637). The previous article was part of an international research project entitled CLASS, funded by DFG (Germany) and Colciencias (Colombia). It is important to remark, that the research made in the aforementioned project intended to apply the CS paradigm to non collaborative outdoor radiolocalization problems. In this talk, the results to be presented are focused in collaborative indoor radiolocalization problems, which are very different.
+---
+summary: We consider the open problem of indoor radiolocalization. We present a solution with the sparse formulation of the localization task and develop a framework that allows to accommodate different types of measurements. All the algorithms are developed in python.

@@ -9,3 +9,13 @@ language: en
 topic: Web
 ---
 type: talk
+---
+description:
+
+Allegro is a big e-commerce platform that is naturally a rapidly changing environment, so there's a need to generate new marketing materials and to keep existing ones up to date: pricing changes continuously, promotions and competing campaigns appear, new goods and services are offered. We used to do this manually and that caused sometimes a simple price change would take a whole day, and when the new information was available on production, it would already be obsolete.
+
+The major problem we have faced is that graphic designers have a very specific work environment that includes specific software and tools that are tricky to automate yet come to be not replaceable in practice. 
+
+In this presentation I am going to describe our year long project that’s objective is not only to automate typical tasks that are usually done by graphic designers but to create a complete system that allows entire marketing team to concentrate more on data and results rather than on some technical details required to achieve them. We have combined facilities provided by Python, Linux, Windows COM (Component Object Model) and the popular graphic editor and also created a modern web UI using VueJs and Django in order to create a product that helps us and our partners to have an always up to date information presented in our platform.
+---
+summary: Operating a big e-commerce platform requires to create and update ads, banners and other marketing materials. Using manual labour can be inefficient in these circumstances. We managed to automate this process and to keep native environment for graphic designers, using Python and its ecosystem.

@@ -11,3 +11,14 @@ last_name: Gómez Trejos
 prefix: Ms.
 ---
 publish: yes
+---
+information:
+
+Soy Ingeniera de Sistemas y Computación, actualmente trabajo como Security Developer en Fluid Signal Group. 
+Hago parte de los organizadores de Django Girls Colombia y Python Pereira, me gusta que la tecnología llegue a más personas y compartir el conocimiento que tengo, por ello en mis tiempos libres doy charlas y promuevo la participación de la mujer en tecnología a través de los talleres Django Girls.
+---
+linkedin_handle: carolinagomezt
+---
+position_1: Fluid Signal Group
+---
+twitter_handle: caro_gomezt

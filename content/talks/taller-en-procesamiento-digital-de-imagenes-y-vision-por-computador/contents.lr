@@ -9,3 +9,19 @@ language: es
 type: workshop
 ---
 topic: Computer Vision
+---
+description:
+
+En el *workshop* se pretende dar a conocer métodos y herramientas básicos del procesamiento digital de imágenes. Entre ellos se encuentra la representación de imágenes digitales para poder realizar operaciones básicas con ellas. Además, se busca comprender técnicas de procesamiento orientadas al punto (píxel), tales como el realce o suavizado, y técnicas de segmentación de imágenes que permitan analizar las diferentes características que pueden extraerse en una imagen digital. Esto, con el fin de representar formas y descriptores básicos con los que se puede realizar reconocimiento de objetos en una escena. Cabe destacar que todo esto se realizará utilizando Python como lenguaje de programación y libreŕías de OpenCV para facilitar el procesamiento. El material utilizado para el workshop fue recopilado por cursos tomados sobre Procesamiento Digital de Imágenes y Visión por Computador.
+
+La estructura del workshop se detalla a continuación:
+
+* Introducción → 5 min.
+* Python básico (Definición de variables y funciones, importación de módulos) → 15min.
+* Lectura y escritura de imágenes → 10 min.
+* Manipulación de imágenes (Rotación, negativo de la imagen, blending) → 20min.
+* Operaciones orientadas al píxel (Función potencia, segmentación, detección de bordes, reemplazo de píxeles) → 20 min.
+* Representación de imágenes (Extracción de características) → 30 min.
+* Reconocimiento de objetos (Detección de rostros) → 20min.
+---
+summary: En 2017, el 80% del tráfico en Internet fueron vídeos e imágenes. Pero se ha vuelto crítico desarrollar algoritmos capaces de entender estos datos. Por tanto, se busca brindar conceptos básicos de procesamiento de imágenes digitales como fundamentos requeridos en el área de visión por computador.

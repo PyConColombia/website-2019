@@ -11,3 +11,11 @@ prefix: Mr.
 publish: yes
 ---
 image: profile.png
+---
+country_residence: pl
+---
+information: One of the core developers of Ralph – an open-source DCIM/CMDB tool https://github.com/allegro/ralph. Work as a software engineer at Allegro – the biggest e-commerce platform in Poland. Mostly I write my code in Python.
+---
+position_1: Allegro
+---
+twitter_handle: ar4s_pl

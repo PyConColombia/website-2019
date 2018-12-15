@@ -9,3 +9,31 @@ language: es
 topic: Web
 ---
 type: workshop
+---
+description:
+
+En este taller vamos a crear una API en GraphQL para compartir e invitar a más personas a participar a los meetups de Python. Vamos a poder crear eventos, ver sus detalles y inscribir usuarios para asistir.
+
+## Programa
+Primero explicar como funciona GraphQL e introducir algunos conceptos básicos de las API de este tipo. Vamos a definir un algunos modelos en Django para almacenar la información que vamos a requerir.
+
+- Introducción
+   - Especificación de GraphQL 
+   - Comparativa REST vs GraphQL (Ventajas - Desventajas)
+- Graphene Django
+   - Instalación y configuración Graphene
+   - Creando tu primer ""resolver""
+- Explorando GraphQL
+  - Agregando modelos a GraphQL
+  - Queries
+  - Connection Fields
+  - Filters
+- Creando eventos y registrando usuarios en la API de GraphQL
+   - Creando tu primera ""mutation""
+   - Input types
+   - Creación modificación  de Nodos
+   - Custom ""mutation""
+- Autenticación y autorización
+- Recursos y documentación"
+---
+summary: En este Workshop te mostraré como hacer una API de GraphQL y porque es una excelente alternativa a los API REST. Vamos a crear una API GraphQL desde cero en Django haciendo uso de todo lo que nos provee. Vamos a crear un API donde vamos a poder definir eventos o meetups y registrar asistentes.

@@ -11,3 +11,9 @@ publish: yes
 web: http://www.maiatech.co
 ---
 image: perfil.jpeg
+---
+country_residence: co
+---
+information: I have been a professor at a private university in Colombia during 16 years, participating in different national and international projects in topics related to signal processing, compressed sensing, machine learning, and data science, in applications as smart agriculture, radiolocalization, spectrum management, wireless telecommunications, among others. I am a PhD in Telecommunications and Electronical Engineer. Also, recently, me and other 4 partners started Maia Technologies, a startup dedicated to data science and machine learning services.
+---
+twitter_handle: cgsantama

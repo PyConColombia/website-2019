@@ -15,3 +15,13 @@ publish: yes
 web: http://aaronbassett.com/
 ---
 image: perfil.jpg
+---
+information:
+
+"Aaron is a developer advocate at Nexmo. A seasoned software engineer and wannabe digital artist Aaron is frequently found creating things with code, or electronics; sometimes both. You can customarily tell when he's working on something new by the smell of burning components in the air.
+
+Hacker, tinkerer, mentor, speaker, writer, and LGBTQ+ ally. Aaron builds cool stuff and helps others build really cool stuff 🦄"
+---
+position_1: Nexmo
+---
+twitter_handle: aaronbassett

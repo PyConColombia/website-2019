@@ -9,3 +9,20 @@ language: es
 topic: Web
 ---
 type: talk
+---
+description:
+
+Las pruebas funcionales, publicaciones en redes sociales, autogeneración de llaves de acceso, etc. Son tareas que se pueden automatizar gracias a Selenium. Esta es una herramienta que nos permite automatizar tareas que son desarrolladas en un navegador. En esta charla se expondrán diferentes casos prácticos donde es de gran utilidad esta herramienta. 
+
+A continuación describo el contenido de la charla:
+
+1. Introducción: ~1 minuto
+2. ¿Qué es Selenium?: ~5 minutos
+3. Lenguajes con los cuales se puede usar Selenium: ~2 minutos
+4. Casos prácticos del uso de Selenium: ~22 minutos
+5. Preguntas: ~10 minutos"
+---
+summary:
+
+Cuando trabajamos con redes sociales o realizamos pruebas funcionales a una aplicación, muchas veces tenemos tareas que son repetitivas y nos demandan mucho tiempo, pero podemos automatizarlas?
+La respuesta es sí, en esta charla aprenderás cómo automatizar estas tareas con Selenium.
