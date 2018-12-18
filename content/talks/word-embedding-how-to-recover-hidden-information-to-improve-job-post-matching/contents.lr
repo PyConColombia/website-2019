@@ -9,3 +9,13 @@ language: en
 topic: Machine Learning
 ---
 type: talk
+---
+description:
+
+Job matching nowadays are widely used by both job seekers and employers. However it is still hard and time consuming to find good matches. The solution presented makes use of word embedding and unsupervised features extraction to identify new data relationships that are fed to a a recommender system to quickly provide the most interested as well as interesting candidates for each specific post. 
+It will be also shown how to build a python architecture to integrate such system.
+---
+summary:
+
+A use case from design/testing to implementation for improving job post matching. 
+The system was implemented in an employment technology company. Through the use of word embedding we derive unexplicit candidates details that we merge with other available data to find the best jobs for each user.

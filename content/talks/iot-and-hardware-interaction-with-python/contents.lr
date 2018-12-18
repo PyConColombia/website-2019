@@ -9,3 +9,11 @@ language: en
 topic: IoT
 ---
 type: talk
+---
+description:
+
+This talk is about, differents tools, boards and liberies for Python that are useful to IOT applications like process control, automation, data visualization, etc..., and export those data to the local application or even the cloud using libraries like matplotlib, jupyter, or even cloud services for iot like thingerio,... and diferent aplications into domestic and industrial fields.
+
+This talk will have a brief demostration of a pycom board using mycropython and different wireless protocols like LoRa, Bluetooth and wifi.
+---
+summary: The barrier between the physical world and the digital world is becoming more diffuse Python has a wide variety that allows to manipulate electronic devices, the purpose of this talk is to give a brief sample of tools, from the connection and devices to the data visualization and control tools.

@@ -9,3 +9,17 @@ language: en
 type: talk
 ---
 topic: Scientific Computing
+---
+description:
+
+All the material show and submitted to PyCon is completely  new and unpublished. Also, the first software release is expected to be ready on December 2018, so we are excited to introduce our work at this conference. the talk will follow the following topics
+
+Introduction -2 min
+Background - 3 min
+Technical aspects and Challenges - 5 min
+Introducion IGNIS - 8 min
+Demo examples - 10 min
+Final comments - 5 min
+Audience questions - 7 min
+---
+summary: IGNIS is a new cross-platform desktop software designed to provide an intuitive tool for symbolic computing. The software is based on several python libraries which are integrated in a modern user interface development in C++. IGNIS can be used for scientific, engineering, and student of all levels.

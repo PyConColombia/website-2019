@@ -9,3 +9,11 @@ language: es
 topic: Web
 ---
 type: workshop
+---
+description:
+
+Es innegable que el pasar el tiempo nuestras aplicaciones se vuelven más complejas,  con nuevos requerimientos se implementan nuevos features. Sin embargo, si nosotros no tenemos un control de como nuestra aplicación crece, llegará un momento en el cual tengamos un único proyecto que lo haga todo,  cientos, miles de líneas de código en un solo proyecto. Modificar un par de líneas puede ser causa de que algo deje de funcionar. Tener proyectos monolíticos tiene muchas desventajas, es por ello que debemos de conocer y saber como implementar los micro servicios.
+
+En este taller aprenderemos a implementar nuestros micro servicios con python. Lo haremos desde cero, sin frameworks web, únicamente con las librerías que Python ya nos proporciona. Trabajaremos en la creación y el consumos de API´s de tal manera que puedas aprender a extender tus proyectos sin sacrificar legibilidad, o performace. 
+---
+summary: En este taller aprenderemos a crear y consumir API´s con Python de tal manera que nuestras aplicaciones puedan comunicarse entre ellas a travez de internet creando proyectos modulares, re utilizables, fáciles de testear e implementar.

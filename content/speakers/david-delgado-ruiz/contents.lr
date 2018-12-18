@@ -7,3 +7,15 @@ last_name: Delgado Ruiz
 prefix: Mr.
 ---
 publish: yes
+---
+github_handle: nonameable
+---
+information:
+
+I am David Mauricio Delgado Ruiz, 22 years old. I am a Systems and Computing Engineer from Universidad de los Andes. Currently I am working at Quantil, an amazing company that loves to apply Math to solve real world problems in Finance, Economics and Governance. Although my work and research has been more related to data and how we can make better decisions with it, I have an ongoing interest for security and privacy in the world of computing. I believe the best way to know someone is through a cup of tea before sunset. If you want to meet me, don't hesitate and shoot me an email, you'll not regret it and neither will I. 
+---
+position_1: Quantil
+---
+twitter_handle: dwhitelined
+---
+web: https://nonameable.github.io

@@ -11,3 +11,10 @@ prefix: Mr.
 publish: yes
 ---
 image: perfil.jpg
+---
+information:
+
+I am a Data Scientist with a MSc in mathematics for cryptography and communications and a MSc in mathematics  focused on statistical mechanics. Since 2011 I have been working with Python language in distinct companies mostly focusing on back-end development and machine learning design and implementation.
+I am currently Data scientist at Vincu, an employment technology company specialized in careers in sales, where I lead the development of machine learning algorithm. 
+---
+position_1: Vincu

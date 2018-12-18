@@ -9,3 +9,66 @@ language: es
 topic: Data Science
 ---
 type: talk
+---
+description:
+
+![](https://raw.githubusercontent.com/goanpeca/pyday-cali-2019/master/img_source/conda-logo.png)
+
+Conda is an open source package management system and a virtual environment management (at the system level!) that runs on Windows, MacOS and Linux and other architectures (like power pc and ARM!). Conda installs, executes and updates packages and their dependencies quickly. Conda creates, saves, loads and easily switches between environments on your local computer. Although written in Python and originally created with the Python scientific packages in mind and the need to handle external dependencies, Conda allows you to create packages and distribute software for any programming language, including Python, R, Ruby, Lua, Scala, Java, JavaScript, C / C ++, FORTRAN, among others.
+
+Conda as a package manager helps you find and install packages. If you need a package that requires a different version of Python or any other package, you do not need to change to a different environment manager, because conda is also a virtual environment manager. Unlike the traditional tools used in the Python ecosystem, such as *pip*, *virtualenv* and others, Conda's virtual environments work at the **system level**, and not only at the **Python level** (site-packages!), as illustrated in the [following figure](https://raw.githubusercontent.com/goanpeca/pyday-cali-2019/master/img_source/isolation.png):
+
+![](https://raw.githubusercontent.com/goanpeca/pyday-cali-2019/master/img_source/isolation.png)
+
+The [ecosystem](https://raw.githubusercontent.com/goanpeca/pyday-cali-2019/master/img_source/community.png) that has developed around Conda has generated an explosion of packages maintained and created by different organizations , including [Conda Forge](https://conda-forge.org/) developing packages **as an open source community**, [Bioconda](https://bioconda.github.io/), a community focused on packages used in bioinformatics and companies such as Intel, and IBM among others, for specialized versions of packages optimized for use with GPUs and special purpose CPUs.
+
+![](https://raw.githubusercontent.com/goanpeca/pyday-cali-2019/master/img_source/community.png)
+
+This has allowed Python to become the high level language used by default in projects of Data Science, Machine Learning and Deep Learning and increasingly on  other branches of the world of scientific computing.
+
+Conda continues to evolve and adapt to the needs of different communities and in this process new complementary tools have been created that facilitate reproducibility in different software projects, whether applied in data science, in academic projects, or in development and traditional software engineering.
+
+The ecosystem tool responsible for building the packages, [conda-build](https://github.com/conda/conda-build) continues to evolve and new tools have emerged including:
+
+  - [constructor](https://github.com/conda/constructor): A tool to create custom conda package installers, similar to how the Anaconda distribution works (single file installer)
+  - [conda-pack](https://github.com/conda/conda-pack): To pack conda environments to be redistributed.
+
+![](https://raw.githubusercontent.com/goanpeca/pyday-cali-2019/master/img_source/state.png)
+
+
+# Table of Contents
+
+## A. First part - Theory *(~ 15 minutes)*
+
+![](https://raw.githubusercontent.com/goanpeca/pyday-cali-2019/master/img_source/historia.png)
+
+1. Introduction *(~ 3 minutes)*
+1. The packaging problem (in Python, Compilation/Installation) *(~ 5 minutes)*
+1. How does Conda work? *(~ 3 minutes)*
+1. What is a Conda package? *(~ 2 minutes)*
+1. What is a Conda environment? *(~ 2 minutes)*
+
+## B. Second part - Practice *(~ 12 minutes)*
+
+![](https://raw.githubusercontent.com/goanpeca/pyday-cali-2019/master/img_source/conda-keep-calm.png)
+
+1. How can I install Conda (Anaconda / Miniconda)? *(~ 3 minutes)*
+1. package installation *(~ 3 minutes)*
+1. Handling additional channels *(~ 3 minutes)*
+1. Conda environment management *(~ 3 minutes)*
+
+## C. Third part - Tools and closing remarks *(~ 15 minutes)*
+
+![](https://raw.githubusercontent.com/goanpeca/pyday-cali-2019/master/img_source/conda-canary.png)
+
+1. How to create a Conda package? *(~ 2 minutes)*
+1. New complementary tools (Constructor, conda-pack) *(~ 2 minutes)*
+1. Why use Conda? *(~ 2 minutes)*
+1. Conda & Docker *(~ 2 minutes)*
+1. The future of Conda and the ecosystem *(~ 3 minutes)*
+1. I want the future now! (Conda Canary) *(~ 2 minutes)*
+1. Additional resources / DataCamp *(~ 2 minutes)*
+
+## Questions *(~ 3 minutes)*
+---
+summary: Anaconda is the most popular Python Data Science distribution and at the heart of Anaconda, we have Conda, the cross platform package and virtual environment manager. In this talk we will cover a bit of history of the packaging problem, the why and the how to use it, together with new tools!

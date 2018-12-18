@@ -9,3 +9,17 @@ last_name: Peña Ramirez
 prefix: Mr.
 ---
 publish: yes
+---
+information:
+
+My name is Diego Camilo Peña Ramírez, i'm mechatronic engineer and master student of industrial automation at ""Universidad Nacional de Colombia"", i had been working on Python for 6 years of wich 2 years i was teacher.
+
+My interests are 3d Printing (and i designed my own 3d printer http://reprap.org/wiki/UNAL_FDM ), Python ,machine learning, hardware and graphical computing.
+---
+position_1: Universidad Nacional de Colombia
+---
+summary: 
+---
+twitter_handle: nervencid
+---
+web: http://reprap.org/wiki/UNAL_FDM

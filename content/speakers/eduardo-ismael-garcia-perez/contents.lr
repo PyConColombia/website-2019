@@ -12,6 +12,10 @@ publish: yes
 ---
 image: perfil.JPG
 ---
-github_handle: https://github.com/eduardogpg
+github_handle: eduardogpg
 ---
 information: Desarrollador de Software desde hace 9 años. Actualmente Full Stack Development en la Startup de [codigofacilito] así como tutor de la misma. Dentro de la plataforma he impartido más de 20 curso en el idioma Español, con lenguajes de programación como Go, Python, Elixir, Ruby, SQL, C# así como frameworks y otras tecnologías (Ruby on Rails, Django, MongoDB etc..)
+---
+position_1: Codigofacilito
+---
+twitter_handle: eduardo_gpg

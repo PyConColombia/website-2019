@@ -1,6 +1,6 @@
 name: Isabel Cristina
 ---
-country_residence: Colombia, Tulua
+country_residence: co
 ---
 email: iris9112@gmail.com
 ---
@@ -13,3 +13,14 @@ prefix: Ms.
 publish: yes
 ---
 image: perfil.jpg
+---
+information:
+
+Soy ingeniera de sistemas de la universidad del valle, con más de cuatro años de experiencia en proyectos de IT. 
+Actualmente trabajo como desarrolladora web para RADY Consultores, lidero la comunidad de Python Tuluá y apoyo como co-organizadora de Pioneras Cali, así como a PyLadies Colombia. También he participado como guía en Django girls. En general, me gusta enseñar y ayudar a las personas.
+
+Soy una persona curiosa y con interés por muchos temas, como la biología, los animales, las matemáticas, el análisis de datos, y amo Python. 
+---
+position_1: Universidad del Valle
+---
+twitter_handle: iris9112

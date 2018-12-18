@@ -9,3 +9,17 @@ language: en
 topic: IoT
 ---
 type: talk
+---
+description:
+
+Using drones and neural networks to scan an affected area by a natural catastrophe (earthquake, hurricane, etc) may result in a powerful tool for rescue purposes, especially if the video could be analyzed by a trained neural network model, this talk is about how to use/implement this useful tool to: Scan affected area, stream video, identify people to be rescued, capture GPS location, create a logistic map for rescue.
+
+- (7min)Developing an app for a DJI drone to capture useful information 
+- (7min)Creating a Neural Network to analyze the video streamed by the drone
+- (5min)Pushing information to the cloud
+- (5min)Merging all the subsystems 
+- (4min)Video demo (may be live demo)
+- (2min)Github link and future work
+- (10min) QA session 
+---
+summary: Using drones and neural networks to scan an affected area by a natural catastrophe (earthquake, hurricane, etc) may result in a powerful tool to save lives, this talk is about how to use/implement this tool to use a drone as a robot to save people in a natural catastrophes

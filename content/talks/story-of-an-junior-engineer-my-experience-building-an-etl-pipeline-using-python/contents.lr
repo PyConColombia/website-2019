@@ -9,3 +9,25 @@ language: en
 topic: Data Science
 ---
 type: talk
+---
+description:
+
+I will share with you the process we followed at my current company to build an ETL pipeline to a client. The idea is to be as real as I can be, explaining the perks and drawbacks of using Python to build it. The solution we built involves the usage of Pandas, Django and many other awesome libraries.
+
+Although the main theme of the talk is how we built the ETL pipeline, I want to to give it it in a different, curious way: by telling you a story. 
+
+My talk will be divided in 5 parts:
+
+**Introduction ~ 1 min:** Learn a little bit about who am I and what I've done.
+**Setting : ~ 4 min:** Just like an storyteller, who describes the environment or surroundings of the story, I will tell you succinctly why my company needed to build an ETL process, how we approach the problem and how finally we decided to use Python to build it. 
+**Plot ~ 24 min (each part taking up to 6 min):** Where I tell the story of how I built an ETL using python. It has 4 chapters:
+1. *How it all began*: Defining the right questions: I share how important it is to define which questions you want to answer as your first step in the ETL process.
+2. *Python increased the size! Insufficient RAM and other drawbacks*: Dataframes are awesome, but not so awesome when you eat up to 12 GB of RAM performing a simple join.
+3. *God bless Python dictionaries*: Of how you can receive/build or send any object using python dicts and how compatible are they with other formats such as JSON.
+4. *Measure, measure, measure!* : I share how you might estimate how long the ETL will take given the size of the data and the implementation.
+
+
+**Resolution and moral ~ 6 min:** Final thoughts of the implementation of the ETL 
+**Questions ~ 5 min**
+---
+summary: This is the story of an engineer who enters a jungle of data and builds an ETL in order to make sense out of it. You'll learn about data modelling, how a JOIN operation may eat up your RAM and many other perks and drawbacks of using Python to build the pipeline. Sit and join him in his adventure.

@@ -2,7 +2,7 @@ name: Gonzalo
 ---
 country: Colombia
 ---
-country_residence: Colombia
+country_residence: co
 ---
 email: goanpeca@gmail.com
 ---
@@ -21,3 +21,51 @@ twitter_handle: goanpeca
 facebook_handle: goanpeca
 ---
 github_handle: goanpeca
+---
+information:
+
+## ¿Entonces, quién eres?
+
+Soy un Ingeniero de Recursos Hídricos de [Bucaramanga, Colombia](https://en.wikipedia.org/wiki/Bucaramanga) con un pregrado en [Ingeniería Civil](http://albatros.uis.edu.co/eisi/), una Maestría en [Hidroinformática](http://master.euroaquae.eu/) y una maestría en [Ingeniería Sanitaria](https://www.un-ihe.org/msc-programmes/specialization/sanitary-engineering-1). Durante un par de años también intenté hacer un doctorado en [Economía conductual](https://es.wikipedia.org/wiki/Econom%C3%ADa_conductual), pero durante este período descubrí la pasión por la ingeniería de software, el desarrollo y la ciencia de datos que me llevó a colaborar en diferentes proyectos de código abierto, y eventualmente a abandonar mis estudios de doctorado después de 2 años (de todos modos no me estaba divirtiendo con ese tema!).
+
+Soy una mezcla entre un Ingeniero de Recursos Hídricos, que trabaja como Ingeniero de Software, que es un Desarrollador (semi) *Full Stack* y un aspirante a Científico de Datos.
+
+## ¿Cuál es tu experiencia en programación y Python?
+
+Mi experiencia inicial en programación vino durante mi pregrado en la materia de  *Introducción a la Programación* ... en C ++. Esto fue *divertido* pero completamente desconectado de cualquier otro curso en el plan de estudios. Desde el tiempo de C ++ hasta mi graduación, pasé un tiempo con Java (¡que no recuerdo con cariño!) Y también tuve un curso sobre tecnologías de desarrollo web donde obtuve mi formación inicial en HTML, CSS, JS y PHP usando *LAMP*. Continué también utilizando las herramientas habituales como Excel, y eventualmente terminé programando en VB6 a través de VBA para automatizar el procesamiento de datos que necesitaba para acelerar los resultados de mi proyecto de tesis en 2006 que hacía uso de [Surfer](http://www.goldensoftware.com/products/surfer).
+
+Pasaron unos años y seguí usando VBA durante mi trabajo como ingeniero civil para conectar y automatizar otras herramientas como [HEC-RAS](http://www.hec.usace.army.mil/software/hec-ras/) y [AutoCAD](https://www.autodesk.com/products/autocad/overview). Luego comencé la maestría en Hidroinformática y tuve que volver a utilizar Java (Comenzando en Francia), luego VBA, luego VB .NET (En Inglaterra) y Java nuevamente (En Alemania, ¡y aún no disfrutaba de Java!) Para mi trabajo de tesis de maestría realicé una pasantía a tiempo completo en [DHI France](https://worldwide.dhigroup.com/fr) ubicada en Nantes. Fue durante este período de 2010 que comencé a trabajar con [Python](https://www.python.org/) porque había leído en algún lugar que era un lenguaje divertido para trabajar, así que lo intenté y empecé a desarrollar todas las herramientas de creación de mapas de riesgos de inundación necesarias para el trabajo en Python con la ayuda de [NumPy](http://www.numpy.org/)!
+
+***Anécdota curiosa***: *Todavía usan el código escrito en 2010 con un estilo para nada pythonico, usando Python 2.7 (¿o quizás 2.6?) Y quién sabe qué versión de NumPy.*
+
+He estado usando Python desde entonces y una vez más lo utilicé para mi segunda tesis de maestría que tenía que ver con la reducción de escala de los modelos de circulación global mientras estudiaba en los Países Bajos. Aquí comencé a explorar herramientas de visualización y programación paralela para poder obtener resultados a tiempo para la graduación, lo que demoró un mes más de lo esperado.
+
+Hice un poco de trabajo independiente de ingeniería y luego comencé el doctorado, me aburrí e inevitablemente comencé a trabajar en código abierto, ya que sentía la necesidad de devolver a la comunidad de Python que tanto amaba y apreciaba. Empecé con una herramienta que estaba usando Spyder IDE, y en 2014 me convertí en colaborador principal. Me atrajo este proyecto en particular por una coincidencia, un amigo estaba usando Spyder y el mantenedor resultó ser Carlos Córdoba (¡Colombiano y aún manteniéndolo!). Seguí trabajando en *Open Source* semi profesionalmente hasta 2015, cuando dejé mi doctorado, regresé a Colombia desde Holanda y con un poco de buena suerte comencé a trabajar de forma remota para [Continuum Analytics](https: //www.anaconda .com/people/gonzalo-pena). Continúo trabajando con la compañía que ahora se llama [Anaconda, Inc](https://www.anaconda.com) y durante este período de tiempo he trabajado como Ingeniero de Software brindando soporte para el Repositorio de paquetes de Conda [Anaconda. org](https://www.anaconda.org) cuyo backend está escrito en Flask, trabajé como líder técnico durante el desarrollo y mantenimiento de [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/) escrito con PyQt y actualmente soy un desarrollador principal en el [gestor de paquetes de Conda](https://conda.io/docs/) y herramientas relacionadas.
+
+## ¿Perteneces a alguna comunidad de programación en Colombia? ¿Actualmente lideras alguna de estas comunidades en Colombia?
+
+Desde 2015, cuando llegué a Bucaramanga, tuve la idea de comenzar una comunidad de Python, y comencé el [grupo de encuentro de Python Bucaramanga](https://www.meetup.com/es/PythonBucaramanga) alrededor de noviembre de 2015. Desde ese entonces co-organizo este grupo con la ayuda de otros entusiastas de Python y hemos tratado de dar charlas y talleres una vez al mes. A fines de 2016 comencé a hablar con otros miembros de la comunidad de Python Colombia ubicados en otras ciudades debido a la próxima conferencia de PyCon Colombia 2017. Finalmente, durante esta conferencia, me reuní con amigos de ideas afines que querían expandir la comunidad y llevar el lenguaje de programación de Python a la mayor cantidad de usuarios posible en Colombia.
+
+[PyCon Colombia 2017](https://2017.pycon.co) vio el nacimiento de [Django Girls Colombia](https://www.python.org.co/django-girls) y una organización más fuerte [Python Colombia](https://www.python.org.co) y he contado con la suerte y el honor de ser parte del equipo que lidera de ambas comunidades e iniciativas. Como parte de Python Colombia, he ayudado a promover la creación de nuevas comunidades en diferentes ciudades. Como parte del proyecto de Django Girls Colombia, he ayudado a organizar y he servido de guía en más de 7 eventos que han tenido lugar en diferentes ciudades, incluyendo [Bucaramanga](https://www.python.org.co/eventos/2017/04/django- girls-bucaramanga/), [Medellín](https://www.python.org.co/eventos/2017/06/django-girls-medellin/), [Barranquilla](https://www.python.org. co/eventos/2017/07/django-girls-barranquilla/), [Cartagena](https://www.python.org.co/eventos/2017/10/django-girls-cartagena/), [Ibagué]( https://www.python.org.co/eventos/2017/12/django-girls-ibague/), [Cali](https://www.python.org.co/eventos/2018/06/django- girls-cali /) y próximamente Pereira, Pasto y Cúcuta. Desde nuestros humildes comienzos, nuevos proyectos han sido creados y están siendo dirigidos por otros miembros de la comunidad de Python, incluyendo [PyLadies Colombia](https://www.python.org.co/pyladies/) y sus capítulos locales en Bogotá y Medellín, y con suerte pronto Bucaramanga :-).
+
+También soy parte del comité organizador de [PyCon Colombia 2018](https://2018.pycon.co) y de la próxima [PyCon Colombia 2019](https://www.pycon.co).
+
+Finalmente, como parte de la comunidad tecnológica de Bucaramanga, también comencé a trabajar con comunidades hermanas, entre ellas [BucarmangaJS](https://www.meetup.com/BucaramangaJS/) y [BucaraMakers](https://www.meetup.com/Bucaramakers/).
+
+
+## ¿Ya has dado charlas en otros eventos tecnológicos?
+
+He participado en diferentes conferencias internacionales en el pasado, pero en tecnología específicamente di un Taller en [PyCon Colombia 2017](https://drive.google.com/file/d/0BzcUFnzOIodbYlk1cmV3VFZ5bnM/view), una charla en [PyCon Colombia 2018](https://2018.pycon.co/talks/pyswmm-and-the-openwateranalytics-initiative/) y he dado y participado en diferentes charlas y talleres como co-organizador de [Python Bucaramanga](https://www.meetup.com/es/PythonBucaramanga/events/past/), y een otros eventos como el [Python Bootcamp de la Universidad de los Andes de 2017](https://pythonbootcampuniandes.github.io/)
+
+## ¿Algo más?
+
+Aunque mi tiempo es limitado, trato de colaborar con los siguientes proyectos de código abierto:
+
+  * [IDE de Spyder](https://www.spyder-ide.org/): El entorno de desarrollo científico de Python.
+  * [Lektor](https://www.getlektor.com/): Un sistema de gestión de contenido estático flexible y potente para crear sitios web complejos y hermosos a partir de archivos planos.
+  * [El sitio web de The Beeware Project](https://pybee.org): crea aplicaciones nativas con Python. Escriba sus aplicaciones en Python y libérelas en iOS, Android, Windows, MacOS, Linux, Web y TVOS usando interfaces de usuario nativas ricas. Una base de código Múltiples aplicaciones.
+  * [PySWMM](https://github.com/OpenWaterAnalytics/pyswmm): Paquete de Python para el Modelo de Gestión de Aguas Pluviales (SWMM5)
+
+Disfruto leer novelas históricas y de ciencia ficción, además de tocar la guitarra, el piano y la batería.
+---
+position_1: Anaconda, Inc

@@ -9,3 +9,23 @@ language: es
 topic: Artifial Intelligence
 ---
 type: workshop
+---
+description:
+
+## Analizando la red de co-ocurrencia de personajes de Juego de Tronos
+
+Desde redes sociales como Facebook y Twitter hasta redes de transporte como sistemas para compartir autos, las redes están en todas partes, y saber cómo analizar este tipo de sistemas le dará una importante habilidad, y le ayudará a mirar sus datos con una nueva perspectiva.
+
+Para este caso, hemos estado buscando diferentes maneras de encontrar los personajes más importantes en la red de co-ocurrencia de Juego de Tronos.  **¿Jon Snow, Tyrion, Daenerys u otra persona?** _¡Veamos!_ La librería **networkx** nos ofrece muchas métricas diferentes para medir la importancia de un nodo en una red. 
+Analizaremos tres medidas y exploraremos los significados que tiene cada metrica. Tenga en cuenta que no existe una forma _""correcta""_ de calcular el nodo más importante en una red, cada medida tiene un significado diferente y vamos a explorarlas.
+
+## Notas: 
+- Para completar este proyecto, debe estar familiarizado con el análisis de red utilizando la libreria networkx y también poder manipular e inspeccionar pandas y DataFrames.
+- Este proyecto utiliza un conjunto de datos analizados por Andrew J. Beveridge y Jie Shan que está disponible aquí (https://github.com/mathbeveridge/asoiaf)
+---
+summary:
+
+Vamos analizar la red de co-ocurrencia de personajes y su evolución en la popular serie de Juego de Tronos.
+¿Jon Snow, Daenerys o Tyrion? ¿Quién es el personaje más importante?
+¡Veamos qué pueden decirnos las matemáticas sobre esto!
+Y lo haremos usando diferentes medidas de la librería networkx.
