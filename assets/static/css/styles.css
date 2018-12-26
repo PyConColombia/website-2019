@@ -357,3 +357,23 @@ a {
 .Other.tag {
   background-color: #c2185b;
 }
+
+.logo-dg {
+  width: 95%;
+  max-width: 500px;
+  height: auto;
+}
+
+.dg-animal {
+  width: 100%;
+  height: auto;
+}
+
+.header-content .apply-btn {
+  width: initial;
+  padding: 7px 20px 0 20px;
+}
+
+.dg-body {
+  margin: 50px 0;
+}
