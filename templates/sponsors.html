@@ -20,6 +20,8 @@
 'startup').order_by('_id') %}
 {% set partner = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
 'partner').order_by('_id') %}
+{% set support = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'support').order_by('_id') %}
 
 <div class="mdl-layout mdl-js-layout layout-home">
   <main>
@@ -97,6 +99,14 @@
                           <h2 class="sponsor-name">Partner</h2>
                         </div>
                         {{ render_sponsors_web(partner) }}
+                      </div>
+                    {% endif %}
+                    {% if support %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Support</h2>
+                        </div>
+                        {{ render_sponsors_web(support) }}
                       </div>
                     {% endif %}
                   </div>

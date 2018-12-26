@@ -45,6 +45,8 @@
 'startup').order_by('_id') %}
 {% set partner = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
 'partner').order_by('_id') %}
+{% set support = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'support').order_by('_id') %}
 
 {%- block body -%}
 
@@ -152,7 +154,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid container-no-padding header-content background-sponsor">
+  <!-- <div class="container-fluid container-no-padding header-content background-sponsor">
     <div class="container">
       <div class="section">
         <div class="apply-content">
@@ -184,7 +186,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="container-fluid container-no-padding header-content background-sponsor">
     <div class="container">
       <div class="section">
@@ -216,6 +218,9 @@
               {% endif %}
               {% if partner %}
               {{ render_sponsors(partner, 2) }}
+              {% endif %}
+              {% if support %}
+              {{ render_sponsors(support, 2) }}
               {% endif %}
             </div>
           </div>
