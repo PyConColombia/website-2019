@@ -48,6 +48,10 @@
 {% set support = site.query('/sponsors', alt=this.alt).filter(F.confirmed).filter(F.category ==
 'support').order_by('_id') %}
 
+{%- set t_title_scholarship = transbag('translate', this.alt, 'title_scholarship') -%}
+{%- set t_content_scholarship = transbag('translate', this.alt, 'content_scholarship') -%}
+{%- set t_button_scholarship = transbag('translate', this.alt, 'button_scholarship') -%}
+
 {%- block body -%}
 
 <main>
@@ -105,9 +109,6 @@
             </div>
           </div>
           <div id="clockEvent">
-            <!-- <p class="cfp-message">
-                {{ t_intro_message }}
-              </p> -->
             <div class="cfp-message">
               <div id="clockEventdiv">
                 <div>
@@ -149,6 +150,28 @@
                 endfor %}
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid container-no-padding header-content background-sponsor">
+    <div class="container">
+      <div class="section">
+        <div class="apply-content">
+          <div class="row">
+            <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+              <h1 class="title-subscribe">{{ t_title_scholarship }}</h1>
+              <div class="commet"></div>
+              <div class="dg-body">
+                {{ t_content_scholarship }}
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <a href="{{'/becas'|url(alt=this.alt)}}" class="apply-btn">
+              <span>{{ t_button_scholarship }}</span>
+            </a>
           </div>
         </div>
       </div>
