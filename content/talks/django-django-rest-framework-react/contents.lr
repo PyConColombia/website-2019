@@ -4,7 +4,7 @@ name: Django + Django Rest Framework + React
 ---
 authors: oswaldo-rodriguez
 ---
-language: en
+language: es
 ---
 topic: Web
 ---
