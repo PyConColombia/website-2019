@@ -7,3 +7,25 @@ last_name: Gonzalez
 prefix: Mr.
 ---
 publish: yes
+---
+country_residence: es
+---
+information:
+
+Jorge Gonzalez is a Telecommunications Engineer who has contributed to the development and implementation of big data in Geotab Europe.
+
+He started in Geotab in June 2016, before finalising his degree. This enabled him to write his final degree thesis on “Development of Big Data analysis to improve road safety using telematics.” A resume can be found here: https://www.geotab.com/blog/big-data-for-road-safety/. 
+His thesis was covered by the main Spanish media: [Atresmedia][1], [La Vanguardia][2], [Europa press][3], [El Economista][4], [Fleet people][5] and [Cuatro][6] among others. 
+After writing and publishing his thesis he stayed in Geotab headquarters in Canada for two months working directly with the Big Data/Business Intelligence team and taking part in the development of data.geotab.com.
+Jorge continues enrich his data analysis and data engineering knowledge to ensure the advancement of Geotab as a leader in the data science. He currently leads Geotab data initiatives in Europe. 
+In his free time Jorge plays rugby. He plays at Club de Rugby Cisneros in Madrid since he was 12 years old. He currently plays in the first and second Spanish leagues. He also enjoys reading, going out with his friends and attending to big data related events.  
+[1]: https://compromiso.atresmedia.com/ponlefreno/noticias/exceso-velocidad-principal-causa-accidente-trafico-puntos-negros_201711305a1fe43d0cf2b410ea890ed1.html       ""Atresmedia""
+[2]: https://www.lavanguardia.com/vida/20171129/433291576219/el-exceso-de-velocidad-causa-mas-frecuente-de-accidentalidad-en-los-puntos-negros-de-las-carreteras.html  ""La Vanguardia""
+[3]: http://www.europapress.es/motor/coches-00640/noticia-exceso-velocidad-causa-mas-frecuente-accidentalidad-puntos-negros-carreteras-20171129173225.html   ""Europa press""
+[4]: http://www.eleconomista.es/ecomotor/motor/noticias/8779031/11/17/Economia-Motor-El-exceso-de-velocidad-causa-mas-frecuente-de-accidentalidad-en-los-puntos-negros-de-las-carreteras.html ""El Economista""
+[5]: https://fleetpeople.es/exceso-velocidad-peligroso-geotab/ ""Fleet people""
+[6]: https://www.cuatro.com/noticias/sociedad/exceso-velocidad-frecuente-accidentalidad-carreteras_0_2475375847.html  ""Cuatro""
+---
+linkedin_handle: jorge-gonzález-núñez-01052711b
+---
+position_1: Geotab

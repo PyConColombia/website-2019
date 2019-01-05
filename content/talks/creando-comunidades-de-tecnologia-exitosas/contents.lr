@@ -9,3 +9,21 @@ language: es
 topic: Community
 ---
 type: talk
+---
+description:
+
+#  Creando comunidades de tecnología exitosas
+
+## Estructura
+1. Presentación del ponente
+2. Razones para crear una comunidad
+3. Consejos para crear una comunidad
+4. Como mantener una comunidad
+5. Como continua
+6. Bibliografía recomendada
+
+Me gustaría empezar hablando sobre las razones de porque una ciudad necesita una comunidad de desarrolladores consolidada, sea de X o Y tecnología. Luego de ello, cuales son los obstáculos y los consejos que recomiendo para vender dichos problemas al momento de crear la comunidad. Luego me gustaría hablar sobre las estrategias y la estructura que se puede usar para mantener activa y funcionando la comunidad. Por último, contemplar las posibles estrategias a abordar luego de que la comunidad crezca lo suficiente como para que le quede muy grande a una persona y se necesite la creación de un equipo.
+
+Me gustaría basarme de mi experiencia como creador de la comunidad de Python Barranquilla en el 2015 y como co-organizador de PyCon Colombia 2018 y Django Girls Colombia. Además de ello me gustaría incluir notas o referencias sobre temas o libros como ""Tribus"" de Seth Godin, hablar en publico, liderazgo y manejo de equipos.
+---
+summary: A diferencia de como nos pinta hollywood, los programadores no vivimos en un sótano, oscuro y solitario. De hecho, a muchos nos gusta participar en comunidades donde compartimos, aprendemos y nos divertimos. Esta charla va dirigida a aquellas personas que buscan crear una comunidad en su ciudad.

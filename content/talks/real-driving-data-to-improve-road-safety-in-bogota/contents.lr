@@ -9,3 +9,25 @@ language: en
 topic: Data Science
 ---
 type: talk
+---
+description:
+
+Road safety is one of the biggest concerns worldwide. Hundreds of thousands of people across the world are losing their lives in road accidents and traffic collisions every year. Close to six thousands of road accidents happened in Colombia in 2017. Also in 2017 in Colombia, around 458.000 victims of road accidents were attended. Plus we need to add all the victims that were not attended on top of that. 
+
+According to the World Health Organization (WHO), the economic cost of traffic accidents around the world is about 518.000 million US$. It's estimated that it costs between 1% and 3% of the gross domestic product (GDP) to each country. 
+There is an effort focused on reducing as much as possible road accidents and the consequent human and economic impact through the new emerging data analysis technologies.
+
+The Government of Colombia provides a dataset of more than 35.000 accidents in Bogota. With that dataset we can analyse the city by small areas and understand what happens in each area. That accidents data is useful to do analysis after the accidents with environmental and traffic information. However to really understand each area and prevent those accidents to happen again is difficult. Therefore real drivers data is needed in addition to accident data. 
+
+In Geotab we have 1,2 million vehicles connected with our devices, collecting more than 3 billion data points daily. That data points collect from coordinates and speed to hazardous driving, engine measurements and faults, seat belt usage, fuel, etc.
+When compounded with Geotab’s Open Platform, these data points provide dynamic-insights and urban analytics creating socio economic benefit on urbanization, safety, Smart Cities, and more. And using them along with information such as the accidents provided by Colombia’s Government can bring the Smart City and road safety analytics to a whole new level.
+
+In this presentation Geotab will show the results of analyzing Bogota accidents with the free datasets provided in data.geotab.com. Focusing specifically in the Hazardous Areas dataset. This dataset identifies accident level events and harsh braking within a specific area. Each area is assigned a severity score that is based on the frequency and severity of occurrences, which is an intersection of the number of accident level events, harsh braking events and traffic flow in the areas.
+The area with more registered accidents in 2017 of Bogota has been recognized as hazardous in data.geotab.com using only data collected by Geotab devices.
+
+ Bad cell coverage areas will be analysed also in this project. A bad cell coverage usually means a less developed area in which a bad signalization or a bad road status can also imply a bigger risk of accidents.
+
+After using those two datasets from data.geotab.com, raw data will be included to add this areas with accidents features such as traffic, average speeds, average accelerations in cornering, accelerating and braking, engine faults, harsh driving and speeding.
+With that features it’s possible to dig deeper and search for patterns to find a relation between the type and granularity of the accidents and the driving behaviour in those areas. That way it's possible to identify in which points the improvement is needed and take action on that points to improve road safety.
+---
+summary: Geotab has more than 1,2 millions of connected vehicles. Those vehicles provide nearly 3 billion data points daily (GPS, speed, hazardous driving, engine measurements...). Using these data points along with 35k accidents data in Bogota it's possible to find where to focus to improve road safety.

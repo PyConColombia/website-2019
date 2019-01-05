@@ -9,3 +9,23 @@ language: es
 topic: Data Science
 ---
 type: talk
+---
+description:
+
+## Salva al mundo. Sé el Profesor X de esta generación.
+
+Así como el Profesor X aprende, anticipa pensamientos y conductas, reconduciendo los patrones de respuesta, así funciona la ciencia de los datos. Y sí, puede salvar al mundo. ¿De qué? De futuras enfermedades, problemáticas sociales y puede, también, mejorar el estilo de vida. ¿Cómo? Simple, recogiendo datos.
+
+Mi objetivo con esta charla es inspirarlos, motivarlos a que desarrollen estas habilidades. Porque sí, el momento es ahora. Estamos en el momento cumbre del conocimiento, en el momento cumbre de los recursos, de las herramientas y del trabajo en equipo, de las comunidades. Porque esta oportunidad nos la da Python, con su  código abierto, con su  lenguaje de programación multi-paradigma con un poder mutable que admite programación orientada a objetos, con su programación estructurada y  con sus patrones de programación funcional. 
+
+Python hace que sea fácil de usar esto, y la cantidad de bibliotecas analíticas disponibles hoy en día significa que los científicos de datos de casi todos los sectores encontrarán paquetes que ya están adaptados a sus necesidades, disponibles para su descarga. 
+¿Y si necesitas ayuda de otro superhéroe? Lo mejor de todo es que siempre hay alguien a quien pedir ayuda en la comunidad de Python. Hay millones de personas que están dispuestas a ofrecer consejos o sugerencias cuando más lo necesites.
+Salvemos al mundo, juntos.
+
+
+Presentación: 2 minuto, Introducción: 3 minutos, Background: 5 minutos, Python y sus librerías para Data Science: 10 minutos, Recursos: 5 minutos, Herramientas: 5 minutos, Comunidades: 5 minutos, Preguntas: 5 minutos
+---
+summary:
+
+Para ser un Data Scientist debes saber que... todos los superhéroes sufrieron  y casi murieron al obtener sus poderes.
+!Por fortuna, existe Python, así como muchos recursos, herramientas, comunidades y plataformas para obtener tu superpoder y sí, ser más sexy, tal como sucede en las historietas!

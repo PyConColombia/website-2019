@@ -12,15 +12,20 @@ type: talk
 ---
 description:
 
-Las pruebas funcionales, publicaciones en redes sociales, autogeneración de llaves de acceso, etc. Son tareas que se pueden automatizar gracias a Selenium. Esta es una herramienta que nos permite automatizar tareas que son desarrolladas en un navegador. En esta charla se expondrán diferentes casos prácticos donde es de gran utilidad esta herramienta. 
+Las pruebas funcionales, publicaciones en redes sociales, autogeneración de llaves de acceso, etc. Son tareas que se pueden automatizar gracias a Selenium. Esta es una herramienta que nos permite automatizar tareas que son desarrolladas en un navegador. En esta charla se expondrán diferentes casos prácticos donde es de gran utilidad esta herramienta. A continuación describo el contenido de la charla:
 
-A continuación describo el contenido de la charla:
-
-1. Introducción: ~1 minuto
-2. ¿Qué es Selenium?: ~5 minutos
-3. Lenguajes con los cuales se puede usar Selenium: ~2 minutos
-4. Casos prácticos del uso de Selenium: ~22 minutos
-5. Preguntas: ~10 minutos"
+1. **Introducción:** _~1 minuto:_ Presentación personal 
+2. **¿Qué es Selenium?:** _~2 minutos :_ En esta sección se  explicara la herramienta utilizada para la automatización e tareas.
+3. **Selenium IDE, Selenium WebDriver, Selenium Grid:** _~7 minutos:_ Se explicaran las diferentes formas en que se puede utilizar selenium en diferentes navegadores y sistemas operativos.
+3. **Lenguajes con los cuales se puede usar Selenium:** _~2 minuto:_ Se explican los diferentes lenguajes y navegadores en los cuales se pueden automatizar tareas.
+4. **Casos prácticos del uso de Selenium:** _~23 minutos_ 
+    1. **Automatización de publicaciones en Facebook:** Se muestra un caso practico en el cual se corre un script en python con selenium para publicar en grupos las publicaciones de la PyCon
+    2. **Automatización de publicaciones en Twitter:** Se muestra un caso practico en el cual se corre un script en python con selenium para publicar en Twitter y se explica por que esto es de utilidad.
+    3. **Automatización de me gusta en Instagram:** Se muestra un caso practico en el cual se corre un script en python con selenium para dar me gusta a publicaciones en Instagram y se explica por que esto es de utilidad.
+    4. **Pruebas Unitarias:** Se muestra un caso practico en el cual se corre un script en python con selenium para realizar pruebas unitarias a una pagina web.
+    5. **Ejemplo de Selenium Grid:** Se explica como puede funcionar un grid de selenium para hacer pruebas en múltiples navegadores y sistemas operativos.
+    6. **Caso FluidAttacks:** Backups y Generación de llaves de acceso: Se cuenta como por medio de selenium se generan backups diarios de una herramienta que no cuenta con esta opción.
+5. **Preguntas:** _~5 minutos_
 ---
 summary:
 

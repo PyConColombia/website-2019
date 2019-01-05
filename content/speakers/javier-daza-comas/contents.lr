@@ -2,7 +2,7 @@ name: Javier
 ---
 country: Colombia
 ---
-country_residence: Colombia
+country_residence: co
 ---
 email: javierdazacomas@gmail.com
 ---
@@ -15,3 +15,7 @@ publish: yes
 web: https://javierdaza.co/
 ---
 image: Javier Daza.jpg
+---
+information: En mi página web (https://javierdaza.co/) pueden encontrar información sobre mi, asi como tambien en mi cuenta de Linkedin. https://www.linkedin.com/in/javierdazaco/
+---
+twitter_handle: javidazac
