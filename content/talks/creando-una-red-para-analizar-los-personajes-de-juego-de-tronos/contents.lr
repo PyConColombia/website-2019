@@ -29,3 +29,9 @@ Vamos analizar la red de co-ocurrencia de personajes y su evolución en la popul
 ¿Jon Snow, Daenerys o Tyrion? ¿Quién es el personaje más importante?
 ¡Veamos qué pueden decirnos las matemáticas sobre esto!
 Y lo haremos usando diferentes medidas de la librería networkx.
+---
+datetime: 2019-02-10 10:00:00 -0500
+---
+datetime_end: 2019-02-10 12:00:00 -0500
+---
+room: salon-9

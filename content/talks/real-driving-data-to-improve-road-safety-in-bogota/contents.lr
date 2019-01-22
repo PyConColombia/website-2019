@@ -31,3 +31,9 @@ After using those two datasets from data.geotab.com, raw data will be included t
 With that features it’s possible to dig deeper and search for patterns to find a relation between the type and granularity of the accidents and the driving behaviour in those areas. That way it's possible to identify in which points the improvement is needed and take action on that points to improve road safety.
 ---
 summary: Geotab has more than 1,2 millions of connected vehicles. Those vehicles provide nearly 3 billion data points daily (GPS, speed, hazardous driving, engine measurements...). Using these data points along with 35k accidents data in Bogota it's possible to find where to focus to improve road safety.
+---
+datetime: 2019-02-08 16:10:00 -0500
+---
+datetime_end: 2019-02-08 16:50:00 -0500
+---
+room: auditorio-2

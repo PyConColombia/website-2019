@@ -37,3 +37,9 @@ Primero explicar como funciona GraphQL e introducir algunos conceptos básicos d
 - Recursos y documentación"
 ---
 summary: En este Workshop te mostraré como hacer una API de GraphQL y porque es una excelente alternativa a los API REST. Vamos a crear una API GraphQL desde cero en Django haciendo uso de todo lo que nos provee. Vamos a crear un API donde vamos a poder definir eventos o meetups y registrar asistentes.
+---
+datetime: 2019-02-10 07:30:00 -0500
+---
+datetime_end: 2019-02-10 09:30:00 -0500
+---
+room: salon-6

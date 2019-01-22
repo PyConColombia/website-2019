@@ -9,3 +9,9 @@ language: es
 topic: IoT
 ---
 type: workshop
+---
+datetime: 2019-02-10 07:30:00 -0500
+---
+datetime_end: 2019-02-10 09:30:00 -0500
+---
+room: salon-1

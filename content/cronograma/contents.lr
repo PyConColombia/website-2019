@@ -1,0 +1,7 @@
+_model: page
+---
+title: Cronograma
+---
+_slug: cronograma
+---
+_template: schedule.html

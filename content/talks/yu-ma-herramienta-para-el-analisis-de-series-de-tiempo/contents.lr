@@ -13,3 +13,9 @@ type: talk
 summary: Uno de los primeros pasos en una investigación es conseguir los datos y filtrarlos, esto conlleva cerca del 60% del esfuerzo, más si se trabaja solo y se hace en Excel. De este problema nace Yu-MA una ayuda simple para el análisis exploratorio de series de tiempo sin necesidad de saber programar.
 ---
 description: 
+---
+datetime: 2019-02-08 15:00:00 -0500
+---
+datetime_end: 2019-02-08 15:40:00 -0500
+---
+room: auditorio-2

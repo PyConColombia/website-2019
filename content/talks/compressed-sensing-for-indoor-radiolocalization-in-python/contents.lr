@@ -31,3 +31,9 @@ The proposed agenda is:
 Related contents to this talk were presented in ISSPIT2017 (“Sparse framework for hybrid TDoA/DoA multiple emitter localization”, DOI: 10.1109/ISSPIT.2017.8388637). The previous article was part of an international research project entitled CLASS, funded by DFG (Germany) and Colciencias (Colombia). It is important to remark, that the research made in the aforementioned project intended to apply the CS paradigm to non collaborative outdoor radiolocalization problems. In this talk, the results to be presented are focused in collaborative indoor radiolocalization problems, which are very different.
 ---
 summary: We consider the open problem of indoor radiolocalization. We present a solution with the sparse formulation of the localization task and develop a framework that allows to accommodate different types of measurements. All the algorithms are developed in python.
+---
+datetime: 2019-02-08 14:10:00 -0500
+---
+datetime_end: 2019-02-08 14:50:00 -0500
+---
+room: auditorio-1
