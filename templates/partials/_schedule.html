@@ -1,39 +1,37 @@
 {%- from "/macros/translation.html" import transbag -%}
 
-
 {%- macro render_room_author(talk, color='white') -%}
 {%- if talk.room -%}
 {%- set room = site.get('/rooms/' + talk.room, alt=this.alt) -%}
 <div class="text-left"><small><i>{{ room.name }}</i></small></div>
 {%- endif -%}
 {%- for author in talk.authors -%}
-{%- set current_author = site.get('/ponentes/'+author, alt=this.alt) -%}
+{%- set current_author = site.get('/speakers/'+author, alt=this.alt) -%}
 {%- set t_country = transbag('translate', this.alt, current_author.country) -%}
 <span>
-  <a class="link" style="color:{{ color }};" href="{{current_author|url(alt=this.alt)}}"><b>{{
-      current_author.name.split(' ')[0] }} {{ current_author.last_name }}</b>{%- if current_author.country -%}&nbsp;<small>({{
-      t_country }})</small>{% endif %}</a>{% if not loop.last %},&nbsp{% endif %}
+  <a class="link" style="color:{{ color }};" href="{{current_author|url(alt=this.alt)}}"><b>
+      {{ current_author.name.split(' ')[0] }} {{ current_author.last_name }}</b>{%- if current_author.country -%}&nbsp;<small>
+      ({{ t_country }})</small>{% endif %}</a>{% if not loop.last %},&nbsp{% endif %}
 </span>
 {%- endfor -%}
 {%- endmacro -%}
 
-
 {%- macro render_schedule() -%}
+
 {%- set event = site.get('/', alt=this.alt) -%}
 {%- set dates = [] -%}
 {%- for i in range((event.date_end - event.date_start).days + 1) -%}
 {%- set a = event.date_start.fromordinal(event.date_start.toordinal() + i) -%}
-{%- if dates.insert(i,a) %}{% endif -%}
+{%- set a = dates.insert(i, a) %}
 {%- endfor -%}
-
 {%- set talks_per_date_per_time = OrderedDict() -%}
 {%- set rooms_per_date = OrderedDict() -%}
 
 {%- for date in dates -%}
-{# Complex expressions doent work in filter() so date should be converted to datetime #}
+{# Complex expressions do not work in filter() so date should be converted to datetime #}
 {%- set start = event.datetime.combine(date, event.datetime.min.time().replace(tzinfo=event.datetime.tzinfo)) -%}
 {%- set end = event.datetime.combine(date, event.datetime.max.time().replace(tzinfo=event.datetime.tzinfo)) -%}
-{%- set talks = site.query('/ponencias', alt=this.alt).filter(F.datetime >= start).filter(F.datetime_end <=
+{%- set talks = site.query('/talks', alt=this.alt).filter(F.datetime >= start).filter(F.datetime_end <=
   end).order_by('datetime', '+room' ) -%} {%- set x=talks_per_date_per_time.__setitem__(date, OrderedDict()) -%} {%-
   set x=rooms_per_date.__setitem__(date, []) -%} {%- for talk in talks -%} {%- set time=talk.datetime.strftime('%H:%M')
   -%} {%- if time in talks_per_date_per_time[date] -%} {%- set x=talks_per_date_per_time[date][time].append(talk) -%}
@@ -43,15 +41,13 @@
   <div class="row justify-content-center">
     <div class="col-12">
 
-
-
       <ul class="nav nav-tabs nav-fill" role="tablist">
         {% for date in dates %}
         {% set t_day = transbag('translate', this.alt, date.strftime('%A')) %}
-        <li class="nav-item"">
-        <a class=" nav-link {% if loop.index==1 %}active{% endif %}" data-toggle="pill"
-          href="#tab-{{ date }}" aria-controls="tab-{{ date }}" role="tab">
-          <span style="font-size:1.5em;"><b>{{ t_day }} {{ date.strftime('%d') }}</a> {#- Friday 9th #}</b></span>
+        <li class="nav-item">
+          <a class=" nav-link {% if loop.index==1 %}active{% endif %}" data-toggle="pill" href="#tab-{{ date }}"
+            aria-controls="tab-{{ date }}" role="tab">
+            <span style="font-size:1.5em;"><b>{{ t_day }} {{ date.strftime('%d') }}</a> {#- Friday 9th #}</b></span>
         </li>
         {%- endfor %}
       </ul>
@@ -87,7 +83,7 @@
       {% set icon = 'user-circle' -%}
       {%- endif -%}
       <div class="schedule schedule-{{talks[0].type}}">
-        <div class="row align-items-center">
+        <div class="row">
 
           <div class="col-lg-3">
             <h2 class="text-left">{{ time.split(':')[0] }}:<small>{{ time.split(':')[-1] }}</small></h2>
@@ -101,7 +97,7 @@
       </div>
       {%- else -%}
       <div class="schedule schedule-multiple">
-        <div class="row align-items-center">
+        <div class="row">
 
           <div class="col-lg-3">
             <h2 class="text-left">{{ time.split(':')[0] }}:<small>{{ time.split(':')[-1] }}</small></h2>

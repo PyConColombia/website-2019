@@ -6,7 +6,7 @@ authors: nicolas-guarin-zapata
 ---
 language: en
 ---
-topic: Data Science
+topic: Scientific Computing
 ---
 type: workshop
 ---
@@ -15,3 +15,14 @@ datetime: 2019-02-10 07:30:00 -0500
 datetime_end: 2019-02-10 09:30:00 -0500
 ---
 room: salon-10
+description:
+
+Visualizations allow to convey a great amount of information in clear and concise fashion. The use of software for data visualization is an important, and sometimes, essential part of research and communication in science and engineering.
+
+This workshop presents some basic aspects of scientific visualization, or visualization of spatial data. And its application through some examples using Python. Particularly, we will discuss techniques for:
+
+- Scalar field visualization;
+- Vector field visualization; and
+- Visualization in 2 and 3 dimensions.
+
+<img src="./example.png" class="img-fluid" />

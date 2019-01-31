@@ -21,7 +21,7 @@ Las pruebas funcionales, publicaciones en redes sociales, autogeneración de lla
 4. **Casos prácticos del uso de Selenium:** _~23 minutos_ 
     1. **Automatización de publicaciones en Facebook:** Se muestra un caso practico en el cual se corre un script en python con selenium para publicar en grupos las publicaciones de la PyCon
     2. **Automatización de publicaciones en Twitter:** Se muestra un caso practico en el cual se corre un script en python con selenium para publicar en Twitter y se explica por que esto es de utilidad.
-    3. **Automatización de me gusta en Instagram:** Se muestra un caso practico en el cual se corre un script en python con selenium para dar me gusta a publicaciones en Instagram y se explica por que esto es de utilidad.
+    3. **Automatizar la explotación o cierre de vulnerabilidades:** Se explica como podemos automatizar algunas pruebas de seguridad después de encontrada una vulnerabilidad en nuestra aplicación.
     4. **Pruebas Unitarias:** Se muestra un caso practico en el cual se corre un script en python con selenium para realizar pruebas unitarias a una pagina web.
     5. **Ejemplo de Selenium Grid:** Se explica como puede funcionar un grid de selenium para hacer pruebas en múltiples navegadores y sistemas operativos.
     6. **Caso FluidAttacks:** Backups y Generación de llaves de acceso: Se cuenta como por medio de selenium se generan backups diarios de una herramienta que no cuenta con esta opción.
