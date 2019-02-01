@@ -1,0 +1,21 @@
+_model: talk
+---
+name: Deep Learning for Autonomous Driving, A Kiwi Campus experience
+---
+authors: david-cardozo
+---
+datetime: 2019-02-09 11:10:00 -0500
+---
+datetime_end: 2019-02-09 11:50:00 -0500
+---
+description: Deep learning is a new exciting field of machine learning that is helping to build the future, at Kiwi Campus we are levering this new field into creating the next generation of robots and embedded devices that will make the future of next door delivery. We want to talk about our development cycles and how have we used python for deployment of our models and our data pipeline characteristics.
+---
+language: es
+---
+room: auditorio-2
+---
+summary: Kiwi Campus is a startup in the Silicon Valley, making autonomous robots for solving the last mile delivery problem, in less than a year, we have released 3 robots that are helping us product deliveries accessible and cheap in the bay area. This talk will focus on the deep learning challenges.
+---
+topic: Computer Vision, Machine Learning, Deep Learning, Scientific Computing, IoT
+---
+type: talk

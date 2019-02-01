@@ -1,0 +1,13 @@
+_model: talk
+---
+name: Keynote by  Jake Vanderplas
+---
+datetime: 2019-02-09 08:00:00 -0500
+---
+datetime_end: 2019-02-09 09:10:00 -0500
+---
+language: en
+---
+room: ap-1
+---
+type: keynote
