@@ -1,0 +1,11 @@
+_model: talk
+---
+name: Event closing
+---
+datetime: 2019-02-10 18:10:00 -0500
+---
+datetime_end: 2019-02-10 19:10:00 -0500
+---
+room: ap-1
+---
+type: closing

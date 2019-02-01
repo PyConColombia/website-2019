@@ -19,3 +19,9 @@ summary:
 
 A use case from design/testing to implementation for improving job post matching. 
 The system was implemented in an employment technology company. Through the use of word embedding we derive unexplicit candidates details that we merge with other available data to find the best jobs for each user.
+---
+datetime: 2019-02-09 14:50:00 -0500
+---
+datetime_end: 2019-02-09 15:30:00 -0500
+---
+room: auditorio-1

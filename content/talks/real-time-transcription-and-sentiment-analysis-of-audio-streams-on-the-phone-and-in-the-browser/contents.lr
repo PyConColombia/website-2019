@@ -57,3 +57,9 @@ Pulling it all together
 - Final Demo"
 ---
 summary: Discover how you can use Artifical Intelligence to perform sentiment analysis of an audio stream, in real-time! In this workshop, we'll show you how to use AI and NLP to figure out what a person is calling about and how they are feeling, all from a telephone call audio feed via WebSockets.
+---
+datetime: 2019-02-10 10:00:00 -0500
+---
+datetime_end: 2019-02-10 12:00:00 -0500
+---
+room: salon-3

@@ -28,3 +28,9 @@ Implementation of GANs using PyTorch ~ 10 min
 Q&A ~ 6 min
 ---
 summary: Generative Adversarial Networks (GANs) leverage the power of neural networks to train a model that can generate new samples using existing data. This talk is an introduction to GANs: how these models work, their applications, and an implementation using the open source library PyTorch.
+---
+datetime: 2019-02-08 11:30:00 -0500
+---
+datetime_end: 2019-02-08 12:10:00 -0500
+---
+room: ap-1

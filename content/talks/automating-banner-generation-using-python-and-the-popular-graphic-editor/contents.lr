@@ -19,3 +19,9 @@ The major problem we have faced is that graphic designers have a very specific w
 In this presentation I am going to describe our year long project that’s objective is not only to automate typical tasks that are usually done by graphic designers but to create a complete system that allows entire marketing team to concentrate more on data and results rather than on some technical details required to achieve them. We have combined facilities provided by Python, Linux, Windows COM (Component Object Model) and the popular graphic editor and also created a modern web UI using VueJs and Django in order to create a product that helps us and our partners to have an always up to date information presented in our platform.
 ---
 summary: Operating a big e-commerce platform requires to create and update ads, banners and other marketing materials. Using manual labour can be inefficient in these circumstances. We managed to automate this process and to keep native environment for graphic designers, using Python and its ecosystem.
+---
+datetime: 2019-02-09 10:20:00 -0500
+---
+datetime_end: 2019-02-09 11:00:00 -0500
+---
+room: auditorio-1

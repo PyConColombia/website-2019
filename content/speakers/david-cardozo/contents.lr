@@ -1,0 +1,33 @@
+name:
+
+David 
+---
+country_residence: us
+---
+last_name: Cardozo
+---
+linkedin_handle: davidcardozo
+---
+position_1: Ingeniero de aprendizaje de máquinas - Kiwi Campus
+---
+position_2: Especialista en robotica y aprendizaje profundo
+---
+prefix: Mr.
+---
+publish: yes
+---
+image: profile.jpg
+---
+email: germancho27@hotmail.com
+---
+information:
+
+Hello everyone! My name is David Cardozo
+I'm a self-driving engineer at the R&D group at Kiwi where our primary focus is autonomous driving for robots using machine learning techniques. I have experience with computer security and functional programming. My day to day activities includes developing the next generation of kiwi drivers using state of the art algorithms.
+I'm also responsible for the creation of new data sciences capabilities with the main focus on bringing autonomous driving for the kiwibots (autonomous robots for last mile delivery), kiwitrike (an autonomous trike for kiwibots deployment), and restaurant bot (autonomous robot for restaurant delivery) (DevOps for Data Science), we use deep learning with focus on CNN and RNN network architectures. Having expertise on different technologies stacks: Using ROS (Robotic Operative System), Linux/GNU, Docker, Docker Compose, CUDA, Jupyter, floydhub, TensorRT, Tensorflow, Sonnet, AWS, GCP and Resin.io. 
+---
+summary: 
+---
+twitter_handle: _davidcardozo
+---
+web: http://www.davidcardozo.com/

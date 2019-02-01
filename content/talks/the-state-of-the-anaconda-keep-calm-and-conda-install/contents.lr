@@ -72,3 +72,9 @@ The ecosystem tool responsible for building the packages, [conda-build](https://
 ## Questions *(~ 3 minutes)*
 ---
 summary: Anaconda is the most popular Python Data Science distribution and at the heart of Anaconda, we have Conda, the cross platform package and virtual environment manager. In this talk we will cover a bit of history of the packaging problem, the why and the how to use it, together with new tools!
+---
+datetime: 2019-02-09 09:10:00 -0500
+---
+datetime_end: 2019-02-09 09:50:00 -0500
+---
+room: ap-1

@@ -17,3 +17,9 @@ This talk is about, differents tools, boards and liberies for Python that are us
 This talk will have a brief demostration of a pycom board using mycropython and different wireless protocols like LoRa, Bluetooth and wifi.
 ---
 summary: The barrier between the physical world and the digital world is becoming more diffuse Python has a wide variety that allows to manipulate electronic devices, the purpose of this talk is to give a brief sample of tools, from the connection and devices to the data visualization and control tools.
+---
+datetime: 2019-02-08 15:00:00 -0500
+---
+datetime_end: 2019-02-08 15:40:00 -0500
+---
+room: auditorio-1

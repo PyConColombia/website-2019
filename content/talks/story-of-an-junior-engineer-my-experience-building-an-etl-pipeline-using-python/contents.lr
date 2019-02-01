@@ -31,3 +31,9 @@ My talk will be divided in 5 parts:
 **Questions ~ 5 min**
 ---
 summary: This is the story of an engineer who enters a jungle of data and builds an ETL in order to make sense out of it. You'll learn about data modelling, how a JOIN operation may eat up your RAM and many other perks and drawbacks of using Python to build the pipeline. Sit and join him in his adventure.
+---
+datetime: 2019-02-09 16:00:00 -0500
+---
+datetime_end: 2019-02-09 16:40:00 -0500
+---
+room: ap-1

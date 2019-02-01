@@ -11,3 +11,9 @@ topic: Data Science
 type: talk
 ---
 description: Datos y más datos estan disponibiles en la Web (opendata) y son usados en muchas áreas (periodismo, derecho, ciencias sociales etc). Sin embargo, ni siempre están en formatos accesibles. Brasil.IO fue creado para resolver eso: programas libres para capturar, convertir y presentarlos de manera fácil
+---
+datetime: 2019-02-09 10:20:00 -0500
+---
+datetime_end: 2019-02-09 11:00:00 -0500
+---
+room: ap-1
