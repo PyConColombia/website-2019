@@ -10,6 +10,8 @@ publish: yes
 ---
 country_residence: es
 ---
+image: jorge-gonzalez.png
+---
 information:
 
 Jorge Gonzalez is a Solutions Engineer who has contributed to the development and implementation of Big Data in Geotab Europe.
