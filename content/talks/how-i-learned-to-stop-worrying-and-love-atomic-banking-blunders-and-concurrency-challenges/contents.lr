@@ -1,6 +1,6 @@
 _model: talk
 ---
-name: Advanced Database Integrity in Django: Banking Blunders and Concurrency Challenges
+name: Database Integrity in Django: Safely Handling Critical Data in Distributed Systems
 ---
 authors: nick-sweeting
 ---
