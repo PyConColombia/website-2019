@@ -8,8 +8,14 @@ prefix: Mr.
 ---
 publish: yes
 ---
-information: I got a PhD in Physics at the University of Córdoba, and also I was a postdoctoral research at University Industrial of Santander. I have 17 scientific publications in international journals and several years of experience as a college professor both in Colombia and in Argentina. Also, I have around five years of experience as development of security systems and business management app for different companies in Argentina and Colombia. Beyond my academic career, I am focused on building my own tech company where IGNIS will be our first initiative and product.
+information:
+
+Soy un argentino nacido en Buenos Aires, hace tres años que resido en Colombia, país donde realicé una estancia posdoctoral. Luego del PyCon estaré retornando a mi país como investigador posdoctoral de CONICET en la Facultad de Matemáticas, Astronomía, Física y Computación de la Universidad Nacional de Córdoba. En esa misma universidad, obtuve mi título de doctor en física. Actualmente me desempeño como docente en distintas universidades en Colombia y como coordinador y conferencista especializado en CEINAUTOS, institución del cual soy co-fundador. Me veo como un físico teórico apasionado por la relatividad general y las ondas gravitacionales, investigador y desarrollador enamorado de la tecnología, ingeniería de punta y aplicaciones de innovación. Cuento con más de 17 publicaciones internacionales y tengo cuatro derechos de autor por desarrollos comerciales. Actualmente lidero varios proyectos en el área de la ingeniería, computación y mecánica automotriz, donde anhelo elevar los estándares de calidad y colaborar en la formación técnica y profesional de las nuevas generaciones. 
 ---
 position_1: Universidad Nacional de Córdoba
 ---
 web: https://scholar.google.com/citations?user=5-1z3dYAAAAJ&hl=es
+---
+country_residence: ar
+---
+image: profile.jpg

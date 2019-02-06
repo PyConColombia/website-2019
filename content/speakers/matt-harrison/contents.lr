@@ -7,3 +7,5 @@ last_name: Harrison
 prefix: Mr.
 ---
 publish: yes
+---
+image: profile.png
