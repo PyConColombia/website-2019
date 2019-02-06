@@ -10,7 +10,7 @@ prefix: Mr.
 ---
 publish: yes
 ---
-information: Soy un apasionado por la programación, la música y la ciencia de datos. Soy ingeniero de sistemas de la Universidad Tecnológica de Pereira y actualmente estoy cursando la Maestría en Ingeniería de Sistemas y Computación en esta misma universidad. Tengo unos 4 años de experiencia laboral trabajando en el mundo de la programación principalmente con lenguajes como JavaScript y Python. Tengo una certificación como Big Data Scientist (Arcitura) y he trabajado en el área de análisis y visualización de datos desde hace unos 5 años usando herramientas como Pandas, R, D3.js, y Bokeh. Actualmente laboro como Front End Developer para la empresa Facturedo. Me encanta la música y siempre separo un espacio de la semana para ensayar con mi banda de Rock donde soy vocalista y guitarrista. Me gusta mucho comer, probar nuevos sabores, reirme, jugar fútbol, ver películas y documentales, charlar y saber que lo que hago dejará huella en mi entorno.
+information: Soy un apasionado por la vida, me gusta la programación, la música y la ciencia de datos, actualmente estoy cursando una Maestría en Ingeniería de Sistemas y Computación y trabajo para Facturedo (una plataforma internacional de compra-venta de facturas online) como Front End Developer, mi trabajo principal es el desarrollo y mantenimiento de una app híbrida que usan nuestros clientes para ceder e invertir en facturas. He tenido la oportunidad de trabajar previamente con librerías como Bokeh, Folium y D3.js en mis anteriores puestos de trabajo de los cuales nació mi interés por la ciencia de datos, la visualización de datos y el lenguaje Python. Me encanta la comida, viajar, el fútbol, la música, componer, tocar guitarra y cantar en mi banda de Rock llamada Subterra
 ---
 position_1: Facturedo
 ---
@@ -19,3 +19,5 @@ summary:
 twitter_handle: iamandrewbrave
 ---
 web: http://www.andrewbrave.com
+---
+image: Andres Giraldo Carvajal.JPG
