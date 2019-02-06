@@ -1,0 +1,17 @@
+_model: talk
+---
+name: Scale your Django Project to thousands of concurrent users for only $5
+---
+authors: julian-amaya, juan-medina
+---
+datetime: 2019-02-10 07:30:00 -0500
+---
+datetime_end: 2019-02-10 09:30:00 -0500
+---
+language: es
+---
+room: salon-13
+---
+type: workshop
+---
+topic: Web

@@ -1,6 +1,4 @@
-name:
-
- Steer
+name: Jesus
 ---
 country_residence: Colombia, Bolívar
 ---
@@ -18,6 +16,8 @@ prefix: Mr.
 ---
 publish: yes
 ---
-last_name: Jesus
+last_name:
+
+ Steer
 ---
 image: Jesus Steer.jpg
