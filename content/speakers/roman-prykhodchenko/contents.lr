@@ -15,3 +15,5 @@ prefix: Mr.
 publish: yes
 ---
 image: photo.png
+---
+information: Alumnus of the Computer Engineering faculty of Kharkiv National University of Radio Electronics in Ukraine. For the last 6 years has been working in fields of cloud computing and automation including taking the core reviewer duty in the OpenStack open source project in 2014-2017. Currently work as a software engineer at Allegro – the biggest e-commerce platform in Poland. An advocate of DevOps philosophy and programming polyglot.

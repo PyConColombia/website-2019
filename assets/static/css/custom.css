@@ -309,17 +309,22 @@
   margin: 0 .5em;
 }
 
-.background-code .code-title, .background-code h2 {
+.background-code .code-title, .background-code h2, .schedule h2 {
   color: #fff;
   font-weight: 300;
   letter-spacing: 5px;
   margin-bottom: 80px;
 }
 
-.background-code h2 {
+.background-code h2, .schedule h2 {
   margin: 40px 0;
 }
 
+.schedule .nav-tabs .nav-link.active {
+  color: #000;
+  background-color: #fff;
+  border-radius: 0;
+}
 
 @media (max-width: 576px) {
   .background-speakers, .intro-background, .keynotes-background, .subscribe-background, .footer-background {
