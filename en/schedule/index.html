@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Language -->
+  <!-- <script>
+    let userLang = navigator.language || navigator.userLanguage;
+    userLang = userLang.split('-')[0];
+    let url = window.location.pathname;
+    const realUrl = url.replace('/en/', '');
+
+    const isEn = (userLang === 'en' || userLang === 'fr' || userLang === 'pt' || userLang === 'ru');
+
+    if (isEn && !url.includes('/en/')) {
+      window.location.href = '/en' + realUrl;
+    } else if (!isEn && url.includes('/en/')) {
+      window.location.href = '/' + realUrl;
+    }
+  </script> -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105321720-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-105321720-2');
+  </script>
+
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February.">
+
+  <meta property="og:site_name" content="PyCon Colombia" />
+  <meta property="og:title" content="PyCon Colombia | February 2019 | Colombia" />
+  <meta property="og:description" content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February"
+  />
+  <meta property="og:image" content="/static/images/opimage.jpg">
+  <meta property="og:url" content="https://www.pycon.co/">
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pyconcolombia">
+  <meta name="twitter:creator" content="@soyelhijo">
+  <meta name="twitter:title" content="PyCon Colombia | February 2019 | Colombia">
+  <meta name="twitter:description" content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February">
+  <meta name="twitter:image" content="/static/images/opimage.jpg">
+
+  <title> Schedule  |
+    PyCon Colombia</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-icon-192x192.png">
+  <link rel="manifest" href="/static/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+  <link rel="stylesheet" href="/static/css/libs/animate.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="/static/css/custom.css">
+  <link rel="stylesheet" href="/static/css/clock.css">
+  <link rel="stylesheet" href="/static/css/sidenav.css">
+  <link rel="stylesheet" href="/static/css/flags/flags.min.css">
+</head>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="/en/">
+    <img src="/static/css/images/logo.svg" alt="" width="auto" height="50">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/venue/">Venue</a>
+  </li>
+      <li class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+    aria-expanded="false">Speakers</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+      
+      <a class="dropdown-item" href="/en/keynotes/">Keynotes</a>
+      
+      
+      <a class="dropdown-item" href="/en/speakers/">Speakers</a></div>
+</li>
+      <!-- 
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/code-of-conduct/">Code of Conduct</a>
+  </li> -->
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/talks/">Talks</a>
+  </li>
+      <!-- 
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/volunteers">Volunteers</a>
+  </li>-->
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/sponsors/">Sponsors</a>
+  </li>
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/team/">Team</a>
+  </li>
+      
+  
+  
+
+  <li class="nav-item active">
+    <a class="nav-link" href="/en/schedule/">Schedule</a>
+  </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">v.2019</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://2018.pycon.co">v.2018</a>
+          <a class="dropdown-item" href="http://2017.pycon.co">v.2017</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        
+        <a class="nav-link" href="/cronograma/">Español</a>
+        
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<body>
+  <button class="js-gitter-toggle-chat-button gitter-custom-button">Open Chat</button>
+<div class="mdl-layout mdl-js-layout layout-home"></div>
+  <main>
+    <!-- class="mdl-layout__content" -->
+    <div>
+      <!-- class="page-content" -->
+      <div class="background-code">
+        <div class="background-stars">
+          <div class="container-fluid header-content background-meteor">
+            <div class="container">
+              <div class="section">
+                <div class="row justify-content-center align-self-center">
+                  <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+                    <div style="margin-bottom: 100px;">
+                      <div class="row justify-content-center align-self-center">
+                        <h1 class="title-subscribe">Schedule </h1>
+                      </div>
+                      <div class="commet"></div>
+                      <div style="margin-top: 40px;">
+                        <div class="schedule"><!-- Nav tabs -->
+    <div class="row justify-content-center">
+      <div class="col-12">
+  
+        <ul class="nav nav-tabs nav-fill" role="tablist">
+          
+          
+          <li class="nav-item">
+            <a class=" nav-link active" data-toggle="pill" href="#tab-2019-02-08"
+              aria-controls="tab-2019-02-08" role="tab">
+              <span style="font-size:1.5em;"><b>Friday 08</a></b></span>
+          </li>
+          
+          <li class="nav-item">
+            <a class=" nav-link " data-toggle="pill" href="#tab-2019-02-09"
+              aria-controls="tab-2019-02-09" role="tab">
+              <span style="font-size:1.5em;"><b>Saturday 09</a></b></span>
+          </li>
+          
+          <li class="nav-item">
+            <a class=" nav-link " data-toggle="pill" href="#tab-2019-02-10"
+              aria-controls="tab-2019-02-10" role="tab">
+              <span style="font-size:1.5em;"><b>Sunday 10</a></b></span>
+          </li>
+        </ul>
+        <br>
+      </div>
+    </div>
+  
+    <!-- Tab panes -->
+    <div class="tab-content text-center">
+      <div class="tab-pane active" id="tab-2019-02-08" role="tabpanel"><div class="schedule schedule-inscription">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">08:<small>00</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              
+              <h2 class="text-left"><i class="fa fa-address-book" aria-hidden="true"></i> Registro</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-opening">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">09:<small>00</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div><span>
+      <a class="link" style="color:#3e1a87;" href="/en/speakers/john-roa/"><b>
+          John Roa</b></a>
+    </span>
+              <h2 class="text-left"><i class="fa fa-power-off" aria-hidden="true"></i> Opening</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-opening">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">09:<small>15</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              
+              <h2 class="text-left"><i class="fa fa-power-off" aria-hidden="true"></i> Xavierian University Speech</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-sponsor_opening">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">09:<small>35</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div>
+              <h2 class="text-left"><i class="fa fa-star" aria-hidden="true"></i> Elastic Speech</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-keynote">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">10:<small>00</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div>
+              <h2 class="text-left"><i class="fa fa-user-circle" aria-hidden="true"></i> Keynote by Benjamin Lewis</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-break">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">11:<small>00</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              
+              <h2 class="text-left"><i class="fa fa-coffee" aria-hidden="true"></i> Coffe Break</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-multiple">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="text-left">11:<small>30</small></h2>
+            </div>
+          </div>
+          <div class="row"><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/carlos-miguel-patino/"><b>
+          Carlos Miguel Patiño</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/introduction-to-generative-adversarial-networks-using-pytorch/">Introduction to Generative Adversarial Networks Using PyTorch</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - A</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/ivan-lozano/"><b>
+          Ivan Lozano</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/using-a-drone-to-identify-and-rescue-people-in-catastrophes-situations/">Using a Drone to identify and rescue people in catastrophes situations</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - B</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/matt-harrison/"><b>
+          Matt Harrison</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/consulting-for-introverted-developers/">Consulting for Introverted Developers</a>
+                </small>
+              </div>
+            </div></div>
+        </div> <div class="schedule schedule-lunch_break">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">12:<small>10</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              
+              <h2 class="text-left"><i class="fa fa-cutlery" aria-hidden="true"></i> Lunch</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-multiple">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="text-left">14:<small>10</small></h2>
+            </div>
+          </div>
+          <div class="row"><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/gonzalo-damian-quiroga/"><b>
+          Gonzalo Damián Quiroga</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/introducing-ignis-a-new-technical-and-symbolic-computing-software-for-science-and-educational-purposes/">Introducing IGNIS, a new technical and symbolic computing Software for science and educational purposes.</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - A</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/cristina-gomez/"><b>
+          Cristina Gomez</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/compressed-sensing-for-indoor-radiolocalization-in-python/">Compressed sensing for indoor radiolocalization in python</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - B</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/andres-giraldo-carvajal/"><b>
+          Andrés Giraldo Carvajal</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/visualizacion-interactiva-de-datos-en-python/">Visualización interactiva de datos en Python</a>
+                </small>
+              </div>
+            </div></div>
+        </div> <div class="schedule schedule-multiple">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="text-left">15:<small>00</small></h2>
+            </div>
+          </div>
+          <div class="row"><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/roman-prykhodchenko/"><b>
+          Roman Prykhodchenko</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/load-distribution-in-heterogeneous-microservice-environments/">Load distribution in heterogeneous microservice environments</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - A</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/diego-camilo-pena-ramirez/"><b>
+          Diego Peña Ramirez</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/iot-and-hardware-interaction-with-python/">IOT and hardware interaction with Python</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - B</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/cristian-david-suarez-reina/"><b>
+          Cristian Suarez Reina</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/yu-ma-herramienta-para-el-analisis-de-series-de-tiempo/">Yu-ma: Herramienta para el análisis de series de tiempo</a>
+                </small>
+              </div>
+            </div></div>
+        </div> <div class="schedule schedule-break">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">15:<small>40</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              
+              <h2 class="text-left"><i class="fa fa-coffee" aria-hidden="true"></i> Break</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-multiple">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="text-left">16:<small>10</small></h2>
+            </div>
+          </div>
+          <div class="row"><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/eduardo-ismael-garcia-perez/"><b>
+          Eduardo García Pérez</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/creando-un-blockchain-con-python/">Creando un BlockChain con Python</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - A</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/nick-sweeting/"><b>
+          Nick Sweeting</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/how-i-learned-to-stop-worrying-and-love-atomic-banking-blunders-and-concurrency-challenges/">Database Integrity in Django: Safely Handling Critical Data in Distributed Systems</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - B</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/jorge-gonzalez/"><b>
+          Jorge Gonzalez</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/real-driving-data-to-improve-road-safety-in-bogota/">Real driving data to improve road safety in Bogota</a>
+                </small>
+              </div>
+            </div></div>
+        </div> <div class="schedule schedule-keynote">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">17:<small>00</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div>
+              <h2 class="text-left"><i class="fa fa-user-circle" aria-hidden="true"></i> Keynote by Kian Katanforoosh</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-closing">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">18:<small>00</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              
+              <h2 class="text-left"><i class="fa fa-power-off" aria-hidden="true"></i> First day closing</h2>
+            </div>
+  
+          </div>
+        </div> </div>
+      <div class="tab-pane " id="tab-2019-02-09" role="tabpanel"><div class="schedule schedule-inscription">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">07:<small>15</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              
+              <h2 class="text-left"><i class="fa fa-address-book" aria-hidden="true"></i> Reception</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-opening">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">07:<small>45</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div>
+              <h2 class="text-left"><i class="fa fa-power-off" aria-hidden="true"></i> Day opening by the Organizing Committee</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-keynote">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">08:<small>00</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div>
+              <h2 class="text-left"><i class="fa fa-user-circle" aria-hidden="true"></i> Keynote by  Jake Vanderplas</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-multiple">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="text-left">09:<small>10</small></h2>
+            </div>
+          </div>
+          <div class="row"><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/gonzalo-pena-castellanos/"><b>
+          Gonzalo Peña-Castellanos</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/the-state-of-the-anaconda-keep-calm-and-conda-install/">The state of the Anaconda: Keep calm and conda install!</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - A</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/carolina-gomez-trejos/"><b>
+          Carolina Gómez Trejos</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/automatizacion-de-tareas-con-selenium/">Automatización de Tareas con Selenium</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - B</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/juan-manuel-alvarez-quinonez/"><b>
+          Juan Álvarez Quiñonez</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/truth-is-always-strange-fuzzy-logic-in-python/">Truth is always Strange - Fuzzy logic in Python</a>
+                </small>
+              </div>
+            </div></div>
+        </div> <div class="schedule schedule-break">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">09:<small>50</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              
+              <h2 class="text-left"><i class="fa fa-coffee" aria-hidden="true"></i> Break</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-multiple">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="text-left">10:<small>20</small></h2>
+            </div>
+          </div>
+          <div class="row"><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/alvaro-justen/"><b>
+          Álvaro Justen</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/brasilio-libertacion-de-datos-publicos-con-python/">Brasil.IO: libertación de datos públicos con Python</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - A</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/arkadiusz-adamski/"><b>
+          Arkadiusz Adamski</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/automating-banner-generation-using-python-and-the-popular-graphic-editor/">Automating banner generation using Python and the popular graphic editor</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - B</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/jose-giraldo/"><b>
+          Jose Giraldo</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/deep-learning-music/">Deep learning Music</a>
+                </small>
+              </div>
+            </div></div>
+        </div> <div class="schedule schedule-multiple">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="text-left">11:<small>10</small></h2>
+            </div>
+          </div>
+          <div class="row"><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/johana-salinas-quintana/"><b>
+          Johana Salinas Quintana</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/como-convertirse-en-un-superheroe-data-science/">¿Cómo convertirse en un superhéroe Data Science?</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - A</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/jorge-martinez/"><b>
+          Jorge Martinez</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/an-artistic-neural-style-algorithm/">An artistic neural style algorithm</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - B</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/david-cardozo/"><b>
+          David Cardozo</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/deep-learning-for-autonomous-driving-a-kiwi-campus-experience/">Deep Learning for Autonomous Driving, A Kiwi Campus experience</a>
+                </small>
+              </div>
+            </div></div>
+        </div> <div class="schedule schedule-lunch_break">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">12:<small>00</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              
+              <h2 class="text-left"><i class="fa fa-cutlery" aria-hidden="true"></i> Lunch</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-multiple">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="text-left">14:<small>00</small></h2>
+            </div>
+          </div>
+          <div class="row"><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/luis-david-camacho-gonzalez/"><b>
+          Luis Camacho Gonzalez</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/high-perfomance-pandas-leveraging-the-power-of-pandas-data-manipulation/">High Perfomance Pandas: Leveraging the power of pandas data manipulation.</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - A</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/ivan-torroledo/"><b>
+          Ivan Torroledo</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/building-next-generation-writers-using-ai/">Building next generation writers using AI</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - B</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/javier-daza-comas/"><b>
+          Javier Daza Comas</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/creando-comunidades-de-tecnologia-exitosas/">Creando comunidades de tecnología exitosas</a>
+                </small>
+              </div>
+            </div></div>
+        </div> <div class="schedule schedule-multiple">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="text-left">14:<small>50</small></h2>
+            </div>
+          </div>
+          <div class="row"><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/felipe-hoffa/"><b>
+          Felipe Hoffa</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/what-can-we-learn-from-11-billion-github-events-and-42-tb-of-code/">What can we learn from 1.1 billion GitHub events and 42 TB of code?</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - A</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/gabriele-tani/"><b>
+          Gabriele Tani</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/word-embedding-how-to-recover-hidden-information-to-improve-job-post-matching/">Word embedding: how to recover hidden information to improve job post matching.</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - B</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/mario-sergio/"><b>
+          Mário Sérgio</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/how-we-face-the-challenges-of-maintaining-an-inclusive-community-in-brazil/">How we face the challenges of maintaining an inclusive community in Brazil</a>
+                </small>
+              </div>
+            </div></div>
+        </div> <div class="schedule schedule-break">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">15:<small>30</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              
+              <h2 class="text-left"><i class="fa fa-coffee" aria-hidden="true"></i> Break</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-multiple">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="text-left">16:<small>00</small></h2>
+            </div>
+          </div>
+          <div class="row"><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/david-delgado-ruiz/"><b>
+          David Delgado Ruiz</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/story-of-an-junior-engineer-my-experience-building-an-etl-pipeline-using-python/">Story of an junior engineer: My experience building an ETL pipeline using Python</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - A</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/william-gomez-ortega/"><b>
+          William Gómez Ortega</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/aureas-a-tool-for-unsupervised-species-call-recognition/">AUREAS: a tool for unsupervised species call recognition</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Alfonso Quintana Auditorium - B</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/jorge-luis-galvis-quintero/"><b>
+          Jorge Galvis Quintero</b></a>
+    </span>
+              <div>
+                
+                <small><b>Talk
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/going-serverless-with-python/">Going Serverless with Python</a>
+                </small>
+              </div>
+            </div></div>
+        </div> <div class="schedule schedule-keynote">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">16:<small>50</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div>
+              <h2 class="text-left"><i class="fa fa-user-circle" aria-hidden="true"></i> Keynote by Carol Willing</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-lightning">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">17:<small>50</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              
+              <h2 class="text-left"><i class="fa fa-bolt" aria-hidden="true"></i> Lightning Talks - Second day closing</h2>
+            </div>
+  
+          </div>
+        </div> </div>
+      <div class="tab-pane " id="tab-2019-02-10" role="tabpanel"><div class="schedule schedule-opening">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">07:<small>00</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Fernando Barón Building</i></small></div>
+              <h2 class="text-left"><i class="fa fa-power-off" aria-hidden="true"></i> Reception / Arrival of assistants</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-multiple">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="text-left">07:<small>30</small></h2>
+            </div>
+          </div>
+          <div class="row"><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 201</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/jose-luis-laica-cornejo/"><b>
+          José Laica Cornejo</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/micropython-como-lenguaje-para-el-desarrollo-de-dispositivos-iot/">MicroPython como lenguaje para el desarrollo de dispositivos IoT</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 304</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/sharon-camacho/"><b>
+          Sharon Camacho</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/limpieza-de-datos-y-visualizacion/">Limpieza de Datos y Visualización</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 305</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/andres-felipe-forero/"><b>
+          Andrés Forero</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/introduction-a-ibm-cloud/">Introduction a IBM Cloud</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 307</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/julian-amaya/"><b>
+          Julian Amaya</b></a>,&nbsp
+    </span><span>
+      <a class="link" style="color:white;" href="/en/speakers/juan-medina/"><b>
+          Juan Medina</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/scale-your-django-project-to-thousands-of-concurrent-users-for-only-dollar5/">Scale your Django Project to thousands of concurrent users for only $5</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 202</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/mauricio-collazos/"><b>
+          Mauricio Collazos</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/automatizando-el-hogar-con-python-raspberry-pi-y-reconocimiento-de-voz/">Automatizando el hogar con Python Raspberry PI y Reconocimiento de voz</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 203</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/jose-david-arevalo/"><b>
+          José Arevalo</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/aprendizaje-supervisado-con-scikit-learn-que-algoritmo-usar-y-como-exportarlo/">Aprendizaje supervisado con scikit-learn, qué algoritmo usar y cómo exportarlo.</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 204</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/dario-guzman/"><b>
+          Dario Guzman</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/crea-un-sitio-web-de-dibujo-colaborativo-en-tiempo-real-con-django-channels/">Crea un sitio web de dibujo colaborativo en tiempo real con Django Channels</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 205</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/oswaldo-rodriguez/"><b>
+          Oswaldo Rodriguez</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/django-django-rest-framework-react/">Django + Django Rest Framework + React</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 206</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/carlos-martinez/"><b>
+          Carlos Martinez</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/construye-una-api-de-clase-mundial-con-graphql/">Construye una API de clase mundial con GraphQL</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 301</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/mauricio-castillo/"><b>
+          Mauricio Castillo</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/desarrollo-de-videojuegos-en-2d-con-pygame/">Desarrollo de Videojuegos en 2D con Pygame</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 302</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/sebastian-rodriguez-colina/"><b>
+          Sebastian Rodriguez Colina</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/como-desplegar-un-servicio-web-de-machine-learning-usando-flask/">Cómo desplegar un servicio web de machine learning usando Flask</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 303</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/daniela-maria-charris-stand/"><b>
+          Daniela Charris Stand</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/taller-en-procesamiento-digital-de-imagenes-y-vision-por-computador/">Taller en Procesamiento Digital de Imágenes y Visión por Computador</a>
+                </small>
+              </div>
+            </div></div>
+        </div> <div class="schedule schedule-multiple">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="text-left">10:<small>00</small></h2>
+            </div>
+          </div>
+          <div class="row"><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 201</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/steven-silva/"><b>
+          Steven Silva</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/introduccion-a-futbol-robotico-con-micropython-y-microcontroladores-esp-01/">Introducción a fútbol robótico con MicroPython y microcontroladores ESP-01</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 304</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/nicolas-guarin-zapata/"><b>
+          Nicolás Guarín-Zapata</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/introduction-to-scientific-visualization-with-python/">Introduction to Scientific Visualization with Python</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 305</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/harold-nicolas-riascos/"><b>
+          Harold Riascos</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/watson-apis-workshop/">Watson APIs Workshop</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 306</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/ugo-sangiorgi/"><b>
+          Ugo Sangiorgi</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/elastic-apm-django-equals/">Elastic APM + Django = ❤</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 308</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/camilo-sepulveda/"><b>
+          Camilo Sepulveda</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/workshop-title-planning-your-weekend-in-bogota-with-scrapy-crawlers/">Planning your weekend in Bogotá with Scrapy crawlers</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 202</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/jose-ivan-lozano-cabral/"><b>
+          Jose Lozano Cabral</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/developing-a-drone-platform-to-identify-and-rescue-people-in-catastrophes-situations/">Developing a Drone platform to identify and rescue people in catastrophes situations</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 203</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/aaron-bassett/"><b>
+          Aaron Bassett</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/real-time-transcription-and-sentiment-analysis-of-audio-streams-on-the-phone-and-in-the-browser/">Real-time transcription and sentiment analysis of audio streams; on the phone and in the browser</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 204</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/eduardo-ismael-garcia-perez/"><b>
+          Eduardo García Pérez</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/microservicios-con-python/">Microservicios con Python</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 205</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/cesar-augusto-herdenez-araque/"><b>
+          Cesar Herdenez Araque</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/python-redis/">Python + Redis</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 206</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/raphael-diniz/"><b>
+          Raphael Diniz</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (English):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/using-web-scraping-to-empower-citizens-to-watch-their-government/">Using web scraping to empower citizens to watch their government</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 206</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/daniel-chavarria/"><b>
+          Daniel Chavarria</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/data-science-workshop/">Data Science Workshop</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 301</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/steer-jesus/"><b>
+          Jesus Steer</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/desarrollo-de-juegos-en-python/">Desarrollo de juegos en Python</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 302</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/juan-sebastian-parada-celis/"><b>
+          Juan Parada Celis</b></a>,&nbsp
+    </span><span>
+      <a class="link" style="color:white;" href="/en/speakers/maria-camila-guerrero-giraldo/"><b>
+          Maria Guerrero Giraldo</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/data-analytics-and-a-few-of-iot/">Data Analytics and a few of IoT</a>
+                </small>
+              </div>
+            </div><div class="col-lg-4 text-left schedule-multiple-item">
+              <div class="text-left"><small><i>Salón 303</i></small></div><span>
+      <a class="link" style="color:white;" href="/en/speakers/isabel-cristina-ruiz-buritica/"><b>
+          Isabel Ruiz Buriticá</b></a>
+    </span>
+              <div>
+                
+                <small><b>Workshop
+                    (Spanish):
+                  </b>
+                  <a class="link" style="color:white;" href="/en/talks/creando-una-red-para-analizar-los-personajes-de-juego-de-tronos/">Creando una red para analizar los personajes de Juego de Tronos</a>
+                </small>
+              </div>
+            </div></div>
+        </div> <div class="schedule schedule-lunch_break">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">12:<small>00</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              
+              <h2 class="text-left"><i class="fa fa-cutlery" aria-hidden="true"></i> Lunch</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-keynote">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">14:<small>00</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div>
+              <h2 class="text-left"><i class="fa fa-user-circle" aria-hidden="true"></i> Keynote by Ola Sendecka</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-sponsor_opening">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">15:<small>00</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div>
+              <h2 class="text-left"><i class="fa fa-star" aria-hidden="true"></i> Huge Speech</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-keynote">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">15:<small>20</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div>
+              <h2 class="text-left"><i class="fa fa-user-circle" aria-hidden="true"></i> Keynote by Russell Keith-Magee</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-break">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">16:<small>20</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              
+              <h2 class="text-left"><i class="fa fa-coffee" aria-hidden="true"></i> Break</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-keynote">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">16:<small>50</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div>
+              <h2 class="text-left"><i class="fa fa-user-circle" aria-hidden="true"></i> Keynote by Jessica Mckellar</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-sponsor_opening">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">17:<small>50</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div>
+              <h2 class="text-left"><i class="fa fa-star" aria-hidden="true"></i> IBM Speech</h2>
+            </div>
+  
+          </div>
+        </div> <div class="schedule schedule-closing">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="text-left">18:<small>10</small></h2>
+            </div>
+            <div class="col-lg-9 text-left">
+              <div class="text-left"><small><i>Félix Restrepo Auditorium</i></small></div>
+              <h2 class="text-left"><i class="fa fa-power-off" aria-hidden="true"></i> Event closing</h2>
+            </div>
+  
+          </div>
+        </div> </div></div><!-- End Tab panes -->
+  </div>
+                      </div>
+                    </div>
+                    <section class="footer">
+  <div class="apply-content">
+    <div class="planet-earth-content">
+      <div class="planet-earth-glow"></div>
+      <div class="planet-earth-glow"></div>
+      <div class="planet-earth-top-glow"></div>
+      <div class="planet-earth-top-glow"></div>
+      <div class="planet-earth"></div>
+    </div>
+    <p class="footer-text">
+      Made with love in Planet Earth
+    </p>
+    <p class="footer-text">
+      © 2019 Python Colombia. All rights reserved.<br />
+      
+      <a href="/en/code-of-conduct">Code of Conduct</a>
+       | <a href="mailto:hello@pycon.co">hello@pycon.co</a>
+    </p>
+    <div class="social-icons-container">
+      <a href="https://www.twitter.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-twitter"></div>
+      </a>
+      <a href="https://www.facebook.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-facebook"></div>
+      </a>
+      <a href="https://www.instagram.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-instagram"></div>
+      </a>
+      <a href="https://medium.com/@pyconcolombia" target="_blank">
+        <div class="social-icon social-medium"></div>
+      </a>
+    </div>
+  </div>
+</section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+</div>
+<!-- Javascript -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/static/js/cfp.js"></script>
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'PyConColombia/Lobby',
+    activationElement: '.gitter-button',
+  };
+</script>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+  crossorigin=""></script>
+<script>
+
+  var mymap = L.map('mapid').setView([4.6283241,-74.0646417], 16);
+  var marker = L.marker([4.6283241,-74.0646417]).addTo(mymap);
+
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox.streets-satellite'
+  }).addTo(mymap);
+
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+<script>
+  function openNav(id) {
+    if (window.innerWidth < 780) {
+      document.getElementById(id).style.width = "100%";
+    } else {
+      document.getElementById(id).style.width = "50%";
+    }
+    document.getElementById('back-resume-speaker').style.display = "block";
+  }
+
+  function closeNav(id) {
+    document.getElementById(id).style.width = "0";
+    document.getElementById('back-resume-speaker').style.display = "none";
+  }
+</script>
+</body>
+
+</html>
+

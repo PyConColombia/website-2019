@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Language -->
+  <!-- <script>
+    let userLang = navigator.language || navigator.userLanguage;
+    userLang = userLang.split('-')[0];
+    let url = window.location.pathname;
+    const realUrl = url.replace('/en/', '');
+
+    const isEn = (userLang === 'en' || userLang === 'fr' || userLang === 'pt' || userLang === 'ru');
+
+    if (isEn && !url.includes('/en/')) {
+      window.location.href = '/en' + realUrl;
+    } else if (!isEn && url.includes('/en/')) {
+      window.location.href = '/' + realUrl;
+    }
+  </script> -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105321720-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-105321720-2');
+  </script>
+
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February.">
+
+  <meta property="og:site_name" content="PyCon Colombia" />
+  <meta property="og:title" content="PyCon Colombia | February 2019 | Colombia" />
+  <meta property="og:description" content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February"
+  />
+  <meta property="og:image" content="/static/images/opimage.jpg">
+  <meta property="og:url" content="https://www.pycon.co/">
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pyconcolombia">
+  <meta name="twitter:creator" content="@soyelhijo">
+  <meta name="twitter:title" content="PyCon Colombia | February 2019 | Colombia">
+  <meta name="twitter:description" content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February">
+  <meta name="twitter:image" content="/static/images/opimage.jpg">
+
+  <title> Speakers  |
+    PyCon Colombia</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-icon-192x192.png">
+  <link rel="manifest" href="/static/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+  <link rel="stylesheet" href="/static/css/libs/animate.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="/static/css/custom.css">
+  <link rel="stylesheet" href="/static/css/clock.css">
+  <link rel="stylesheet" href="/static/css/sidenav.css">
+  <link rel="stylesheet" href="/static/css/flags/flags.min.css">
+</head>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="/en/">
+    <img src="/static/css/images/logo.svg" alt="" width="auto" height="50">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/venue/">Venue</a>
+  </li>
+      <li class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+    aria-expanded="false">Speakers</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+      
+      <a class="dropdown-item" href="/en/keynotes/">Keynotes</a>
+      
+      
+      <a class="dropdown-item active" href="/en/speakers/">Speakers</a></div>
+</li>
+      <!-- 
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/code-of-conduct/">Code of Conduct</a>
+  </li> -->
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/talks/">Talks</a>
+  </li>
+      <!-- 
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/volunteers">Volunteers</a>
+  </li>-->
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/sponsors/">Sponsors</a>
+  </li>
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/team/">Team</a>
+  </li>
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/schedule/">Schedule</a>
+  </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">v.2019</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://2018.pycon.co">v.2018</a>
+          <a class="dropdown-item" href="http://2017.pycon.co">v.2017</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        
+        <a class="nav-link" href="/ponentes/">Español</a>
+        
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<body>
+  <button class="js-gitter-toggle-chat-button gitter-custom-button">Open Chat</button>
+
+<div class="mdl-layout mdl-js-layout layout-home">
+  
+  <main>
+    <!-- class="mdl-layout__content" -->
+    <div>
+      <!-- class="page-content" -->
+      <div class="container-fluid container-no-padding header-content background-keynotes">
+        <div class="container">
+          <div class="section">
+            <div class="apply-content">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+                  <h1 class="title-subscribe">Speakers  (57)</h1>
+                  <div class="commet"></div>
+                  <div class="row">
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/aaron-bassett/">
+          <img id="speaker-image-link-1" alt="Aaron Bassett" src="/ponentes/aaron-bassett/perfil.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/aaron-bassett/">Aaron Bassett</a></h1>
+      <h2 class="speaker-info-1">Nexmo</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/aaronbassett" target="blank_">@aaronbassett</a></h3>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/alvaro-justen/">
+          <img id="speaker-image-link-2" alt="Álvaro Justen" src="/ponentes/alvaro-justen/perfil.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/alvaro-justen/">Álvaro Justen</a></h1>
+      <h2 class="speaker-info-1">Brasil.IO</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/turicas" target="blank_">@turicas</a></h3>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/andres-felipe-forero/">Andrés Felipe Forero</a></h1>
+      <h2 class="speaker-info-1">IBM</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/andres-felipe-forero/">
+          <img id="speaker-image-link-3" alt="Andrés Felipe Forero" src="/static/images/empty-photo.svg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/andres-giraldo-carvajal/">Andrés Giraldo Carvajal</a></h1>
+      <h2 class="speaker-info-1">Facturedo</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/iamandrewbrave" target="blank_">@iamandrewbrave</a></h3>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/andres-giraldo-carvajal/">
+          <img id="speaker-image-link-4" alt="Andrés Giraldo Carvajal" src="/ponentes/andres-giraldo-carvajal/Andres Giraldo Carvajal.JPG"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/arkadiusz-adamski/">
+          <img id="speaker-image-link-5" alt="Arkadiusz Adamski" src="/ponentes/arkadiusz-adamski/profile.png"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/arkadiusz-adamski/">Arkadiusz Adamski</a></h1>
+      <h2 class="speaker-info-1">Allegro</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/ar4s_pl" target="blank_">@ar4s_pl</a></h3>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/camilo-sepulveda/">
+          <img id="speaker-image-link-6" alt="Camilo Sepulveda" src="/ponentes/camilo-sepulveda/camilo.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/camilo-sepulveda/">Camilo Sepulveda</a></h1>
+      <h2 class="speaker-info-1">Endava</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/km2506" target="blank_">@km2506</a></h3>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/carlos-martinez/">Carlos Martinez</a></h1>
+      <h2 class="speaker-info-1">UruIT</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/carlosmart626" target="blank_">@carlosmart626</a></h3>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/carlos-martinez/">
+          <img id="speaker-image-link-7" alt="Carlos Martinez" src="/ponentes/carlos-martinez/Carlos Martinez.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/carlos-miguel-patino/">Carlos Miguel Patiño</a></h1>
+      <h2 class="speaker-info-1">Green Services and Solutions</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/carlos-miguel-patino/">
+          <img id="speaker-image-link-8" alt="Carlos Miguel Patiño" src="/ponentes/carlos-miguel-patino/perfil.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/carolina-gomez-trejos/">
+          <img id="speaker-image-link-9" alt="Carolina Gómez Trejos" src="/ponentes/carolina-gomez-trejos/pycon.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/carolina-gomez-trejos/">Carolina Gómez Trejos</a></h1>
+      <h2 class="speaker-info-1">Fluid Signal Group</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/caro_gomezt" target="blank_">@caro_gomezt</a></h3>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/cesar-augusto-herdenez-araque/">
+          <img id="speaker-image-link-10" alt="Cesar Augusto Herdenez Araque" src="/ponentes/cesar-augusto-herdenez-araque/perfil.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/cesar-augusto-herdenez-araque/">Cesar Augusto Herdenez Araque</a></h1>
+      <h2 class="speaker-info-1">Python Barranquilla</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/cesarau0619" target="blank_">@cesarau0619</a></h3>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/cristian-david-suarez-reina/">Cristian David Suarez Reina</a></h1>
+      <h2 class="speaker-info-1">Universidad del Norte</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/cristian-david-suarez-reina/">
+          <img id="speaker-image-link-11" alt="Cristian David Suarez Reina" src="/ponentes/cristian-david-suarez-reina/profile.png"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/cristina-gomez/">Cristina Gomez</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/cgsantama" target="blank_">@cgsantama</a></h3>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/cristina-gomez/">
+          <img id="speaker-image-link-12" alt="Cristina Gomez" src="/ponentes/cristina-gomez/perfil.jpeg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/daniel-chavarria/">
+          <img id="speaker-image-link-13" alt="Daniel Chavarria" src="/static/images/empty-photo.svg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/daniel-chavarria/">Daniel Chavarria</a></h1>
+      <h2 class="speaker-info-1">IBM</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/daniela-maria-charris-stand/">
+          <img id="speaker-image-link-14" alt="Daniela María Charris Stand" src="/ponentes/daniela-maria-charris-stand/Daniela Maria Charris Stand.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/daniela-maria-charris-stand/">Daniela María Charris Stand</a></h1>
+      <h2 class="speaker-info-1">Universidad del Norte</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/dario-guzman/">Dario Guzman</a></h1>
+      <h2 class="speaker-info-1">Ebenezer Technologies</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/GudarJs" target="blank_">@GudarJs</a></h3>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/dario-guzman/">
+          <img id="speaker-image-link-15" alt="Dario Guzman" src="/ponentes/dario-guzman/profile.png"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/david-cardozo/">David Cardozo</a></h1>
+      <h2 class="speaker-info-1">Ingeniero de aprendizaje de máquinas - Kiwi Campus</h2>
+      <h2 class="speaker-info-2">Especialista en robotica y aprendizaje profundo</h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/_davidcardozo" target="blank_">@_davidcardozo</a></h3>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/david-cardozo/">
+          <img id="speaker-image-link-16" alt="David Cardozo" src="/ponentes/david-cardozo/profile.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/david-delgado-ruiz/">
+          <img id="speaker-image-link-17" alt="David Delgado Ruiz" src="/ponentes/david-delgado-ruiz/David Delgado.png"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/david-delgado-ruiz/">David Delgado Ruiz</a></h1>
+      <h2 class="speaker-info-1">Quantil</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/dwhitelined" target="blank_">@dwhitelined</a></h3>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/diego-camilo-pena-ramirez/">
+          <img id="speaker-image-link-18" alt="Diego Camilo Peña Ramirez" src="/static/images/empty-photo.svg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/diego-camilo-pena-ramirez/">Diego Camilo Peña Ramirez</a></h1>
+      <h2 class="speaker-info-1">Universidad Nacional de Colombia</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/nervencid" target="blank_">@nervencid</a></h3>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/eduardo-ismael-garcia-perez/">Eduardo Ismael García Pérez</a></h1>
+      <h2 class="speaker-info-1">Codigofacilito</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/eduardo_gpg" target="blank_">@eduardo_gpg</a></h3>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/eduardo-ismael-garcia-perez/">
+          <img id="speaker-image-link-19" alt="Eduardo Ismael García Pérez" src="/ponentes/eduardo-ismael-garcia-perez/perfil.JPG"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/felipe-hoffa/">Felipe Hoffa</a></h1>
+      <h2 class="speaker-info-1">Google</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/felipehoffa" target="blank_">@felipehoffa</a></h3>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/felipe-hoffa/">
+          <img id="speaker-image-link-20" alt="Felipe Hoffa" src="/ponentes/felipe-hoffa/perfil.jpeg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/gabriele-tani/">
+          <img id="speaker-image-link-21" alt="Gabriele Tani" src="/ponentes/gabriele-tani/perfil.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/gabriele-tani/">Gabriele Tani</a></h1>
+      <h2 class="speaker-info-1">Vincu</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/gonzalo-damian-quiroga/">
+          <img id="speaker-image-link-22" alt="Gonzalo Damián Quiroga" src="/ponentes/gonzalo-damian-quiroga/profile.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/gonzalo-damian-quiroga/">Gonzalo Damián Quiroga</a></h1>
+      <h2 class="speaker-info-1">Universidad Nacional de Córdoba</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/gonzalo-pena-castellanos/">Gonzalo Peña-Castellanos</a></h1>
+      <h2 class="speaker-info-1">Anaconda, Inc</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/goanpeca" target="blank_">@goanpeca</a></h3>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/gonzalo-pena-castellanos/">
+          <img id="speaker-image-link-23" alt="Gonzalo Peña-Castellanos" src="/ponentes/gonzalo-pena-castellanos/yop.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/harold-nicolas-riascos/">Harold Nicolás Riascos</a></h1>
+      <h2 class="speaker-info-1">IBM</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/harold-nicolas-riascos/">
+          <img id="speaker-image-link-24" alt="Harold Nicolás Riascos" src="/static/images/empty-photo.svg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/isabel-cristina-ruiz-buritica/">
+          <img id="speaker-image-link-25" alt="Isabel Cristina Ruiz Buriticá" src="/ponentes/isabel-cristina-ruiz-buritica/perfil.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/isabel-cristina-ruiz-buritica/">Isabel Cristina Ruiz Buriticá</a></h1>
+      <h2 class="speaker-info-1">Datatres60</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/iris9112" target="blank_">@iris9112</a></h3>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/ivan-lozano/">
+          <img id="speaker-image-link-26" alt="Ivan Lozano" src="/ponentes/ivan-lozano/Ivan Lozano.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/ivan-lozano/">Ivan Lozano</a></h1>
+      <h2 class="speaker-info-1">Airspace Systems Inc</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/ivanovishx" target="blank_">@ivanovishx</a></h3>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/ivan-torroledo/">Ivan Torroledo</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/ivan-torroledo/">
+          <img id="speaker-image-link-27" alt="Ivan Torroledo" src="/ponentes/ivan-torroledo/Ivan Torroledo_.PNG"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/javier-daza-comas/">Javier Daza Comas</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/javidazac" target="blank_">@javidazac</a></h3>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/javier-daza-comas/">
+          <img id="speaker-image-link-28" alt="Javier Daza Comas" src="/ponentes/javier-daza-comas/Javier Daza.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/johana-salinas-quintana/">
+          <img id="speaker-image-link-29" alt="Johana Salinas Quintana" src="/ponentes/johana-salinas-quintana/Perfil.JPG"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/johana-salinas-quintana/">Johana Salinas Quintana</a></h1>
+      <h2 class="speaker-info-1">Data Science Fem</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+      <h3 class="speaker-info-1"><a href="https://twitter.com/jsnunki" target="blank_">@jsnunki</a></h3>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/jorge-gonzalez/">
+          <img id="speaker-image-link-30" alt="Jorge Gonzalez" src="/ponentes/jorge-gonzalez/jorge-gonzalez.PNG"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/jorge-gonzalez/">Jorge Gonzalez</a></h1>
+      <h2 class="speaker-info-1">Solutions Engineer, Geotab</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/jorge-luis-galvis-quintero/">Jorge Luis Galvis Quintero</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/jorge-luis-galvis-quintero/">
+          <img id="speaker-image-link-31" alt="Jorge Luis Galvis Quintero" src="/ponentes/jorge-luis-galvis-quintero/perfil.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/jorge-martinez/">Jorge Martinez</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/jorge-martinez/">
+          <img id="speaker-image-link-32" alt="Jorge Martinez" src="/ponentes/jorge-martinez/jorge-martinez.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/jose-david-arevalo/">
+          <img id="speaker-image-link-33" alt="José David Arevalo" src="/static/images/empty-photo.svg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/jose-david-arevalo/">José David Arevalo</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/jose-giraldo/">
+          <img id="speaker-image-link-34" alt="Jose Giraldo" src="/ponentes/jose-giraldo/Jose_giraldo.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/jose-giraldo/">Jose Giraldo</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/jose-ivan-lozano-cabral/">Jose Ivan Lozano Cabral</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/jose-ivan-lozano-cabral/">
+          <img id="speaker-image-link-35" alt="Jose Ivan Lozano Cabral" src="/static/images/empty-photo.svg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/jose-luis-laica-cornejo/">José Luis Laica Cornejo</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/jose-luis-laica-cornejo/">
+          <img id="speaker-image-link-36" alt="José Luis Laica Cornejo" src="/static/images/empty-photo.svg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/juan-manuel-alvarez-quinonez/">
+          <img id="speaker-image-link-37" alt="Juan Manuel Álvarez Quiñonez" src="/ponentes/juan-manuel-alvarez-quinonez/perfil.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/juan-manuel-alvarez-quinonez/">Juan Manuel Álvarez Quiñonez</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/juan-medina/">
+          <img id="speaker-image-link-38" alt="Juan Medina" src="/static/images/empty-photo.svg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/juan-medina/">Juan Medina</a></h1>
+      <h2 class="speaker-info-1">Monoku</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/juan-sebastian-parada-celis/">Juan Sebastián Parada Celis</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/juan-sebastian-parada-celis/">
+          <img id="speaker-image-link-39" alt="Juan Sebastián Parada Celis" src="/ponentes/juan-sebastian-parada-celis/Juan Sebastian Parada Celis.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/julian-amaya/">Julian Amaya</a></h1>
+      <h2 class="speaker-info-1">Monoku</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/julian-amaya/">
+          <img id="speaker-image-link-40" alt="Julian Amaya" src="/static/images/empty-photo.svg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/luis-david-camacho-gonzalez/">
+          <img id="speaker-image-link-41" alt="Luis David Camacho Gonzalez" src="/static/images/empty-photo.svg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/luis-david-camacho-gonzalez/">Luis David Camacho Gonzalez</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/marcelo-elizeche-lando/">
+          <img id="speaker-image-link-42" alt="Marcelo Elizeche Landó" src="/ponentes/marcelo-elizeche-lando/profilepic.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/marcelo-elizeche-lando/">Marcelo Elizeche Landó</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/maria-camila-guerrero-giraldo/">Maria Camila Guerrero Giraldo</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/maria-camila-guerrero-giraldo/">
+          <img id="speaker-image-link-43" alt="Maria Camila Guerrero Giraldo" src="/ponentes/maria-camila-guerrero-giraldo/Maria Camila Guerrero.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/mario-sergio/">Mário Sérgio</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/mario-sergio/">
+          <img id="speaker-image-link-44" alt="Mário Sérgio" src="/ponentes/mario-sergio/perfil.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/matt-harrison/">
+          <img id="speaker-image-link-45" alt="Matt Harrison" src="/ponentes/matt-harrison/profile.png"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/matt-harrison/">Matt Harrison</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/mauricio-castillo/">
+          <img id="speaker-image-link-46" alt="Mauricio Castillo" src="/ponentes/mauricio-castillo/Mauricio Castillo Mina.jpeg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/mauricio-castillo/">Mauricio Castillo</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/nick-sweeting/">Nick Sweeting</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/nick-sweeting/">
+          <img id="speaker-image-link-47" alt="Nick Sweeting" src="/ponentes/nick-sweeting/profile.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/nicolas-guarin-zapata/">Nicolás Guarín-Zapata</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/nicolas-guarin-zapata/">
+          <img id="speaker-image-link-48" alt="Nicolás Guarín-Zapata" src="/ponentes/nicolas-guarin-zapata/Nicolas Guarín.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/oswaldo-rodriguez/">
+          <img id="speaker-image-link-49" alt="Oswaldo Rodriguez" src="/static/images/empty-photo.svg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/oswaldo-rodriguez/">Oswaldo Rodriguez</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/raphael-diniz/">
+          <img id="speaker-image-link-50" alt="Raphael Diniz" src="/ponentes/raphael-diniz/perfil.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/raphael-diniz/">Raphael Diniz</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/roman-prykhodchenko/">Roman Prykhodchenko</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/roman-prykhodchenko/">
+          <img id="speaker-image-link-51" alt="Roman Prykhodchenko" src="/ponentes/roman-prykhodchenko/photo.png"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/sebastian-rodriguez-colina/">Sebastian Rodriguez Colina</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/sebastian-rodriguez-colina/">
+          <img id="speaker-image-link-52" alt="Sebastian Rodriguez Colina" src="/ponentes/sebastian-rodriguez-colina/Sebastian Rodriguez Colina.png"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/sharon-camacho/">
+          <img id="speaker-image-link-53" alt="Sharon Camacho" src="/ponentes/sharon-camacho/perfil.jpeg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/sharon-camacho/">Sharon Camacho</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/steer-jesus/">
+          <img id="speaker-image-link-54" alt="Jesus Steer" src="/ponentes/steer-jesus/Jesus Steer.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/steer-jesus/">Jesus Steer</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/steven-silva/">Steven Silva</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/steven-silva/">
+          <img id="speaker-image-link-55" alt="Steven Silva" src="/ponentes/steven-silva/Steven Silva.png"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-12 order-md-1 order-12">
+    <div class="speaker-details text-right">
+      <h1 class="speaker-name"><a href="/en/speakers/ugo-sangiorgi/">Ugo Sangiorgi</a></h1>
+      <h2 class="speaker-info-1">Elastic</h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/ugo-sangiorgi/">
+          <img id="speaker-image-link-56" alt="Ugo Sangiorgi" src="/static/images/empty-photo.svg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <div class="speaker">
+                        
+  <div class="speaker-container">
+    <!-- <div class="row justify-content-center align-self-center"> --><div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="speaker-image-container">
+      <div class="shadow square">
+        <a href="/en/speakers/william-gomez-ortega/">
+          <img id="speaker-image-link-57" alt="William Gómez Ortega" src="/ponentes/william-gomez-ortega/perfil.jpg"" class="img-fluid blend" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="speaker-details text-left">
+      <h1 class="speaker-name"><a href="/en/speakers/william-gomez-ortega/">William Gómez Ortega</a></h1>
+      <h2 class="speaker-info-1"></h2>
+      <h2 class="speaker-info-2"></h2>
+      
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+  </div>
+
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <section class="footer">
+  <div class="apply-content">
+    <div class="planet-earth-content">
+      <div class="planet-earth-glow"></div>
+      <div class="planet-earth-glow"></div>
+      <div class="planet-earth-top-glow"></div>
+      <div class="planet-earth-top-glow"></div>
+      <div class="planet-earth"></div>
+    </div>
+    <p class="footer-text">
+      Made with love in Planet Earth
+    </p>
+    <p class="footer-text">
+      © 2019 Python Colombia. All rights reserved.<br />
+      
+      <a href="/en/code-of-conduct">Code of Conduct</a>
+       | <a href="mailto:hello@pycon.co">hello@pycon.co</a>
+    </p>
+    <div class="social-icons-container">
+      <a href="https://www.twitter.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-twitter"></div>
+      </a>
+      <a href="https://www.facebook.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-facebook"></div>
+      </a>
+      <a href="https://www.instagram.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-instagram"></div>
+      </a>
+      <a href="https://medium.com/@pyconcolombia" target="_blank">
+        <div class="social-icon social-medium"></div>
+      </a>
+    </div>
+  </div>
+</section>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+</div><!-- Javascript -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/static/js/cfp.js"></script>
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'PyConColombia/Lobby',
+    activationElement: '.gitter-button',
+  };
+</script>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+  crossorigin=""></script>
+<script>
+
+  var mymap = L.map('mapid').setView([4.6283241,-74.0646417], 16);
+  var marker = L.marker([4.6283241,-74.0646417]).addTo(mymap);
+
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox.streets-satellite'
+  }).addTo(mymap);
+
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+<script>
+  function openNav(id) {
+    if (window.innerWidth < 780) {
+      document.getElementById(id).style.width = "100%";
+    } else {
+      document.getElementById(id).style.width = "50%";
+    }
+    document.getElementById('back-resume-speaker').style.display = "block";
+  }
+
+  function closeNav(id) {
+    document.getElementById(id).style.width = "0";
+    document.getElementById('back-resume-speaker').style.display = "none";
+  }
+</script>
+</body>
+
+</html>
+

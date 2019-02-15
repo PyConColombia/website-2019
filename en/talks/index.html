@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Language -->
+  <!-- <script>
+    let userLang = navigator.language || navigator.userLanguage;
+    userLang = userLang.split('-')[0];
+    let url = window.location.pathname;
+    const realUrl = url.replace('/en/', '');
+
+    const isEn = (userLang === 'en' || userLang === 'fr' || userLang === 'pt' || userLang === 'ru');
+
+    if (isEn && !url.includes('/en/')) {
+      window.location.href = '/en' + realUrl;
+    } else if (!isEn && url.includes('/en/')) {
+      window.location.href = '/' + realUrl;
+    }
+  </script> -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105321720-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-105321720-2');
+  </script>
+
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February.">
+
+  <meta property="og:site_name" content="PyCon Colombia" />
+  <meta property="og:title" content="PyCon Colombia | February 2019 | Colombia" />
+  <meta property="og:description" content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February"
+  />
+  <meta property="og:image" content="/static/images/opimage.jpg">
+  <meta property="og:url" content="https://www.pycon.co/">
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pyconcolombia">
+  <meta name="twitter:creator" content="@soyelhijo">
+  <meta name="twitter:title" content="PyCon Colombia | February 2019 | Colombia">
+  <meta name="twitter:description" content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February">
+  <meta name="twitter:image" content="/static/images/opimage.jpg">
+
+  <title> Talks  |
+    PyCon Colombia</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-icon-192x192.png">
+  <link rel="manifest" href="/static/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+  <link rel="stylesheet" href="/static/css/libs/animate.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="/static/css/custom.css">
+  <link rel="stylesheet" href="/static/css/clock.css">
+  <link rel="stylesheet" href="/static/css/sidenav.css">
+  <link rel="stylesheet" href="/static/css/flags/flags.min.css">
+</head>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="/en/">
+    <img src="/static/css/images/logo.svg" alt="" width="auto" height="50">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/venue/">Venue</a>
+  </li>
+      <li class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+    aria-expanded="false">Speakers</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+      
+      <a class="dropdown-item" href="/en/keynotes/">Keynotes</a>
+      
+      
+      <a class="dropdown-item" href="/en/speakers/">Speakers</a></div>
+</li>
+      <!-- 
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/code-of-conduct/">Code of Conduct</a>
+  </li> -->
+      
+  
+  
+
+  <li class="nav-item active">
+    <a class="nav-link" href="/en/talks/">Talks</a>
+  </li>
+      <!-- 
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/volunteers">Volunteers</a>
+  </li>-->
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/sponsors/">Sponsors</a>
+  </li>
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/team/">Team</a>
+  </li>
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/schedule/">Schedule</a>
+  </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">v.2019</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://2018.pycon.co">v.2018</a>
+          <a class="dropdown-item" href="http://2017.pycon.co">v.2017</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        
+        <a class="nav-link" href="/ponencias/">Español</a>
+        
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<body>
+  <button class="js-gitter-toggle-chat-button gitter-custom-button">Open Chat</button>
+<div class="mdl-layout mdl-js-layout layout-home"></div>
+  <main>
+    <!-- class="mdl-layout__content" -->
+    <div>
+      <!-- class="page-content" -->
+      <div class="background-code">
+        <div class="background-stars">
+          <div class="container-fluid header-content background-meteor">
+            <div class="container">
+              <div class="section">
+                <div class="row justify-content-center align-self-center">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="margin-bottom: 100px;">
+                      <div >
+                        
+  <div class="row justify-content-center align-self-center">
+    <h1 class="title-subscribe">Talks (30)</h1>
+  </div>
+  <div class="commet"></div>  
+  <div class="row" style="margin-top: 40px"><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/an-artistic-neural-style-algorithm/">An artistic neural style algorithm (English)</a>
+        </div>
+        <div class="row"><div class="Computer Vision tag">Computer Vision</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/jorge-martinez/"><img class="shadow overlay square" src="/ponentes/jorge-martinez/jorge-martinez.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/aureas-a-tool-for-unsupervised-species-call-recognition/">AUREAS: a tool for unsupervised species call recognition (English)</a>
+        </div>
+        <div class="row"><div class="Machine Learning tag">Machine Learning</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/william-gomez-ortega/"><img class="shadow overlay square" src="/ponentes/william-gomez-ortega/perfil.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/automating-banner-generation-using-python-and-the-popular-graphic-editor/">Automating banner generation using Python and the popular graphic editor (English)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/arkadiusz-adamski/"><img class="shadow overlay square" src="/ponentes/arkadiusz-adamski/profile.png"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/automatizacion-de-tareas-con-selenium/">Automatización de Tareas con Selenium (Spanish)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/carolina-gomez-trejos/"><img class="shadow overlay square" src="/ponentes/carolina-gomez-trejos/pycon.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/brasilio-libertacion-de-datos-publicos-con-python/">Brasil.IO: libertación de datos públicos con Python (Spanish)</a>
+        </div>
+        <div class="row"><div class="Data Science tag">Data Science</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/alvaro-justen/"><img class="shadow overlay square" src="/ponentes/alvaro-justen/perfil.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/building-next-generation-writers-using-ai/">Building next generation writers using AI (English)</a>
+        </div>
+        <div class="row"><div class="Machine Learning tag">Machine Learning</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/ivan-torroledo/"><img class="shadow overlay square" src="/ponentes/ivan-torroledo/Ivan Torroledo_.PNG"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/como-convertirse-en-un-superheroe-data-science/">¿Cómo convertirse en un superhéroe Data Science? (Spanish)</a>
+        </div>
+        <div class="row"><div class="Data Science tag">Data Science</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/johana-salinas-quintana/"><img class="shadow overlay square" src="/ponentes/johana-salinas-quintana/Perfil.JPG"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/compressed-sensing-for-indoor-radiolocalization-in-python/">Compressed sensing for indoor radiolocalization in python (English)</a>
+        </div>
+        <div class="row"><div class="IoT tag">IoT</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/cristina-gomez/"><img class="shadow overlay square" src="/ponentes/cristina-gomez/perfil.jpeg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/consulting-for-introverted-developers/">Consulting for Introverted Developers (English)</a>
+        </div>
+        <div class="row"><div class="Other tag">Other</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/matt-harrison/"><img class="shadow overlay square" src="/ponentes/matt-harrison/profile.png"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/creando-comunidades-de-tecnologia-exitosas/">Creando comunidades de tecnología exitosas (Spanish)</a>
+        </div>
+        <div class="row"><div class="Community tag">Community</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/javier-daza-comas/"><img class="shadow overlay square" src="/ponentes/javier-daza-comas/Javier Daza.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/creando-un-blockchain-con-python/">Creando un BlockChain con Python (Spanish)</a>
+        </div>
+        <div class="row"><div class="Blockchain tag">Blockchain</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/eduardo-ismael-garcia-perez/"><img class="shadow overlay square" src="/ponentes/eduardo-ismael-garcia-perez/perfil.JPG"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/deep-learning-for-autonomous-driving-a-kiwi-campus-experience/">Deep Learning for Autonomous Driving, A Kiwi Campus experience (Spanish)</a>
+        </div>
+        <div class="row"><div class="Computer Vision tag">Computer Vision</div><div class="Machine Learning tag">Machine Learning</div><div class="Deep Learning tag">Deep Learning</div><div class="Scientific Computing tag">Scientific Computing</div><div class="IoT tag">IoT</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/david-cardozo/"><img class="shadow overlay square" src="/ponentes/david-cardozo/profile.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/deep-learning-music/">Deep learning Music (English)</a>
+        </div>
+        <div class="row"><div class="Deep Learning tag">Deep Learning</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/jose-giraldo/"><img class="shadow overlay square" src="/ponentes/jose-giraldo/Jose_giraldo.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/going-serverless-with-python/">Going Serverless with Python (English)</a>
+        </div>
+        <div class="row"><div class="DevOps tag">DevOps</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/jorge-luis-galvis-quintero/"><img class="shadow overlay square" src="/ponentes/jorge-luis-galvis-quintero/perfil.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/high-perfomance-pandas-leveraging-the-power-of-pandas-data-manipulation/">High Perfomance Pandas: Leveraging the power of pandas data manipulation. (English)</a>
+        </div>
+        <div class="row"><div class="Data Science tag">Data Science</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/luis-david-camacho-gonzalez/"><img class="shadow overlay square" src="/static/images/empty-photo.svg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/how-i-learned-to-stop-worrying-and-love-atomic-banking-blunders-and-concurrency-challenges/">Database Integrity in Django: Safely Handling Critical Data in Distributed Systems (English)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/nick-sweeting/"><img class="shadow overlay square" src="/ponentes/nick-sweeting/profile.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/how-we-face-the-challenges-of-maintaining-an-inclusive-community-in-brazil/">How we face the challenges of maintaining an inclusive community in Brazil (English)</a>
+        </div>
+        <div class="row"><div class="Community tag">Community</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/mario-sergio/"><img class="shadow overlay square" src="/ponentes/mario-sergio/perfil.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/introducing-ignis-a-new-technical-and-symbolic-computing-software-for-science-and-educational-purposes/">Introducing IGNIS, a new technical and symbolic computing Software for science and educational purposes. (English)</a>
+        </div>
+        <div class="row"><div class="Scientific Computing tag">Scientific Computing</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/gonzalo-damian-quiroga/"><img class="shadow overlay square" src="/ponentes/gonzalo-damian-quiroga/profile.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/introduction-to-generative-adversarial-networks-using-pytorch/">Introduction to Generative Adversarial Networks Using PyTorch (English)</a>
+        </div>
+        <div class="row"><div class="Machine Learning tag">Machine Learning</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/carlos-miguel-patino/"><img class="shadow overlay square" src="/ponentes/carlos-miguel-patino/perfil.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/iot-and-hardware-interaction-with-python/">IOT and hardware interaction with Python (English)</a>
+        </div>
+        <div class="row"><div class="IoT tag">IoT</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/diego-camilo-pena-ramirez/"><img class="shadow overlay square" src="/static/images/empty-photo.svg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/load-distribution-in-heterogeneous-microservice-environments/">Load distribution in heterogeneous microservice environments (English)</a>
+        </div>
+        <div class="row"><div class="Performance tag">Performance</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/roman-prykhodchenko/"><img class="shadow overlay square" src="/ponentes/roman-prykhodchenko/photo.png"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/real-driving-data-to-improve-road-safety-in-bogota/">Real driving data to improve road safety in Bogota (English)</a>
+        </div>
+        <div class="row"><div class="Data Science tag">Data Science</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/jorge-gonzalez/"><img class="shadow overlay square" src="/ponentes/jorge-gonzalez/jorge-gonzalez.PNG"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/story-of-an-junior-engineer-my-experience-building-an-etl-pipeline-using-python/">Story of an junior engineer: My experience building an ETL pipeline using Python (English)</a>
+        </div>
+        <div class="row"><div class="Data Science tag">Data Science</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/david-delgado-ruiz/"><img class="shadow overlay square" src="/ponentes/david-delgado-ruiz/David Delgado.png"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/the-state-of-the-anaconda-keep-calm-and-conda-install/">The state of the Anaconda: Keep calm and conda install! (Spanish)</a>
+        </div>
+        <div class="row"><div class="Data Science tag">Data Science</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/gonzalo-pena-castellanos/"><img class="shadow overlay square" src="/ponentes/gonzalo-pena-castellanos/yop.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/truth-is-always-strange-fuzzy-logic-in-python/">Truth is always Strange - Fuzzy logic in Python (English)</a>
+        </div>
+        <div class="row"><div class="Artifial Intelligence tag">Artifial Intelligence</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/juan-manuel-alvarez-quinonez/"><img class="shadow overlay square" src="/ponentes/juan-manuel-alvarez-quinonez/perfil.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/using-a-drone-to-identify-and-rescue-people-in-catastrophes-situations/">Using a Drone to identify and rescue people in catastrophes situations (English)</a>
+        </div>
+        <div class="row"><div class="IoT tag">IoT</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/ivan-lozano/"><img class="shadow overlay square" src="/ponentes/ivan-lozano/Ivan Lozano.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/visualizacion-interactiva-de-datos-en-python/">Visualización interactiva de datos en Python (Spanish)</a>
+        </div>
+        <div class="row"><div class="Data Science tag">Data Science</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/andres-giraldo-carvajal/"><img class="shadow overlay square" src="/ponentes/andres-giraldo-carvajal/Andres Giraldo Carvajal.JPG"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/what-can-we-learn-from-11-billion-github-events-and-42-tb-of-code/">What can we learn from 1.1 billion GitHub events and 42 TB of code? (English)</a>
+        </div>
+        <div class="row"><div class="Data Science tag">Data Science</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/felipe-hoffa/"><img class="shadow overlay square" src="/ponentes/felipe-hoffa/perfil.jpeg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/word-embedding-how-to-recover-hidden-information-to-improve-job-post-matching/">Word embedding: how to recover hidden information to improve job post matching. (English)</a>
+        </div>
+        <div class="row"><div class="Machine Learning tag">Machine Learning</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/gabriele-tani/"><img class="shadow overlay square" src="/ponentes/gabriele-tani/perfil.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/yu-ma-herramienta-para-el-analisis-de-series-de-tiempo/">Yu-ma: Herramienta para el análisis de series de tiempo (Spanish)</a>
+        </div>
+        <div class="row"><div class="Data Science tag">Data Science</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/cristian-david-suarez-reina/"><img class="shadow overlay square" src="/ponentes/cristian-david-suarez-reina/profile.png"/>
+                </a>
+              </div>
+            </div></div>
+      </div></div>
+
+                        
+  <div class="row justify-content-center align-self-center">
+    <h1 class="title-subscribe">Workshops (26)</h1>
+  </div>
+  <div class="commet"></div>  
+  <div class="row" style="margin-top: 40px"><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/aprendizaje-supervisado-con-scikit-learn-que-algoritmo-usar-y-como-exportarlo/">Aprendizaje supervisado con scikit-learn, qué algoritmo usar y cómo exportarlo. (Spanish)</a>
+        </div>
+        <div class="row"><div class="Machine Learning tag">Machine Learning</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/jose-david-arevalo/"><img class="shadow overlay square" src="/static/images/empty-photo.svg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/automatizando-el-hogar-con-python-raspberry-pi-y-reconocimiento-de-voz/">Automatizando el hogar con Python Raspberry PI y Reconocimiento de voz (Spanish)</a>
+        </div>
+        <div class="row"><div class="IoT tag">IoT</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/mauricio-collazos/"><img class="shadow overlay square" src="/ponentes/mauricio-collazos/perfil.jpeg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/como-desplegar-un-servicio-web-de-machine-learning-usando-flask/">Cómo desplegar un servicio web de machine learning usando Flask (Spanish)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div><div class="Machine Learning tag">Machine Learning</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/sebastian-rodriguez-colina/"><img class="shadow overlay square" src="/ponentes/sebastian-rodriguez-colina/Sebastian Rodriguez Colina.png"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/construye-una-api-de-clase-mundial-con-graphql/">Construye una API de clase mundial con GraphQL (Spanish)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/carlos-martinez/"><img class="shadow overlay square" src="/ponentes/carlos-martinez/Carlos Martinez.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/crea-un-sitio-web-de-dibujo-colaborativo-en-tiempo-real-con-django-channels/">Crea un sitio web de dibujo colaborativo en tiempo real con Django Channels (Spanish)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/dario-guzman/"><img class="shadow overlay square" src="/ponentes/dario-guzman/profile.png"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/creando-una-red-para-analizar-los-personajes-de-juego-de-tronos/">Creando una red para analizar los personajes de Juego de Tronos (Spanish)</a>
+        </div>
+        <div class="row"><div class="Artifial Intelligence tag">Artifial Intelligence</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/isabel-cristina-ruiz-buritica/"><img class="shadow overlay square" src="/ponentes/isabel-cristina-ruiz-buritica/perfil.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/data-analytics-and-a-few-of-iot/">Data Analytics and a few of IoT (Spanish)</a>
+        </div>
+        <div class="row"><div class="Data Science tag">Data Science</div><div class="IoT tag">IoT</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/juan-sebastian-parada-celis/"><img class="shadow overlay square" src="/ponentes/juan-sebastian-parada-celis/Juan Sebastian Parada Celis.jpg"/>
+                </a>
+              </div>
+            </div><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/maria-camila-guerrero-giraldo/"><img class="shadow overlay square" src="/ponentes/maria-camila-guerrero-giraldo/Maria Camila Guerrero.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/data-science-workshop/">Data Science Workshop (Spanish)</a>
+        </div>
+        <div class="row"><div class="Data Science tag">Data Science</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/daniel-chavarria/"><img class="shadow overlay square" src="/static/images/empty-photo.svg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/desarrollo-de-juegos-en-python/">Desarrollo de juegos en Python (Spanish)</a>
+        </div>
+        <div class="row"><div class="Video Games tag">Video Games</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/steer-jesus/"><img class="shadow overlay square" src="/ponentes/steer-jesus/Jesus Steer.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/desarrollo-de-videojuegos-en-2d-con-pygame/">Desarrollo de Videojuegos en 2D con Pygame (Spanish)</a>
+        </div>
+        <div class="row"><div class="Video Games tag">Video Games</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/mauricio-castillo/"><img class="shadow overlay square" src="/ponentes/mauricio-castillo/Mauricio Castillo Mina.jpeg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/developing-a-drone-platform-to-identify-and-rescue-people-in-catastrophes-situations/">Developing a Drone platform to identify and rescue people in catastrophes situations (English)</a>
+        </div>
+        <div class="row"><div class="IoT tag">IoT</div><div class="Machine Learning tag">Machine Learning</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/jose-ivan-lozano-cabral/"><img class="shadow overlay square" src="/static/images/empty-photo.svg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/django-django-rest-framework-react/">Django + Django Rest Framework + React (Spanish)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/oswaldo-rodriguez/"><img class="shadow overlay square" src="/static/images/empty-photo.svg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/elastic-apm-django-equals/">Elastic APM + Django = ❤ (Spanish)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/ugo-sangiorgi/"><img class="shadow overlay square" src="/static/images/empty-photo.svg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/introduccion-a-futbol-robotico-con-micropython-y-microcontroladores-esp-01/">Introducción a fútbol robótico con MicroPython y microcontroladores ESP-01 (Spanish)</a>
+        </div>
+        <div class="row"><div class="IoT tag">IoT</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/steven-silva/"><img class="shadow overlay square" src="/ponentes/steven-silva/Steven Silva.png"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/introduction-a-ibm-cloud/">Introduction a IBM Cloud (Spanish)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/andres-felipe-forero/"><img class="shadow overlay square" src="/static/images/empty-photo.svg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/introduction-to-scientific-visualization-with-python/">Introduction to Scientific Visualization with Python (English)</a>
+        </div>
+        <div class="row"><div class="Scientific Computing tag">Scientific Computing</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/nicolas-guarin-zapata/"><img class="shadow overlay square" src="/ponentes/nicolas-guarin-zapata/Nicolas Guarín.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/limpieza-de-datos-y-visualizacion/">Limpieza de Datos y Visualización (Spanish)</a>
+        </div>
+        <div class="row"><div class="Data Science tag">Data Science</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/sharon-camacho/"><img class="shadow overlay square" src="/ponentes/sharon-camacho/perfil.jpeg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/micropython-como-lenguaje-para-el-desarrollo-de-dispositivos-iot/">MicroPython como lenguaje para el desarrollo de dispositivos IoT (Spanish)</a>
+        </div>
+        <div class="row"><div class="IoT tag">IoT</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/jose-luis-laica-cornejo/"><img class="shadow overlay square" src="/static/images/empty-photo.svg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/microservicios-con-python/">Microservicios con Python (Spanish)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/eduardo-ismael-garcia-perez/"><img class="shadow overlay square" src="/ponentes/eduardo-ismael-garcia-perez/perfil.JPG"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/python-redis/">Python + Redis (Spanish)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/cesar-augusto-herdenez-araque/"><img class="shadow overlay square" src="/ponentes/cesar-augusto-herdenez-araque/perfil.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/real-time-transcription-and-sentiment-analysis-of-audio-streams-on-the-phone-and-in-the-browser/">Real-time transcription and sentiment analysis of audio streams; on the phone and in the browser (English)</a>
+        </div>
+        <div class="row"><div class="Machine Learning tag">Machine Learning</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/aaron-bassett/"><img class="shadow overlay square" src="/ponentes/aaron-bassett/perfil.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/scale-your-django-project-to-thousands-of-concurrent-users-for-only-dollar5/">Scale your Django Project to thousands of concurrent users for only $5 (Spanish)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/julian-amaya/"><img class="shadow overlay square" src="/static/images/empty-photo.svg"/>
+                </a>
+              </div>
+            </div><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/juan-medina/"><img class="shadow overlay square" src="/static/images/empty-photo.svg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/taller-en-procesamiento-digital-de-imagenes-y-vision-por-computador/">Taller en Procesamiento Digital de Imágenes y Visión por Computador (Spanish)</a>
+        </div>
+        <div class="row"><div class="Computer Vision tag">Computer Vision</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/daniela-maria-charris-stand/"><img class="shadow overlay square" src="/ponentes/daniela-maria-charris-stand/Daniela Maria Charris Stand.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/using-web-scraping-to-empower-citizens-to-watch-their-government/">Using web scraping to empower citizens to watch their government (English)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/raphael-diniz/"><img class="shadow overlay square" src="/ponentes/raphael-diniz/perfil.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/watson-apis-workshop/">Watson APIs Workshop (Spanish)</a>
+        </div>
+        <div class="row"><div class="Web tag">Web</div></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/harold-nicolas-riascos/"><img class="shadow overlay square" src="/static/images/empty-photo.svg"/>
+                </a>
+              </div>
+            </div></div>
+      </div><div class="col-sm-12 col-md-6 container-resume">
+        <div class="subtitle left"><a class="link" href="/en/talks/workshop-title-planning-your-weekend-in-bogota-with-scrapy-crawlers/">Planning your weekend in Bogotá with Scrapy crawlers (Spanish)</a>
+        </div>
+        <div class="row"></div>
+        <div class="row"><div class="col-sm-2">
+              <div class="speaker-talk-container">
+                <a class="link" href="/en/speakers/camilo-sepulveda/"><img class="shadow overlay square" src="/ponentes/camilo-sepulveda/camilo.jpg"/>
+                </a>
+              </div>
+            </div></div>
+      </div></div>
+
+                      </div>
+                    </div>
+                    <section class="footer">
+  <div class="apply-content">
+    <div class="planet-earth-content">
+      <div class="planet-earth-glow"></div>
+      <div class="planet-earth-glow"></div>
+      <div class="planet-earth-top-glow"></div>
+      <div class="planet-earth-top-glow"></div>
+      <div class="planet-earth"></div>
+    </div>
+    <p class="footer-text">
+      Made with love in Planet Earth
+    </p>
+    <p class="footer-text">
+      © 2019 Python Colombia. All rights reserved.<br />
+      
+      <a href="/en/code-of-conduct">Code of Conduct</a>
+       | <a href="mailto:hello@pycon.co">hello@pycon.co</a>
+    </p>
+    <div class="social-icons-container">
+      <a href="https://www.twitter.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-twitter"></div>
+      </a>
+      <a href="https://www.facebook.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-facebook"></div>
+      </a>
+      <a href="https://www.instagram.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-instagram"></div>
+      </a>
+      <a href="https://medium.com/@pyconcolombia" target="_blank">
+        <div class="social-icon social-medium"></div>
+      </a>
+    </div>
+  </div>
+</section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+</div>
+<!-- Javascript -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/static/js/cfp.js"></script>
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'PyConColombia/Lobby',
+    activationElement: '.gitter-button',
+  };
+</script>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+  crossorigin=""></script>
+<script>
+
+  var mymap = L.map('mapid').setView([4.6283241,-74.0646417], 16);
+  var marker = L.marker([4.6283241,-74.0646417]).addTo(mymap);
+
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox.streets-satellite'
+  }).addTo(mymap);
+
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+<script>
+  function openNav(id) {
+    if (window.innerWidth < 780) {
+      document.getElementById(id).style.width = "100%";
+    } else {
+      document.getElementById(id).style.width = "50%";
+    }
+    document.getElementById('back-resume-speaker').style.display = "block";
+  }
+
+  function closeNav(id) {
+    document.getElementById(id).style.width = "0";
+    document.getElementById('back-resume-speaker').style.display = "none";
+  }
+</script>
+</body>
+
+</html>
+

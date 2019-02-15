@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Language -->
+  <!-- <script>
+    let userLang = navigator.language || navigator.userLanguage;
+    userLang = userLang.split('-')[0];
+    let url = window.location.pathname;
+    const realUrl = url.replace('/en/', '');
+
+    const isEn = (userLang === 'en' || userLang === 'fr' || userLang === 'pt' || userLang === 'ru');
+
+    if (isEn && !url.includes('/en/')) {
+      window.location.href = '/en' + realUrl;
+    } else if (!isEn && url.includes('/en/')) {
+      window.location.href = '/' + realUrl;
+    }
+  </script> -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105321720-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-105321720-2');
+  </script>
+
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February.">
+
+  <meta property="og:site_name" content="PyCon Colombia" />
+  <meta property="og:title" content="PyCon Colombia | February 2019 | Colombia" />
+  <meta property="og:description" content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February"
+  />
+  <meta property="og:image" content="/static/images/opimage.jpg">
+  <meta property="og:url" content="https://www.pycon.co/">
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pyconcolombia">
+  <meta name="twitter:creator" content="@soyelhijo">
+  <meta name="twitter:title" content="PyCon Colombia | February 2019 | Colombia">
+  <meta name="twitter:description" content="PyCon Colombia 2019 will be the third national conference for users and developers of the Python programming language. This year it will be in February">
+  <meta name="twitter:image" content="/static/images/opimage.jpg">
+
+  <title>   |
+    PyCon Colombia</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-icon-192x192.png">
+  <link rel="manifest" href="/static/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+  <link rel="stylesheet" href="/static/css/libs/animate.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="/static/css/custom.css">
+  <link rel="stylesheet" href="/static/css/clock.css">
+  <link rel="stylesheet" href="/static/css/sidenav.css">
+  <link rel="stylesheet" href="/static/css/flags/flags.min.css">
+</head>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="/en/">
+    <img src="/static/css/images/logo.svg" alt="" width="auto" height="50">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/venue/">Venue</a>
+  </li>
+      <li class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+    aria-expanded="false">Speakers</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+      
+      <a class="dropdown-item" href="/en/keynotes/">Keynotes</a>
+      
+      
+      <a class="dropdown-item active" href="/en/speakers/">Speakers</a></div>
+</li>
+      <!-- 
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/code-of-conduct/">Code of Conduct</a>
+  </li> -->
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/talks/">Talks</a>
+  </li>
+      <!-- 
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/volunteers">Volunteers</a>
+  </li>-->
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/sponsors/">Sponsors</a>
+  </li>
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/team/">Team</a>
+  </li>
+      
+  
+  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/en/schedule/">Schedule</a>
+  </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">v.2019</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://2018.pycon.co">v.2018</a>
+          <a class="dropdown-item" href="http://2017.pycon.co">v.2017</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        
+        <a class="nav-link" href="/ponentes/gonzalo-pena-castellanos/">Español</a>
+        
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<body>
+  <button class="js-gitter-toggle-chat-button gitter-custom-button">Open Chat</button><div class="mdl-layout mdl-js-layout layout-home">
+    <main>
+      <!-- class="mdl-layout__content" -->
+      <div>
+        <!-- class="page-content" -->
+        <div class="container-fluid container-no-padding header-content background-speakers">
+          <div class="container">
+            <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
+              <div class="keynotes">
+                <div class="section" style="margin-bottom: 100px;">
+                  <div class="row justify-content-center align-self-center">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                      <div class="speaker-image-container row justify-content-center align-self-center">
+                        <div class="shadow overlay square">
+                          <img id="speaker-image-link-" alt="Gonzalo Peña-Castellanos" src="/ponentes/gonzalo-pena-castellanos/yop.jpg"onclick="openNav('gonzalo-pena-castellanos')" class="img-fluid blend" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center align-self-center">
+                    <div class="col-md-8 col-sm-10 col-xs-12">
+                      <div class="speaker-details text-center">
+                        <h1 class="speaker-name">Gonzalo Peña-Castellanos</h1>
+                        <h2 class="speaker-info-2"></h2>
+                        <h2 class="speaker-info-1">Anaconda, Inc</h2>
+                        <div src="/images/blank.gif" class="flag flag-co">
+                        </div>
+                        <div class="social-container-speaker">
+                          <div class="row justify-content-center align-self-center">
+                            <div class="col-xs-1">
+                              
+                              <a href="https://github.com/goanpeca" target="_blank">
+                                <div class="social-icon fab fa-github-alt"></div>
+                              </a>
+                              
+                            </div>
+                            <div class="col-xs-1">
+                              
+                              <a href="https://facebook.com/goanpeca" target="_blank">
+                                <div class="social-icon fab fa-facebook-f"></div>
+                              </a>
+                              
+                            </div>
+                            <div class="col-xs-1">
+                              
+                              <a href="https://twitter.com/goanpeca" target="_blank">
+                                <div class="social-icon fab fa-twitter"></div>
+                              </a>
+                              
+                            </div>
+                            <div class="col-xs-1">
+                              
+                              <a href="http://linkedin.com/in/goanpeca" target="_blank">
+                                <div class="social-icon fab fa-linkedin-in"></div>
+                              </a>
+                              
+                            </div>
+                            <div class="col-xs-1">
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center align-self-center">
+                        <div class="col-md-12 col-sm-12">
+                          <div class="speaker-summary">
+                            
+                            <p><h2 id="so-who-are-you?">So, who are you?</h2><p>I am a Water Resources Engineer from <a href="https://en.wikipedia.org/wiki/Bucaramanga">Bucaramanga, Colombia</a> with a Bachelor's degree in <a href="http://albatros.uis.edu.co/eisi/">Civil Engineering</a>, an MSc. in <a href="http://master.euroaquae.eu/">Hydroinformatics</a> and an MSc. in <a href="https://www.un-ihe.org/msc-programmes/specialization/sanitary-engineering-1">Sanitary Engineering</a>. For a couple of years I also attempted doing a PhD in <a href="https://en.wikipedia.org/wiki/Behavioral_economics">Behavioral Economics</a>, but during this period I discovered a passion for software engineering and data science which led me to collaborate in different open source projects, and eventually to drop my doctoral studies after 2 years (I was not having fun with that topic anyway!).</p>
+<p>I am a mix between a Water Resources Engineer, that works as a Software Engineer, who is kinda a (semi) Full Stack Developer and an aspiring Data Scientist.</p>
+<h2 id="what-is-your-experience-in-programming-and-python?">What is your experience in programming and Python?</h2><p>My initial programming experience came during my bachelor in the <em>Introduction to Programming</em>... in C++. That was <em>fun</em> but completely unconnected to any other course in the syllabus. From the C++ time until my graduation I spent some time with Java (which I don't remember fondly!) and I also had a course on web development technologies where I got my initial formation on HTML, CSS, JS and PHP using a LAMP stack. I continued also using the usual tools like Excel, and eventually ended up programming in VB6 via VBA to automate data processing I needed to speed up the results of my thesis project by 2006, which was using <a href="http://www.goldensoftware.com/products/surfer">Surfer</a>.</p>
+<p>A few years passed by and I kept using VBA during my work as a civil engineer to connect and automate other tools like <a href="http://www.hec.usace.army.mil/software/hec-ras/">HEC-RAS</a> and <a href="https://www.autodesk.com/products/autocad/overview">AutoCAD</a>. Then I started the MSc in Hydroinformatics and I had to use yet again Java (Starting in France), then VBA, then VB .NET (On England), and finally back to Java (In Germany, and I still did not enjoy Java!). For my MSc. thesis work I did a full time internship with <a href="https://worldwide.dhigroup.com/fr">DHI France</a> located at Nantes. It was during this 2010 period that I started working with <a href="https://www.python.org/">Python</a> because I had read somewhere that it was a fun language to work with, so I gave it a try and tried to develop all the flood and mapping tools needed for the work in Python with the help of <a href="http://www.numpy.org/">NumPy</a>!</p>
+<p><strong><em>Fun Anecdote</em></strong>: <em>They are still using that code written back in 2010 with crappy non pythonic style, using Python 2.7 (or maybe 2.6?) and who knows what version of NumPy.</em></p>
+<p>I have been using Python ever since and again put it to good use for my second MSc thesis that had to do with downscaling of global circulation models while studying in The Netherlands. Here I started exploring visualization tools and parallel programming to be able to get results on time for graduation, which took a month longer than expected.</p>
+<p>I did some freelance engineering work and then I started the PhD, got bored and inevitably started working in Open Source as I felt the need to give back to the Python community I so much loved and cherished. I started with a tool I was using Spyder IDE, and in 2014 I became a Core contributor. I was drawn to this project in particular because of a coincidence, a friend was using Spyder and the maintainer happened to be Carlos Córdoba (Colombian and Still maintaining it!). I kept working on Open Source semi professionally until 2015, when with a bit of chance and a bit of luck I quit my PhD, returned to Colombia from The Netherlands and Started working remotely for <a href="https://www.anaconda.com/people/gonzalo-pena">Continuum Analytics</a>. I continue to work with the company which is now called <a href="https://www.anaconda.com">Anaconda, Inc</a> and during this period of time I have worked as a Software Engineer providing support for the Conda Package Repository <a href="https://www.anaconda.org">Anaconda.org</a> backend written in Flask, Worked as a Technical Lead during the development and maintenance of <a href="https://docs.anaconda.com/anaconda/navigator/">Anaconda Navigator</a> written with PyQt and I am currently a core developer in the <a href="https://conda.io/docs/">Conda package manager</a> and related tools.</p>
+<h2 id="do-you-belong-to-any-programming-community-in-colombia?-are-you-currently-leading-any-of-such-communities-in-colombia?">Do you belong to any programming community in Colombia? Are you currently leading any of such communities in Colombia?</h2><p>Since 2015, when I arrived back to Bucaramanga, I had the idea of starting a Python Community, and  started the <a href="https://www.meetup.com/es/PythonBucaramanga">Python Bucaramanga meetup group</a> around November 2015. I have been since co-organizing this group with the help of other fellow python enthusiasts and we have tried to give talks and workshops once per month. At the end of 2016 I started talking with other members of the Python Colombia community located on other cities due to the upcoming PyCon Colombia 2017 conference. It was finally during this conference that I met with like minded friends that wanted to expand the community and take the Python Programming language to as many users as possible in Colombia.</p>
+<p><a href="https://2017.pycon.co">PyCon Colombia 2017</a> saw the birth of <a href="https://www.python.org.co/django-girls">Django Girls Colombia</a> and a stronger <a href="https://www.python.org.co">Python Colombia organization</a> and I have been part of the leading team of both of these communities. As part of Python Colombia I have promoted the creation of new communities in different cities. As part of the Django Girls Colombia tema I have helped organized and acted as coach in over 7 events taking place in different cities including <a href="https://www.python.org.co/eventos/2017/04/django-girls-bucaramanga/">Bucaramanga</a>, <a href="https://www.python.org.co/eventos/2017/06/django-girls-medellin/">Medellín</a>, <a href="https://www.python.org.co/eventos/2017/07/django-girls-barranquilla/">Barranquilla</a>, <a href="https://www.python.org.co/eventos/2017/10/django-girls-cartagena/">Cartagena</a>, <a href="https://www.python.org.co/eventos/2017/12/django-girls-ibague/">Ibagué</a>, <a href="https://www.python.org.co/eventos/2018/06/django-girls-cali/">Cali</a> and soon Pereira, Pasto and Cúcuta. Since our humble beginnings, new projects have been created and are being led by other members of the Python Community, including <a href="https://www.python.org.co/pyladies/">PyLadies Colombia</a> and its local chapters in Bogotá and Medellín, and hopefully soon Bucaramanga :-).</p>
+<p>I am also part of the organizing committee for both <a href="https://2018.pycon.co">PyCon Colombia 2018</a> and the upcoming <a href="https://www.pycon.co">PyCon Colombia 2019</a>.</p>
+<p>Finally as part of the Bucaramanga technology community I have also started working with sister communities including <a href="https://www.meetup.com/BucaramangaJS/">BucarmangaJS</a> and <a href="https://www.meetup.com/Bucaramakers/">BucaraMakers</a>.</p>
+<h2 id="have-you-given-talks-in-other-technology-events-before?">Have you given talks in other technology events before?</h2><p>I have participated in different international conferences in the past, but in technology specifically I gave a Workshop on <a href="https://drive.google.com/file/d/0BzcUFnzOIodbYlk1cmV3VFZ5bnM/view">PyCon Colombia 2017</a>, a talk on <a href="https://2018.pycon.co/talks/pyswmm-and-the-openwateranalytics-initiative/">PyCon Colombia 2018</a> and I have given and participated in different talks and workshops as co-organizer of the <a href="https://www.meetup.com/es/PythonBucaramanga/events/past/">Python Bucaramanga Meetup</a>, and the <a href="https://pythonbootcampuniandes.github.io/">Python Bootcamp de la Universidad de los Andes de 2017</a></p>
+<h2 id="anything-else?">Anything else?</h2><p>Although my time is limited I try to collaborate with the following Open Source Projects:</p>
+<ul>
+<li><a href="https://www.spyder-ide.org/">Spyder IDE</a>: The Scientific Python DEvelopment EnviRonment.</li>
+<li><a href="https://www.getlektor.com/">Lektor</a>: A flexible and powerful static content management system for building complex and beautiful websites out of flat files.</li>
+<li><a href="https://pybee.org">The Beeware Project website</a>: Build native apps with Python. Write your apps in Python and release them on iOS, Android, Windows, MacOS, Linux, Web, and tvOS using rich, native user interfaces. One codebase. Multiple apps. </li>
+<li><a href="https://github.com/OpenWaterAnalytics/pyswmm">PySWMM</a>: 
+Python Wrapper for Stormwater Management Model (SWMM5)</li>
+</ul>
+<p>I enjoy reading historic and science fiction novels as well as playing guitar, piano and drums.</p>
+</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="commet"></div>
+                      <div class="row justify-content-center align-self-center">
+                        <div style="padding-top: 4em;">
+                          <div class="col-sm-12">
+        <div class="subtitle"><a href="/en/talks/the-state-of-the-anaconda-keep-calm-and-conda-install/">The state of the Anaconda: Keep calm and conda install! (Spanish)</a></div>
+      </div>
+      <div class="col-sm-12">
+        <div class="label-talk">Talks</div>
+      </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section class="footer">
+  <div class="apply-content">
+    <div class="planet-earth-content">
+      <div class="planet-earth-glow"></div>
+      <div class="planet-earth-glow"></div>
+      <div class="planet-earth-top-glow"></div>
+      <div class="planet-earth-top-glow"></div>
+      <div class="planet-earth"></div>
+    </div>
+    <p class="footer-text">
+      Made with love in Planet Earth
+    </p>
+    <p class="footer-text">
+      © 2019 Python Colombia. All rights reserved.<br />
+      
+      <a href="/en/code-of-conduct">Code of Conduct</a>
+       | <a href="mailto:hello@pycon.co">hello@pycon.co</a>
+    </p>
+    <div class="social-icons-container">
+      <a href="https://www.twitter.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-twitter"></div>
+      </a>
+      <a href="https://www.facebook.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-facebook"></div>
+      </a>
+      <a href="https://www.instagram.com/pyconcolombia/" target="_blank">
+        <div class="social-icon social-instagram"></div>
+      </a>
+      <a href="https://medium.com/@pyconcolombia" target="_blank">
+        <div class="social-icon social-medium"></div>
+      </a>
+    </div>
+  </div>
+</section>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+  </div>
+
+<!-- Javascript -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/static/js/cfp.js"></script>
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'PyConColombia/Lobby',
+    activationElement: '.gitter-button',
+  };
+</script>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+  crossorigin=""></script>
+<script>
+
+  var mymap = L.map('mapid').setView([4.6283241,-74.0646417], 16);
+  var marker = L.marker([4.6283241,-74.0646417]).addTo(mymap);
+
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox.streets-satellite'
+  }).addTo(mymap);
+
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+<script>
+  function openNav(id) {
+    if (window.innerWidth < 780) {
+      document.getElementById(id).style.width = "100%";
+    } else {
+      document.getElementById(id).style.width = "50%";
+    }
+    document.getElementById('back-resume-speaker').style.display = "block";
+  }
+
+  function closeNav(id) {
+    document.getElementById(id).style.width = "0";
+    document.getElementById('back-resume-speaker').style.display = "none";
+  }
+</script>
+</body>
+
+</html>
+
