@@ -23,7 +23,4 @@ target = ghpages+https://pyconcolombia/website-develop?cname=develop.pycon.co
 
 [servers.production]
 name = Production
-target = ghpages+https://pyconcolombia/website-production?cname=www.pycon.co
-
-[themes]
-theme = unix
+target = ghpages+https://pyconcolombia/website-2019?cname=2019.pycon.co
