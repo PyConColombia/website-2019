@@ -24,6 +24,7 @@
 {%- set t_button_talks = transbag('translate', this.alt, 'button_talks') -%}
 {%- set t_button_workshops = transbag('translate', this.alt, 'button_workshops') -%}
 {%- set t_button_dg = transbag('translate', this.alt, 'button_dg') -%}
+{%- set t_button_pydata = transbag('translate', this.alt, 'button_pydata') -%}
 {%- set t_footer_message = transbag('translate', this.alt, 'footer_message') -%}
 {%- set t_intro_keynotes = transbag('translate', this.alt, 'intro_keynotes') -%}
 {%- set t_intro_sponsors = transbag('translate', this.alt, 'intro_sponsors') -%}
@@ -181,6 +182,29 @@
       </div>
     </div>
   {%- endif -%}
+  <div class="container-fluid container-no-padding header-content background-sponsor">
+    <div class="container">
+      <div class="section">
+        <div class="apply-content">
+          <div class="row">
+            <div class="col-md-8 col-sm-12 col-xs-12 mx-auto">
+              <img class="logo-dg" src="{{ base_url }}static/images/pydata.png" />
+              <div class="commet"></div>
+              {% set pydata = site.get('/pydata', alt=this.alt) %}
+              <div class="dg-body">
+                {{ pydata.body }}
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <a href="/pydata" class="apply-btn">
+              <span>{{ t_button_pydata }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container-fluid container-no-padding header-content background-sponsor">
     <div class="container">
       <div class="section">
