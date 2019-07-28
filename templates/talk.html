@@ -26,7 +26,7 @@
             <div class="container">
               <div class="section">
                 <div class="row justify-content-center align-self-center">
-                  <div class="col-md-6 col-sm-8 col-xs-12">
+                  <div class="col-md-10 col-sm-8 col-xs-12">
                     <div style="margin-bottom: 100px;">
                       <div class="row justify-content-center align-self-center">
                         <div class="title">{{ this.name }}
@@ -36,9 +36,31 @@
                           {%- endif -%}
                         </div>
                       </div>
+                      {% if this.video_code %}
+                      <div class="row justify-content-center align-self-center">
+                        <div class="video-talk">
+                          <iframe src="https://www.youtube.com/embed/{{ this.video_code }}" frameborder="0" allowfullscreen class="video">
+                          </iframe>
+                        </div>
+                      </div>
+                      {% endif %}
+                      <hr />
+                      {% if this.authors %}
+                        <div class="row justify-content-center align-self-center">
+                          {%- for author in this.authors -%}
+                            <div class="col-sm-12">
+                              <div class="text-center">
+                                {%- set current_author = site.get('/speakers/'+author, alt=this.alt) -%}
+                                <a class="link subtitle" href="{{current_author|url(alt=this.alt)}}">{{ current_author.name }} {{ current_author.last_name}}</a>
+                              </div>
+                            </div>
+                          {%- endfor -%}
+                          <h4 class="label-talk">{{ t_authors }}</h4>
+                        </div>
+                      {% endif %}
                       <div class="row justify-content-center align-self-center">
                         {%- for tag in this.topic -%}
-                          <div class="{{ tag }} tag">{{ tag }}</div>
+                        <div class="{{ tag }} tag">{{ tag }}</div>
                         {%- endfor -%}
                       </div>
                       <div class="row justify-content-center align-self-center">
@@ -61,15 +83,6 @@
                             <div class="label-talk">{{ t_date_and_time }}</div>
                           </div>
                         {%- endif -%}
-                        {# {{ t_authors }}:
-                        {%- for author in this.authors -%}
-                        {%- set current_author = site.get('/speakers/'+author, alt=this.alt) -%}
-                        {%- set t_country_res = transbag('translate', this.alt, current_author.country) -%}
-                        <a class="link" href="{{current_author|url(alt=this.alt)}}">{{ current_author.name }} {{ current_author.last_name
-                          }} {% if current_author.country %}<small>({{ t_country_res }})</small>{% endif %}</a>{% if not loop.last
-                        %},&nbsp{% endif %}
-                        {%- endfor -%} #}
-  
                         {%- if this.summary -%}
                           <div class="col-sm-12">
                             <div class="summary-talk">{{ this.summary }}</div>
