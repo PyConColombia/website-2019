@@ -93,20 +93,20 @@
                         {{ render_sponsors_web(startup) }}
                       </div>
                     {% endif %}
+                    {% if support %}
+                      <div class="row row_sponsor">
+                        <div class="col-md-4 col-xs-12">
+                          <h2 class="sponsor-name">Partner</h2>
+                        </div>
+                        {{ render_sponsors_web(support) }}
+                      </div>
+                    {% endif %}
                     {% if partner %}
                       <div class="row row_sponsor">
                         <div class="col-md-4 col-xs-12">
                           <h2 class="sponsor-name">Partner</h2>
                         </div>
                         {{ render_sponsors_web(partner) }}
-                      </div>
-                    {% endif %}
-                    {% if support %}
-                      <div class="row row_sponsor">
-                        <div class="col-md-4 col-xs-12">
-                          <h2 class="sponsor-name">Support</h2>
-                        </div>
-                        {{ render_sponsors_web(support) }}
                       </div>
                     {% endif %}
                   </div>
